@@ -107,7 +107,7 @@ def create_figure(selected_year):
         marker=dict(
             size=6,
             color=['red' if year == selected_year else 'lightgrey' for year in yc_projected_embeddings['year']],
-            opacity=0.3
+            opacity=0.7
         ),
         text=[
             f'{row.Company} {row.Batch} {row.Status}<br><br>{row.oneliner_then_tags}' 
@@ -122,7 +122,7 @@ def create_figure(selected_year):
         x=bar_chart_data[selected_year]['vals'][::-1],
         orientation='h',
         name='SAE Features',
-        text=[name[:50] + '...' if len(name) > 50 else name for name in reversed(bar_chart_data[selected_year]['names'])],
+        text=[name[:75] + '...' if len(name) > 75 else name for name in reversed(bar_chart_data[selected_year]['names'])],
         textposition='inside',
         insidetextanchor='start',
         textfont=dict(color='white'),
@@ -150,8 +150,8 @@ def create_figure(selected_year):
     )
     fig.update_xaxes(title_text="X", row=1, col=1)
     fig.update_yaxes(title_text="Y", row=1, col=1)
-    fig.update_xaxes(title_text="SAE Features", tickangle=90, row=1, col=2, tickfont=dict(size=8))
-    fig.update_yaxes(title_text="Activation", row=1, col=2)
+    fig.update_yaxes(title_text="SAE Features", tickangle=90, row=1, col=2, tickfont=dict(size=8))
+    fig.update_xaxes(title_text="Activation", row=1, col=2)
     fig.update_xaxes(title_text="Year", row=2, col=1)
     fig.update_yaxes(showticklabels=False, row=1, col=2)
     fig.update_yaxes(showticklabels=False, row=2, col=1)
