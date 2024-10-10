@@ -1,0 +1,220 @@
+{
+  "datasets": [
+    {
+      "name": "NDCG@10",
+      "data": [
+        {
+          "retrieval_type": "zach's",
+          "nfcorpus": 0.3467,
+          "scifact": 0.7028,
+          "fiqa": 0.3746,
+          "trec-covid": 0.8231
+        },
+        {
+          "retrieval_type": "embedding full",
+          "nfcorpus": 0.3492,
+          "scifact": 0.6980,
+          "fiqa": 0.3770,
+          "trec-covid": 0.8250
+        },
+        {
+          "retrieval_type": "hybrid full",
+          "nfcorpus": 0.3653,
+          "scifact": 0.7175,
+          "fiqa": 0.3801,
+          "trec-covid": 0.8228
+        },
+        {
+          "retrieval_type": "embedding 512",
+          "nfcorpus": 0.3155,
+          "scifact": 0.6884,
+          "fiqa": 0.3476,
+          "trec-covid": 0.7598
+        },
+        {
+          "retrieval_type": "hybrid 512",
+          "nfcorpus": 0.3245,
+          "scifact": 0.6996,
+          "fiqa": 0.3419,
+          "trec-covid": 0.7629
+        },
+        {
+          "retrieval_type": "rerank",
+          "nfcorpus": 0.3646,
+          "scifact": 0.7614,
+          "fiqa": 0.4456,
+          "trec-covid": 0.8792
+        },
+        {
+          "retrieval_type": "hybrid+rerank",
+          "nfcorpus": 0.3809,
+          "scifact": 0.7744,
+          "fiqa": 0.4507,
+          "trec-covid": 0.8749
+        }
+      ]
+    },
+    {
+      "name": "MAP@10",
+      "data": [
+        {
+          "retrieval_type": "zach's",
+          "nfcorpus": 0.1303,
+          "scifact": 0.6519,
+          "fiqa": 0.3153,
+          "trec-covid": 0.0217
+        },
+        {
+          "retrieval_type": "embedding full",
+          "nfcorpus": 0.1310,
+          "scifact": 0.6465,
+          "fiqa": 0.2999,
+          "trec-covid": 0.0220
+        },
+        {
+          "retrieval_type": "hybrid full",
+          "nfcorpus": 0.1413,
+          "scifact": 0.6651,
+          "fiqa": 0.3030,
+          "trec-covid": 0.0216
+        },
+        {
+          "retrieval_type": "embedding 512",
+          "nfcorpus": 0.1237,
+          "scifact": 0.6522,
+          "fiqa": 0.2756,
+          "trec-covid": 0.0193
+        },
+        {
+          "retrieval_type": "hybrid 512",
+          "nfcorpus": 0.1260,
+          "scifact": 0.6588,
+          "fiqa": 0.2703,
+          "trec-covid": 0.0194
+        },
+        {
+          "retrieval_type": "rerank",
+          "nfcorpus": 0.1422,
+          "scifact": 0.7243,
+          "fiqa": 0.3676,
+          "trec-covid": 0.0231
+        },
+        {
+          "retrieval_type": "hybrid+rerank",
+          "nfcorpus": 0.1498,
+          "scifact": 0.7321,
+          "fiqa": 0.3718,
+          "trec-covid": 0.0228
+        }
+      ]
+    },
+    {
+      "name": "Recall@10",
+      "data": [
+        {
+          "retrieval_type": "zach's",
+          "nfcorpus": 0.1715,
+          "scifact": 0.8436,
+          "fiqa": 0.4437,
+          "trec-covid": 0.0230
+        },
+        {
+          "retrieval_type": "embedding full",
+          "nfcorpus": 0.1739,
+          "scifact": 0.8411,
+          "fiqa": 0.4547,
+          "trec-covid": 0.0233
+        },
+        {
+          "retrieval_type": "hybrid full",
+          "nfcorpus": 0.1793,
+          "scifact": 0.8662,
+          "fiqa": 0.4566,
+          "trec-covid": 0.0230
+        },
+        {
+          "retrieval_type": "embedding 512",
+          "nfcorpus": 0.1533,
+          "scifact": 0.7851,
+          "fiqa": 0.4159,
+          "trec-covid": 0.0207
+        },
+        {
+          "retrieval_type": "hybrid 512",
+          "nfcorpus": 0.1602,
+          "scifact": 0.8151,
+          "fiqa": 0.4096,
+          "trec-covid": 0.0208
+        },
+        {
+          "retrieval_type": "rerank",
+          "nfcorpus": 0.1819,
+          "scifact": 0.8614,
+          "fiqa": 0.5113,
+          "trec-covid": 0.0242
+        },
+        {
+          "retrieval_type": "hybrid+rerank",
+          "nfcorpus": 0.1834,
+          "scifact": 0.8898,
+          "fiqa": 0.5168,
+          "trec-covid": 0.0239
+        }
+      ]
+    },
+    {
+      "name": "Precision@10",
+      "data": [
+        {
+          "retrieval_type": "zach's",
+          "nfcorpus": 0.2579,
+          "scifact": 0.0950,
+          "fiqa": 0.1039,
+          "trec-covid": 0.8700
+        },
+        {
+          "retrieval_type": "embedding full",
+          "nfcorpus": 0.2591,
+          "scifact": 0.0950,
+          "fiqa": 0.1052,
+          "trec-covid": 0.8680
+        },
+        {
+          "retrieval_type": "hybrid full",
+          "nfcorpus": 0.2659,
+          "scifact": 0.0970,
+          "fiqa": 0.1059,
+          "trec-covid": 0.8720
+        },
+        {
+          "retrieval_type": "embedding 512",
+          "nfcorpus": 0.2074,
+          "scifact": 0.0880,
+          "fiqa": 0.0941,
+          "trec-covid": 0.7920
+        },
+        {
+          "retrieval_type": "hybrid 512",
+          "nfcorpus": 0.2121,
+          "scifact": 0.0913,
+          "fiqa": 0.0926,
+          "trec-covid": 0.7980
+        },
+        {
+          "retrieval_type": "rerank",
+          "nfcorpus": 0.2644,
+          "scifact": 0.0970,
+          "fiqa": 0.1199,
+          "trec-covid": 0.9240
+        },
+        {
+          "retrieval_type": "hybrid+rerank",
+          "nfcorpus": 0.2789,
+          "scifact": 0.1000,
+          "fiqa": 0.1211,
+          "trec-covid": 0.9180
+        }
+      ]
+    }
+  ]
+}
