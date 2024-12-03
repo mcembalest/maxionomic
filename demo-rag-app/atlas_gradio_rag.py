@@ -1,7 +1,7 @@
+from gpt4all import GPT4All
 import gradio as gr
 import json
 import requests
-from ollama import chat
 import os
 
 # setup Nomic Atlas parameters
@@ -9,7 +9,8 @@ atlas_dataset_name = "nomic/example-text-dataset-news"
 atlas_dataset_id = "4576c3a3-773d-4ba1-bf51-ff60734e4e00"
 
 # setup LLM parameters
-model_name = "llama3.2"
+model_name = "Meta-Llama-3-8B-Instruct.Q4_0.gguf"
+model = GPT4All(model_name)
 system_prompt = "You are a helpful assistant. Use the following context to answer the user's question:"
 
 from nomic import AtlasDataset
@@ -44,9 +45,10 @@ def retrieve(query, top_k=5):
     return formatted_results
 
 with gr.Blocks() as demo:
-    gr.Markdown("# RAG using the Nomic Atlas API for retrieval")
+    gr.Markdown("# RAG using the Atlas API for retrieval and the GPT4ALL Python SDK for generation")
     with gr.Row():
         with gr.Column(scale=2):
+            gr.Markdown(f"### Response from {model_name}")
             chatbot = gr.Chatbot(type="messages")
             msg = gr.Textbox()
             with gr.Row():
@@ -67,7 +69,7 @@ with gr.Blocks() as demo:
         last_user_message = history[-1]['content']
         context = retrieve(last_user_message)
         return context
-
+    
     def bot(history: list, context: str):
         formatted_messages = [
             {
@@ -78,15 +80,19 @@ with gr.Blocks() as demo:
 
         for msg in history:
             formatted_messages.append({'role': msg['role'], 'content': msg['content']})
+
+        full_prompt = "\n".join([m['content'] for m in formatted_messages])
         
         history.append({"role": "assistant", "content": ""})
-        for chunk in chat(
-            model=model_name,
-            messages=formatted_messages,
-            stream=True,
-        ):
-            history[-1]['content'] += chunk['message']['content']
-            yield history
+        with model.chat_session():
+            response = model.generate(
+                full_prompt,
+                max_tokens=1024,
+                streaming=True
+            )
+            for chunk in response:
+                history[-1]['content'] += chunk
+                yield history
 
     msg.submit(
     user, [msg, chatbot], [msg, chatbot], queue=False
