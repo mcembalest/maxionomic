@@ -1,0 +1,45 @@
+{{Expand Italian|Ipogeo di Trebio Giusto}}
+The '''Hypogeum of Trebius Justus''' is a [[catacombs of Rome|catacomb]] on the ancient [[via Latina]], now at the junction of via Latina and via Mantellini in the modern [[Appio-Latino]] quarter. It is named after a young man buried in its main chamber.
+
+It was accidentally rediscovered in March 1911 when the owner of a small villa decided to carry out works to check the state of his property. This unearthed the entrance to an underground cubiculum which led to a completely frescoed main burial chamber. He informed the [[Pontificia commissione di archeologia sacra]] and at the end of March the same year its secretary Rudolf Kanzler inspected the complex - he did not find any traces of Christianity but produced an accurate photographic record of it. Once the works ended the cemetery was closed up, with the present quarter built over it with new palazzi and streets. 
+
+It was reopened in 1976,<ref>{{in lang|it}} Mario Petrassi, 'Torna alla luce l'ipogeo di Trebio Giusto', in ''Capitolium'', anno LI, n. 2-3, Roma, Edizione del Comune di Roma, 1976, pp. 17-32</ref> this time through a ground floor trapdoor in the small villa - the Sovrintendenza alle Antichità di Roma produced another photographic survey, but then closed up the complex again. A third inspection was carried out in 1996 to begin restoration work. An expropriation case is underway and in the meantime it is privately run with the small villa on top of it rented by the Sovrintendenza Archeologica del Lazio.
+<!---
+== Descrizione ==
+L'ipogeo è composto da una galleria d'ingresso, ai lati della quale sono collocati alcuni [[arcosolio|arcosoli]]; la galleria termina con una camera funeraria interamente affrescata.
+* Nella parete di fondo, opposta all'ingresso, c'è l'arcosolio con le pitture che ricordano il giovane defunto Trebio Giusto. L'affresco parietale è distinto in tre fasce. Nella fascia superiore ([[lunetta]]) è ritratto il giovane con dei libri aperti sulle ginocchia; in alto la scritta che ci informa dell'età alla sua morte (21 anni) e dei nomi dei genitori che fecero edificare la tomba (Trebio Giusto ''senior'' e Oronazia Severina). Nella fascia intermedia Trebio Giusto è ritratto con i suoi genitori, mentre nella fascia inferiore è ritratto in piedi circondato da cinque figure maschili, vestiti con abiti da contadini, che offrono al giovane i frutti della terra.
+* Nella parete di sinistra rispetto all'entrata, sono posti tre loculi, al di sopra dei quali è dipinta una scena in cui alcuni operai sono intenti a costruire delle mura con torri.
+* Nella parete di destra troviamo altri tre loculi: sopra è dipinta una scena che ritrae un architetto che indica ad un capomastro il lavoro da fare; entrambe le figure sono dotate degli strumenti propri del loro mestiere.
+* Nella parete d'ingresso, sono dipinte diverse figure e simboli: due muli con i rispettivi mulattieri; una corona da cui spunta un ramo di palma; una figura femminile; due contadini con cesti di frutta.
+* Nella volta, all'interno di un [[clipeo]] decorato con fiori e foglie, è collocata la figura di un pastore, affiancato da due pecore e con in mano un flauto.
+
+Le pitture e gli indizi che da esse emergono fanno datare la tomba o al [[III secolo]] o nei primi decenni del [[IV secolo]].
+
+== Interpretazione ==
+Una cosa che accomuna tutti gli studiosi di questo ipogeo è l'affermazione comune che non esistono elementi sicuri per dire che la famiglia di Trebio Giusto appartenesse ad una comunità cristiana. Le interpretazioni che nel corso dei decenni si sono susseguite sono condizionate dalla non perfetta qualità delle foto e riproduzioni effettuate nel 1911 e dalla mancanza, allora, di accurati restauri: infatti, non potendo penetrare nell'ipogeo, l'unico modo per studiarlo ed interpretarlo era attraverso le foto scattate al momento della sua scoperta.
+
+Il primo che cercò di interpretare le figure e gli affreschi fu [[Orazio Marucchi]] nel 1911<ref>{{Cita|Orazio Marucchi, 1912.}}</ref>, poco dopo la scoperta dell'ipogeo<ref>{{Cita|Orazio Marucchi, 1911}}.</ref>, che vide nelle diverse pitture elementi legati alla simbologia [[gnosticismo|gnostica]]. Per [[Joseph Wilpert]] invece si tratta semplicemente di scene di vita quotidiana ed agreste: anzi, l'archeologo tedesco interpreta il pastore della volta come un segno chiaramente cristiano. Negli anni Quaranta del [[XX secolo|secolo scorso]], un altro archeologo, Carlo Cecchelli, interpretò gli affreschi della tomba come appartenenti ad una famiglia di religione sincretista: non più pagana cioè, ma non ancora completamente cristiana.
+--->
+== References ==
+<references />
+
+== Bibliography ==
+* {{Cite book|title=L'orizzonte tardoantico e le nuove immagini, corpus I|author=Maria Andaloro|publisher=Jaca Book|place=Milano|date=2006|chapter=Le pitture dell'ipogeo di Trebio Giusto|pp=259-263|ISBN=978-88-16-60371-4|ref=Fabrizio Bisconti}}
+* {{Cite book|title=Iscrizioni graffite nel vestibolo dell'ipogeo di Trebio Giusto|author=Pio Franchi De' Cavalieri|date=1912}}
+* {{Cite book|title=Le catacombe di Roma|author1=Leonella De Santis|author2=Giuseppe Biamonte|publisher=Newton Compton Editori|place=Roma|date=2011|ISBN=978-88-541-2771-5}}
+* {{Cite book|title=Nuovo Bullettino di Archeologia Cristiana|author=R. Kanzler R.|date=1911|issue=17|chapter=Scoperta del sepolcro di Trebio Giusto sulla via Latina|pp=201-207}}
+* {{Cite book|title=Nuovo Bullettino di Archeologia Cristiana|author=Orazio Marucchi|date=1911|issue=17|chapter=L'ipogeo sepolcrale di Trebio Giusto recentemente scoperto sulla via Latina e proposta di spiegazione gnostica delle sue pitture|pp=209-235}}
+* {{Cite book|title=Scoperta del sepolcro di Trebio Giusto sulla via Latina|author=[[Orazio Marucchi]]|date=1911|ref=Orazio Marucchi, 1911}}
+* {{Cite book|title=Ulteriori osservazioni sull'ipogeo di Trebio Giusto in conferma dell'ipotesi sulla natura gnostica del monumento|author=Orazio Marucchi|date=1912|ref=Orazio Marucchi, 1912}}
+* {{Cite journal|title=Torna alla luce l'ipogeo di Trebio Giusto|author=Mario Petrassi|journal=Capitolium|volume=anno LI|issue=2-3|publisher=Edizione del Comune di Roma|place=Roma|date=1976|pp=17-32|url=http://www.archiviocapitolinorisorsedigitali.it/view_doc_frameset.php?IDA=69&IDF=4677|ref=Mario Petrassi|url-status=dead|archive-url=https://web.archive.org/web/20150923174400/http://www.archiviocapitolinorisorsedigitali.it/view_doc_frameset.php?IDA=69&IDF=4677|archive-date=23 September 2015}}
+* {{Cite book|title=L'ipogeo di Trebio Giusto sulla via Latina: scavi e restauri|editor=Rossella Rea|publisher=Pontificia commissione di archeologia sacra|place=Roma|date=2004|ISBN=978-88-88420-03-5}}
+
+<!---
+== Collegamenti esterni ==
+* {{Cita web|url=http://www.archeologiasacra.net/pcas-web/ricerca/fotografico?filter=catacomba&query=storico_Ipogeo-di-Trebio-Giusto&fototecapage=2&jsonVal={}|titolo=Ipogeo di Trebio Giusto in archivio fotografico|sito=Archivio Pontificia Commissione di Archeologia Sacra|accesso=22 gennaio 2016}}
+* {{Cita web|url=http://www.comune.roma.it/pcr/it/newsview.page?contentId=NEW617367|titolo=Ipogeo di Trebio Giusto|sito=Roma Capitale|data=8 aprile 2014|accesso=22 gennaio 2016}}
+* {{YouTube|autore=RAI - Passaggio a Nord-Ovest|id=C2tLvfPer-s|titolo=La tomba di trebio Giusto|produttore=RAI|accesso=22 gennaio 2016}}
+--->
+
+[[category:Catacombs of Rome|Trebius]]
+[[category:Rome Q. IX Appio-Latino]]

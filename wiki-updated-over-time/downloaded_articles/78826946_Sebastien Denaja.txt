@@ -1,0 +1,35 @@
+{{short description|French politician (born 1979)}}
+{{use dmy dates|date=January 2025}}
+{{Infobox officeholder
+| name                = Sébastien Denaja
+| image               = DeputeXIVeLegVeRep-Sebastien Denaja.jpg
+| caption             = Denaja in 2012
+| assembly            = French National
+| constituency_AM     = [[Hérault's 7th constituency]]
+| term_start          = 20 June 2012
+| term_end            = 20 June 2017
+| predecessor         = [[Gilles d'Ettore]]
+| successor           = [[Christophe Euzet]]
+| party               = [[Socialist Party (France)|Socialist Party]]
+| otherparty          = 
+| birth_date          = {{Birth date and age|14 January 1979|df=yes}}
+| birth_place         = 
+}}
+
+'''Sébastien Denaja''' (born 14 January 1979) is a French politician serving as a member of the [[Regional Council of Occitania]] since 2021.<ref>{{cite web|url=https://www.midilibre.fr/2021/06/28/sete-sebastien-denaja-veut-sinvestir-sur-les-thematiques-territoriales-comme-regionales-9636894.php|title=Sète : Sébastien Denaja veut s'investir sur les thématiques territoriales comme régionales|work=[[Midi Libre]]|date=29 June 2021|language=fr}}</ref> From 2012 to 2017, he was a member of the [[National Assembly (France)|National Assembly]].<ref>{{cite web|url=https://www.midilibre.fr/2022/06/20/legislatives-la-reaction-de-lancien-depute-ps-de-la7e-sebastien-denaja-a-lelection-du-candidat-rn-10384598.php|title=Législatives : la réaction de l'ancien député PS de la 7e, Sébastien Denaja, à l'élection du candidat RN|work=[[Midi Libre]]|date=21 June 2022|language=fr}}</ref>
+
+==References==
+{{reflist}}
+
+{{DEFAULTSORT:Denaja, Sebastien}}
+[[Category:1979 births]]
+[[Category:Living people]]
+[[Category:Socialist Party (France) politicians]]
+[[Category:Deputies of the 14th National Assembly of the French Fifth Republic]]
+[[Category:Members of Parliament for Hérault]]
+[[Category:Candidates for the 2017 French legislative election]]
+[[Category:Members of the Regional Council of Occitania (administrative region)]]
+[[Category:21st-century French politicians]]
+
+
+{{France-politician-stub}}

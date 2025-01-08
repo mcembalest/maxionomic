@@ -1,0 +1,211 @@
+{{short description|Boxing match}}
+{{Infobox boxing match
+| Fight Name   = Vassiliy Jirov vs. James Toney
+| image        = [[File:Jirov vs Toney.jpg|230px]]
+| caption      = 
+| fight date   = April 26, 2003
+| location     = [[Foxwoods Resort Casino]], [[Ledyard, Connecticut]], [[United States|U.S.]]
+| titles       = [[International Boxing Federation|IBF]] Cruiserweight title
+| fighter1     = [[Vassiliy Jirov]]
+| nickname1    = The Tiger
+| hometown1    = [[Balkhash (city)|Balkhash]], [[Karaganda Region|Karaganda]], [[Kazakhstan]]
+| purse1       = 
+| record1      = 31–0 (27 KO)
+| age1         = {{age in years and months|April 4, 1974|April 26, 2003}}
+| height1      = 6 ft 2 in
+| weight1      = 188 lb
+| style1       = Southpaw
+| recognition1 = [[International Boxing Federation|IBF]]<br>Cruiserweight champion<br>[[The Ring (magazine)|''The Ring'']]<br>No. 1 Ranked Cruiserweight
+| fighter2     = [[James Toney]]
+| nickname2    = Lights Out
+| hometown2    = [[Grand Rapids, Michigan]], U.S.
+| purse2       = 
+| record2      = 65–4–2 (42 KO)
+| age2         = {{age in years and months|August 24, 1968|April 26, 2003}}
+| height2      = 5 ft 9 in
+| weight2      = 190 lb
+| style2       = Orthodox
+| recognition2 = [[International Boxing Federation|IBF]]<br>No. 1 Ranked Cruiserweight<br>[[The Ring (magazine)|''The Ring'']]<br>No. 4 Ranked Cruiserweight<br>2-division world champion
+| result       = '''Toney''' wins via unanimous decision (117–109, 117–109, 116–110)
+}}
+'''[[Vassiliy Jirov]] vs. [[James Toney]]''' was a professional boxing match contested on April 26, 2003 for the [[International Boxing Federation|IBF]] cruiserweight title.<ref>{{cite web |title=Vassiliy Jirov vs. James Toney |url=https://boxrec.com/wiki/index.php/Vassiliy_Jirov_vs._James_Toney |website=boxrec.com |publisher=BoxRec |access-date=6 January 2025}}</ref>
+
+==Background==
+A fight between reigning IBF cruiserweight champion Vassiliy Jirov and former 2-divison champion James Toney had been in the works for nearly two years. Jirov and Toney had a tentative agreement to face each other on September 8, 2001.
+
+Jirov, despite being a former Olympic gold medalist (having beaten the co featured [[Antonio Tarver]] in the semi final) and in the midst of a 2-year reign as cruiserweight champion, had yet to headline a boxing card and was hoping a fight with Toney, once one of boxings biggest stars, would give him the chance to do so.<ref>[https://www.nytimes.com/2001/07/17/sports/boxing-boxer-s-biggest-fight-is-for-attention.html Boxer's Biggest Fight Is for Attention], N.Y. Times article, 2001-07-17, Retrieved on 2025-01-06</ref> He had however appeared in the first cruiserweight title bout to be broadcast on [[HBO]], when he [[Arthur Williams vs. Vassiliy Jirov|won]] the title against [[Arthur Williams (boxer)|Arthur Williams]]. However, a deal did not get done and Jirov's next defense turned out to be against 34-year old [[Jorge Castro (boxer)|Jorge Castro]], the IBF's number-one ranked cruiserweight contender and Jirov's [[mandatory challenger]]. After his defeat of Castro, Jirov hoped to either meet [[Roy Jones Jr.]], the then-undisputed light heavyweight champion or Toney, who was in attendance for the Jirov–Castro fight.<ref>[https://www.washingtonpost.com/archive/sports/2002/02/03/with-one-eye-toward-the-future-jirov-outpoints-castro/9894e827-11b1-45ef-94cc-e26c49d13dba/ With One Eye Toward the Future, Jirov Outpoints Castro], Washington Post article, 2002-02-03, Retrieved on 2025-01-06</ref>
+
+Toney would fight Jason Robinson in an IBF title eliminator bout, earning the victory via seventh-round knockout, making him the number-one contender to Jirov's title and officially setting in motion his first major title fight since his [[James Toney vs. Roy Jones Jr.|1994 loss]] to Roy Jones Jr.<ref>[https://a.espncdn.com/boxing/a/2002/0807/1415254.html Call James Toney a survivor], ''Sports Business Journal'' article, 2002-08-07, Retrieved on 2025-01-06</ref><ref>[https://www.latimes.com/archives/la-xpm-2002-aug-19-sp-fight19-story.html Toney Earns Another Shot at a World Title], 'L.A. Times article, 2002-08-19, Retrieved on 2025-01-06</ref>
+
+The Jirov–Toney fight was originally set for November 2002, but a long and acrimonious split with his longtime manager, Ivalyo Gotzev, caused a 14-month layoff for Jirov and the fight was pushed back to April 26, 2003.<ref>[https://a.espncdn.com/boxing/a/2003/0424/1543989.html Jirov's message: I talk by fist], ESPN article, 2003-04-24, Retrieved on 2025-01-06</ref> 
+
+==The fights== 
+===Undercard===
+The untelevised card saw wins for [[Sechew Powell]], [[Duncan Dokiwari]] and [[Yuri Foreman]].
+
+===Tarver vs. Griffin===
+{{Infobox boxing match
+| Fight Name   = Antonio Tarver	vs. Montell Griffin
+| image        = 
+| caption      = 
+| fight date   = 
+| location     = 
+| titles       = vacant [[World Boxing Council|WBC]] and [[International Boxing Federation|IBF]] light heavyweight title
+| fighter1     = Antonio Tarver
+| nickname1    = "The Magic Man"
+| hometown1    = [[Orlando, Florida]], U.S.
+| purse1       = 
+| record1      = 21–1 (17 KO)
+| age1         = {{age in years and months |November 21, 1968 |26 April 2003}}
+| height1      = 6 ft 2 in
+| weight1      = 175 lb
+| style1       = Southpaw
+| recognition1 = [[World Boxing Council|WBC]]/[[International Boxing Federation|IBF]]/[[The Ring (magazine)|''The Ring'']]<br>No. 1 Ranked Light Heavyweight
+| fighter2     = Montell Griffin
+| nickname2    = "Ice"
+| hometown2    = [[Chicago, Illinois]], U.S.
+| purse2       = 
+| record2      = 44–3 (29 KO)
+| age2         = {{age in years and months |June 6, 1970 |26 April 2003}}
+| height2      = 5 ft 7 in
+| weight2      = 175 lb
+| style2       = Orthodox
+| recognition2 = [[World Boxing Council|WBC]]/[[International Boxing Federation|IBF]]<br>No. 2 Ranked Light Heavyweight<br>[[The Ring (magazine)|''The Ring'']]<br>No. 4 Ranked Light Heavyweight<br>Former Light heavyweight champion
+| result       = Tarver defeats Griffin by unanimous decision
+}}
+The co featured bout saw top ranked contender [[Antonio Tarver]] face No. 2 ranked and former light heavyweight champion [[Montell Griffin]]. The [[World Boxing Council|WBC]] and [[International Boxing Federation|IBF]] light heavyweight belt vacated by [[Roy Jones Jr.]] were on the line.<ref>{{cite web |title=Antonio Tarver vs. Montell Griffin |url=https://boxrec.com/wiki/index.php/Antonio_Tarver_vs._Montell_Griffin |website=boxrec.com |publisher=BoxRec |access-date=6 January 2025}}</ref>
+
+Tarver entered the bout having avenged the only loss on his record in his previous bout, stopping former world title challenger [[Eric Harding]] in 5 rounds.
+
+Griffin had gone 17–2 since he lost his world title in a [[Montell Griffin vs. Roy Jones Jr. II|first round knockout]] at the hands of Jones in August 1997, having lost a split decision to Harding and been stopped by [[Lineal championship|Lineal champion]] [[Dariusz Michalczewski]].
+
+====The fight====
+After both men spent the first round feeling each other out, Tarver landed a left hand to the back of the head followed by a straight left that dropped Griffin with seconds left in the round. Griffin had his moments but Tarver largely controlled the bout with his left hand and jab. In the 7th round, Griffin was cut on the right eye by a left hand, prompting referee Mike Ortega to have the ringside physician check multiple times that Griffin could continue. As the fight ticked toward the end Tarver landed a left to the chin that sent Griffin down for the second time, he beat the count and seconds later the final bell sounded.
+
+When the scorecards were read all three judges scored the bout a 120–106 shutout for Tarver, making his the new unified light heavyweight champion.<ref>{{cite web |author1=Bill Luppert |title=Tarver Captures WBC/IBF Belts |url=http://www.boxing-pics.com/tarver_griffin/mulholland_tarver.html |website=boxing-pics.com |publisher=Fight News |access-date=6 January 2025 |archive-url=https://web.archive.org/web/20030603163509/http://www.boxing-pics.com/tarver_griffin/mulholland_tarver.html |archive-date=3 June 2003 |date=26 April 2003}}</ref>
+
+HBO's unofficial ringside scorer [[Harold Lederman]] scored the fight 120–106 for Tarver.
+
+According [[CompuBox]] statistics Tarver landed 187 of 677 punches thrown (a 27.6% connect rate) while Griffin landed 82 of 338 (a 24.3% connect rate)
+
+====Aftermath====
+Speaking after the fight, Tarver said "I never thought I'd be here, but here I am, light heavyweight champion of the world. I've put in a lot of hard work to get where I am." When asked about a potential bout with [[Lineal championship|Lineal champion]] [[Dariusz Michalczewski]], Tarver dismissed it saying "probably not, because of how things work over there, and I'm not about to jeopardize my career because of that."
+
+{{s-start}}
+{{s-bef | before=[[Vernon Forrest vs. Shane Mosley II|vs.]] [[Eric Harding]] II}}
+{{s-ttl | title=[[Antonio Tarver]]'s bouts |years=26 April 2003}}
+{{s-aft | after=[[Antonio Tarver vs. Roy Jones Jr.|vs. Roy Jones Jr.]]}}
+{{s-bef | before=vs. George Khalid Jones}}
+{{s-ttl | title=[[Montell Griffin]]'s bouts |years=26 April 2003}}
+{{s-aft | after=vs. Willard Lewis}}
+{{s-end}}
+
+===Main Event===
+In a hardfought bout in which a combined 1,843 punches were thrown, Toney would earn a unanimous decision victory with rather comfortable scores of 117–109 (twice) and 116–110. Jirov served as the agressor and pressed the action most of the fight, throwing 1,032 punches, but only landing 24% of them (243) as Toney defended and counter-punched effectively and landed over 100 more punches than Jirov, scoring 380 of his 811 thrown punches. Toney would score the fight's lone knockdown in the 12th and final round. Jirov and Toney exchange punches back-and-forth for the entire duration of the round with both fighter taking damage, then with 20 seconds remaining Toney scored a six-punch combination that sent Jirov down to the canvas. With only five seconds remaining, Jirov answered referee [[Steve Smoger]]'s 10-count and the fight continued, though the bell rang to end the fight just as the fighters engaged again.<ref>[https://www.nytimes.com/2003/04/27/sports/plus-boxing-toney-hands-jirov-first-loss-as-a-pro.html Toney Hands Jirov First Loss as a Pro], N.Y. Times article, 2003-04-27 Retrieved on 2025-01-05</ref> <ref>{{cite web |author1=Peter M. Heintzelman |title=Toney Beats Jirov!!! |url=http://www.boxing-pics.com/toney_jirov/mulholland_toney.html |website=boxing-pics.com |publisher=Fight News |access-date=6 January 2025 |archive-url=https://web.archive.org/web/20030603164045/http://www.boxing-pics.com/toney_jirov/mulholland_toney.html |archive-date=3 June 2003 |date=26 April 2003}}</ref>
+
+HBO's unofficial ringside scorer [[Harold Lederman]], who had Jirov winning going into the 12th round, scored the fight even 113–113.
+
+==Fight card==
+Confirmed bouts:<ref>{{cite web|url=https://boxrec.com/en/event/287566|title=BoxRec - event|publisher=}}</ref>
+{| class="toccolours" style="font-size: 85%;"
+|-
+! style="background:#e6e8fa; color:#000; text-align:center;"| Weight Class
+! style="background:#e6e8fa; color:#000; text-align:center;"| Weight
+! style="background:#e6e8fa; color:#000; text-align:center;"|
+! style="background:#e6e8fa; color:#000; text-align:center;"| vs.
+! style="background:#e6e8fa; color:#000; text-align:center;"|
+! style="background:#e6e8fa; color:#000; text-align:center;"| Method
+! style="background:#e6e8fa; color:#000; text-align:center;"| Round
+! style="background:#e6e8fa; color:#000; text-align:center;"| Notes
+|-
+|Cruiserweight
+|190 lbs.
+|'''[[James Toney]]'''
+|def.
+|[[Vassiliy Jirov]] (c)
+|align=center|TKO
+|align=center|6/12
+|{{ref|Vassiliy Jirov vs. James Toney|note 1}}
+|-
+|Light Heavyweight
+|175 lbs.
+|'''[[Antonio Tarver]]''' 
+|def.
+|[[Montell Griffin]]
+|align=center|UD
+|align=center|12/12
+|{{ref|Antonio Tarver vs. Montell Griffin|note 2}}
+|-
+|Heavyweight
+|190+ lbs.
+|'''[[Duncan Dokiwari]]'''
+|def.
+|Carlton Johnson
+|align=center|TKO
+|align=center|3/8
+|-
+|Middleweight
+|160 lbs.
+|'''[[Yuri Foreman]]'''
+|def.
+|Charles Clark
+|align=center|TKO
+|align=center|2/8
+|-
+|Middleweight
+|160 lbs.
+|'''[[Sechew Powell]]'''
+|def.
+|Jamal Harris
+|align=center|UD
+|align=center|6/6
+|-
+|Cruiserweight
+|190 lbs.
+|'''Aneudi Santos'''
+|def.
+|Dan Sheehan
+|align=center|TKO
+|align=center|5/6
+|}
+{{note|Vassiliy Jirov vs. James Toney|Note 1|For [[International Boxing Federation|IBF]] Cruiserweight title}}<br>{{note|Antonio Tarver vs. Montell Griffin|Note 2|For vacant [[World Boxing Council|WBC]] and [[International Boxing Federation|IBF]] Light Heavyweight titles}}
+
+==Broadcasting==
+{| class="wikitable"
+|-
+! align=center | Country
+! align=center | Broadcaster
+|-
+| {{flag|United States}} || [[HBO]]
+|}
+
+==References==
+{{reflist}}
+
+{{s-start}}
+{{s-bef | before=vs. [[Jorge Castro (boxer)|Jorge Castro]]}}
+{{s-ttl | title=[[Vassiliy Jirov]]'s bouts |years=26 April 2003}}
+{{s-aft | after=vs. [[Ernest Mateen]]}}
+{{s-bef | before=vs. Jason Robinson}}
+{{s-ttl | title=[[James Toney]]'s bouts |years=26 April 2003}}
+{{s-aft | after=[[Evander Holyfield vs. James Toney|vs. Evander Holyfield]]}}
+{{s-ach|aw}}
+{{s-bef | before=<small>[[Arturo Gatti]] vs. [[Micky Ward]]</small>}}
+{{s-ttl
+| title = [[Harry Markson Award]]
+| years = 2003
+}}
+{{s-aft |after=<small>[[Erik Morales vs. Marco Antonio Barrera III]]</small>}}
+{{s-end}}
+
+{{James Toney}}
+
+{{DEFAULTSORT:Jirov, Toney}}
+[[Category:2003 in boxing]]
+[[Category:2003 in sports in Connecticut]]
+[[Category:April 2003 sports events in the United States]]
+[[Category:Boxing matches in Connecticut]]
+[[Category:Boxing matches involving James Toney|Jirov]]
+[[Category:Boxing matches refereed by Steve Smoger]]
+[[Category:Boxing on HBO]]
+[[Category:Cruiserweight championship matches]]

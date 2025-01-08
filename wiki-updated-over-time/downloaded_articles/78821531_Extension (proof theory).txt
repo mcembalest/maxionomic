@@ -1,0 +1,45 @@
+{{Short description|Concept in mathematics}}
+In [[mathematical logic]], a '''conservative extension''' is a [[Theory (mathematical logic)#Subtheories and extensions|supertheory]] of a [[Theory (mathematical logic)|theory]] which is often convenient for proving [[theorem]]s, but proves no new theorems about the language of the original theory. Similarly, a '''non-conservative extension''' is a supertheory which is not conservative, and can prove more theorems than the original.
+
+More formally stated, a theory <math>T_2</math> is a ([[Proof theory|proof theoretic]]) conservative extension of a theory <math>T_1</math> if every theorem of <math>T_1</math> is a theorem of <math>T_2</math>, and any theorem of <math>T_2</math> in the language of <math>T_1</math> is already a theorem of <math>T_1</math>.
+
+More generally, if <math>\Gamma</math> is a set of [[Well-formed formula|formulas]] in the common language of <math>T_1</math> and <math>T_2</math>, then <math>T_2</math> is <math>\Gamma</math>'''-conservative''' over <math>T_1</math> if every formula from <math>\Gamma</math> provable in <math>T_2</math> is also provable in <math>T_1</math>.
+
+Note that a conservative extension of a [[consistent]] theory is consistent. If it were not, then by the [[principle of explosion]], every formula in the language of <math>T_2</math> would be a theorem of <math>T_2</math>, so every formula in the language of <math>T_1</math> would be a theorem of <math>T_1</math>, so <math>T_1</math> would not be consistent. Hence, conservative extensions do not bear the risk of introducing new inconsistencies. This can also be seen as a [[methodology]] for writing and structuring large theories: start with a theory, <math>T_0</math>, that is known (or assumed) to be consistent, and successively build conservative extensions <math>T_1</math>, <math>T_2</math>, ... of it.
+
+Recently, conservative extensions have been used for defining a notion of [[ontology modularization|module]] for [[Ontology (computer science)|ontologies]]{{citation needed|date=April 2024}}: if an ontology is formalized as a logical theory, a subtheory is a module if the whole ontology is a conservative extension of the subtheory.
+
+An extension which is not conservative may be called a '''proper extension'''.
+
+==Examples==
+* <math>\mathsf{ACA}_0</math>, a subsystem of [[second-order arithmetic]] studied in [[reverse mathematics]], is a conservative extension of first-order [[Peano arithmetic]].
+* The [[Reverse mathematics|subsystems of second-order arithmetic]] <math>\mathsf{RCA}_0^*</math> and <math>\mathsf{WKL}_0^*</math> are <math>\Pi_2^0</math>-conservative over <math>\mathsf{EFA}</math>.<ref name="Simpson86">S. G. Simpson, R. L. Smith, "[https://www.sciencedirect.com/science/article/pii/0168007286900746 Factorization of polynomials and <math>\Sigma_1^0</math>-induction]" (1986). Annals of Pure and Applied Logic, vol. 31 (p.305)</ref>
+* The subsystem <math>\mathsf{WKL}_0</math> is a <math>\Pi_1^1</math>-conservative extension of <math>\mathsf{RCA}_0</math>, and a <math>\Pi_2^0</math>-conservative over <math>\mathsf{PRA}</math> ([[primitive recursive arithmetic]]).<ref name="Simpson86" />
+* [[Von Neumann–Bernays–Gödel set theory]] (<math>\mathsf{NBG}</math>) is a conservative extension of [[Zermelo–Fraenkel set theory]] with the [[axiom of choice]] (<math>\mathsf{ZFC}</math>).
+* [[Internal set theory]] is a conservative extension of [[Zermelo–Fraenkel set theory]] with the [[axiom of choice]] (<math>\mathsf{ZFC}</math>).
+* [[Extension by definitions|Extensions by definitions]] are conservative.
+* Extensions by unconstrained predicate or function symbols are conservative.
+* <math>I\Sigma_1</math> (a subsystem of Peano arithmetic with induction only for [[arithmetical hierarchy|<math>\Sigma^0_1</math>-formulas]]) is a <math>\Pi^0_2</math>-conservative extension of <math>\mathsf{PRA}</math>.<ref>[https://projecteuclid.org/download/pdfview_1/euclid.ndjfl/1107220675A Fernando Ferreira, A Simple Proof of Parsons' Theorem. Notre Dame Journal of Formal Logic, Vol.46, No.1, 2005.]</ref>
+* <math>\mathsf{ZFC}</math> is a [[analytical hierarchy|<math>\Sigma^1_3</math>]]-conservative extension of <math>\mathsf{ZF}</math> by [[absoluteness (mathematical logic)|Shoenfield's absoluteness theorem]].
+* <math>\mathsf{ZFC}</math> with the [[continuum hypothesis]] is a <math>\Pi^2_1</math>-conservative extension of <math>\mathsf{ZFC}</math>.{{Citation needed|date=March 2021}}
+
+==Model-theoretic conservative extension==
+{{see also|Extension (model theory)}}
+With [[Model theory|model-theoretic]] means, a stronger notion is obtained: an extension <math>T_2</math> of a theory <math>T_1</math> is '''model-theoretically conservative''' if <math>T_1 \subseteq T_2</math> and every model of <math>T_1</math> can be expanded to a model of <math>T_2</math>. Each model-theoretic conservative extension also is a (proof-theoretic) conservative extension in the above sense.<ref>{{Cite book | last1=Hodges | first1=Wilfrid | author1-link=Wilfrid Hodges | title=A shorter model theory | publisher= [[Cambridge University Press]]| location=Cambridge | isbn=978-0-521-58713-6 | year=1997 | postscript=<!--None--> | page=58 exercise 8}}</ref> The model theoretic notion has the advantage over the proof theoretic one that it does not depend so much on the language at hand; on the other hand, it is usually harder to establish model theoretic conservativity.
+
+==See also==
+* [[Extension by definitions]]
+* [[Extension by new constant and function names]]
+
+==References==
+{{reflist}}
+
+==External links==
+
+* [http://www.cs.nyu.edu/pipermail/fom/1998-October/002306.html The importance of conservative extensions for the foundations of mathematics]
+
+{{Mathematical logic}}
+
+[[Category:Mathematical logic]]
+[[Category:Model theory]]
+[[Category:Proof theory]]

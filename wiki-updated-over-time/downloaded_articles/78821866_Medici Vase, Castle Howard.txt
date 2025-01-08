@@ -1,0 +1,35 @@
+[[File:Rhododendrons in Ray Wood - geograph.org.uk - 826173.jpg|thumb|right|Trees and rhododendrons in the wood]]
+'''Ray Wood''' is a woodland area of the [[Castle Howard]] estate in [[North Yorkshire]], in England.  It contains several historic structures.
+
+==History==
+Originally known as "Wray Wood", it was first recorded in the 16th century.  In 1699, [[George London (landscape architect)|George London]] was commissioned to landscape the woodland, planning to cut radial avenues through it.  This plan was not pursued, and instead in 1705 a more naturalistic labyrinth design of paths was created, probably to a design by either [[Nicholas Hawksmoor]] or [[John Vanbrugh]].  From 1706 to 1710, a boundary wall, [[summer house]], fountains, statues, seats and steps were constructed.  It became a popular place for visitors to the estate to stroll.<ref name="parks">{{cite web |title=Ray Wood, Castle Howard |url=https://www.parksandgardens.org/places/castle-howard-ray-wood |website=Parks & Gardens |publisher=Hestercombe Gardens Trust |access-date=6 January 2025}}</ref><ref>{{cite journal |last1=Jeffery |first1=Sally |title=Hawksmoor’s Vision of Wray Wood, Castle Howard |journal=Architectural History |date=2018 |volume=61}}</ref>  [[Stephen Switzer]] was particularly enthusiastic about the wood, describing it as "this incomparable wood, the highest pitch that natural and polite gardening can ever possibly ascribe to... 'tis there that nature is truly imitated, if not excelled".<ref>{{cite book |last1=Eyres |first1=Patrick |title=Sculpture and the Garden |date=2017 |publisher=Taylor & Francis |isbn=9781351549585}}</ref>
+
+In the mid 18th century, most of the features were removed, retaining only the plinths of some statues, and the statue of [[Apollo]].  There was a small reservoir at the bottom of the wood, which was rebuilt on a larger scale in the 1850s, to feed the new [[Atlas Fountain]].  The wood all felled in the 1940s and replanted in 1946 with hardwoods.  The paths were restored from 1968 to 1975, and [[James Russell (garden designer)|James Russell]] then introduced new planting.<ref name="parks" />  The walls were restored in 2007.<ref>{{cite news |title=Stately home walls boost |url=https://www.yorkpress.co.uk/news/1570355.stately-home-walls-boost/ |access-date=6 January 2025 |work=The Press |date=25 July 2007}}</ref>
+
+==Architecture==
+===Gates and railings===
+The grade II-listed gates and railings probably date from the early 18th century.  They are in [[wrought iron]], and the [[pier (architecture)|piers]] and walls are in stone. There are two pairs of square piers on [[plinth]]s, with sunken panels, [[molding (architecture)|moulded]] [[cornice]]s and ball [[finial]]s, and they are joined by low walls, one with railings. In front, the walls are [[coping (architecture)|coped]] and angled, containing seats, and ending in quadrants.<ref>{{NHLE |num= 1148970|desc= Gate piers, walls, gates and railings to entrance of Ray Wood, Henderskelfe|access-date= 27 December 2024|mode=cs2|fewer-links=yes}}</ref>
+
+===Reservoir===
+[[File:The Reservoir, Ray Wood, Castle Howard (geograph 1882844).jpg|thumb|right|The reservoir, with water levels low enough to show the carvings]]
+The reservoir is grade II* listed.  It is a circular basin about {{convert|30|m}} in diameter. In the centre is a rectangular [[pedestal]] on a [[molding (architecture)|moulded]] base, with raised square panels and a moulded [[cornice]].<ref>{{NHLE |num= 1316052|desc= Castle Howard Reservoir basin and Pedestal at centre of reservoir, Henderskelfe|access-date= 27 December 2024|mode=cs2|fewer-links=yes}}</ref>  There are carvings of water creatures and plants on the pedestal, which are usually underwater.<ref name="parks" />
+
+===Medici Vase===
+[[File:Medici vase and pedestal Castle Howard Jun25.jpg|thumb|right|The Medici Vase]]
+The grade II*-listed Medici Vase was made by the Coade Company in [[Coade stone]], and purchased by the estate in 1778.  It is a copy of the [[Medici Vase]] in the [[Uffizi Gallery]], [[Florence]]. It is decorated with figures representing the sacrifice of [[Iphigenia]]. The vase stands on a [[sandstone]] base, about {{convert|3.5|m}} high, with waterleaf decoration to the base, sunk panels, one with a Latin inscription, the others with antique medallions, and a [[molding (architecture)|moulded]] [[cornice]].<ref>{{NHLE |num= 1172761|desc= Medici Vase and Pedestal, Henderskelfe|access-date= 27 December 2024|mode=cs2|fewer-links=yes}}</ref>
+
+===Pyramid===
+The pyramid is a roughly-placed collection of stones in a central clearing in the wood.  The stones are believed to have been part of the original early-18th century ornamental features, which were demolished and later reassembled by gardeners, probably in a new form.<ref name="parks" />
+
+==See also==
+*[[Grade II* listed buildings in North Yorkshire (district)]]
+*[[Listed buildings in Henderskelfe]]
+
+==References==
+{{reflist}}
+
+==External links==
+*{{official website|https://www.castlehoward.co.uk/visit-us/the-gardens/the-woodland-garden}}
+
+[[Category:Castle Howard]]
+[[Category:Forests and woodlands of North Yorkshire]]

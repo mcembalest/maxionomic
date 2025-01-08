@@ -1,0 +1,165 @@
+{{short description|American college football season}}
+{{Use mdy dates|date=January 2025}}
+{{Infobox college sports team season
+| year = 1989
+| team = Morehead State Eagles
+| sport = football
+| image = 
+| image_size = 
+| conference = [[Ohio Valley Conference]]
+| short_conf = OVC
+| record = 1–10
+| wins_forfeited = 4
+| conf_record = 0–6
+| conf_wins_forfeited = 2
+| head_coach = [[Bill Baldridge]]
+| hc_year = 6th
+| captain = 
+| stadium = [[Jayne Stadium]]
+}}
+{{1989 Ohio Valley Conference football standings}}
+The '''1989 Morehead State Eagles football team''' represented [[Morehead State University]] as a member of the [[Ohio Valley Conference]] (OVC) during the [[1989 NCAA Division I-AA football season]]. Led by sixth-year head coach [[Bill Baldridge]], the Eagles compiled an overall record of 1–10, with a mark of 0–6 in conference play, and finished seventh in the OVC. Morehead was found to have played an ineligable player, and as a result forefieted four of their victories.<ref>{{cite news|url=https://www.newspapers.com/article/the-courier-journal-morehead-to-forfeit/162441157/|work=The Courier-Journal|title=Morehead to forfeit two OVC football wins|date=May 12, 1990|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref><ref>{{cite news|url=https://www.newspapers.com/article/the-courier-journal-middle-tenn-getss-o/162441512/|work=The Courier-Journal|title=Middle Tenn. getss OVC nod|date=August 3, 1990|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+
+==Schedule==
+{{CFB schedule
+| rankyear = 1989
+| rankdivision = NCAA Division I-AA
+| poll = NCAA Division I-AA Football Committee
+
+|{{CFB schedule entry
+| date = September 9
+| w/l = l
+| away = y
+| nonconf = y
+| opponent = [[1989 Marshall Thundering Herd football team|Marshall]]
+| opprank = 11
+| site_stadium = [[Fairfield Stadium]]
+| site_cityst = [[Huntington, West Virginia|Huntington, WV]]
+| score = 7–30
+| attend = 18,153
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/the-courier-journal-marshalls-second-ha/162363302/|work=The Courier-Journal|title=Marshall's second half stings Morehead 30–7|date=September 10, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = September 16
+| w/l = l
+| nonconf = y
+| opponent = {{cfb link|year=1989|team=Kentucky State Thorobreds|title=Kentucky State}}
+| site_stadium = [[Jayne Stadium]]
+| site_cityst = [[Morehead, Kentucky|Morehead, KY]]
+| score = 38–0 (forfeit)
+| attend = 
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/the-state-journal-morehead-pulls-away-vs/162442413/|work=The State Journal|title=Morehead pulls away vs. KSU|date=September 17, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = September 23
+| w/l = l
+| nonconf = y
+| opponent = [[1989 Liberty Flames football team|Liberty]]
+| site_stadium = Jayne Stadium
+| site_cityst = Morehead, KY
+| score = 14–34
+| attend = 5,200
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/the-courier-journal-liberty-breaks-free/144581618/|work=The Courier-Journal|title=Liberty breaks free, tops Morehead 34–14|date=September 24, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = September 30
+| w/l = l
+| away = y
+| nonconf = y
+| opponent = [[1989 Samford Bulldogs football team|Samford]]
+| site_stadium = [[Pete Hanna Stadium|Seibert Stadium]]
+| site_cityst = [[Homewood, Alabama|Homewood, AL]]
+| score = 35–28 (forfeit)
+| attend = 2,430
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/lexington-herald-leader-morhead-rides-gr/162400308/|work=Lexington Herald-Leader|title=Morehead rides ground game to victory|date=October 1, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = October 7
+| w/l = l
+| away = y
+| opponent = [[1989 Murray State Racers football team|Murray State]]
+| site_stadium = [[Roy Stewart Stadium]]
+| site_cityst = [[Murray, Kentucky|Murray, KY]]
+| score = 13–27
+| attend = 10,850
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/the-paducah-sun-racers-heal-ovc-ills-des/162437578/|work=The Paducah Sun|title=Racers heal OVC ills despite sickly Proctor|date=October 8, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = October 14
+| w/l = l
+| opponent = [[1989 Middle Tennessee Blue Raiders football team|Middle Tennessee]]
+| site_stadium = Jayne Stadium
+| site_cityst = Morehead, KY
+| score = 3–34
+| attend = 
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/lexington-herald-leader-middle-drills-mo/162429009/|work=Lexington Herald-Leader|title=Middle drills Morehead 34–3; chest pains send Baldridge to hospital|date=October 15, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = October 21
+| w/l = l
+| away = y
+| opponent = [[1989 Tennessee State Tigers football team|Tennessee State]]
+| site_stadium = Hale Stadium
+| site_cityst = [[Nashville, Tennessee|Nashville, TN]]
+| score = 14–23
+| attend = 4,187
+| source = <ref>{{Cite news|url=https://www.newspapers.com/article/the-courier-journal-tennessee-state-thwa/142504688/|title=Tennessee State thwarts Morehead's comeback|newspaper=The Courier-Journal|date=October 22, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = October 28
+| w/l = l
+| away = y
+| opponent = {{cfb link|year=1989|team=Austin Peay Governors|title=Austin Peay}}
+| site_stadium = [[Fortera Stadium|Municipal Stadium]]
+| site_cityst = [[Clarksville, Tennessee|Clarksville, TN]]
+| score = 23–22 (forfeit)
+| attend = 
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/lexington-herald-leader-swartz-passes-si/162443139/|work=Lexington Herald-Leader|title=Swartz passes Simms as Eagles prevail|date=October 29, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = November 4
+| w/l = l
+| opponent = [[1989 Tennessee Tech Golden Eagles football team|Tennessee Tech]]
+| site_stadium = Jayne Stadium
+| site_cityst = Morehead, KY
+| score = 14–8 (forfeit)
+| attend = 
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/lexington-herald-leader-swartz-morehead/162440087/|work=Lexington Herald-Leader|title=Swartz, Morehead beat Tech 14–8|date=November 5, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = November 11
+| w/l = w
+| away = y
+| nonconf = y
+| opponent = [[1989 Cincinnati Bearcats football team|Cincinnati]]
+| site_stadium = [[Nippert Stadium]]
+| site_cityst = [[Cincinnati|Cincinnati, OH]]
+| score = 13–10
+| attend = 
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/the-cincinnati-enquirer-uc-humbled-again/162443430/|work=The Cincinnati Enquirer|title=UC humbled again|date=November 12, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+|{{CFB schedule entry
+| date = November 18
+| w/l = l
+| opponent = [[1989 Eastern Kentucky Colonels football team|Eastern Kentucky]]
+| opprank = 10
+| site_stadium = Jayne Stadium
+| site_cityst = Morehead, KY
+| gamename = [[Old Hawg Rifle|rivalry]]
+| score = 31–38
+| overtime = 3OT
+| attend = 
+| source = <ref>{{cite news|url=https://www.newspapers.com/article/the-leaf-chronicle-eastern-kentucky-snea/143995811/|work=The Leaf-Chronicle|title=Eastern Kentucky sneaks by Eagles|date=November 19, 1989|accessdate=January 6, 2025|via=[[Newspapers.com]]}}</ref>
+}}
+}}
+
+==References==
+{{Reflist}}
+
+{{Morehead State Eagles football navbox}}
+
+[[Category:1989 Ohio Valley Conference football season|Morehead State]]
+[[Category:Morehead State Eagles football seasons]]
+[[Category:1989 in sports in Kentucky|Morehead State Eagles football]]
+
+{{collegefootball-1980s-season-stub}}

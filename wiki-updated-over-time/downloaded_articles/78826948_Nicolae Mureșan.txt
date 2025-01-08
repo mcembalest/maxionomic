@@ -1,0 +1,44 @@
+{{Short description|Romanian footballer (born 1956)}}
+{{Use dmy dates|date=June 2020}}
+{{Infobox football biography
+| name        = Nicolae Mureșan
+| image       = 
+| image_size  = 150px
+| caption     = 
+| fullname    = Nicolae Florentin Mureșan
+| birth_date  = {{birth date and age|df=yes|1956|01|19}}
+| birth_place = [[Oradea]], Romania
+| height      = 1.80 m
+| position    = [[Midfielder|Defensive midfielder]]
+| youthyears1 = 1966–1975 | youthclubs1 = [[FC Bihor Oradea (1958)|Bihor Oradea]]
+| years1      = 1975–1976 |clubs1 = [[FC Bihor Oradea (1958)|Bihor Oradea]]    |caps1 =   5 |goals1 =  0
+| years2      = 1976–1978 |clubs2 = Înfrățirea Oradea                          |caps2 =     |goals2 =  
+| years3      = 1978–1991 |clubs3 = [[FC Bihor Oradea (1958)|Bihor Oradea]]    |caps3 = 342 |goals3 = 44
+| totalcaps   = 347 | totalgoals = 44
+| pcupdate    = 15:02, 7 January 2025 (UTC)
+}}
+
+'''Nicolae Florentin Mureșan''' (born 19 January 1956) is a [[Romania]]n former professional [[Association football|footballer]]. Mureșan grew up in the youth academy of [[FC Bihor Oradea (1958)|FC Bihor Oradea]], club for which he played almost its entire career, in over 340 matches (196 matches in [[Liga I|Divizia A]]).<ref>{{cite book |last= Ciubotaru|first= Constantin|author-link= |date= 2024|title= Loturi Divizia A (volume 2)|url= https://www.olx.ro/d/oferta/loturi-divizia-a-1950-2000-IDhBfqC.html|location= București|publisher= Editura Babel|pages=1-209 |isbn=}}</ref><ref>{{cite book |last= Ciubotaru|first= Constantin|author-link= |date= 2024|title= Loturi Divizia B|url= https://www.olx.ro/d/oferta/loturi-divizia-a-1950-2000-IDhBfqC.html|location= București|publisher= Editura Babel|pages= |isbn=}}</ref> He was the captain of the team during the 1980s, one of the best periods in the history of the club and is also the most-capped player alongside [[Cornel Georgescu]]. After 1991, Nicolae Mureșan moved to [[Canada]], but he periodically returns to [[Oradea]] in order to meet his former teammates.<ref>[https://www.crisana.ro/stiri/sport-7/-nae-muresan-propune-un-plan-pentru-redresarea-fc-bihor-60264.html "Nae" Mureşan propune un plan pentru redresarea FC Bihor]. crisana.ro {{inlang|ro}}</ref><ref>[https://www.crisana.ro/stiri/sport-7/simpozion-aniversar-110-ani-de-fotbal-in-bihor-si-40-de-ani-de-fc-bihor--38226.html Simpozion aniversar - "110 ani de fotbal în Bihor şi 40 de ani de FC Bihor"]. crisana.ro {{inlang|ro}}</ref>
+
+==Honours==
+'''Bihor Oradea'''
+*[[Liga II|Divizia B]]: [[1981–82 Divizia B|1981–82]], [[1987–88 Divizia B|1987–88]]
+
+'''Înfrățirea Oradea'''
+*[[Liga III|Divizia C]]: [[1977–78 Divizia C|1977–78]]
+
+==References==
+{{Reflist}}
+
+{{DEFAULTSORT:Muresan, Nicolae}}
+[[Category:1956 births]]
+[[Category:Living people]]
+[[Category:Footballers from Oradea]]
+[[Category:Romanian men's footballers]]
+[[Category:Men's association football midfielders]]
+[[Category:Liga I players]]
+[[Category:Liga II players]]
+[[Category:FC Bihor Oradea (1958) players]]
+[[Category:20th-century Romanian sportsmen]]
+
+{{Romania-footy-midfielder-stub}}
