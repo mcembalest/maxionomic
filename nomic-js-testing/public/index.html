@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nomic Testing</title>
+    <style>
+        body { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 0 20px; 
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        
+        /* Tab styling */
+        .tabs {
+            margin-top: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab-button {
+            padding: 12px 24px;
+            border: none;
+            background: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 4px;
+            border-radius: 4px 4px 0 0;
+            color: #333;
+        }
+        .tab-button.active {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+            color: #2196F3;
+            font-weight: 500;
+        }
+        .tab-button:not(.active) {
+            background: #f8f8f8;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Existing styles with improvements */
+        textarea { 
+            width: 100%; 
+            height: 120px; 
+            margin: 10px 0; 
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        button {
+            background: #2196F3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #1976D2;
+        }
+        #result {
+            white-space: pre-wrap;
+            background: #f8f8f8;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nomic Testing</h1>
+    
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('embed')">Embeddings</button>
+        <button class="tab-button" onclick="openTab('datasetID')">Atlas Data Map by ID</button>
+        <button class="tab-button" onclick="openTab('datasetSlug')">Atlas Data Map by Slug</button>
+    </div>
+
+    <div id="embed" class="tab-content active">
+        <h2>Generate Embeddings</h2>
+        <p>Enter each phrase on a new line to be embedded:</p>
+        <textarea id="inputText" placeholder="string one to embed&#10;string two to embed"></textarea>
+        <button onclick="getEmbedding()">Get Embeddings</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="datasetID" class="tab-content">
+        <h2>Atlas Data Map by ID</h2>
+        <p>Enter a dataset ID to view data from the corresponding Atlas data map:</p>
+        <textarea id="datasetID" placeholder="Enter dataset ID"></textarea>
+        <button onclick="getDatasetMap()">Get Atlas data map</button>
+        <div id="mapResultFromID"></div>
+    </div>
+
+    <div id="datasetSlug" class="tab-content">
+        <h2>Atlas Data Map by Slug</h2>
+        <p>Enter a dataset slug to view data from the corresponding Atlas data map:</p>
+        <textarea id="datasetSlug" placeholder="Enter dataset slug"></textarea>
+        <button onclick="getDatasetMap()">Get Atlas data map</button>
+        <div id="mapResultFromSlug"></div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            // Hide all tab contents
+            const contents = document.getElementsByClassName('tab-content');
+            for (let content of contents) {
+                content.classList.remove('active');
+            }
+            
+            // Deactivate all tabs
+            const tabs = document.getElementsByClassName('tab-button');
+            for (let tab of tabs) {
+                tab.classList.remove('active');
+            }
+            
+            // Show selected tab content and activate tab
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        async function getDatasetMapByID() {
+            const result = document.getElementById('mapResultFromID');
+            const datasetIDTextArea = document.getElementById('datasetID');
+            const datasetId = datasetNameTextArea.value.trim();
+            
+            if (!datasetId) {
+                result.textContent = 'Please enter a dataset ID';
+                return;
+            }
+            
+            result.textContent = 'Loading dataset...';
+            
+            try {
+                const response = await fetch(`/dataset_by_id/${datasetId}`, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to fetch dataset');
+                }
+                
+                const formattedOutput = {
+                    id: data.id,
+                    name: data.project_name,
+                    description: data.description,
+                    created_at: data.created_timestamp,
+                    num_items: data.total_datums_in_project
+                };
+                
+                result.textContent = JSON.stringify(formattedOutput, null, 2);
+            } catch (error) {
+                result.textContent = `Error: ${error.message}`;
+            }
+        }
+
+
+        async function getDatasetMapBySlug() {
+            const result = document.getElementById('mapResultFromSlug');
+            const datasetSlugTextArea = document.getElementById('datasetSlug');
+            const datasetSlug = datasetSlugTextArea.value.trim();
+            
+            if (!datasetSlug) {
+                result.textContent = 'Please enter a dataset slug';
+                return;
+            }
+            
+            result.textContent = 'Loading dataset...';
+            
+            try {
+                const response = await fetch(`/dataset_by_slug/${datasetSlug}`, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to fetch dataset');
+                }
+                
+                const formattedOutput = {
+                    id: data.id,
+                    name: data.project_name,
+                    description: data.description,
+                    created_at: data.created_timestamp,
+                    num_items: data.total_datums_in_project
+                };
+                
+                result.textContent = JSON.stringify(formattedOutput, null, 2);
+            } catch (error) {
+                result.textContent = `Error: ${error.message}`;
+            }
+        }
+
+        async function getEmbedding() {
+            const textArea = document.getElementById('inputText');
+            const result = document.getElementById('result');
+            
+            try {
+                const response = await fetch('/embed', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: textArea.value })
+                });
+                const data = await response.json();
+                const strings = textArea.value.split('\n').filter(str => str.trim());
+                const prettyResult = {
+                    inputs: strings,
+                    embeddings: data.embeddings
+                };
+                result.textContent = JSON.stringify(prettyResult, null, 2);
+            } catch (error) {
+                result.textContent = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
