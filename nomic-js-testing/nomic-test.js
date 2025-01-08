@@ -1,6 +1,6 @@
 import express from 'express';
 import { embed, AtlasDataset, AtlasViewer } from '@nomic-ai/atlas';
-// atlas = import("https://cdn.skypack.dev/@nomic-ai/atlas@next");
+// const atlas = import("https://cdn.skypack.dev/@nomic-ai/atlas@next");
 const anonViewer = new AtlasViewer({});
 const app = express();
 const port = 3000;
@@ -33,7 +33,10 @@ app.get('/dataset_by_id/:id', async (req, res) => {
 app.get('/dataset_by_slug/:slug', async (req, res) => {
   try {
     const { slug } = req.params;
-    const dataset = new AtlasDataset(slug, anonViewer).withLoadedAttributes();
+    console.log("here is the augmented slug");
+    console.log("nomic/"+slug);
+    console.log("^ there");
+    const dataset = new AtlasDataset("nomic/"+slug);
     const attributes = await dataset.fetchAttributes();
     res.json(attributes);
   } catch (error) {

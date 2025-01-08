@@ -98,16 +98,16 @@
     <div id="datasetID" class="tab-content">
         <h2>Atlas Data Map by ID</h2>
         <p>Enter a dataset ID to view data from the corresponding Atlas data map:</p>
-        <textarea id="datasetID" placeholder="Enter dataset ID"></textarea>
-        <button onclick="getDatasetMap()">Get Atlas data map</button>
+        <textarea id="datasetIDInput" placeholder="Enter dataset ID"></textarea>
+        <button onclick="getDatasetMapByID()">Get Atlas data map</button>
         <div id="mapResultFromID"></div>
     </div>
 
     <div id="datasetSlug" class="tab-content">
         <h2>Atlas Data Map by Slug</h2>
         <p>Enter a dataset slug to view data from the corresponding Atlas data map:</p>
-        <textarea id="datasetSlug" placeholder="Enter dataset slug"></textarea>
-        <button onclick="getDatasetMap()">Get Atlas data map</button>
+        <textarea id="datasetSlugInput" placeholder="Enter dataset slug"></textarea>
+        <button onclick="getDatasetMapBySlug()">Get Atlas data map</button>
         <div id="mapResultFromSlug"></div>
     </div>
 
@@ -132,8 +132,8 @@
 
         async function getDatasetMapByID() {
             const result = document.getElementById('mapResultFromID');
-            const datasetIDTextArea = document.getElementById('datasetID');
-            const datasetId = datasetNameTextArea.value.trim();
+            const datasetIDTextArea = document.getElementById('datasetIDInput');
+            const datasetId = datasetIDTextArea.value.trim();
             
             if (!datasetId) {
                 result.textContent = 'Please enter a dataset ID';
@@ -170,7 +170,7 @@
 
         async function getDatasetMapBySlug() {
             const result = document.getElementById('mapResultFromSlug');
-            const datasetSlugTextArea = document.getElementById('datasetSlug');
+            const datasetSlugTextArea = document.getElementById('datasetSlugInput');
             const datasetSlug = datasetSlugTextArea.value.trim();
             
             if (!datasetSlug) {
