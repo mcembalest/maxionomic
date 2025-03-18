@@ -40,6 +40,7 @@ plt.rcParams.update({
 with open('performance_stats.json', 'r') as f:
     perf_data = json.load(f)['data']
 dataset_data = [d for d in perf_data if d['dataset'] == args.dataset]
+
 latency_stats = {}
 reranking_stats = {}
 
@@ -56,11 +57,17 @@ for filename in os.listdir('reranking_stats'):
                 'queries_evaluated': data['metrics']['queries_evaluated']
             }
 
-for filename in os.listdir('latency_stats'):
-    if args.dataset in filename:
-        with open(os.path.join('latency_stats', filename), 'r') as f:
+#######################################################
+# Estimate cost of hosting Voyage using e5 mistral 7b
+model_to_latency_file = {
+    'nomic-embed-text-v1.5': f'nomic-ai-nomic-embed-text-v1.5_{args.dataset}_b1024_s8192_latency_stats.json',
+    'voyage-3-large': f'intfloat-e5-mistral-7b-instruct_{args.dataset}_b1024_s8192_latency_stats.json'  # Use intfloat for voyage
+}
+for model_name, latency_file in model_to_latency_file.items():
+    file_path = os.path.join('latency_stats', latency_file)
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as f:
             data = json.load(f)
-            model_name = data['model'].replace('nomic-ai/', '').replace('voyageai/', '')
             # Store tokens per second and total tokens from latency stats
             latency_stats[model_name] = {
                 'tokens_per_second': data['tokens_per_second'],
