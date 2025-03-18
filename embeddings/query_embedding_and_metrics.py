@@ -11,6 +11,7 @@ import requests
 import voyageai
 from transformers import AutoTokenizer
 
+
 DATASET_PATHS = {
     "msmarco": "zeta-alpha-ai/NanoMSMARCO",
     "quora": "zeta-alpha-ai/NanoQuoraRetrieval",
@@ -39,15 +40,11 @@ class EmbeddingEvaluator:
         self.use_reranker = use_reranker
         self.initial_k = initial_k if use_reranker else k
         
-        # Initialize cost tracking
         self.total_reranking_cost = 0.0
         self.total_tokens_reranked = 0
         self.total_reranking_requests = 0
+        self.rerank_tokenizer = AutoTokenizer.from_pretrained("voyageai/rerank-2")
         
-        # Initialize tokenizer for accurate token counting
-        self.rerank_tokenizer = AutoTokenizer.from_pretrained("voyageai/voyage-3-large")
-        
-        # Initialize Voyage API client if using a Voyage model
         self.use_voyage = "voyage" in model_name.lower()
         voyage_api_key = os.environ.get("VOYAGE_API_KEY", None)
         if not voyage_api_key and (use_reranker or self.use_voyage):
@@ -151,7 +148,6 @@ class EmbeddingEvaluator:
         query_embeddings = {}
         try:
             if self.use_voyage:
-                # Use Voyage API for embeddings
                 result = self.vo.embed(
                     query_texts, 
                     model=self.model_name.replace("voyageai/", ""), 
@@ -159,7 +155,6 @@ class EmbeddingEvaluator:
                 )
                 embeddings = result.embeddings
             else:
-                # Use existing API endpoint
                 response = requests.post(
                     f"{self.endpoint}/embed",
                     headers=self.headers,

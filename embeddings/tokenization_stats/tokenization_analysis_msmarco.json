@@ -1,0 +1,21 @@
+{
+  "model1": {
+    "name": "nomic-ai/nomic-embed-text-v1.5",
+    "total_tokens": 407146,
+    "avg_doc_length": 74.8292,
+    "median_doc_length": 67.0,
+    "min_doc_length": 13,
+    "max_doc_length": 451,
+    "std_doc_length": 31.241197598043517
+  },
+  "model2": {
+    "name": "voyageai/voyage-3-large",
+    "total_tokens": 363683,
+    "avg_doc_length": 66.1366,
+    "median_doc_length": 60.0,
+    "min_doc_length": 8,
+    "max_doc_length": 451,
+    "std_doc_length": 31.29905334734583
+  },
+  "average_overlap": 0.7014
+}

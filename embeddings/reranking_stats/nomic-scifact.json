@@ -5,7 +5,6 @@
   "use_reranker": true,
   "initial_k": 100,
   "metrics": {
-    "NDCG@10": 0.7482957338861277,
     "MRR@10": 0.7200238095238096,
     "queries_evaluated": 50,
     "total_reranking_cost": 0.08177785,

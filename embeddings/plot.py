@@ -200,5 +200,5 @@ plt.title(f'Performance vs Cost on Nano{args.dataset.upper()}',
 plt.gcf().patch.set_linewidth(2)
 plt.gcf().patch.set_edgecolor('#0D4A34')
 plt.tight_layout()
-plt.savefig(f'performance_vs_cost_{args.dataset}.png', bbox_inches='tight', dpi=300, facecolor='#FEFBF6')
+plt.savefig(f'plots/performance_vs_cost_{args.dataset}.png', bbox_inches='tight', dpi=300, facecolor='#FEFBF6')
 plt.close()
