@@ -1,0 +1,16 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "scifact",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "NDCG@10": 0.7482957338861277,
+    "MRR@10": 0.7200238095238096,
+    "queries_evaluated": 50,
+    "total_reranking_cost": 0.08177785,
+    "total_tokens_reranked": 1635557,
+    "total_reranking_requests": 50,
+    "average_cost_per_query": 0.001635557
+  }
+}

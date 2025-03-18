@@ -1,0 +1,9 @@
+{
+  "dataset": "msmarco",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 1024,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 8.224060773849487,
+  "total_tokens": 374211,
+  "tokens_per_second": 45501.97406005315
+}

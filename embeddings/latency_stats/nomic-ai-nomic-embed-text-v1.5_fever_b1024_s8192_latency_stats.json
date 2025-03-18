@@ -1,0 +1,9 @@
+{
+  "dataset": "fever",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 1024,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 17.388288974761963,
+  "total_tokens": 1290820,
+  "tokens_per_second": 74235.0211612854
+}

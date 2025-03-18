@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "model": "nomic-embed-text-v1.5",
+      "dataset": "msmarco",
+      "NDCG@10": 0.5929,
+      "MRR@10": 0.5339,
+      "Reranking": false
+    },
+    {
+      "model": "nomic-embed-text-v1.5",
+      "dataset": "msmarco",
+      "NDCG@10": 0.7068,
+      "MRR@10": 0.6334,
+      "Reranking": true
+    },
+    {
+      "model": "voyageai/voyage-3-large",
+      "dataset": "msmarco",
+      "NDCG@10": 0.4303,
+      "MRR@10": 0.3579,
+      "Reranking": false
+    },
+    {
+      "model": "voyageai/voyage-3-large",
+      "dataset": "msmarco",
+      "NDCG@10": 0.6975,
+      "MRR@10": 0.6277,
+      "Reranking": true
+    },
+    {
+      "model": "nomic-embed-text-v1.5",
+      "dataset": "scifact",
+      "NDCG@10": 0.6569,
+      "MRR@10": 0.6055,
+      "Reranking": false
+    },
+    {
+      "model": "nomic-embed-text-v1.5",
+      "dataset": "scifact",
+      "NDCG@10": 0.7483,
+      "MRR@10": 0.7200,
+      "Reranking": true
+    },
+    {
+      "model": "voyageai/voyage-3-large",
+      "dataset": "scifact",
+      "NDCG@10": 0.7814,
+      "MRR@10": 0.7360,
+      "Reranking": false
+    },
+    {
+      "model": "voyageai/voyage-3-large",
+      "dataset": "scifact",
+      "NDCG@10": 0.7497,
+      "MRR@10": 0.7217,
+      "Reranking": true
+    },
+    {
+      "model": "nomic-embed-text-v1.5",
+      "dataset": "fever",
+      "NDCG@10": 0.8332,
+      "MRR@10": 0.7919,
+      "Reranking": false
+    },
+    {
+      "model": "nomic-embed-text-v1.5",
+      "dataset": "fever",
+      "NDCG@10": 0.9118,
+      "MRR@10": 0.8825,
+      "Reranking": true
+    },
+    {
+      "model": "voyageai/voyage-3-large",
+      "dataset": "fever",
+      "NDCG@10": 0.5868,
+      "MRR@10": 0.4958,
+      "Reranking": false
+    },
+    {
+      "model": "voyageai/voyage-3-large",
+      "dataset": "fever",
+      "NDCG@10": 0.9012,
+      "MRR@10": 0.8747,
+      "Reranking": true
+    }
+  ]
+}

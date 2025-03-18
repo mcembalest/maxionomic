@@ -1,0 +1,9 @@
+{
+  "dataset": "msmarco",
+  "model": "voyageai/voyage-3-large",
+  "batch_size": 1000,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 27.070695161819458,
+  "total_tokens": 374698,
+  "tokens_per_second": 13841.462059255668
+}

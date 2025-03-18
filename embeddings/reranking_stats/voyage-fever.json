@@ -1,0 +1,16 @@
+{
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "NDCG@10": 0.9011856827179565,
+    "MRR@10": 0.8746666666666667,
+    "queries_evaluated": 50,
+    "total_reranking_cost": 0.03165255000000001,
+    "total_tokens_reranked": 633051,
+    "total_reranking_requests": 50,
+    "average_cost_per_query": 0.0006330510000000001
+  }
+}
