@@ -1,5 +1,3 @@
-# Rules for LLMs editing this file: prioritize being minimal and do not add fake/mock data/results
-
 from argparse import ArgumentParser
 import requests
 import time
@@ -24,8 +22,6 @@ class EmbeddingsBenchmark:
         model_name_safe = model_name.replace("/", "-")
         self.cache_file = f"{self.cache_dir}/{model_name_safe}_{dataset_name}_s{max_seq_length}_embeddings"
         os.makedirs(self.cache_dir, exist_ok=True)
-        
-        # Initialize Voyage API client if using a Voyage model
         self.use_voyage = "voyage" in model_name.lower()
         if self.use_voyage:
             voyage_api_key = os.environ.get("VOYAGE_API_KEY", None)
@@ -37,8 +33,6 @@ class EmbeddingsBenchmark:
     def batch_embed(self, texts):
         """Embed a batch of texts and return embeddings with latency"""
         start_time = time.time()
-        
-        # Count tokens without padding for accurate token counts
         token_counts = [
             len(self.tokenizer.encode(text, add_special_tokens=True, truncation=True, max_length=self.max_seq_length))
             for text in texts

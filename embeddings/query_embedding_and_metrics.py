@@ -42,7 +42,6 @@ class EmbeddingEvaluator:
         
         self.total_reranking_cost = 0.0
         self.total_tokens_reranked = 0
-        self.total_reranking_requests = 0
         self.rerank_tokenizer = AutoTokenizer.from_pretrained("voyageai/rerank-2")
         
         self.use_voyage = "voyage" in model_name.lower()
@@ -205,9 +204,7 @@ class EmbeddingEvaluator:
                 top_k=self.k
             )
             
-            # Update cost tracking
             self.total_tokens_reranked += total_tokens
-            self.total_reranking_requests += 1
             self.total_reranking_cost += (total_tokens / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
             
             # Extract doc_ids in order of relevance scores
@@ -233,7 +230,6 @@ class EmbeddingEvaluator:
             logger.error("Failed to obtain query embeddings")
             return {
                 f"MRR@{self.k}": 0,
-                "queries_evaluated": 0
             }
         mrr_sum = 0
         for query_id in tqdm(query_embeddings):
@@ -242,7 +238,6 @@ class EmbeddingEvaluator:
         query_count = len(query_embeddings)
         metrics = {
             f"MRR@{self.k}": mrr_sum / query_count if query_count > 0 else 0,
-            "queries_evaluated": query_count
         }
         
         # Add reranking cost metrics if reranker was used
@@ -250,8 +245,6 @@ class EmbeddingEvaluator:
             metrics.update({
                 "total_reranking_cost": self.total_reranking_cost,
                 "total_tokens_reranked": self.total_tokens_reranked,
-                "total_reranking_requests": self.total_reranking_requests,
-                "average_cost_per_query": self.total_reranking_cost / query_count if query_count > 0 else 0
             })
         
         return metrics

@@ -26,37 +26,26 @@ def analyze_dataset_truncation(dataset_name, model_name, max_seq_length):
     """Analyze how many documents would be truncated in the dataset."""
     if dataset_name not in DATASET_PATHS:
         raise ValueError(f"Unknown dataset: {dataset_name}. Available: {list(DATASET_PATHS.keys())}")
-    
-    # Load dataset
     dataset_path = DATASET_PATHS[dataset_name]
     corpus = load_dataset(dataset_path, "corpus", split="train")
-    
-    # Process corpus the same way as benchmark_corpus_embedding.py
     processed_corpus = {
         str(sample["_id"]): sample["text"] 
         for sample in corpus 
         if len(sample["text"].strip()) > 0
     }
-    
-    # Initialize tokenizer with provided model
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    
     total_docs = 0
     truncated_docs = 0
     total_tokens = 0
     max_tokens_seen = 0
     max_tokens_doc_id = None
     token_lengths = []
-    
-    # Check each document
     for doc_id, text in processed_corpus.items():
         total_docs += 1
-        # Just encode once and use the token count
         tokens = tokenizer.encode(text, add_special_tokens=True)
         token_count = len(tokens)
         total_tokens += token_count
         token_lengths.append(token_count)
-        
         if token_count > max_tokens_seen:
             max_tokens_seen = token_count
             max_tokens_doc_id = doc_id

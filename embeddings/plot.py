@@ -40,25 +40,19 @@ plt.rcParams.update({
 with open('performance_stats.json', 'r') as f:
     perf_data = json.load(f)['data']
 dataset_data = [d for d in perf_data if d['dataset'] == args.dataset]
-
 latency_stats = {}
 reranking_stats = {}
-
-# Load reranking stats
 for filename in os.listdir('reranking_stats'):
     if args.dataset in filename:
         with open(os.path.join('reranking_stats', filename), 'r') as f:
             data = json.load(f)
             model_name = data['model'].replace('nomic-ai/', '').replace('voyageai/', '')
-            # Store the actual cost data for reranking
             reranking_stats[model_name] = {
                 'total_tokens_reranked': data['metrics']['total_tokens_reranked'],
-                'total_reranking_requests': data['metrics']['total_reranking_requests'],
-                'queries_evaluated': data['metrics']['queries_evaluated']
             }
 
-#######################################################
-# Estimate cost of hosting Voyage using e5 mistral 7b
+########################################################################
+# Estimate compute cost of corpus embedding Voyage using e5 mistral 7b
 model_to_latency_file = {
     'nomic-embed-text-v1.5': f'nomic-ai-nomic-embed-text-v1.5_{args.dataset}_b1024_s8192_latency_stats.json',
     'voyage-3-large': f'intfloat-e5-mistral-7b-instruct_{args.dataset}_b1024_s8192_latency_stats.json'  # Use intfloat for voyage
@@ -68,34 +62,22 @@ for model_name, latency_file in model_to_latency_file.items():
     if os.path.exists(file_path):
         with open(file_path, 'r') as f:
             data = json.load(f)
-            # Store tokens per second and total tokens from latency stats
             latency_stats[model_name] = {
                 'tokens_per_second': data['tokens_per_second'],
-                'total_tokens': data['total_tokens']
+                'total_tokens': data['total_tokens'],
+                'total_duration_seconds': data['total_duration_seconds']
             }
 
 plot_data = []
 for entry in dataset_data:
     model_name = entry['model'].replace('nomic-ai/', '').replace('voyageai/', '')
     if model_name in latency_stats:
-        # Get tokens per second and total tokens from latency stats
-        tokens_per_second = latency_stats[model_name]['tokens_per_second']
-        total_tokens = latency_stats[model_name]['total_tokens']
-        
-        # Calculate time to process all tokens
-        processing_time = total_tokens / tokens_per_second
-        # Calculate embedding cost
+        processing_time = latency_stats[model_name]['total_duration_seconds']
         embedding_cost = processing_time * EC2_COST_PER_SECOND
-        
-        # Total cost starts with embedding cost
         total_cost = embedding_cost
-        
-        # Add reranking cost if applicable
         if entry['Reranking']:
-            # Calculate actual reranking cost
             reranking_cost = reranking_stats[model_name]['total_tokens_reranked'] / 1_000_000 * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
             total_cost += reranking_cost
-        
         plot_data.append({
             'model': model_name,
             'MRR@10': entry['MRR@10'],
@@ -113,6 +95,7 @@ ax.xaxis.set_major_formatter(FuncFormatter(format_scientific))
 ax.grid(True, which='major', linestyle='--', alpha=0.2)
 ax.grid(True, which='minor', linestyle=':', alpha=0.1)
 ax.minorticks_on()
+
 colors = {'nomic-embed-text-v1.5': COLORS[3], 'voyage-3-large': COLORS[1]}
 markers = {'Without Reranking': 'o', 'With Reranking': '^'}
 model_points = {}
@@ -189,6 +172,10 @@ for entry in plot_data:
         annotation_clip=True,
         zorder=3
     )
+
+# Set left x-limit to 0 while preserving right limit
+_, x_max = plt.xlim()
+plt.xlim(0, x_max)
 
 plt.xlabel('Estimated Cost ($)', fontsize=12, labelpad=10)
 plt.ylabel('MRR@10', fontsize=12, labelpad=10)

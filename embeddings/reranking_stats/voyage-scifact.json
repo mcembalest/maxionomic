@@ -6,10 +6,7 @@
   "initial_k": 100,
   "metrics": {
     "MRR@10": 0.7216666666666667,
-    "queries_evaluated": 50,
     "total_reranking_cost": 0.06910075000000002,
-    "total_tokens_reranked": 1382015,
-    "total_reranking_requests": 50,
-    "average_cost_per_query": 0.0013820150000000003
+    "total_tokens_reranked": 1382015
   }
 }
