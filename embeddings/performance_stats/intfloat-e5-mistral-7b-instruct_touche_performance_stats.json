@@ -1,0 +1,11 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "touche",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.02607709750566893,
+    "NDCG@10": 0.033821166995347006
+  }
+}

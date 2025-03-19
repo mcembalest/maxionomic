@@ -1,0 +1,9 @@
+{
+  "dataset": "hotpot",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 512,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 15.924108982086182,
+  "total_tokens": 405222,
+  "tokens_per_second": 25447.0752778604
+}

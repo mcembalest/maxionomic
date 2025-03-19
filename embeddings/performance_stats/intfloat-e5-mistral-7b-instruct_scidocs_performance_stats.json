@@ -1,0 +1,11 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.04479166666666667,
+    "NDCG@10": 0.06376227832605205
+  }
+}

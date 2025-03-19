@@ -1,0 +1,11 @@
+{
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.11240476190476192,
+    "NDCG@10": 0.15988241861374328
+  }
+}

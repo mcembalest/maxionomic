@@ -1,0 +1,11 @@
+{
+  "model": "voyageai/voyage-3-large",
+  "dataset": "scifact",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.7779365079365081,
+    "NDCG@10": 0.816798114668855
+  }
+}

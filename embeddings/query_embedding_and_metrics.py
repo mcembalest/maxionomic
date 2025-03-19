@@ -9,40 +9,45 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 import requests
 import voyageai
-from transformers import AutoTokenizer
 
 
-DATASET_PATHS = {
-    "msmarco": "zeta-alpha-ai/NanoMSMARCO",
-    "quora": "zeta-alpha-ai/NanoQuoraRetrieval",
-    "nfcorpus": "zeta-alpha-ai/NanoNFCorpus",
-    "fiqa": "zeta-alpha-ai/NanoFiQA",
-    "scifact": "zeta-alpha-ai/NanoSciFact",
-    "arguana": "zeta-alpha-ai/NanoArguAna",
-    "scidocs": "zeta-alpha-ai/NanoSciDocs",
-    "fever": "zeta-alpha-ai/NanoFEVER",
-    "climate-fever": "zeta-alpha-ai/NanoClimateFEVER",
-    "dbpedia": "zeta-alpha-ai/NanoDBPedia"
-}
+from corpus_embedding import DATASET_PATHS
 
 VOYAGE_RERANK_COST_PER_MILLION_TOKENS = 0.05
 
+e5_mistral_prompt_dict = {
+    "arguana": "Given a claim, find documents that refute the claim: ",
+    "climate-fever": "Given a claim about climate change, retrieve documents that support or refute the claim: ",
+    "dbpedia": "Given a query, retrieve relevant entity descriptions from DBPedia: ",
+    "fever": "Given a claim, retrieve documents that support or refute the claim: ",
+    "fiqa": "Given a financial question, retrieve user replies that best answer the question: ",
+    "hotpot": "Given a multi-hop question, retrieve documents that can help answer the question: ",
+    "msmarco": "Given a web search query, retrieve relevant passages that answer the query: ",
+    "nfcorpus": "Given a question, retrieve relevant documents that best answer the question: ",
+    "nq": "Given a question, retrieve Wikipedia passages that answer the question: ",
+    "quora": "Given a question, retrieve questions that are semantically equivalent to the given question: ",
+    "scidocs": "Given a scientific paper title, retrieve paper abstracts that are cited by the given paper: ",
+    "scifact": "Given a scientific claim, retrieve documents that support or refute the claim: ",
+    "touche": "Given a question, retrieve detailed and persuasive arguments that answer the question: ",
+}
+
+def get_prefix(dataset_name: str) -> str:
+    
+    raise ValueError(f"unrecognized dataset: {dataset_name}")
+
 class EmbeddingEvaluator:
-    def __init__(self, model_name, dataset_name, endpoint="http://18.216.76.107:8080", batch_size=10, k=10, 
-                 use_reranker=False, initial_k=100):
+    def __init__(self, model_name, dataset_name, endpoint="", k=10, use_reranker=False, initial_k=100):
         """Initialize the embedding evaluator"""
         self.model_name = model_name
         self.dataset_name = dataset_name
         self.endpoint = endpoint
         self.headers = {"Content-Type": "application/json"}
-        self.batch_size = batch_size
         self.k = k
         self.use_reranker = use_reranker
         self.initial_k = initial_k if use_reranker else k
         
         self.total_reranking_cost = 0.0
         self.total_tokens_reranked = 0
-        self.rerank_tokenizer = AutoTokenizer.from_pretrained("voyageai/rerank-2")
         
         self.use_voyage = "voyage" in model_name.lower()
         voyage_api_key = os.environ.get("VOYAGE_API_KEY", None)
@@ -150,14 +155,24 @@ class EmbeddingEvaluator:
                 result = self.vo.embed(
                     query_texts, 
                     model=self.model_name.replace("voyageai/", ""), 
-                    input_type="document"
+                    input_type="query"
                 )
                 embeddings = result.embeddings
             else:
-                response = requests.post(
+                # note: we used consistent prefix for nomic server-side, 
+                # but benchmark-dataset-specific prefixes are needed for e5-mistral
+                payload = {"inputs": query_texts}
+                if "e5-mistral" in self.model_name:
+                    payload = {
+                        "inputs": [
+                            e5_mistral_prompt_dict[self.dataset_name] + x
+                            for x in query_texts
+                        ]
+                    }
+                response = requests.post( 
                     f"{self.endpoint}/embed",
                     headers=self.headers,
-                    json={"inputs": query_texts}
+                    json=payload
                 )
                 if response.status_code != 200:
                     raise Exception(f"Embedding request failed: {response.status_code}")
@@ -192,17 +207,14 @@ class EmbeddingEvaluator:
             docs_to_rerank = [self.corpus[doc_id] for _, doc_id in initial_ranking]
             doc_id_map = {doc: doc_id for doc, (_, doc_id) in zip(docs_to_rerank, initial_ranking)}
             
-            # Count tokens using the Voyage tokenizer
-            query_tokens = len(self.rerank_tokenizer.encode(self.queries[query_id], add_special_tokens=True))
-            docs_tokens = sum(len(self.rerank_tokenizer.encode(doc, add_special_tokens=True)) for doc in docs_to_rerank)
-            total_tokens = (query_tokens * len(docs_to_rerank)) + docs_tokens
-            
             reranking = self.vo.rerank(
                 self.queries[query_id],
                 docs_to_rerank,
                 model="rerank-2",
                 top_k=self.k
             )
+
+            total_tokens = reranking.total_tokens
             
             self.total_tokens_reranked += total_tokens
             self.total_reranking_cost += (total_tokens / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
@@ -218,7 +230,16 @@ class EmbeddingEvaluator:
             if doc_id == relevant_doc:
                 mrr = 1.0 / (rank + 1)
                 break
-        return mrr
+
+        # Calculate NDCG@k
+        # For binary relevance, NDCG = 1/log2(r+1) where r is the rank of the relevant doc
+        ndcg = 0
+        for rank, doc_id in enumerate(ranking):
+            if doc_id == relevant_doc:
+                ndcg = 1.0 / np.log2(rank + 2)
+                break
+
+        return mrr, ndcg
     
     def evaluate(self):
         """Run the evaluation and return metrics"""
@@ -230,14 +251,18 @@ class EmbeddingEvaluator:
             logger.error("Failed to obtain query embeddings")
             return {
                 f"MRR@{self.k}": 0,
+                f"NDCG@{self.k}": 0,
             }
         mrr_sum = 0
+        ndcg_sum = 0
         for query_id in tqdm(query_embeddings):
-            mrr = self.calculate_metrics(query_embeddings[query_id], query_id)
+            mrr, ndcg = self.calculate_metrics(query_embeddings[query_id], query_id)
             mrr_sum += mrr
+            ndcg_sum += ndcg
         query_count = len(query_embeddings)
         metrics = {
             f"MRR@{self.k}": mrr_sum / query_count if query_count > 0 else 0,
+            f"NDCG@{self.k}": ndcg_sum / query_count if query_count > 0 else 0,
         }
         
         # Add reranking cost metrics if reranker was used
@@ -252,48 +277,56 @@ class EmbeddingEvaluator:
 def main():
     parser = argparse.ArgumentParser(description="Calculate MRR using cached embeddings")
     parser.add_argument("--model", type=str)
-    parser.add_argument("--dataset", type=str, default="msmarco",
-                      help=f"Dataset name (default: msmarco). Available: {', '.join(DATASET_PATHS.keys())}")
+    parser.add_argument("--dataset", type=str)
+    parser.add_argument("--skip_datasets", type=str, default = '')
     parser.add_argument("--k", type=int, default=10,
                       help="Number of documents to consider for metrics (default: 10)")
-    parser.add_argument("--batch_size", type=int, default=10)
-    parser.add_argument("--endpoint", type=str, default="http://18.216.76.107:8080",
-                      help="Embedding API endpoint (default: http://18.216.76.107:8080)")
-    parser.add_argument("--output", type=str, default=None,
-                      help="Output file path for metrics (default: None - prints to console)")
+    parser.add_argument("--endpoint", type=str, default="")
+    parser.add_argument("--save", action="store_true")
     parser.add_argument("--use_reranker", action="store_true",
                       help="Whether to use Voyage reranker after initial retrieval")
     parser.add_argument("--initial_k", type=int, default=100,
                       help="Number of documents to retrieve before reranking (default: 100)")
     args = parser.parse_args()
-    
-    logger.info(f"Starting evaluation for {args.model} on {args.dataset}")
-    evaluator = EmbeddingEvaluator(
-        args.model, 
-        args.dataset, 
-        endpoint=args.endpoint, 
-        batch_size=args.batch_size,
-        k=args.k,
-        use_reranker=args.use_reranker,
-        initial_k=args.initial_k,
-    )
-    metrics = evaluator.evaluate()
-    for metric_name, metric_value in metrics.items():
-        if isinstance(metric_value, float):
-            logger.info(f"{metric_name}: {metric_value:.4f}")
-        else:
-            logger.info(f"{metric_name}: {metric_value}")
-    if args.output:
-        with open(args.output, 'w') as f:
-            json.dump({
+
+    if args.dataset == 'all':
+        datasets = list(set(DATASET_PATHS.keys()) - set(args.skip_datasets.split()))
+    else:
+        datasets = [args.dataset]
+
+    for d in datasets:
+        
+        logger.info(f"Starting evaluation for {args.model} on {d}")
+        evaluator = EmbeddingEvaluator(
+            args.model, 
+            d, 
+            endpoint=args.endpoint, 
+            k=args.k,
+            use_reranker=args.use_reranker,
+            initial_k=args.initial_k,
+        )
+        metrics = evaluator.evaluate()
+        for metric_name, metric_value in metrics.items():
+            if isinstance(metric_value, float):
+                logger.info(f"{metric_name}: {metric_value:.4f}")
+            else:
+                logger.info(f"{metric_name}: {metric_value}")
+        if args.save:
+            model_name_safe = args.model.replace("/", "-")
+            output_dict = {
                 "model": args.model,
-                "dataset": args.dataset,
+                "dataset": d,
                 "k": args.k,
                 "use_reranker": args.use_reranker,
                 "initial_k": args.initial_k if args.use_reranker else args.k,
                 "metrics": metrics
-            }, f, indent=2)
-        logger.info(f"Metrics saved to {args.output}")
+            }
+            output_filename = f"performance_stats/{model_name_safe}_{d}_performance_stats.json"
+            if args.use_reranker:
+                output_filename = f"performance_stats/{model_name_safe}_{d}_rerank_performance_stats.json"
+            with open(output_filename, 'w') as f:
+                json.dump(output_dict, f, indent=2)
+            logger.info(f"Metrics saved to {output_filename}")
 
 if __name__ == "__main__":
     main()

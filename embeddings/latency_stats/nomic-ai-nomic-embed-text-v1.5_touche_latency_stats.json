@@ -1,0 +1,9 @@
+{
+  "dataset": "touche",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 512,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 46.62561297416687,
+  "total_tokens": 2688027,
+  "tokens_per_second": 57651.29568354015
+}

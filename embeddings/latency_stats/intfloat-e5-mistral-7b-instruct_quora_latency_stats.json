@@ -1,0 +1,9 @@
+{
+  "dataset": "quora",
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "batch_size": 256,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 46.91695713996887,
+  "total_tokens": 77912,
+  "tokens_per_second": 1660.6362549805312
+}

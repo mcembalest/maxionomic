@@ -1,0 +1,13 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.2299365079365079,
+    "NDCG@10": 0.27996081612378354,
+    "total_reranking_cost": 0.10574949999999998,
+    "total_tokens_reranked": 2114990
+  }
+}

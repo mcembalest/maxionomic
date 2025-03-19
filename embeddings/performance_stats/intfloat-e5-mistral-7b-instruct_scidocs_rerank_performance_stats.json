@@ -1,0 +1,13 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.17685185185185184,
+    "NDCG@10": 0.22122593234516,
+    "total_reranking_cost": 0.04377519999999999,
+    "total_tokens_reranked": 875504
+  }
+}

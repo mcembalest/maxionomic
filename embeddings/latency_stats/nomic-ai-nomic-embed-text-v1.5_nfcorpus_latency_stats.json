@@ -1,0 +1,9 @@
+{
+  "dataset": "nfcorpus",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 512,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 18.770181894302368,
+  "total_tokens": 1006020,
+  "tokens_per_second": 53596.71023248711
+}

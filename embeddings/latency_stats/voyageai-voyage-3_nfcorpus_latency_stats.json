@@ -1,0 +1,9 @@
+{
+  "dataset": "nfcorpus",
+  "model": "voyageai/voyage-3",
+  "batch_size": 500,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 15.951193809509277,
+  "total_tokens": 1000295,
+  "tokens_per_second": 62709.726428355214
+}

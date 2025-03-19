@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fiqa",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.44641269841269837,
+    "NDCG@10": 0.5043473295836195,
+    "total_reranking_cost": 0.056785800000000004,
+    "total_tokens_reranked": 1135716
+  }
+}

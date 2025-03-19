@@ -1,0 +1,11 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "scifact",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.2630238095238095,
+    "NDCG@10": 0.29935613551921864
+  }
+}

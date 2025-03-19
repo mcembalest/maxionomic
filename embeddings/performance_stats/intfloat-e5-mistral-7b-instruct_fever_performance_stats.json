@@ -1,0 +1,11 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.7246031746031746,
+    "NDCG@10": 0.7862835922960341
+  }
+}

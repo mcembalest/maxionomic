@@ -1,0 +1,9 @@
+{
+  "dataset": "climate-fever",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 512,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 20.598947048187256,
+  "total_tokens": 1102841,
+  "tokens_per_second": 53538.70746014913
+}

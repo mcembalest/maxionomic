@@ -1,0 +1,9 @@
+{
+  "dataset": "touche",
+  "model": "voyageai/voyage-3-large",
+  "batch_size": 150,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 130.65608096122742,
+  "total_tokens": 2601233,
+  "tokens_per_second": 19909.008297684388
+}

@@ -1,0 +1,13 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.18255555555555553,
+    "NDCG@10": 0.2391663067104415,
+    "total_reranking_cost": 0.023366500000000002,
+    "total_tokens_reranked": 467330
+  }
+}

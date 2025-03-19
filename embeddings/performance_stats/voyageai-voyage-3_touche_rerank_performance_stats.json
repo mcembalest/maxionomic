@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3",
+  "dataset": "touche",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.11269031422092647,
+    "NDCG@10": 0.161115821065871,
+    "total_reranking_cost": 0.12755174999999996,
+    "total_tokens_reranked": 2551035
+  }
+}

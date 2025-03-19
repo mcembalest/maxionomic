@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.8798333333333334,
+    "NDCG@10": 0.9097579241089803,
+    "total_reranking_cost": 0.07362170000000003,
+    "total_tokens_reranked": 1472434
+  }
+}

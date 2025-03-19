@@ -1,0 +1,11 @@
+{
+  "model": "voyageai/voyage-3-large",
+  "dataset": "nfcorpus",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.0638888888888889,
+    "NDCG@10": 0.09945781561210118
+  }
+}

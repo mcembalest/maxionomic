@@ -1,0 +1,11 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.40729365079365076,
+    "NDCG@10": 0.5269050465311422
+  }
+}

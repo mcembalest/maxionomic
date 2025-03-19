@@ -1,0 +1,11 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "nfcorpus",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.054333333333333324,
+    "NDCG@10": 0.07899876638826649
+  }
+}

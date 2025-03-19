@@ -1,0 +1,9 @@
+{
+  "dataset": "arguana",
+  "model": "voyageai/voyage-3",
+  "batch_size": 500,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 15.205609798431396,
+  "total_tokens": 757482,
+  "tokens_per_second": 49815.95674499957
+}

@@ -1,0 +1,9 @@
+{
+  "dataset": "quora",
+  "model": "voyageai/voyage-3",
+  "batch_size": 500,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 11.344924926757812,
+  "total_tokens": 58255,
+  "tokens_per_second": 5134.895151452385
+}

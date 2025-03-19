@@ -1,0 +1,9 @@
+{
+  "dataset": "climate-fever",
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "batch_size": 256,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 330.9028811454773,
+  "total_tokens": 1266286,
+  "tokens_per_second": 3826.760273638395
+}

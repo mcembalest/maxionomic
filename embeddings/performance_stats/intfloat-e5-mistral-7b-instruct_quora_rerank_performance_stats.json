@@ -1,0 +1,13 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "quora",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.8766666666666666,
+    "NDCG@10": 0.9083301655000041,
+    "total_reranking_cost": 0.0046578999999999995,
+    "total_tokens_reranked": 93158
+  }
+}

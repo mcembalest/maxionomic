@@ -1,0 +1,9 @@
+{
+  "dataset": "hotpot",
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "batch_size": 256,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 151.69902396202087,
+  "total_tokens": 489450,
+  "tokens_per_second": 3226.454509836121
+}

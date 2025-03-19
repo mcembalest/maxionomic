@@ -1,9 +1,0 @@
-{
-  "dataset": "msmarco",
-  "model": "intfloat/e5-mistral-7b-instruct",
-  "batch_size": 256,
-  "max_seq_length": 8192,
-  "total_duration_seconds": 118.70910501480103,
-  "total_tokens": 423225,
-  "tokens_per_second": 3565.227788948716
-}

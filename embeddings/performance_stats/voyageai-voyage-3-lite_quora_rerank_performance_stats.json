@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "quora",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.855,
+    "NDCG@10": 0.8921808868043303,
+    "total_reranking_cost": 0.0059762,
+    "total_tokens_reranked": 119524
+  }
+}

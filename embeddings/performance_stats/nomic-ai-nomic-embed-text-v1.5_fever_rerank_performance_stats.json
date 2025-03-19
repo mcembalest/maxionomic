@@ -1,0 +1,13 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.8778888888888889,
+    "NDCG@10": 0.9080827576480133,
+    "total_reranking_cost": 0.08171259999999998,
+    "total_tokens_reranked": 1634252
+  }
+}

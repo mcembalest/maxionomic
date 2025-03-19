@@ -1,9 +1,0 @@
-{
-  "dataset": "scifact",
-  "model": "intfloat/e5-mistral-7b-instruct",
-  "batch_size": 1024,
-  "max_seq_length": 8192,
-  "total_duration_seconds": 268.3431098461151,
-  "total_tokens": 1073986,
-  "tokens_per_second": 4002.28647799413
-}

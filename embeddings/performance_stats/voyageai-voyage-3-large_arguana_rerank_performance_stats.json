@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3-large",
+  "dataset": "arguana",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.566579365079365,
+    "NDCG@10": 0.6579198254682176,
+    "total_reranking_cost": 0.11629085,
+    "total_tokens_reranked": 2325817
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "hotpot",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.622,
+    "NDCG@10": 0.703236045492164,
+    "total_reranking_cost": 0.029520700000000007,
+    "total_tokens_reranked": 590414
+  }
+}

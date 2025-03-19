@@ -10,7 +10,7 @@ from datasets import load_dataset
 import voyageai
 
 class EmbeddingsBenchmark:
-    def __init__(self, model_name, batch_size, max_seq_length, endpoint="http://18.216.76.107:8080", dataset_name="", use_cache=False):
+    def __init__(self, model_name, batch_size, max_seq_length, endpoint="", dataset_name="", use_cache=False):
         self.cache_dir = "embeddings_cache"
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.batch_size = batch_size
@@ -30,13 +30,9 @@ class EmbeddingsBenchmark:
             voyageai.api_key = voyage_api_key
             self.vo = voyageai.Client()
     
-    def batch_embed(self, texts):
+    def batch_embed(self, texts: list[str]):
         """Embed a batch of texts and return embeddings with latency"""
         start_time = time.time()
-        token_counts = [
-            len(self.tokenizer.encode(text, add_special_tokens=True, truncation=True, max_length=self.max_seq_length))
-            for text in texts
-        ]
         
         if self.use_voyage:
             result = self.vo.embed(
@@ -45,6 +41,7 @@ class EmbeddingsBenchmark:
                 input_type="document"
             )
             embeddings = result.embeddings
+            total_tokens = result.total_tokens
         else:
             response = requests.post(
                 f"{self.endpoint}/embed",
@@ -54,11 +51,16 @@ class EmbeddingsBenchmark:
             if response.status_code != 200:
                 raise Exception(f"Embedding request failed with status {response.status_code}: {response.text}")
             embeddings = response.json()
+            token_counts = [
+                len(self.tokenizer.encode(text, add_special_tokens=True, truncation=True, max_length=self.max_seq_length))
+                for text in texts
+            ]
+            total_tokens = sum(token_counts)
         
         latency = time.time() - start_time
         if len(embeddings) != len(texts):
             raise Exception(f"Expected {len(texts)} embeddings but got {len(embeddings)}")
-        return embeddings, latency, sum(token_counts)
+        return embeddings, latency, total_tokens
 
     def embed_corpus(self, corpus):
         """Embed an entire corpus with batching and caching"""
@@ -123,16 +125,19 @@ class EmbeddingsBenchmark:
         return all_embeddings, total_duration, total_tokens
 
 DATASET_PATHS = {
-    "msmarco": "zeta-alpha-ai/NanoMSMARCO",
-    "quora": "zeta-alpha-ai/NanoQuoraRetrieval",
-    "nfcorpus": "zeta-alpha-ai/NanoNFCorpus",
-    "fiqa": "zeta-alpha-ai/NanoFiQA",
-    "scifact": "zeta-alpha-ai/NanoSciFact",
     "arguana": "zeta-alpha-ai/NanoArguAna",
-    "scidocs": "zeta-alpha-ai/NanoSciDocs",
-    "fever": "zeta-alpha-ai/NanoFEVER",
     "climate-fever": "zeta-alpha-ai/NanoClimateFEVER",
-    "dbpedia": "zeta-alpha-ai/NanoDBPedia"
+    "dbpedia": "zeta-alpha-ai/NanoDBPedia",
+    "fever": "zeta-alpha-ai/NanoFEVER",
+    "fiqa": "zeta-alpha-ai/NanoFiQA2018",
+    "hotpot": "zeta-alpha-ai/NanoHotpotQA",
+    "msmarco": "zeta-alpha-ai/NanoMSMARCO",
+    "nfcorpus": "zeta-alpha-ai/NanoNFCorpus",
+    "nq": "zeta-alpha-ai/NanoNQ",
+    "quora": "zeta-alpha-ai/NanoQuoraRetrieval",
+    "scidocs": "zeta-alpha-ai/NanoSciDocs",
+    "scifact": "zeta-alpha-ai/NanoSciFact",
+    "touche": "zeta-alpha-ai/NanoTouche2020",
 }
 
 def load_dataset_corpus(dataset_name):
@@ -154,38 +159,47 @@ def load_dataset_corpus(dataset_name):
 
 if __name__ == "__main__":
     parser = ArgumentParser(description="Benchmark embedding models on NanoBEIR datasets")
-    parser.add_argument("--model", type=str, help="For file naming only, model is loaded in EC2 instance")
-    parser.add_argument("--dataset", type=str, default="msmarco",
-                      help=f"Dataset name (default: msmarco). Available: {', '.join(DATASET_PATHS.keys())}")
-    parser.add_argument("--endpoint", type=str, default="http://18.216.76.107:8080")
-    parser.add_argument("--batch_size", type=int, default=8)
-    parser.add_argument("--max_seq_length", type=int, default=512)
+    parser.add_argument("--model", type=str)
+    parser.add_argument("--dataset", type=str)
+    parser.add_argument("--endpoint", type=str)
+    parser.add_argument("--batch_size", type=int, default=512)
+    parser.add_argument("--max_seq_length", type=int, default=8192)
     parser.add_argument("--no_cache", action="store_false", dest="use_cache", 
                       help="Disable cache for embeddings (default: cache enabled)")
+    parser.add_argument("--save", action="store_true")
     args = parser.parse_args()
-    
-    print(f"Benchmark starting for {args.model} on {args.dataset}")
-    print(f"Cache usage: {'Enabled' if args.use_cache else 'Disabled'}")
 
-    corpus = load_dataset_corpus(args.dataset)
-    benchmark = EmbeddingsBenchmark(
-        args.model,
-        args.batch_size,
-        args.max_seq_length,
-        endpoint=args.endpoint,
-        dataset_name=args.dataset,
-        use_cache=args.use_cache
-    )
-    corpus_embeddings, total_duration, total_tokens = benchmark.embed_corpus(corpus)
+    if args.dataset == 'all':
+        datasets = list(DATASET_PATHS.keys())
+    else:
+        datasets = [args.dataset]
     
-    model_name_safe = args.model.replace("/", "-")
-    with open(f"latency_stats/{model_name_safe}_{args.dataset}_b{args.batch_size}_s{args.max_seq_length}_latency_stats.json", 'w') as f:
-        json.dump({
-            "dataset": args.dataset,
+    for d in datasets:
+        print(f"Benchmark starting for {args.model} on {d}")
+        print("saving results? >>", args.save, "<<")
+        print(f"Cache usage: {'Enabled' if args.use_cache else 'Disabled'}")
+        corpus = load_dataset_corpus(d)
+        benchmark = EmbeddingsBenchmark(
+            args.model,
+            args.batch_size,
+            args.max_seq_length,
+            endpoint=args.endpoint,
+            dataset_name=d,
+            use_cache=args.use_cache
+        )
+        corpus_embeddings, total_duration, total_tokens = benchmark.embed_corpus(corpus)
+        
+        model_name_safe = args.model.replace("/", "-")
+        output_dict = {
+            "dataset": d,
             "model": args.model,
             "batch_size": args.batch_size,
             "max_seq_length": args.max_seq_length,
             "total_duration_seconds": total_duration,
             "total_tokens": total_tokens,
             "tokens_per_second": total_tokens / total_duration if total_duration > 0 else 0,
-        }, f, indent=2)
+        }
+        print(output_dict)
+        if args.save:
+            with open(f"latency_stats/{model_name_safe}_{d}_b{args.batch_size}_s{args.max_seq_length}_latency_stats.json", 'w') as f:
+                json.dump(output_dict, f, indent=2)

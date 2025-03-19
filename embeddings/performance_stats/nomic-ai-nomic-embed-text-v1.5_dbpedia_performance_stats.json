@@ -1,0 +1,11 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.145,
+    "NDCG@10": 0.1957208153993665
+  }
+}

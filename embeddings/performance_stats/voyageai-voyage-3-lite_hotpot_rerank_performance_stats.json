@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "hotpot",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.6136666666666667,
+    "NDCG@10": 0.692003919259267,
+    "total_reranking_cost": 0.025385099999999997,
+    "total_tokens_reranked": 507702
+  }
+}

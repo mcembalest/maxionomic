@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3",
+  "dataset": "scifact",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.7176666666666667,
+    "NDCG@10": 0.7421803508116603,
+    "total_reranking_cost": 0.08569145,
+    "total_tokens_reranked": 1713829
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "dataset": "dbpedia",
+  "model": "voyageai/voyage-3-lite",
+  "batch_size": 1000,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 38.565505027770996,
+  "total_tokens": 493596,
+  "tokens_per_second": 12798.898903166491
+}

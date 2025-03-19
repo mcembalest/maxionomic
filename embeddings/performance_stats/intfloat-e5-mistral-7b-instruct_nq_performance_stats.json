@@ -1,0 +1,11 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "nq",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.3840158730158729,
+    "NDCG@10": 0.4627464727334394
+  }
+}

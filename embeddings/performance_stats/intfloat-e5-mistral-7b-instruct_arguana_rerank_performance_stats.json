@@ -1,0 +1,13 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.3016666666666667,
+    "NDCG@10": 0.3520265441986951,
+    "total_reranking_cost": 0.12542370000000003,
+    "total_tokens_reranked": 2508474
+  }
+}
