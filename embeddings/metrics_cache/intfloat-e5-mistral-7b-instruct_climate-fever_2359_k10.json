@@ -1,0 +1,28 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.2811463015585058,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "2359",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Deforestation_and_climate_change",
+    "Atmospheric_carbon_cycle",
+    "Environmental_issue",
+    "History_of_climate_change_science",
+    "Greenhouse_gas",
+    "Scientific_consensus_on_climate_change",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Greening_Earth_Society",
+    "Abrupt_climate_change",
+    "Climate_state"
+  ],
+  "relevant_docs": [
+    "Greenhouse_gas",
+    "Global_warming",
+    "Carbon_dioxide",
+    "Carbon_dioxide_in_Earth's_atmosphere"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1822",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Carbon_tax",
+    "Carbon_price",
+    "Canada_and_the_Kyoto_Protocol",
+    "Carbon_pricing_in_Australia",
+    "Environmental_impact_of_transport_in_Australia",
+    "Climate_change_in_Australia",
+    "Mitigation_of_global_warming_in_Australia",
+    "Climate_change_in_Canada",
+    "Environmental_pricing_reform",
+    "Carbon_bubble"
+  ],
+  "relevant_docs": [
+    "Carbon_tax"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "21854",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Physics",
+    "Index_of_physics_articles",
+    "Physics_outreach",
+    "Particle_physics",
+    "University_of_Sydney_School_of_Physics",
+    "Space_physics",
+    "Astrophysics",
+    "Theory_of_everything",
+    "Communication_physics",
+    "Physics_Today"
+  ],
+  "relevant_docs": [
+    "Physics"
+  ]
+}

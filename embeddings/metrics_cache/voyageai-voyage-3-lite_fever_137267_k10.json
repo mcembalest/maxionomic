@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "137267",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Menace_II_Society",
+    "Society_(film)",
+    "Groupe_du_mus\u00e9e_de_l'Homme",
+    "Two_(Earshot_album)",
+    "Mensa_International",
+    "Chapter_2:_World_Domination",
+    "1190s_in_England",
+    "List_of_USAF_Strategic_Missile_Wings_assigned_to_Strategic_Air_Command",
+    "West_Side_Boys",
+    "Royal_Society_of_Musicians"
+  ],
+  "relevant_docs": [
+    "Menace_II_Society"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "94779",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Petyr_Baelish",
+    "Aidan_Gillen",
+    "Oberyn_Martell",
+    "Cripples,_Bastards,_and_Broken_Things",
+    "Varys",
+    "Roose_Bolton",
+    "Ramsay_Bolton",
+    "Bran_Stark",
+    "Jaime_Lannister",
+    "The_Pointy_End"
+  ],
+  "relevant_docs": [
+    "Petyr_Baelish"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-law-umtlilhotac-con02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-law-umtlilhotac-con02a",
+    "test-international-aglhrilhb-pro01a",
+    "training-free-speech-debate-ifdffehw-con04b",
+    "training-politics-oepvhwvseacd0-pro03a",
+    "training-international-alilhbukiw-con01a",
+    "test-law-lghwpcctcc-con03a",
+    "training-international-melhrilppd-pro01b",
+    "training-international-alilhbassw-pro03b",
+    "test-politics-ypppgvhwmv-con02b",
+    "test-international-amehbuaisji-con04a"
+  ],
+  "relevant_docs": [
+    "test-law-umtlilhotac-con02b"
+  ]
+}

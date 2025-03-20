@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "64966",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Camp_Flog_Gnaw",
+    "Camp_(style)",
+    "Camp_Belknap_(military_camp)",
+    "Camp_Nama",
+    "Jesus_freak",
+    "Campdrafting",
+    "Camp_War_Eagle",
+    "CAMP_(company)",
+    "Horror_convention",
+    "H._Rap_Brown"
+  ],
+  "relevant_docs": [
+    "Camp_Flog_Gnaw"
+  ]
+}

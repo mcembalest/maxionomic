@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-32",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Fitzgerald_Auto_Malls>",
+    "<dbpedia:Chambersburg_Mall>",
+    "<dbpedia:Herb_Chambers_Companies>",
+    "<dbpedia:Fairlane_Village_Mall>",
+    "<dbpedia:Forman_Mills>",
+    "<dbpedia:Westmoreland_Outlet_World>",
+    "<dbpedia:List_of_shopping_malls_in_Pennsylvania>",
+    "<dbpedia:Susquehanna_Valley_Mall>",
+    "<dbpedia:Eastland_Mall_(North_Versailles,_Pennsylvania)>",
+    "<dbpedia:Springfield_Mall_(SEPTA_Route_101_station)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Fitzgerald_Auto_Malls>"
+  ]
+}

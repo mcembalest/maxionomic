@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "1360",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Global_cooling",
+    "Air_pollution_in_the_United_States",
+    "Hockey_stick_graph",
+    "Global_warming_hiatus",
+    "Living_Planet_Index",
+    "Global_stilling",
+    "Religion_in_the_United_States",
+    "Glacier_mass_balance",
+    "Mesopause",
+    "Home-ownership_in_the_United_States"
+  ],
+  "relevant_docs": [
+    "Solar_cycle",
+    "Hysterectomy",
+    "Usage_share_of_operating_systems",
+    "Uptick_rule"
+  ],
+  "tokens_reranked": 38792
+}

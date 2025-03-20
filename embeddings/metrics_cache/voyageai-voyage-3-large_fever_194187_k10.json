@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.9197207891481876,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "194187",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Barbara_Bush",
+    "Marvin_Bush",
+    "Jeb_Bush",
+    "Political_positions_of_Jeb_Bush",
+    "George_W._Bush",
+    "Jonathan_Bush",
+    "Laura_Bush",
+    "Bush_compound",
+    "Bushie",
+    "Presidency_of_George_H._W._Bush"
+  ],
+  "relevant_docs": [
+    "Jeb_Bush",
+    "Barbara_Bush"
+  ]
+}

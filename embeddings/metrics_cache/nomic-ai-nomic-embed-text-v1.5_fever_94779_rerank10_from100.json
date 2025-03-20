@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "94779",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Petyr_Baelish",
+    "Aidan_Gillen",
+    "A_Feast_for_Crows",
+    "Battle_of_the_Bastards",
+    "A_Game_of_Thrones",
+    "Iron_Throne_(A_Song_of_Ice_and_Fire)",
+    "Game_of_Thrones_(season_2)",
+    "Game_of_Thrones_(season_3)",
+    "A_Game_of_Thrones_(board_game)",
+    "Game_of_Thrones_(2014_video_game)"
+  ],
+  "relevant_docs": [
+    "Petyr_Baelish"
+  ],
+  "tokens_reranked": 32815
+}

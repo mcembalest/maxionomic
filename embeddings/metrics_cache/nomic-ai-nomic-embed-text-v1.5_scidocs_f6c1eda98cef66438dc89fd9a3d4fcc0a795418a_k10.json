@@ -1,0 +1,29 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.3347975674340217,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "scidocs",
+  "query_id": "f6c1eda98cef66438dc89fd9a3d4fcc0a795418a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "8df383aae16ce1003d57184d8e4bf729f265ab40",
+    "5ab321e0ea7893dda145331bfb95e102c0b61a5d",
+    "e36ecd4250fac29cc990330e01c9abee4c67a9d6",
+    "e4f7706213ee2bc9b1255c82c88990992ed0fddc",
+    "209929b05cee369ee000ae4ae4c2ec7d26cff197",
+    "65077651b36a63d3ca4184137df348cc8b29776a",
+    "bbad8eb4fd80411f99b08a5b2aa11eaed6b6f51a",
+    "bbe657fbc16cbf0ceaebd596cea5b3915f4eb39c",
+    "9462cd1ec2e404b22f76c88b6149d1e84683acb7",
+    "60686a80b91ce9518428e00dea95dfafadadd93c"
+  ],
+  "relevant_docs": [
+    "9639aa5fadb89ea5e8362dad52082745012c90aa",
+    "838b107445e72d903f2217946c73a5d3d1e4344e",
+    "6f3ffb1a7b6cb168caeb81a23b68bbf99fdab052",
+    "65077651b36a63d3ca4184137df348cc8b29776a",
+    "5ab321e0ea7893dda145331bfb95e102c0b61a5d"
+  ]
+}

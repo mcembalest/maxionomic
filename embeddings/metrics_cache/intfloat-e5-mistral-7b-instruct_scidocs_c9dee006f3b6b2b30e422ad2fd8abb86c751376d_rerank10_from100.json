@@ -1,0 +1,30 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8013122149737618,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "scidocs",
+  "query_id": "c9dee006f3b6b2b30e422ad2fd8abb86c751376d",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "8b85f287c144aad5ff038ec0b140e0c4e210990b",
+    "e72e10ad6228bd3dcee792f6f571c5ffed37266f",
+    "2087c23fbc7890c1b27fe3f2914299cc0693306e",
+    "60afb1828de4efa1588401f87caa55ac3a0cd820",
+    "14316b885f65d2197ce8c6d4ab3ee61fdab052b8",
+    "14316b885f65d2197ce8c6d4ab3ee61fdab052b8",
+    "14316b885f65d2197ce8c6d4ab3ee61fdab052b8",
+    "14316b885f65d2197ce8c6d4ab3ee61fdab052b8",
+    "f4f6ae0b10f2cc26e5cf75b4c39c70703f036e9b",
+    "6882dcb241f5aaefe85025bf754f8dd1c1502df1"
+  ],
+  "relevant_docs": [
+    "f4f6ae0b10f2cc26e5cf75b4c39c70703f036e9b",
+    "e72e10ad6228bd3dcee792f6f571c5ffed37266f",
+    "60afb1828de4efa1588401f87caa55ac3a0cd820",
+    "7f60b70dede16fe4d7b412674929b4805c9b5c95",
+    "8b85f287c144aad5ff038ec0b140e0c4e210990b"
+  ],
+  "tokens_reranked": 16502
+}

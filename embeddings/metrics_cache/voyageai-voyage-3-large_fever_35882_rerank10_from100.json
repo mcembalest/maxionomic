@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "35882",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Pearl_(Steven_Universe)",
+    "Steven_Universe_(character)",
+    "List_of_anthropomorphic_animal_superheroes",
+    "Magic_in_fiction",
+    "Cartoon_physics",
+    "Soul",
+    "Existence",
+    "Phenotype",
+    "Shelby_Rabara",
+    "List_of_occult_terms"
+  ],
+  "relevant_docs": [
+    "Pearl_(Steven_Universe)"
+  ],
+  "tokens_reranked": 32089
+}

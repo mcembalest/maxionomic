@@ -1,0 +1,29 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.3853585682515056,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-67",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Princess_Mar\u00eda_de_las_Mercedes_of_Bourbon-Two_Sicilies>",
+    "<dbpedia:Infanta_Elena,_Duchess_of_Lugo>",
+    "<dbpedia:Spanish_Royal_Family>",
+    "<dbpedia:Duke_of_Franco>",
+    "<dbpedia:Juan_Carlos_(disambiguation)>",
+    "<dbpedia:Princess_Maria_de_la_Esperanza_of_Bourbon-Two_Sicilies>",
+    "<dbpedia:Prince_Carlos_of_Bourbon-Two_Sicilies>",
+    "<dbpedia:Princess_Maria_Antonia_of_Naples_and_Sicily>",
+    "<dbpedia:Infanta_Isabel_Maria_of_Portugal>",
+    "<dbpedia:Infanta_Eulalia_of_Spain>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Paul_of_Greece>",
+    "<dbpedia:Frederica_of_Hanover>",
+    "<dbpedia:Infanta_Elena,_Duchess_of_Lugo>",
+    "<dbpedia:Princess_Maria_de_la_Esperanza_of_Bourbon-Two_Sicilies>"
+  ],
+  "tokens_reranked": 11519
+}

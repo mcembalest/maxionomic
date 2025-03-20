@@ -1,0 +1,42 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.9363792118010483,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-60",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:List_of_lakes_of_Denmark>",
+    "<dbpedia:The_Lakes,_Copenhagen>",
+    "<dbpedia:Lake_Esrum>",
+    "<dbpedia:Arres\u00f8>",
+    "<dbpedia:Tiss\u00f8>",
+    "<dbpedia:Moss\u00f8>",
+    "<dbpedia:Maribo>",
+    "<dbpedia:Madum_Lake>",
+    "<dbpedia:Damhus_Lake>",
+    "<dbpedia:Hammeren>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Arres\u00f8>",
+    "<dbpedia:Lake_Pavilion,_Copenhagen>",
+    "<dbpedia:Lake_Esrum>",
+    "<dbpedia:Lake_Bagsv\u00e6rd>",
+    "<dbpedia:The_Lakes,_Copenhagen>",
+    "<dbpedia:B\u00f8lling_lake>",
+    "<dbpedia:Madum_Lake>",
+    "<dbpedia:Lake_Denmark>",
+    "<dbpedia:Damhus_Lake>",
+    "<dbpedia:Lake_Stubbe>",
+    "<dbpedia:Lists_of_lakes>",
+    "<dbpedia:Tiss\u00f8>",
+    "<dbpedia:List_of_lakes_of_Denmark>",
+    "<dbpedia:Maribo>",
+    "<dbpedia:Fures\u00f8_(lake)>",
+    "<dbpedia:Moss\u00f8>",
+    "<dbpedia:Brabrand_Lake>"
+  ],
+  "tokens_reranked": 6921
+}

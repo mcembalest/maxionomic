@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-economy-egppphbcb-pro03a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-economy-egppphbcb-pro03a",
+    "test-economy-egppphbcb-pro01a",
+    "training-religion-msgfhwagcm-con04a",
+    "training-health-dhgamvs-con03a",
+    "test-science-ciidfaihwc-con03a",
+    "training-economy-bepeghbnmw-pro02a",
+    "training-international-alcphbgbsnl-con03a",
+    "training-law-cplghrhwrgo-pro04a",
+    "training-economy-bepeghbnmw-con02a",
+    "test-science-cpisydfphwj-con03a"
+  ],
+  "relevant_docs": [
+    "test-economy-egppphbcb-pro03b"
+  ],
+  "tokens_reranked": 66847
+}

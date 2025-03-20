@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "3066",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Renewable_energy_commercialization",
+    "Renewable_energy_debate",
+    "Sustainable_energy",
+    "Alternative_energy",
+    "Renewable_energy_credit",
+    "Renewable_energy",
+    "100%_renewable_energy",
+    "Politics_of_global_warming",
+    "Nuclear_power_debate",
+    "Wind_power_in_New_Mexico"
+  ],
+  "relevant_docs": [
+    "Minimum_wage",
+    "Alternative_medicine",
+    "History_of_economic_thought",
+    "Economics",
+    "List_of_topics_characterized_as_pseudoscience"
+  ]
+}

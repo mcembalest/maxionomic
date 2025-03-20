@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "21854",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Physical_cosmology",
+    "Particle_physics",
+    "Physics",
+    "Physics_outreach",
+    "Laws_of_science",
+    "Atomic_theory",
+    "Experimental_physics",
+    "Index_of_metaphysics_articles",
+    "Interpretations_of_quantum_mechanics",
+    "Scientific_law"
+  ],
+  "relevant_docs": [
+    "Physics"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "401",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "1908",
+    "NOAA-6",
+    "NOAA-7",
+    "Global_warming_hiatus",
+    "Media_coverage_of_climate_change",
+    "MSU_temperature_measurements",
+    "Climate_change_in_the_United_States",
+    "Explorer_7",
+    "2010_Northern_Hemisphere_heat_waves",
+    "1936_North_American_cold_wave"
+  ],
+  "relevant_docs": [
+    "Syracuse,_New_York",
+    "Instrumental_temperature_record"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "137267",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Menace_II_Society",
+    "Cold_War_(1962\u201379)",
+    "Generation_Jones",
+    "Society_(film)",
+    "United_States_presidential_election,_1976",
+    "Cold_War",
+    "Movie_theater",
+    "Gerald_Ford_assassination_attempt_in_Sacramento",
+    "Cine_film",
+    "Disney_Channel"
+  ],
+  "relevant_docs": [
+    "Menace_II_Society"
+  ],
+  "tokens_reranked": 35644
+}

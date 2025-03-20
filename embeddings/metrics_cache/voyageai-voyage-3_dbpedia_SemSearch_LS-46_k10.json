@@ -1,0 +1,40 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.23047380976071707,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_LS-46",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:List_of_heads_of_state_by_diplomatic_precedence>",
+    "<dbpedia:History_of_monarchy_in_Australia>",
+    "<dbpedia:Monarchy_of_Tuvalu>",
+    "<dbpedia:Politics_of_the_United_Kingdom>",
+    "<dbpedia:List_of_viceregal_representatives_of_Elizabeth_II>",
+    "<dbpedia:Elizabeth_II>",
+    "<dbpedia:Monarchy_in_the_Cook_Islands>",
+    "<dbpedia:Monarchy_in_the_Irish_Free_State>",
+    "<dbpedia:Monarchies_in_Europe>",
+    "<dbpedia:Head_of_the_Commonwealth>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Republicanism_in_the_United_Kingdom>",
+    "<dbpedia:Governor_of_Gibraltar>",
+    "<dbpedia:Governor_of_the_British_Virgin_Islands>",
+    "<dbpedia:Politics_of_the_United_Kingdom>",
+    "<dbpedia:Monarchy_of_the_Solomon_Islands>",
+    "<dbpedia:Monarchies_in_Europe>",
+    "<dbpedia:Monarchy_in_the_Irish_Free_State>",
+    "<dbpedia:Monarchy_of_Belize>",
+    "<dbpedia:Monarchy_of_Antigua_and_Barbuda>",
+    "<dbpedia:Monarchy_of_Grenada>",
+    "<dbpedia:Monarchy_of_Saint_Lucia>",
+    "<dbpedia:Monarchism_in_Canada>",
+    "<dbpedia:Monarchy_of_the_Bahamas>",
+    "<dbpedia:Monarchy_of_Jamaica>",
+    "<dbpedia:Monarchy_of_Barbados>",
+    "<dbpedia:Anne,_Queen_of_Great_Britain>"
+  ]
+}

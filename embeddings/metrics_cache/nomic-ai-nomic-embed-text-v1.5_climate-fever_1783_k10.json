@@ -1,0 +1,28 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.502373740777944,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1783",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Climate_variability",
+    "Climate_change_(general_concept)",
+    "Global_warming_hiatus",
+    "Global_warming",
+    "Global_cooling",
+    "Attribution_of_recent_climate_change",
+    "Global_warming_controversy",
+    "Antarctica_cooling_controversy",
+    "Climate_change",
+    "Scientific_opinion_on_climate_change"
+  ],
+  "relevant_docs": [
+    "Attribution_of_recent_climate_change",
+    "Global_warming_hiatus",
+    "Little_Ice_Age",
+    "Global_warming"
+  ]
+}

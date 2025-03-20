@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "2510",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "PDO",
+    "Pacific_decadal_oscillation",
+    "Global_warming_hiatus",
+    "Temperature_record_of_the_past_1000_years",
+    "Disco",
+    "Climatology",
+    "Hockey_stick_graph",
+    "Marine_isotope_stage",
+    "Global_cooling",
+    "Pliocene_climate"
+  ],
+  "relevant_docs": [
+    "Pacific_decadal_oscillation"
+  ]
+}

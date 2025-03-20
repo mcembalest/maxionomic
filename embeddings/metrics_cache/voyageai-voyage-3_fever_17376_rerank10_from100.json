@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "17376",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "The_Elephant_Man_(film)",
+    "Joseph_Merrick",
+    "The_Invisible_Man_Returns",
+    "Maniac_(1934_film)",
+    "The_Death_of_Poor_Joe",
+    "American_Horror_Story",
+    "Annie_Jones_(bearded_woman)",
+    "The_Rocky_Horror_Show",
+    "Drama_(film_and_television)",
+    "Historical_figure"
+  ],
+  "relevant_docs": [
+    "The_Elephant_Man_(film)",
+    "Joseph_Merrick"
+  ],
+  "tokens_reranked": 32480
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.34620964322385606,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1510",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Greenhouse_gas",
+    "Global_warming",
+    "Atmospheric_carbon_cycle",
+    "Climate_sensitivity",
+    "Climate_change_in_Texas",
+    "Climate_change_in_the_United_States",
+    "Atmospheric_methane",
+    "Climate_inertia",
+    "Effects_of_global_warming"
+  ],
+  "relevant_docs": [
+    "Global_warming",
+    "Permian\u2013Triassic_extinction_event",
+    "Climate_sensitivity",
+    "Climate_change_feedback"
+  ]
+}

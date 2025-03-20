@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "71911",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Tenth_Doctor",
+    "War_Doctor",
+    "Grant_Markham",
+    "Eleventh_Doctor",
+    "Doctor_Who_(series_8)",
+    "The_Doctor,_the_Widow_and_the_Wardrobe",
+    "White_Guardian",
+    "The_Night_of_the_Doctor",
+    "Vincent_and_the_Doctor",
+    "The_Sixth_Doctor:_The_Last_Adventure"
+  ],
+  "relevant_docs": [
+    "Tenth_Doctor"
+  ]
+}

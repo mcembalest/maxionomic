@@ -1,0 +1,28 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.20210734650054757,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1334",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Ocean_acidification",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Oceanic_carbon_cycle",
+    "Carbon_dioxide",
+    "Paleocene\u2013Eocene_Thermal_Maximum",
+    "Free_Ocean_CO2_Enrichment",
+    "Acidophobe",
+    "Environmental_skepticism",
+    "Svante_Arrhenius",
+    "Clathrate_gun_hypothesis"
+  ],
+  "relevant_docs": [
+    "Acid",
+    "Carbon_dioxide",
+    "PH"
+  ],
+  "tokens_reranked": 30285
+}

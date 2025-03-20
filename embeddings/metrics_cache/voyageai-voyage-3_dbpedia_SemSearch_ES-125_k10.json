@@ -1,0 +1,30 @@
+{
+  "mrr": 0.125,
+  "ndcg": 0.09546043308946733,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-125",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Nokia_E63>",
+    "<dbpedia:Nokia_E72>",
+    "<dbpedia:Nokia_E71>",
+    "<dbpedia:Nokia_E70>",
+    "<dbpedia:Nokia_N75>",
+    "<dbpedia:Nokia_C3_Touch_and_Type>",
+    "<dbpedia:Nokia_2100>",
+    "<dbpedia:Nokia_Eseries>",
+    "<dbpedia:1legcall>",
+    "<dbpedia:Nokia_5070>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Nokia_Networks>",
+    "<dbpedia:List_of_Nokia_products>",
+    "<dbpedia:Nokia_Research_Center>",
+    "<dbpedia:Nokia_Eseries>",
+    "<dbpedia:Nokia>",
+    "<dbpedia:Nokia_phone_series>"
+  ]
+}

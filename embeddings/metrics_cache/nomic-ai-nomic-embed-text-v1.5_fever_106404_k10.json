@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "106404",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Burbank,_California",
+    "Los_Alamos_National_Laboratory",
+    "Boeing_B-17_Flying_Fortress",
+    "Lockheed_L-2000",
+    "Boeing_B-52_Stratofortress",
+    "Concorde",
+    "Lockheed_A-12",
+    "Aerospace_Walk_of_Honor",
+    "San_Francisco",
+    "Palo_Alto,_California"
+  ],
+  "relevant_docs": [
+    "Burbank,_California"
+  ]
+}

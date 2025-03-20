@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.46927872602275644,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "36",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_cooling",
+    "Global_cooling_(disambiguation)",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming",
+    "Scientific_opinion_on_climate_change",
+    "Global_warming_controversy",
+    "Scientific_consensus_on_climate_change",
+    "Antarctica_cooling_controversy",
+    "Journal_for_Geoclimatic_Studies",
+    "History_of_climate_change_science",
+    "Environmental_skepticism"
+  ],
+  "relevant_docs": [
+    "Climate_change_denial",
+    "Global_cooling",
+    "Richard_Lindzen"
+  ]
+}

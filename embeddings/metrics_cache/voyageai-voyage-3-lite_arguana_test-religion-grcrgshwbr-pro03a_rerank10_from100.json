@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "arguana",
+  "query_id": "test-religion-grcrgshwbr-pro03a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-politics-grcrgshwbr-pro03a",
+    "test-politics-grcrgshwbr-pro03b",
+    "test-politics-grcrgshwbr-pro03b",
+    "test-politics-grcrgshwbr-pro01a",
+    "test-politics-grcrgshwbr-pro01b",
+    "training-religion-frgsbnaofcs-pro03b",
+    "test-politics-grcrgshwbr-con02a",
+    "test-politics-grcrgshwbr-pro02a",
+    "test-religion-grcrgshwbr-con02b",
+    "training-religion-frgsbnaofcs-con01b"
+  ],
+  "relevant_docs": [
+    "test-religion-grcrgshwbr-pro03b"
+  ],
+  "tokens_reranked": 43846
+}

@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "2192",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Ian_Clark_(geologist)",
+    "Solar_phenomena",
+    "Willie_Soon",
+    "Climate_variability",
+    "Solar_Radiation_and_Climate_Experiment",
+    "Attribution_of_recent_climate_change",
+    "Idealized_greenhouse_model",
+    "History_of_climate_change_science",
+    "100,000-year_problem",
+    "Climate_change"
+  ],
+  "relevant_docs": [
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "Cosmic_ray",
+    "21st_century",
+    "Global_warming",
+    "Climate"
+  ],
+  "tokens_reranked": 32453
+}

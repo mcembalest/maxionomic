@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1758",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "March_2012_North_American_heat_wave",
+    "Great_Lakes_region",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "Temperature_record_of_the_past_1000_years",
+    "Hockey_stick_graph",
+    "2010_Northern_Hemisphere_heat_waves",
+    "2010_Northern_Hemisphere_summer_heat_waves",
+    "Great_Lakes_Areas_of_Concern",
+    "2001_Eastern_North_America_heat_wave",
+    "2013_extreme_weather_events"
+  ],
+  "relevant_docs": [
+    "Little_Ice_Age",
+    "Permafrost",
+    "Lake_Superior",
+    "Precipitation"
+  ]
+}

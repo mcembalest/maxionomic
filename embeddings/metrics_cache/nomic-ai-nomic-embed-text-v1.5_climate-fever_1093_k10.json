@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6131471927654584,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1093",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Ocean_acidification",
+    "Estuarine_acidification",
+    "Oceanic_carbon_cycle",
+    "Ocean",
+    "Anoxic_event",
+    "Sea",
+    "Chemical_oceanography",
+    "Iron_fertilization",
+    "Great_Oxygenation_Event",
+    "Carbon_dioxide"
+  ],
+  "relevant_docs": [
+    "Greenhouse_gas",
+    "Ocean_acidification"
+  ]
+}

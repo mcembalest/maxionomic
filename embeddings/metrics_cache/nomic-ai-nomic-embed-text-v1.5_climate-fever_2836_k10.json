@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "2836",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Deglaciation",
+    "Arctic_sea_ice_decline",
+    "Future_sea_level",
+    "Global_warming_hiatus",
+    "Retreat_of_glaciers_since_1850",
+    "Last_Glacial_Maximum",
+    "Late_Glacial",
+    "Past_sea_level",
+    "Global_warming",
+    "Measurement_of_sea_ice"
+  ],
+  "relevant_docs": [
+    "Ice_age",
+    "Glacier",
+    "Post-glacial_rebound"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6719882468370725,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1334",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Ocean_acidification",
+    "Carbon_dioxide",
+    "PH",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Acidosis",
+    "Estuarine_acidification",
+    "Acid_dissociation_constant",
+    "Geological_history_of_oxygen",
+    "Acid",
+    "Oceanic_carbon_cycle"
+  ],
+  "relevant_docs": [
+    "Acid",
+    "PH",
+    "Carbon_dioxide"
+  ]
+}

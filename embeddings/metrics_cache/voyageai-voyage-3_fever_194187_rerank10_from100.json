@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "194187",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Barbara_Bush",
+    "Jeb_Bush",
+    "Marvin_Bush",
+    "George_W._Bush",
+    "Political_positions_of_Jeb_Bush",
+    "Natural-born-citizen_clause",
+    "Key_West,_Florida",
+    "Laura_Bush",
+    "Bush_compound",
+    "BarBara_Luna"
+  ],
+  "relevant_docs": [
+    "Barbara_Bush",
+    "Jeb_Bush"
+  ],
+  "tokens_reranked": 27450
+}

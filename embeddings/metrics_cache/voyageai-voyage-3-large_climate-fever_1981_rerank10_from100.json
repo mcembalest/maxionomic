@@ -1,0 +1,29 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.19519002499605084,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1981",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Greenhouse_gas",
+    "Presidential_Climate_Action_Plan",
+    "Lisa_P._Jackson",
+    "Shale_gas",
+    "Energy_policy_of_the_Barack_Obama_administration",
+    "Scott_Pruitt",
+    "Greenhouse_gas_emissions_by_the_United_States",
+    "Coal_pollution_mitigation",
+    "Energy_policy_of_the_United_States",
+    "CO2_is_Green"
+  ],
+  "relevant_docs": [
+    "Climate_change_policy_of_the_United_States",
+    "Emissions_trading",
+    "Environmental_policy_of_the_Donald_Trump_administration",
+    "Lisa_P._Jackson"
+  ],
+  "tokens_reranked": 39813
+}

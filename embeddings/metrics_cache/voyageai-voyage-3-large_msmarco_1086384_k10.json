@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "msmarco",
+  "query_id": "1086384",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "7110606",
+    "7110612",
+    "7110611",
+    "3259751",
+    "7770196",
+    "3259746",
+    "4678888",
+    "5280582",
+    "7434455",
+    "5655"
+  ],
+  "relevant_docs": [
+    "7110606"
+  ]
+}

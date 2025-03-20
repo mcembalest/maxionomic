@@ -1,0 +1,27 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.3065735963827292,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1019",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "2014\u201316_El_Ni\u00f1o_event",
+    "El_Ni\u00f1o",
+    "Global_warming_hiatus",
+    "Climate_oscillation",
+    "1997\u201398_El_Ni\u00f1o_event",
+    "2016_North_American_heat_wave",
+    "Climate_change_in_the_United_States",
+    "Satellite_temperature_measurements",
+    "Deforestation_and_climate_change"
+  ],
+  "relevant_docs": [
+    "La_Ni\u00f1a",
+    "El_Ni\u00f1o"
+  ],
+  "tokens_reranked": 38987
+}

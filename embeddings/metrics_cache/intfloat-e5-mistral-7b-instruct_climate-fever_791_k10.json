@@ -1,0 +1,27 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.41618115554873086,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "791",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Carbon_sequestration",
+    "Carbon_capture_and_storage_in_Australia",
+    "Carbon_capture_and_storage",
+    "Clean_coal_technology",
+    "Coal_pollution_mitigation",
+    "Biosequestration",
+    "Fossil_fuel_power_station",
+    "Carbon_dioxide_removal",
+    "Low-carbon_building",
+    "Carbon_diet"
+  ],
+  "relevant_docs": [
+    "Carbon_capture_and_storage",
+    "Coal_pollution_mitigation",
+    "Climate_change_mitigation"
+  ]
+}

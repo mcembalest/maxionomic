@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "msmarco",
+  "query_id": "570070",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "442006",
+    "8045986",
+    "863946",
+    "2588002",
+    "4796869",
+    "7134383",
+    "1918866",
+    "5535297",
+    "1023113",
+    "1839684"
+  ],
+  "relevant_docs": [
+    "7623736"
+  ]
+}

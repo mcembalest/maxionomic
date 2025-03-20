@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "17376",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Joseph_Merrick",
+    "The_Elephant_Man_(film)",
+    "Samuel_Vaughan_Merrick",
+    "John_Merrick_(architect)",
+    "Leonard_Merrick",
+    "Garrick_M\u00e9decin",
+    "David_Garrick_(play)",
+    "Joseph_Herrick",
+    "The_Incredible_Robert_Baldick",
+    "The_Man_in_the_Iron_Mask_(1998_film)"
+  ],
+  "relevant_docs": [
+    "Joseph_Merrick",
+    "The_Elephant_Man_(film)"
+  ]
+}

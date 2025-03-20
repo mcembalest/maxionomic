@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "hotpot",
+  "query_id": "5a7a5cc35542996c55b2dd7c",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "1786611",
+    "554236",
+    "579802",
+    "2434247",
+    "142281",
+    "18458977",
+    "4237433",
+    "579778",
+    "1497984",
+    "320002"
+  ],
+  "relevant_docs": [
+    "554236",
+    "1786611"
+  ]
+}

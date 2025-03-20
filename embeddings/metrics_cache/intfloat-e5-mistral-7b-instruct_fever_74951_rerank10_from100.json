@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "74951",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Caesar_(Mercury_Theatre)",
+    "Julius_Caesar_(1970_film)",
+    "Mercury_Theatre",
+    "C\u00e9sar_(film)",
+    "Gaius_Cassius_Longinus",
+    "High_School_Caesar",
+    "The_Mercury_Summer_Theatre_on_the_Air",
+    "The_Merchant_of_Venice_(1969_film)",
+    "Anne_Baxter",
+    "Caesar_the_Conqueror"
+  ],
+  "relevant_docs": [
+    "Caesar_(Mercury_Theatre)"
+  ],
+  "tokens_reranked": 22221
+}

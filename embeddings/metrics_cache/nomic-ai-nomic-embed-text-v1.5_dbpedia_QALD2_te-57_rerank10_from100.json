@@ -1,0 +1,33 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5390031312763821,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-57",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Apollo_14>",
+    "<dbpedia:Edgar_Mitchell>",
+    "<dbpedia:Stuart_Roosa>",
+    "<dbpedia:Michael_J._McCulley>",
+    "<dbpedia:Jim_Lovell>",
+    "<dbpedia:Neil_Armstrong>",
+    "<dbpedia:Moon_Shot>",
+    "<dbpedia:Ronald_J._Garan,_Jr.>",
+    "<dbpedia:Tepehu\u00e1n_people>",
+    "<dbpedia:Farouk_El-Baz>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Ronald_Evans_(astronaut)>",
+    "<dbpedia:Apollo_program>",
+    "<dbpedia:Apollo_14>",
+    "<dbpedia:Alan_Shepard>",
+    "<dbpedia:List_of_Apollo_astronauts>",
+    "<dbpedia:Edgar_Mitchell>",
+    "<dbpedia:List_of_astronauts_by_name>",
+    "<dbpedia:Stuart_Roosa>"
+  ],
+  "tokens_reranked": 10343
+}

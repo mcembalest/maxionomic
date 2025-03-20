@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "25290",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Love_Club_EP",
+    "All_the_Rage_(Cary_Brothers_EP)",
+    "Love_At_First_Sound",
+    "Love/Hate_(band)",
+    "Nicholas_Masson",
+    "Synergy_(Champ_Lui-Pio_album)",
+    "Justin_Bieber",
+    "Taylor_Caniff",
+    "Thankful_(EP)",
+    "Mr._Smith_(album)"
+  ],
+  "relevant_docs": [
+    "The_Love_Club_EP"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7917267193679839,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-80",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Brothers_(Goldman_novel)>",
+    "<dbpedia:Tinsel_(novel)>",
+    "<dbpedia:William_Goldman>",
+    "<dbpedia:Adventures_in_the_Screen_Trade>",
+    "<dbpedia:Boys_and_Girls_Together>",
+    "<dbpedia:Bernard_Goldman>",
+    "<dbpedia:The_Season:_A_Candid_Look_at_Broadway>",
+    "<dbpedia:The_Princess_Bride>",
+    "<dbpedia:The_Thing_of_It_Is...>",
+    "<dbpedia:Marathon_Man_(novel)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Father's_Day_(novel)>",
+    "<dbpedia:The_Ghost_and_the_Darkness>",
+    "<dbpedia:Adventures_in_the_Screen_Trade>",
+    "<dbpedia:Wait_Till_Next_Year>",
+    "<dbpedia:The_Color_of_Light>",
+    "<dbpedia:William_Goldman>",
+    "<dbpedia:Brothers_(Goldman_novel)>",
+    "<dbpedia:Boys_and_Girls_Together>",
+    "<dbpedia:Blood,_Sweat_and_Stanley_Poole>",
+    "<dbpedia:Control_(novel)>",
+    "<dbpedia:The_Princess_Bride>",
+    "<dbpedia:A_Family_Affair_(musical)>",
+    "<dbpedia:The_Season:_A_Candid_Look_at_Broadway>",
+    "<dbpedia:Hype_and_Glory>",
+    "<dbpedia:Year_of_the_Comet>",
+    "<dbpedia:Tinsel_(novel)>"
+  ]
+}

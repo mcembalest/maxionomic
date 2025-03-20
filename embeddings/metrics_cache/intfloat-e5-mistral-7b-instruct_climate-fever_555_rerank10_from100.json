@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6713860725233041,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "555",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Brown_bear",
+    "Effects_of_global_warming",
+    "Effects_of_climate_change_on_terrestrial_animals",
+    "Kodiak_bear",
+    "Climate_change_in_the_Arctic",
+    "Regional_effects_of_global_warming",
+    "Acclimatization",
+    "Season_creep",
+    "Physical_impacts_of_climate_change",
+    "Regime_shift"
+  ],
+  "relevant_docs": [
+    "Kodiak_bear",
+    "Grizzly_bear",
+    "Brown_bear"
+  ],
+  "tokens_reranked": 31785
+}

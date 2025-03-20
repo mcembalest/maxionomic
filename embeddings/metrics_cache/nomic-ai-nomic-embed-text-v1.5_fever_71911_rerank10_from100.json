@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "71911",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Tenth_Doctor",
+    "Jack_Harkness",
+    "Blackfriars,_London",
+    "Doctor_Who",
+    "Prisoner_of_the_Daleks",
+    "UNIT",
+    "End_time",
+    "Weeping_Angel",
+    "Silurian_(Doctor_Who)",
+    "Face_of_Boe"
+  ],
+  "relevant_docs": [
+    "Tenth_Doctor"
+  ],
+  "tokens_reranked": 28349
+}

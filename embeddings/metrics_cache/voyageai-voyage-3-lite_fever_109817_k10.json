@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "109817",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Louis_Malle",
+    "Sophie_Mallebranche",
+    "Maurice_Mallet",
+    "Humain,_trop_humain",
+    "Louis_Del\u00e2ge",
+    "Moulin_Rouge",
+    "Phantom_India",
+    "Jean-Baptiste_Dureau_de_la_Malle",
+    "May_Fools",
+    "Louis-Ars\u00e8ne_Delaunay"
+  ],
+  "relevant_docs": [
+    "Louis_Malle"
+  ]
+}

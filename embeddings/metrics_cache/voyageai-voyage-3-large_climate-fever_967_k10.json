@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "967",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Hockey_stick_graph",
+    "Temperature_record_of_the_past_1000_years",
+    "Hockey_stick_controversy",
+    "Description_of_the_Medieval_Warm_Period_and_Little_Ice_Age_in_IPCC_reports",
+    "Wibj\u00f6rn_Karl\u00e9n",
+    "Neoglaciation",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming",
+    "History_of_climate_change_science",
+    "Ian_Clark_(geologist)"
+  ],
+  "relevant_docs": [
+    "Little_Ice_Age",
+    "John_D._Hamaker",
+    "Ice_age"
+  ]
+}

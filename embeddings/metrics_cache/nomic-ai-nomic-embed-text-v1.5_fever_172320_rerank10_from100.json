@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "172320",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Scream_2",
+    "Scream,_Baby,_Scream",
+    "Screamplay",
+    "Movie_theater",
+    "The_Scream_(film)",
+    "C\u00e9sar_Award",
+    "Cinema_of_the_United_States",
+    "The_American_Friend",
+    "Anatomy_2",
+    "Scream_(Ozzy_Osbourne_album)"
+  ],
+  "relevant_docs": [
+    "Scream_2"
+  ],
+  "tokens_reranked": 28174
+}

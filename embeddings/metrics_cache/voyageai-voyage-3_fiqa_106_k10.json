@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fiqa",
+  "query_id": "106",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "76695",
+    "504599",
+    "538208",
+    "451723",
+    "365410",
+    "262721",
+    "126751",
+    "126770",
+    "329810",
+    "420915"
+  ],
+  "relevant_docs": [
+    "76695"
+  ]
+}

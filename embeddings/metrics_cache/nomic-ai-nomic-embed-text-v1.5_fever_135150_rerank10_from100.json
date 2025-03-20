@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "135150",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Kung_Fu_Panda",
+    "Po_(Kung_Fu_Panda)",
+    "Kung_Fu_Panda_2",
+    "Kung_Fu_Panda_World",
+    "Broadway_Theatre_(53rd_Street)",
+    "Tony_Award",
+    "Movie_theater",
+    "Theatre",
+    "Kung_Fu_Panda:_Legends_of_Awesomeness_(season_3)",
+    "Peking_opera"
+  ],
+  "relevant_docs": [
+    "Kung_Fu_Panda"
+  ],
+  "tokens_reranked": 29921
+}

@@ -1,0 +1,36 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.28952298823485745,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-20120121",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Vietnamese_cuisine>",
+    "<dbpedia:G\u1ecfi_cu\u1ed1n>",
+    "<dbpedia:B\u00e1nh_b\u1ed9t_chi\u00ean>",
+    "<dbpedia:G\u00e0_n\u01b0\u1edbng_s\u1ea3>",
+    "<dbpedia:Nem_ngu\u1ed9i>",
+    "<dbpedia:Canh_chua>",
+    "<dbpedia:B\u00e1nh_l\u1ecdt>",
+    "<dbpedia:B\u00e1nh_chu\u1ed1i>",
+    "<dbpedia:B\u00e1nh_da_l\u1ee3n>",
+    "<dbpedia:B\u00f2_l\u00fac_l\u1eafc>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:B\u00e1nh_b\u00f2>",
+    "<dbpedia:Dog_meat>",
+    "<dbpedia:Lumpia>",
+    "<dbpedia:B\u00e1nh_t\u00e9t>",
+    "<dbpedia:Kuy_teav>",
+    "<dbpedia:Vietnamese_cuisine>",
+    "<dbpedia:Wheat_gluten_(food)>",
+    "<dbpedia:Hoisin_sauce>",
+    "<dbpedia:Allrecipes.com>",
+    "<dbpedia:Cendol>",
+    "<dbpedia:B\u00e1nh_chu\u1ed1i>"
+  ],
+  "tokens_reranked": 8512
+}

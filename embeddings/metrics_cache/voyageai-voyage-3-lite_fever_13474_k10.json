@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "13474",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah",
+    "Shailesh_Lodha",
+    "Kehta_Hai_Dil",
+    "Karishma_Sharma",
+    "Tahalka",
+    "Tapasvi_Mehta",
+    "Bade_Achhe_Lagte_Hain",
+    "Daal_Mein_Kala",
+    "Dinesh_Mehta",
+    "Meka_Ramakrishna"
+  ],
+  "relevant_docs": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah"
+  ]
+}

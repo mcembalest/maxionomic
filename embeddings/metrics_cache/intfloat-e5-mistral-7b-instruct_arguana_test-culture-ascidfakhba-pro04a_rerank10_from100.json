@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-culture-ascidfakhba-pro04a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-culture-ascidfakhba-pro04a",
+    "test-culture-ascidfakhba-pro01a",
+    "training-digital-freedoms-iphwclcp-pro04a",
+    "training-digital-freedoms-pidfakhwnfawn-pro01a",
+    "training-politics-dwdfiphwut-pro03b",
+    "training-digital-freedoms-iphwclcp-con04b",
+    "test-law-phwmfri-con02a",
+    "training-digital-freedoms-piidfphwbaa-pro03b",
+    "test-international-gsciidffe-pro04a",
+    "training-law-cpphwlpvo-pro02a"
+  ],
+  "relevant_docs": [
+    "test-culture-ascidfakhba-pro04b"
+  ],
+  "tokens_reranked": 68816
+}

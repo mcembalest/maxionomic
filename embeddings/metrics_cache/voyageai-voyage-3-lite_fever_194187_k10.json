@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "194187",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Barbara_Bush",
+    "Jeb_Bush",
+    "Marvin_Bush",
+    "Political_positions_of_Jeb_Bush",
+    "George_W._Bush",
+    "Laura_Bush",
+    "George_W._Bush_judicial_appointment_controversies",
+    "Jonathan_Bush",
+    "Fictionalized_portrayals_of_George_W._Bush",
+    "Presidency_of_George_H._W._Bush"
+  ],
+  "relevant_docs": [
+    "Barbara_Bush",
+    "Jeb_Bush"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.34620964322385606,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1783",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Climate_change_(general_concept)",
+    "Climate_variability",
+    "Global_warming_hiatus",
+    "History_of_climate_change_science",
+    "Attribution_of_recent_climate_change",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming",
+    "Climate_change",
+    "Description_of_the_Medieval_Warm_Period_and_Little_Ice_Age_in_IPCC_reports",
+    "Temperature_record_of_the_past_1000_years",
+    "Climate_oscillation"
+  ],
+  "relevant_docs": [
+    "Global_warming_hiatus",
+    "Attribution_of_recent_climate_change",
+    "Global_warming",
+    "Little_Ice_Age"
+  ]
+}

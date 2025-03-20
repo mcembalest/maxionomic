@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "arguana",
+  "query_id": "test-international-gmehwasr-pro05a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-international-gmehwasr-pro05b",
+    "validation-international-mewhwakapps-con01b",
+    "test-international-gmehwasr-con05b",
+    "test-international-gmehwasr-con05a",
+    "validation-international-mewhwakapps-pro03a",
+    "test-international-gmehwasr-pro03a",
+    "validation-international-mewhwakapps-con02a",
+    "test-international-gmehwasr-pro01a",
+    "validation-international-mewhwakapps-con03b",
+    "test-international-gmehwasr-pro02a"
+  ],
+  "relevant_docs": [
+    "test-international-gmehwasr-pro05b"
+  ],
+  "tokens_reranked": 51308
+}

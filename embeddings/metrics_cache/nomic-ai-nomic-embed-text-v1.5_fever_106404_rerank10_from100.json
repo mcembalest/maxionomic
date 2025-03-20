@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "106404",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Burbank,_California",
+    "Lockheed_A-12",
+    "Lockheed_L-2000",
+    "Lockheed_L-1011_TriStar",
+    "Avro_Canada_VZ-9_Avrocar",
+    "Playa_Vista,_Los_Angeles",
+    "Convair_B-58_Hustler",
+    "Thunderbirds_(TV_series)",
+    "Northrop_P-61_Black_Widow",
+    "Hughes_XF-11"
+  ],
+  "relevant_docs": [
+    "Burbank,_California"
+  ],
+  "tokens_reranked": 39815
+}

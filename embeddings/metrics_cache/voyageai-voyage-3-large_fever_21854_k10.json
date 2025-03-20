@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "21854",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Physics",
+    "Index_of_physics_articles",
+    "Physical_cosmology",
+    "Particle_physics",
+    "Astrophysics",
+    "Laws_of_science",
+    "Theory_of_everything_(philosophy)",
+    "Astronomy",
+    "Experimental_physics",
+    "Interpretations_of_quantum_mechanics"
+  ],
+  "relevant_docs": [
+    "Physics"
+  ]
+}

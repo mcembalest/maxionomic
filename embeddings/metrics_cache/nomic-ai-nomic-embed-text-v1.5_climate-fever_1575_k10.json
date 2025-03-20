@@ -1,0 +1,27 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.18154179253735267,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1575",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Arctic_sea_ice_decline",
+    "Arctic_resources_race",
+    "Measurement_of_sea_ice",
+    "Antarctic_sea_ice",
+    "Sea_ice",
+    "Sea_ice_thickness",
+    "Arctic_ice_pack",
+    "Arctic_Ocean",
+    "Arctic_geoengineering",
+    "Territorial_claims_in_the_Arctic"
+  ],
+  "relevant_docs": [
+    "Sea_ice",
+    "Antarctica",
+    "Arctic"
+  ]
+}

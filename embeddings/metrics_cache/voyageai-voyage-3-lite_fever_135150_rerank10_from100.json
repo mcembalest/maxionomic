@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "135150",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Kung_Fu_Panda",
+    "Po_(Kung_Fu_Panda)",
+    "Kung_Fu_Panda_2",
+    "Kung_Fu_Panda_World",
+    "Kung_Fu_Panda:_Legends_of_Awesomeness_(season_3)",
+    "Just_Another_Pandora's_Box",
+    "My_kung_fu_is_stronger_than_yours",
+    "Shaolin_Popey",
+    "Zouyu",
+    "Red_Baron_(ride)"
+  ],
+  "relevant_docs": [
+    "Kung_Fu_Panda"
+  ],
+  "tokens_reranked": 22607
+}

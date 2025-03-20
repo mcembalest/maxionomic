@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1981",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Presidential_Climate_Action_Plan",
+    "Special_Report_on_Global_Warming_of_1.5_\u00b0C",
+    "Fossil_fuel_power_station",
+    "Energy_policy_of_the_Barack_Obama_administration",
+    "Scott_Pruitt",
+    "Greenhouse_gas_emissions_by_the_United_States",
+    "Coal_pollution_mitigation",
+    "CO2_is_Green",
+    "Massachusetts_v._Environmental_Protection_Agency",
+    "Environmental_skepticism"
+  ],
+  "relevant_docs": [
+    "Emissions_trading",
+    "Lisa_P._Jackson",
+    "Environmental_policy_of_the_Donald_Trump_administration",
+    "Climate_change_policy_of_the_United_States"
+  ],
+  "tokens_reranked": 34599
+}

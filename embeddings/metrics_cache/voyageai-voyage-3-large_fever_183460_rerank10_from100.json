@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "183460",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Henry_III_of_France",
+    "Antoine_of_Navarre",
+    "Henry_of_France",
+    "Marie_of_Cleves,_Princess_of_Cond\u00e9",
+    "Charles_II_de_Bourbon-Vend\u00f4me",
+    "C\u00e9sar,_Duke_of_Vend\u00f4me",
+    "Charles_IX_of_France",
+    "July_Revolution",
+    "House_of_Orl\u00e9ans",
+    "Charles,_Count_of_Soissons"
+  ],
+  "relevant_docs": [
+    "Henry_III_of_France"
+  ],
+  "tokens_reranked": 40382
+}

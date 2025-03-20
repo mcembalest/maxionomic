@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "172320",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Scream_2",
+    "List_of_actors_nominated_for_Academy_Awards_for_foreign_language_performances",
+    "Scream,_Baby,_Scream",
+    "G\u00fcnther_Schramm",
+    "Screamplay",
+    "Scream_World_Tour",
+    "Lumiere_(Brazilian_film_company)",
+    "Rick_Kavanian",
+    "Peter_Jordan_(actor)",
+    "The_Scream_(film)"
+  ],
+  "relevant_docs": [
+    "Scream_2"
+  ],
+  "tokens_reranked": 22824
+}

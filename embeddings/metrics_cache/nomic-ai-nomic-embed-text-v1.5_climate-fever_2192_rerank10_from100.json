@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "2192",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Ian_Clark_(geologist)",
+    "Solar_phenomena",
+    "Climate_variability",
+    "Attribution_of_recent_climate_change",
+    "Idealized_greenhouse_model",
+    "History_of_climate_change_science",
+    "Thermosphere",
+    "Climate_change",
+    "Milankovitch_cycles",
+    "Earth's_energy_budget"
+  ],
+  "relevant_docs": [
+    "Global_warming",
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "Climate",
+    "21st_century",
+    "Cosmic_ray"
+  ],
+  "tokens_reranked": 38566
+}

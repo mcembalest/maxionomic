@@ -1,0 +1,29 @@
+{
+  "mrr": 0.14285714285714285,
+  "ndcg": 0.13012668333070054,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1971",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Alta_Wind_Energy_Center",
+    "Life-cycle_greenhouse-gas_emissions_of_energy_sources",
+    "Wind_power_in_the_European_Union",
+    "Wind_power_in_the_United_Kingdom",
+    "Fossil_fuel",
+    "Carbon-neutral_fuel",
+    "Zero-energy_building",
+    "Carbon_offset",
+    "Wind_power",
+    "Fossil_fuel_power_station"
+  ],
+  "relevant_docs": [
+    "Carbon_neutrality",
+    "Renewable_energy",
+    "Zero-energy_building",
+    "Carbon_footprint"
+  ],
+  "tokens_reranked": 37242
+}

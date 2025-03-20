@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "3066",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Energy_development",
+    "Renewable_energy",
+    "Renewable_energy_debate",
+    "Energy_accidents",
+    "Renewable_energy_in_Germany",
+    "100%_renewable_energy",
+    "Nuclear_power_debate",
+    "Renewable_energy_in_the_United_States",
+    "Alternative_energy",
+    "Renewable_energy_commercialization"
+  ],
+  "relevant_docs": [
+    "History_of_economic_thought",
+    "Economics",
+    "List_of_topics_characterized_as_pseudoscience",
+    "Alternative_medicine",
+    "Minimum_wage"
+  ]
+}

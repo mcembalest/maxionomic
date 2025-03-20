@@ -1,0 +1,29 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.6416430169737799,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-2012319",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Vintage_Munro>",
+    "<dbpedia:Stone_Mattress>",
+    "<dbpedia:Friend_of_My_Youth>",
+    "<dbpedia:Boys_and_Girls_(short_story)>",
+    "<dbpedia:List_of_short_stories_by_Alice_Munro>",
+    "<dbpedia:Open_Secrets>",
+    "<dbpedia:Alice_Munro>",
+    "<dbpedia:Too_Much_Happiness>",
+    "<dbpedia:Alice_Sebold>",
+    "<dbpedia:Valentines_(book)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Open_Secrets>",
+    "<dbpedia:Alice_Munro>",
+    "<dbpedia:List_of_short_stories_by_Alice_Munro>",
+    "<dbpedia:Friend_of_My_Youth>",
+    "<dbpedia:Too_Much_Happiness>"
+  ]
+}

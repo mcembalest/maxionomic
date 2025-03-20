@@ -1,0 +1,27 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.3065735963827292,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1112",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Polar_vortex",
+    "Global_stilling",
+    "Jet_stream",
+    "Weather",
+    "Climate_of_the_United_States",
+    "Arctic_oscillation",
+    "Westerlies",
+    "Polar_front",
+    "Wind_shear",
+    "Atmospheric_circulation"
+  ],
+  "relevant_docs": [
+    "Global_warming",
+    "Jet_stream"
+  ],
+  "tokens_reranked": 43117
+}

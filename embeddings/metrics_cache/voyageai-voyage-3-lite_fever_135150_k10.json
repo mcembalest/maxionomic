@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "135150",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Kung_Fu_Panda",
+    "Kung_Fu_Panda_2",
+    "Po_(Kung_Fu_Panda)",
+    "Kung_Fu_Panda:_Legends_of_Awesomeness_(season_3)",
+    "Kung_Fu_Panda_World",
+    "Kung_Fu:_The_Movie",
+    "Just_Another_Pandora's_Box",
+    "Dragon_Fist",
+    "Kung_Phooey",
+    "The_Kung_Fu_Master_(TV_series)"
+  ],
+  "relevant_docs": [
+    "Kung_Fu_Panda"
+  ]
+}

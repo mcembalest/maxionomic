@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "25290",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Love_Club_EP",
+    "We_Be_Clubbin'",
+    "Playaz_Club",
+    "Beck's_Record_Club",
+    "Love_Is_(Michi_EP)",
+    "DJ_Jayceeoh",
+    "Aaron_Smith_(DJ)",
+    "Jay_Park_discography",
+    "The_Love_Experience",
+    "Hip_Club_Groove"
+  ],
+  "relevant_docs": [
+    "The_Love_Club_EP"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.9083745556952364,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_LS-24",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:Daddio>",
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:The_IT_Crowd>",
+    "<dbpedia:Smiles_of_a_Summer_Night_(Desperate_Housewives)>",
+    "<dbpedia:Matthew_Berry_(politician)>",
+    "<dbpedia:Matt_Marksberry>",
+    "<dbpedia:List_of_White_Collar_episodes>",
+    "<dbpedia:The_Stafford_Brothers_(TV_series)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Ant_&_Dec's_Push_the_Button>",
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:Daddio>",
+    "<dbpedia:The_IT_Crowd>",
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Smiles_of_a_Summer_Night_(Desperate_Housewives)>"
+  ],
+  "tokens_reranked": 8028
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1822",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Carbon_tax",
+    "Carbon_price",
+    "Low-carbon_fuel_standard",
+    "Environmental_pricing_reform",
+    "Carbon-based_fuel",
+    "Green_industrial_policy",
+    "Gasoline",
+    "Emissions_trading",
+    "Gasoline_gallon_equivalent",
+    "Carbon_offset"
+  ],
+  "relevant_docs": [
+    "Carbon_tax"
+  ],
+  "tokens_reranked": 38891
+}

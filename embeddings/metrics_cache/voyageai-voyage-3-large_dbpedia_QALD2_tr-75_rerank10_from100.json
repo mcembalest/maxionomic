@@ -1,0 +1,29 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.16812753627111746,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-75",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:E._grandis>",
+    "<dbpedia:E._grandis>",
+    "<dbpedia:E._grandis>",
+    "<dbpedia:James_Monroe>",
+    "<dbpedia:Second_inauguration_of_James_Monroe>",
+    "<dbpedia:Franklin_D._Roosevelt>",
+    "<dbpedia:John_R._Gill>",
+    "<dbpedia:Living_Presidents_of_the_United_States>",
+    "<dbpedia:United_States_presidential_election_in_California,_1876>",
+    "<dbpedia:John_Quincy_Adams_II>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:James_Monroe>",
+    "<dbpedia:List_of_Presidents_of_the_United_States>",
+    "<dbpedia:President_of_the_United_States>",
+    "<dbpedia:The_Presidents_of_the_United_States_of_America_(album)>"
+  ],
+  "tokens_reranked": 7927
+}

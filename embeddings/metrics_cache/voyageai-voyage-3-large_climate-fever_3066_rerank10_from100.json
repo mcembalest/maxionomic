@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "3066",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Energy_development",
+    "Junk_science",
+    "Renewable_energy",
+    "Renewable_energy_commercialization",
+    "Alternative_energy",
+    "Energy_industry",
+    "Debunker",
+    "Environmental_skepticism",
+    "Carbon_tax",
+    "Life-cycle_greenhouse-gas_emissions_of_energy_sources"
+  ],
+  "relevant_docs": [
+    "History_of_economic_thought",
+    "List_of_topics_characterized_as_pseudoscience",
+    "Economics",
+    "Minimum_wage",
+    "Alternative_medicine"
+  ],
+  "tokens_reranked": 42376
+}

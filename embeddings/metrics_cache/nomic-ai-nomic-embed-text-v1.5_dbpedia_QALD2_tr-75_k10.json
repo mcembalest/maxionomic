@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.3903800499921017,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-75",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:James_Monroe>",
+    "<dbpedia:Second_inauguration_of_James_Monroe>",
+    "<dbpedia:Barack_Obama>",
+    "<dbpedia:Franklin_D._Roosevelt>",
+    "<dbpedia:1825_State_of_the_Union_Address>",
+    "<dbpedia:John_Campbell_(US_Treasurer)>",
+    "<dbpedia:Ulysses_S._Grant>",
+    "<dbpedia:Richard_Mentor_Johnson>",
+    "<dbpedia:Living_Presidents_of_the_United_States>",
+    "<dbpedia:James_Madison>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:President_of_the_United_States>",
+    "<dbpedia:The_Presidents_of_the_United_States_of_America_(album)>",
+    "<dbpedia:James_Monroe>",
+    "<dbpedia:List_of_Presidents_of_the_United_States>"
+  ]
+}

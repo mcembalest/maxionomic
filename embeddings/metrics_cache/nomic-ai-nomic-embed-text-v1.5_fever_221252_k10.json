@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "221252",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Block_(album)",
+    "Rock_the_Block",
+    "Single_(New_Kids_on_the_Block_and_Ne-Yo_song)",
+    "The_Block_(Israeli_TV_series)",
+    "New_Kids_on_the_Block_(album)",
+    "Dirty_Dancing_(song)",
+    "The_Bricks",
+    "The_Album_(The_Firm_album)",
+    "Writer's_Block_(Just_Jack_song)",
+    "10_(New_Kids_on_the_Block_album)"
+  ],
+  "relevant_docs": [
+    "The_Block_(album)"
+  ]
+}

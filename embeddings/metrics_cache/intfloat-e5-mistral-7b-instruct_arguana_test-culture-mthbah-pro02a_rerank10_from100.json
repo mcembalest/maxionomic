@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-culture-mthbah-pro02a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-culture-mthbah-pro02a",
+    "test-culture-mthbah-pro02b",
+    "test-culture-mthbah-pro05a",
+    "test-culture-mthbah-pro01b",
+    "test-culture-mthbah-con01b",
+    "training-health-hgwsytpsctpf-pro02a",
+    "training-health-hgwhwilfepe-con02b",
+    "training-health-hgwhwilfepe-pro02a",
+    "training-health-mthwhwbpd-con02a",
+    "training-politics-pgglgvhciu-pro01a"
+  ],
+  "relevant_docs": [
+    "test-culture-mthbah-pro02b"
+  ],
+  "tokens_reranked": 56472
+}

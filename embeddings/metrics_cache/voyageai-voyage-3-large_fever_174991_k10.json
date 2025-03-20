@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "174991",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Man_in_the_Iron_Mask_(1998_film)",
+    "The_Man_in_the_Iron_Mask_(film)",
+    "The_Man_in_the_Iron_Mask_(1985_film)",
+    "The_Iron_Mask",
+    "Jeremy_Irons",
+    "Will_Smith_filmography",
+    "The_Mask_(film)",
+    "Johnny_Depp_filmography",
+    "Roux_de_Marcilly",
+    "Les_Mis\u00e9rables_(1998_film)"
+  ],
+  "relevant_docs": [
+    "The_Man_in_the_Iron_Mask_(1998_film)"
+  ]
+}

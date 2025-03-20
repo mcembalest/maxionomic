@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8175295903539445,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "85454",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Nero",
+    "Tiberius_Claudius_Nero",
+    "Nero,_Mozambique",
+    "Nero_AG",
+    "Django_(1966_film)",
+    "Neron_(DC_Comics)",
+    "Julio-Claudian_dynasty",
+    "Nero_Digital",
+    "Roman_usurper",
+    "Tiberius_Claudius_Nero_(consul)"
+  ],
+  "relevant_docs": [
+    "Nero",
+    "Julio-Claudian_dynasty"
+  ],
+  "tokens_reranked": 29065
+}

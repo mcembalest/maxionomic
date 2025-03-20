@@ -1,0 +1,27 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.2640681225725909,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-50",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Bob_Kevoian>",
+    "<dbpedia:NJCAA_Women's_Basketball_Championship>",
+    "<dbpedia:Planet_Bob_&_Tom>",
+    "<dbpedia:The_Bob_&_Tom_Show>",
+    "<dbpedia:With_a_Little_Help_from_Our_Friends>",
+    "<dbpedia:A_Day_at_the_Race>",
+    "<dbpedia:Greatest_Hits:_Volume_One_(The_Bob_&_Tom_Show_album)>",
+    "<dbpedia:It's_a_Wonderful_Laugh>",
+    "<dbpedia:Find_My_Keys_and_We'll_Drive_Out!>",
+    "<dbpedia:Gone_Wild>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:The_Bob_&_Tom_Show>",
+    "<dbpedia:Bob_Steele_(actor)>"
+  ],
+  "tokens_reranked": 7428
+}

@@ -1,9 +1,9 @@
 {
   "dataset": "scidocs",
   "model": "intfloat/e5-mistral-7b-instruct",
-  "batch_size": 256,
+  "batch_size": 1024,
   "max_seq_length": 8192,
-  "total_duration_seconds": 117.89133095741272,
+  "total_duration_seconds": 112.09961700439453,
   "total_tokens": 429145,
-  "tokens_per_second": 3640.1743581555215
+  "tokens_per_second": 3828.2467993015234
 }

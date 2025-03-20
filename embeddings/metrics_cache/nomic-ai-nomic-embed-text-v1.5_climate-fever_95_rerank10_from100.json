@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "95",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Hurricane_Katrina_and_global_warming",
+    "Global_warming",
+    "Special_Report_on_Global_Warming_of_1.5_\u00b0C",
+    "Brown_ocean_effect",
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "I'm_not_a_scientist",
+    "Reasons_for_concern",
+    "Scientific_opinion_on_climate_change",
+    "Tropical_cyclone",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming"
+  ],
+  "relevant_docs": [
+    "Effects_of_global_warming",
+    "Hurricane_Harvey"
+  ],
+  "tokens_reranked": 41547
+}

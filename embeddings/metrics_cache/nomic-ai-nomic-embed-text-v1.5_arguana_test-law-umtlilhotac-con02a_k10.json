@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-law-umtlilhotac-con02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-law-umtlilhotac-con02a",
+    "test-law-umtlilhotac-con03a",
+    "test-international-aglhrilhb-pro01a",
+    "test-law-lghwpcctcc-con02a",
+    "validation-law-hrilhbiccfg-pro04a",
+    "test-law-umtlilhotac-pro01b",
+    "validation-law-hrilhbiccfg-pro04b",
+    "training-law-ilppghsuta-pro01b",
+    "training-international-alilhbassw-con03a",
+    "test-law-hrilpgwhwr-pro02a"
+  ],
+  "relevant_docs": [
+    "test-law-umtlilhotac-con02b"
+  ]
+}

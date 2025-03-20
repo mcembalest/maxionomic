@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3",
+  "dataset": "arguana",
+  "query_id": "test-politics-cpegiepgh-con01a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-politics-cpegiepgh-con01a",
+    "test-politics-cpegiepgh-con01b",
+    "test-politics-cpegiepgh-pro01a",
+    "test-politics-cpegiepgh-pro01b",
+    "test-politics-cpegiepgh-pro02b",
+    "training-economy-epechbuwbbe-con04b",
+    "test-politics-cpegiepgh-con03b",
+    "training-international-epgvhwhrum-con02b",
+    "training-economy-epechbuwbbe-con03a",
+    "training-economy-epechbuwbbe-pro02a"
+  ],
+  "relevant_docs": [
+    "test-politics-cpegiepgh-con01b"
+  ],
+  "tokens_reranked": 45447
+}

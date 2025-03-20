@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5585075862632192,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1510",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Climate_sensitivity",
+    "IPCC_First_Assessment_Report",
+    "Atmospheric_carbon_cycle",
+    "Global_warming",
+    "Greenhouse_gas",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Carbon_dioxide",
+    "Polar_forests_of_the_Cretaceous",
+    "Climate_change_mitigation_scenarios",
+    "Idealized_greenhouse_model"
+  ],
+  "relevant_docs": [
+    "Permian\u2013Triassic_extinction_event",
+    "Climate_change_feedback",
+    "Global_warming",
+    "Climate_sensitivity"
+  ],
+  "tokens_reranked": 36492
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 0.1111111111111111,
+  "ndcg": 0.3010299956639812,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "59903",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Paper_(magazine)",
+    "Paper",
+    "Paper_clip",
+    "Illustrated_Paper",
+    "La_Presse_(French_newspaper)",
+    "Printer_(computing)",
+    "The_Saturday_Paper",
+    "Ingres_paper",
+    "The_Paper_(film)",
+    "Street_News"
+  ],
+  "relevant_docs": [
+    "The_Paper_(film)"
+  ]
+}

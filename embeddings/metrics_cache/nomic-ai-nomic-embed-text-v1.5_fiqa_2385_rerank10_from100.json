@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8503449055347546,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fiqa",
+  "query_id": "2385",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "373059",
+    "312349",
+    "108062",
+    "257616",
+    "407654",
+    "351169",
+    "127584",
+    "157233",
+    "329810",
+    "320777"
+  ],
+  "relevant_docs": [
+    "407654",
+    "373059"
+  ],
+  "tokens_reranked": 20014
+}

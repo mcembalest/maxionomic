@@ -1,0 +1,31 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6684881776649958,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_LS-24",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:The_IT_Crowd>",
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:NAACP_Image_Award_for_Outstanding_Comedy_Series>",
+    "<dbpedia:Nathan_Barley>",
+    "<dbpedia:List_of_productions_using_the_Vasquez_Rocks_as_a_filming_location>",
+    "<dbpedia:NAACP_Image_Award_for_Outstanding_Variety_\u2013_Series_or_Special>",
+    "<dbpedia:Matt_Smith_(TV_reporter)>",
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:Brickleberry>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Daddio>",
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Smiles_of_a_Summer_Night_(Desperate_Housewives)>",
+    "<dbpedia:Ant_&_Dec's_Push_the_Button>",
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:The_IT_Crowd>",
+    "<dbpedia:Matthew_Berry>"
+  ]
+}

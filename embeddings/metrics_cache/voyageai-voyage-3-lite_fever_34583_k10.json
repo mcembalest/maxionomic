@@ -1,0 +1,25 @@
+{
+  "mrr": 0.14285714285714285,
+  "ndcg": 0.3333333333333333,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "34583",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Mozart_and_Freemasonry",
+    "WWE_tournaments",
+    "Amateur_wrestling",
+    "Mozart's_name",
+    "Lucha_libre",
+    "Freestyle_wrestling",
+    "Wolfgang_Amadeus_Mozart",
+    "Triple_Crown_(professional_wrestling)",
+    "Exsultate,_jubilate",
+    "Royal_Rumble_(1999)"
+  ],
+  "relevant_docs": [
+    "Wolfgang_Amadeus_Mozart"
+  ]
+}

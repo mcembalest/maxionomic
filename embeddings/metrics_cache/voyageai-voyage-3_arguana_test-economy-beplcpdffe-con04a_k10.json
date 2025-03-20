@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "arguana",
+  "query_id": "test-economy-beplcpdffe-con04a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-economy-beplcpdffe-con04b",
+    "test-economy-beplcpdffe-pro03a",
+    "training-law-ucgllghwbg-con02a",
+    "test-economy-beplcpdffe-con01b",
+    "training-law-ucgllghwbg-pro01b",
+    "training-law-ucgllghwbg-pro06a",
+    "test-law-sdfclhrppph-pro01b",
+    "test-economy-beplcpdffe-pro04b",
+    "test-economy-beplcpdffe-con05b",
+    "test-free-speech-debate-ldhwbmclg-con02a"
+  ],
+  "relevant_docs": [
+    "test-economy-beplcpdffe-con04b"
+  ]
+}

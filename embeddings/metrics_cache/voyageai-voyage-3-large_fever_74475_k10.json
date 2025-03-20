@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8065735963827293,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "74475",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Quay_(film)",
+    "Postmasters_Gallery",
+    "Quay_Bar",
+    "Manhattan_(film)",
+    "TriBeCa_(TV_series)",
+    "Astor_Place_Theatre",
+    "Q_(New_York_City_Subway_service)",
+    "Film_Forum",
+    "IFC_Center",
+    "Manhattan_Design"
+  ],
+  "relevant_docs": [
+    "Quay_(film)",
+    "Film_Forum"
+  ]
+}

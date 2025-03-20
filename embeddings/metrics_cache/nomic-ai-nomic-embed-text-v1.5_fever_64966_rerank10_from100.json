@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "64966",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Camp_Flog_Gnaw",
+    "Gaming_convention",
+    "Horror_convention",
+    "Camp_(style)",
+    "Gnaw",
+    "Hugo_Award_for_Best_Fan_Artist",
+    "Wet_Hot_American_Summer",
+    "Hugo_Award_for_Best_Professional_Magazine",
+    "Theatre",
+    "Flogging_Molly"
+  ],
+  "relevant_docs": [
+    "Camp_Flog_Gnaw"
+  ],
+  "tokens_reranked": 32685
+}

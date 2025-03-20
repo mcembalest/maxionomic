@@ -1,0 +1,27 @@
+{
+  "mrr": 0.1111111111111111,
+  "ndcg": 0.14126697285982898,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "967",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_cooling_(disambiguation)",
+    "Hockey_stick_graph",
+    "Global_warming_hiatus",
+    "Abrupt_climate_change",
+    "Timeline_of_glaciation",
+    "Pliocene_climate",
+    "Global_cooling",
+    "Description_of_the_Medieval_Warm_Period_and_Little_Ice_Age_in_IPCC_reports",
+    "Little_Ice_Age",
+    "Neoglaciation"
+  ],
+  "relevant_docs": [
+    "John_D._Hamaker",
+    "Ice_age",
+    "Little_Ice_Age"
+  ]
+}

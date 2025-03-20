@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.3903800499921017,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-75",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:James_Monroe>",
+    "<dbpedia:Second_inauguration_of_James_Monroe>",
+    "<dbpedia:Franklin_D._Roosevelt>",
+    "<dbpedia:Living_Presidents_of_the_United_States>",
+    "<dbpedia:United_States_presidential_election_in_California,_1876>",
+    "<dbpedia:John_Quincy_Adams_II>",
+    "<dbpedia:Barack_Obama>",
+    "<dbpedia:5th_New_Jersey_Volunteer_Infantry>",
+    "<dbpedia:Presidents_Race>",
+    "<dbpedia:Benjamin_Joseph_Franklin>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:The_Presidents_of_the_United_States_of_America_(album)>",
+    "<dbpedia:President_of_the_United_States>",
+    "<dbpedia:List_of_Presidents_of_the_United_States>",
+    "<dbpedia:James_Monroe>"
+  ],
+  "tokens_reranked": 8881
+}

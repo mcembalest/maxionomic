@@ -1,0 +1,41 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6911279212606076,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_LS-46",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Politics_of_the_United_Kingdom>",
+    "<dbpedia:Monarchy_in_the_Irish_Free_State>",
+    "<dbpedia:Governor_of_Gibraltar>",
+    "<dbpedia:Elizabeth_II>",
+    "<dbpedia:Republicanism_in_the_United_Kingdom>",
+    "<dbpedia:Monarchy_of_Tuvalu>",
+    "<dbpedia:Monarchies_in_Europe>",
+    "<dbpedia:Monarchy_in_the_Cook_Islands>",
+    "<dbpedia:List_of_viceregal_representatives_of_Elizabeth_II>",
+    "<dbpedia:Governor_of_the_British_Virgin_Islands>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Monarchies_in_Europe>",
+    "<dbpedia:Anne,_Queen_of_Great_Britain>",
+    "<dbpedia:Monarchy_of_Belize>",
+    "<dbpedia:Monarchy_of_Antigua_and_Barbuda>",
+    "<dbpedia:Monarchism_in_Canada>",
+    "<dbpedia:Politics_of_the_United_Kingdom>",
+    "<dbpedia:Monarchy_of_Jamaica>",
+    "<dbpedia:Monarchy_of_Grenada>",
+    "<dbpedia:Monarchy_of_the_Solomon_Islands>",
+    "<dbpedia:Monarchy_in_the_Irish_Free_State>",
+    "<dbpedia:Monarchy_of_Barbados>",
+    "<dbpedia:Republicanism_in_the_United_Kingdom>",
+    "<dbpedia:Governor_of_the_British_Virgin_Islands>",
+    "<dbpedia:Monarchy_of_Saint_Lucia>",
+    "<dbpedia:Monarchy_of_the_Bahamas>",
+    "<dbpedia:Governor_of_Gibraltar>"
+  ],
+  "tokens_reranked": 7518
+}

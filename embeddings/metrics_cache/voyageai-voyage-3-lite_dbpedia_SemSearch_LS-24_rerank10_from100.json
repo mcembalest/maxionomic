@@ -1,0 +1,32 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.9083745556952364,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_LS-24",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:Daddio>",
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:Smiles_of_a_Summer_Night_(Desperate_Housewives)>",
+    "<dbpedia:Ant_&_Dec's_Push_the_Button>",
+    "<dbpedia:Matthew_Berry_(politician)>",
+    "<dbpedia:List_of_television_stations_in_Missouri_(by_channel_number)>",
+    "<dbpedia:List_of_television_stations_in_Missouri_(by_channel_number)>",
+    "<dbpedia:List_of_television_stations_in_Missouri_(by_channel_number)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:Daddio>",
+    "<dbpedia:Smiles_of_a_Summer_Night_(Desperate_Housewives)>",
+    "<dbpedia:The_IT_Crowd>",
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Ant_&_Dec's_Push_the_Button>"
+  ],
+  "tokens_reranked": 6126
+}

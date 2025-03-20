@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "13474",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah",
+    "Shailesh_Lodha",
+    "Don't_Worry_Chachu",
+    "Kehta_Hai_Dil",
+    "Kuch_Toh_Hai_Tere_Mere_Darmiyaan",
+    "Dastaan_(TV_series)",
+    "Ek_Hasina_Thi_(TV_series)",
+    "Baa_Bahoo_Aur_Baby",
+    "Chashme_Baddoor_(2013_film)",
+    "Daal_Mein_Kala"
+  ],
+  "relevant_docs": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah"
+  ]
+}

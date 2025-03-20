@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1119",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Climatic_Research_Unit_documents",
+    "Ian_Clark_(geologist)",
+    "2013_extreme_weather_events",
+    "Polar_amplification",
+    "IPCC_Fourth_Assessment_Report",
+    "Polar_see-saw",
+    "Measurement_of_sea_ice",
+    "Permafrost",
+    "Arctic_sea_ice_decline",
+    "Iris_hypothesis"
+  ],
+  "relevant_docs": [
+    "Greenland",
+    "Adam_Scaife",
+    "Scientific_consensus_on_climate_change",
+    "Climatic_Research_Unit_email_controversy"
+  ]
+}

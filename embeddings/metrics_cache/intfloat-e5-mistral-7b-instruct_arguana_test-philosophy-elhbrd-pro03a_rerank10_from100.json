@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-philosophy-elhbrd-pro03a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-law-lgplhbssbco-con01a",
+    "test-health-dhpelhbass-con02b",
+    "test-health-dhpelhbass-pro01a",
+    "test-health-dhpelhbass-pro01b",
+    "training-science-ncpshwlucpc-con01b",
+    "test-health-hpehwadvoee-pro03b",
+    "test-law-lgplhbssbco-con03a",
+    "test-health-dhpelhbass-con01a",
+    "test-health-dhpelhbass-con01b",
+    "test-health-hpehwadvoee-con01a"
+  ],
+  "relevant_docs": [
+    "test-philosophy-elhbrd-pro03b"
+  ],
+  "tokens_reranked": 48570
+}

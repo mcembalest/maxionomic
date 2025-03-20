@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7039180890341347,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1862",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Greenhouse_gas",
+    "Fossil_fuel",
+    "Carbon_dioxide",
+    "The_Great_Global_Warming_Swindle",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "James_Hansen",
+    "IPCC_First_Assessment_Report",
+    "Idealized_greenhouse_model",
+    "Friends_of_Science",
+    "World_Climate_Report"
+  ],
+  "relevant_docs": [
+    "Scott_Pruitt",
+    "Carbon_dioxide",
+    "Greenhouse_gas"
+  ],
+  "tokens_reranked": 36059
+}

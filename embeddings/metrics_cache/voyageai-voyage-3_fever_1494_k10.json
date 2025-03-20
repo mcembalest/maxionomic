@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "1494",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Food_Network",
+    "Food_Network_(Australia)",
+    "Top_5_Restaurants",
+    "Food_Network_Magazine",
+    "NFL_Network",
+    "Food_Network_Star",
+    "Have_Fork,_Will_Travel",
+    "Food_Feuds",
+    "Bobby's_Dinner_Battle",
+    "Cooking_Channel_(Canada)"
+  ],
+  "relevant_docs": [
+    "Food_Network"
+  ]
+}

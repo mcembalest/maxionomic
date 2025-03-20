@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8772153153380493,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "136604",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Zac_Efron",
+    "MTV_Video_Music_Award",
+    "High_School_Musical",
+    "Americans",
+    "Natural-born-citizen_clause",
+    "Disney_Channel",
+    "Breaking_Free",
+    "Charlie_St._Cloud",
+    "Dancing_with_the_Stars_(U.S._TV_series)",
+    "Washington,_D.C."
+  ],
+  "relevant_docs": [
+    "Americans",
+    "Zac_Efron"
+  ],
+  "tokens_reranked": 33195
+}

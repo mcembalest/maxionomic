@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "2204",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Global_warming",
+    "Global_warming_controversy",
+    "Climatic_Research_Unit_documents",
+    "Scientific_opinion_on_climate_change",
+    "Satellite_temperature_measurements",
+    "Retreat_of_glaciers_since_1850",
+    "An_Appeal_to_Reason",
+    "Copenhagen_Diagnosis",
+    "IPCC_First_Assessment_Report"
+  ],
+  "relevant_docs": [
+    "Global_warming"
+  ],
+  "tokens_reranked": 38845
+}

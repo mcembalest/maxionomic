@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "705",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Wies\u0142aw_Mas\u0142owski",
+    "Climate:_Long_range_Investigation,_Mapping,_and_Prediction",
+    "Global_warming_hiatus",
+    "Climate_change",
+    "Copenhagen_Diagnosis",
+    "Cool_tropics_paradox",
+    "Coupled_model_intercomparison_project",
+    "IPCC_First_Assessment_Report",
+    "Climate_change_in_Texas",
+    "Wibj\u00f6rn_Karl\u00e9n"
+  ],
+  "relevant_docs": [
+    "Sensitivity_analysis",
+    "Science",
+    "General_circulation_model",
+    "Global_warming"
+  ],
+  "tokens_reranked": 35034
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "412",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "History_of_climate_change_science",
+    "James_Hansen",
+    "Environmental_issue",
+    "Global_warming_hiatus",
+    "Global_cooling",
+    "1997\u201398_El_Ni\u00f1o_event",
+    "George_Kukla",
+    "Paleocene\u2013Eocene_Thermal_Maximum",
+    "Hockey_stick_graph",
+    "IPCC_First_Assessment_Report"
+  ],
+  "relevant_docs": [
+    "Eocene",
+    "Paleocene",
+    "Global_warming"
+  ],
+  "tokens_reranked": 39180
+}

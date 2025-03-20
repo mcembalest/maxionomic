@@ -1,0 +1,36 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5239294981581574,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-17",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Butte_High_School_(Butte,_Montana)>",
+    "<dbpedia:Long_Buttes>",
+    "<dbpedia:Butte_(Besan\u00e7on)>",
+    "<dbpedia:Square_Butte_(Montana)>",
+    "<dbpedia:Blacktail_Butte>",
+    "<dbpedia:Fairmont_Butte>",
+    "<dbpedia:St._John's_Episcopal_Church_(Butte,_Montana)>",
+    "<dbpedia:List_of_places_in_Montana>",
+    "<dbpedia:Butte,_Montana>",
+    "<dbpedia:Sweet_Grass_Hills>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Montana_Tech_of_the_University_of_Montana>",
+    "<dbpedia:Butte\u2013Anaconda_Historic_District>",
+    "<dbpedia:Butte,_America>",
+    "<dbpedia:Rocker,_Butte>",
+    "<dbpedia:Heart_Butte,_Montana>",
+    "<dbpedia:Butte_High_School_(Butte,_Montana)>",
+    "<dbpedia:List_of_places_in_Montana>",
+    "<dbpedia:National_Register_of_Historic_Places_listings_in_Silver_Bow_County,_Montana>",
+    "<dbpedia:St._John's_Episcopal_Church_(Butte,_Montana)>",
+    "<dbpedia:Silver_Bow,_Butte>",
+    "<dbpedia:Square_Butte_(Montana)>",
+    "<dbpedia:Butte,_Montana>"
+  ]
+}

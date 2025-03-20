@@ -1,0 +1,27 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.3295827480202853,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "555",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Season_creep",
+    "Phenology",
+    "Ursus_americanus_carlottae",
+    "Arctostaphylos",
+    "Kodiak_bear",
+    "Seed_predation",
+    "Rubus_arcticus",
+    "Grizzly_bear",
+    "Yup'ik_cuisine",
+    "Beringian_wolf"
+  ],
+  "relevant_docs": [
+    "Grizzly_bear",
+    "Kodiak_bear",
+    "Brown_bear"
+  ]
+}

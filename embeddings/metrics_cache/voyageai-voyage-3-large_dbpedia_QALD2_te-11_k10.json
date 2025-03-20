@@ -1,0 +1,32 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.1932507268736416,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-11",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Formula_One_drivers_from_Brazil>",
+    "<dbpedia:Alain_Prost>",
+    "<dbpedia:Formula_One_drivers_from_Argentina>",
+    "<dbpedia:Michael_Schumacher>",
+    "<dbpedia:Stirling_Moss>",
+    "<dbpedia:Formula_One_drivers_from_the_United_Kingdom>",
+    "<dbpedia:List_of_Formula_One_driver_records>",
+    "<dbpedia:Riccardo_Patrese>",
+    "<dbpedia:Formula_One_drivers_from_France>",
+    "<dbpedia:Luigi_Fagioli>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Andrea_de_Adamich>",
+    "<dbpedia:Jean-\u00c9ric_Vergne>",
+    "<dbpedia:Rubens_Barrichello>",
+    "<dbpedia:Eddie_Cheever>",
+    "<dbpedia:2008_Spanish_Grand_Prix>",
+    "<dbpedia:List_of_Formula_One_driver_records>",
+    "<dbpedia:Michael_Schumacher>",
+    "<dbpedia:Enrico_Bertaggia>"
+  ]
+}

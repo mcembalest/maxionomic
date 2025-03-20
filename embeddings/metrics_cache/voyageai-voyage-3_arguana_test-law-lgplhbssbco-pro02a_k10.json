@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3",
+  "dataset": "arguana",
+  "query_id": "test-law-lgplhbssbco-pro02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "training-law-ueegllghwhsl-pro01a",
+    "test-law-lgplhbssbco-pro02b",
+    "training-law-lgpisyhwhcdt-pro01b",
+    "training-law-ueegllghwhsl-pro01b",
+    "training-law-ueegllghwhsl-con01a",
+    "test-law-lgplhbssbco-con01a",
+    "training-education-eghbpsbhrt-con01a",
+    "training-law-ueegllghwhsl-con02b",
+    "test-law-lgplhbssbco-con03a",
+    "training-law-ueegllghwhsl-con01b"
+  ],
+  "relevant_docs": [
+    "test-law-lgplhbssbco-pro02b"
+  ]
+}

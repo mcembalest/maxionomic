@@ -1,0 +1,30 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.9068250379649666,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-2012319",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Open_Secrets>",
+    "<dbpedia:Vintage_Munro>",
+    "<dbpedia:Alice_Munro>",
+    "<dbpedia:List_of_short_stories_by_Alice_Munro>",
+    "<dbpedia:Too_Much_Happiness>",
+    "<dbpedia:Friend_of_My_Youth>",
+    "<dbpedia:The_View_from_Castle_Rock>",
+    "<dbpedia:Short_story_collection>",
+    "<dbpedia:The_Best_American_Short_Stories_1994>",
+    "<dbpedia:Boys_and_Girls_(short_story)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Alice_Munro>",
+    "<dbpedia:Friend_of_My_Youth>",
+    "<dbpedia:Too_Much_Happiness>",
+    "<dbpedia:Open_Secrets>",
+    "<dbpedia:List_of_short_stories_by_Alice_Munro>"
+  ],
+  "tokens_reranked": 9063
+}

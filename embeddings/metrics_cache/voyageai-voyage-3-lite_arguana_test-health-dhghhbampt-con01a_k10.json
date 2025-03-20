@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "arguana",
+  "query_id": "test-health-dhghhbampt-con01a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-health-dhghhbampt-con01b",
+    "test-health-dhghhbampt-pro03b",
+    "test-health-dhghhbampt-pro01a",
+    "test-health-dhghhbampt-pro01b",
+    "test-health-dhghhbampt-con03b",
+    "training-health-dhiahwivdp-con04b",
+    "training-health-fhhphwisu-con03b",
+    "test-health-dhghhbampt-pro02a",
+    "training-health-fhhphwisu-con03a",
+    "test-philosophy-elhbrd-pro01b"
+  ],
+  "relevant_docs": [
+    "test-health-dhghhbampt-con01b"
+  ]
+}

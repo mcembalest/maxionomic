@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-international-amehbuaisji-con04a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-international-amehbuaisji-con04a",
+    "test-international-amehbuaisji-con04b",
+    "validation-law-hrilhbiccfg-con04b",
+    "validation-law-hrilhbiccfg-pro05b",
+    "training-international-alilhbassw-con03a",
+    "test-international-amehbuaisji-con03a",
+    "test-law-hrilpgwhwr-pro01a",
+    "test-international-amehbuaisji-pro02b",
+    "test-international-amehbuaisji-pro03a",
+    "training-international-alilhbassw-pro01a"
+  ],
+  "relevant_docs": [
+    "test-international-amehbuaisji-con04b"
+  ],
+  "tokens_reranked": 37964
+}

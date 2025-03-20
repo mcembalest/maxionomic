@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "2204",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Global_warming",
+    "IPCC_Fourth_Assessment_Report",
+    "Economics_of_global_warming",
+    "Special_Report_on_Global_Warming_of_1.5_\u00b0C",
+    "Greenhouse_gas_emissions_accounting",
+    "Attribution_of_recent_climate_change",
+    "Global_warming_controversy",
+    "Climate_change_mitigation",
+    "Ozone_depletion_and_climate_change"
+  ],
+  "relevant_docs": [
+    "Global_warming"
+  ]
+}

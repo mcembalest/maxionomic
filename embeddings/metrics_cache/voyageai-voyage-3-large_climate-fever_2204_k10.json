@@ -1,0 +1,25 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.43067655807339306,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "2204",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Scientific_opinion_on_climate_change",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming",
+    "Global_warming",
+    "Attribution_of_recent_climate_change",
+    "Scientific_consensus_on_climate_change",
+    "Global_warming_controversy",
+    "Effects_of_global_warming",
+    "Climate_change_in_the_United_States",
+    "Climate_change_in_the_Arctic"
+  ],
+  "relevant_docs": [
+    "Global_warming"
+  ]
+}

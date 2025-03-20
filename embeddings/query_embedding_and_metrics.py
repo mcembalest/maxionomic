@@ -1,4 +1,5 @@
 import argparse
+import glob
 import json
 import os
 import numpy as np
@@ -45,6 +46,12 @@ class EmbeddingEvaluator:
         self.k = k
         self.use_reranker = use_reranker
         self.initial_k = initial_k if use_reranker else k
+        if "nomic" in model_name:
+            self.query_prefix="search_query: "
+        elif "e5-mistral" in model_name:
+            self.query_prefix = e5_mistral_prompt_dict[dataset_name]
+        else:
+            self.query_prefix = ""
         
         self.total_reranking_cost = 0.0
         self.total_tokens_reranked = 0
@@ -75,19 +82,26 @@ class EmbeddingEvaluator:
             processed_queries = {str(s["_id"]): s["text"] 
                                for s in queries if len(s["text"].strip()) > 0}
             
-            # Process relevance judgments - simplified to store single relevant doc per query
+            # FIX: Process relevance judgments - store ALL relevant docs per query
             processed_qrels = {}
             for item in qrels:
                 query_id = str(item["query-id"])
-                processed_qrels[query_id] = str(item["corpus-id"])
+                corpus_id = str(item["corpus-id"])
+                if query_id not in processed_qrels:
+                    processed_qrels[query_id] = set()
+                processed_qrels[query_id].add(corpus_id)
             
-            missing_docs = set(doc_id for doc_id in processed_qrels.values() 
-                              if doc_id not in processed_corpus)
+            missing_docs = set()
+            for query_id, relevant_docs in processed_qrels.items():
+                for doc_id in list(relevant_docs):
+                    if doc_id not in processed_corpus:
+                        relevant_docs.remove(doc_id)
+                        missing_docs.add(doc_id)
+            
             if missing_docs:
                 logger.warning(f"Found {len(missing_docs)} referenced documents that don't exist in corpus")
-                # Remove queries whose relevant document is missing
-                processed_qrels = {qid: doc_id for qid, doc_id in processed_qrels.items() 
-                                 if doc_id not in missing_docs}
+                # Remove queries with no relevant documents
+                processed_qrels = {qid: docs for qid, docs in processed_qrels.items() if docs}
             
             logger.info(f"Dataset loaded: {len(processed_corpus)} docs, {len(processed_queries)} queries")
             return processed_corpus, processed_queries, processed_qrels
@@ -161,7 +175,7 @@ class EmbeddingEvaluator:
             else:
                 # note: we used consistent prefix for nomic server-side, 
                 # but benchmark-dataset-specific prefixes are needed for e5-mistral
-                payload = {"inputs": query_texts}
+                
                 if "e5-mistral" in self.model_name:
                     payload = {
                         "inputs": [
@@ -169,6 +183,8 @@ class EmbeddingEvaluator:
                             for x in query_texts
                         ]
                     }
+                else:
+                    payload = {"inputs": [self.query_prefix + x for x in query_texts]}
                 response = requests.post( 
                     f"{self.endpoint}/embed",
                     headers=self.headers,
@@ -185,9 +201,36 @@ class EmbeddingEvaluator:
             logger.error(f"Error embedding queries: {str(e)}")
             return None
     
+    def _get_metrics_cache_path(self, query_id):
+        """Get cache path for metrics results"""
+        cache_dir = "metrics_cache"
+        os.makedirs(cache_dir, exist_ok=True)
+        
+        model_name_safe = self.model_name.replace("/", "-")
+        rerank_suffix = f"_rerank{self.k}_from{self.initial_k}" if self.use_reranker else f"_k{self.k}"
+        return f"{cache_dir}/{model_name_safe}_{self.dataset_name}_{query_id}{rerank_suffix}.json"
+
     def calculate_metrics(self, query_embedding, query_id):
-        """Calculate metrics for a single query"""
-        relevant_doc = self.qrels[query_id]  # Now just a single document ID
+        """Calculate metrics for a single query with caching"""
+        # Check if cached results exist
+        cache_path = self._get_metrics_cache_path(query_id)
+        if os.path.exists(cache_path):
+            try:
+                with open(cache_path, 'r') as f:
+                    cached_results = json.load(f)
+                    logger.debug(f"Loaded cached metrics for query {query_id}")
+                    
+                    # Update reranking cost metrics if using reranker
+                    if self.use_reranker and "tokens_reranked" in cached_results:
+                        self.total_tokens_reranked += cached_results["tokens_reranked"]
+                        self.total_reranking_cost += (cached_results["tokens_reranked"] / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
+                    
+                    return cached_results["mrr"], cached_results["ndcg"]
+            except Exception as e:
+                logger.warning(f"Failed to load cached metrics for query {query_id}: {e}")
+        
+        # If not cached or cache loading failed, calculate metrics
+        relevant_docs = self.qrels[query_id]  # Now this is a set of relevant document IDs
         all_doc_ids = list(self.corpus_embeddings.keys())
         
         query_norm = np.linalg.norm(query_embedding)
@@ -203,6 +246,7 @@ class EmbeddingEvaluator:
         similarities.sort(reverse=True)
         initial_ranking = [(score, doc_id) for score, doc_id in similarities[:self.initial_k]]
         
+        tokens_reranked = 0
         if self.use_reranker:
             docs_to_rerank = [self.corpus[doc_id] for _, doc_id in initial_ranking]
             doc_id_map = {doc: doc_id for doc, (_, doc_id) in zip(docs_to_rerank, initial_ranking)}
@@ -214,10 +258,10 @@ class EmbeddingEvaluator:
                 top_k=self.k
             )
 
-            total_tokens = reranking.total_tokens
+            tokens_reranked = reranking.total_tokens
             
-            self.total_tokens_reranked += total_tokens
-            self.total_reranking_cost += (total_tokens / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
+            self.total_tokens_reranked += tokens_reranked
+            self.total_reranking_cost += (tokens_reranked / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
             
             # Extract doc_ids in order of relevance scores
             ranking = [doc_id_map[result.document] for result in reranking.results]
@@ -227,17 +271,44 @@ class EmbeddingEvaluator:
         # Calculate MRR@k
         mrr = 0
         for rank, doc_id in enumerate(ranking):
-            if doc_id == relevant_doc:
+            if doc_id in relevant_docs:
                 mrr = 1.0 / (rank + 1)
                 break
 
-        # Calculate NDCG@k
-        # For binary relevance, NDCG = 1/log2(r+1) where r is the rank of the relevant doc
-        ndcg = 0
-        for rank, doc_id in enumerate(ranking):
-            if doc_id == relevant_doc:
-                ndcg = 1.0 / np.log2(rank + 2)
-                break
+        # Calculate NDCG@k using the proper implementation from comments
+        def compute_dcg_at_k(relevances, k):
+            dcg = 0
+            for i in range(min(len(relevances), k)):
+                dcg += relevances[i] / np.log2(i + 2)  # +2 as we start our idx at 0
+            return dcg
+
+        # Create relevance arrays for predicted and ideal rankings
+        predicted_relevance = [1 if doc_id in relevant_docs else 0 for doc_id in ranking[:self.k]]
+        true_relevances = [1] * len(relevant_docs)
+        
+        # Calculate NDCG using the helper function
+        dcg = compute_dcg_at_k(predicted_relevance, self.k)
+        idcg = compute_dcg_at_k(true_relevances, min(self.k, len(relevant_docs)))
+        
+        ndcg = dcg / idcg if idcg > 0 else 0
+        cache_data = {
+            "mrr": mrr,
+            "ndcg": ndcg,
+            "model": self.model_name,
+            "dataset": self.dataset_name,
+            "query_id": query_id,
+            "k": self.k,
+            "use_reranker": self.use_reranker,
+            "initial_k": self.initial_k,
+            "ranking": ranking[:self.k],  # Save top-k rankings
+            "relevant_docs": list(relevant_docs)
+        }
+        
+        if self.use_reranker:
+            cache_data["tokens_reranked"] = tokens_reranked
+        
+        with open(cache_path, 'w') as f:
+            json.dump(cache_data, f, indent=2)
 
         return mrr, ndcg
     
@@ -264,8 +335,6 @@ class EmbeddingEvaluator:
             f"MRR@{self.k}": mrr_sum / query_count if query_count > 0 else 0,
             f"NDCG@{self.k}": ndcg_sum / query_count if query_count > 0 else 0,
         }
-        
-        # Add reranking cost metrics if reranker was used
         if self.use_reranker:
             metrics.update({
                 "total_reranking_cost": self.total_reranking_cost,
@@ -288,14 +357,13 @@ def main():
     parser.add_argument("--initial_k", type=int, default=100,
                       help="Number of documents to retrieve before reranking (default: 100)")
     args = parser.parse_args()
-
     if args.dataset == 'all':
         datasets = list(set(DATASET_PATHS.keys()) - set(args.skip_datasets.split()))
     else:
         datasets = [args.dataset]
 
+    all_metrics = {}
     for d in datasets:
-        
         logger.info(f"Starting evaluation for {args.model} on {d}")
         evaluator = EmbeddingEvaluator(
             args.model, 
@@ -307,10 +375,11 @@ def main():
         )
         metrics = evaluator.evaluate()
         for metric_name, metric_value in metrics.items():
-            if isinstance(metric_value, float):
-                logger.info(f"{metric_name}: {metric_value:.4f}")
-            else:
-                logger.info(f"{metric_name}: {metric_value}")
+            if metric_name not in all_metrics:
+                all_metrics[metric_name] = 0
+            all_metrics[metric_name] += metric_value
+            logger.info(f"{metric_name}: {metric_value}")
+                
         if args.save:
             model_name_safe = args.model.replace("/", "-")
             output_dict = {
@@ -327,6 +396,15 @@ def main():
             with open(output_filename, 'w') as f:
                 json.dump(output_dict, f, indent=2)
             logger.info(f"Metrics saved to {output_filename}")
+    
+    if len(datasets) > 0:
+        logger.info(f"\n===== Average metrics across {len(datasets)} datasets =====")
+        for metric_name, metric_sum in all_metrics.items():
+            avg_value = metric_sum / len(datasets)
+            if isinstance(avg_value, float):
+                logger.info(f"Average {metric_name}: {avg_value:.4f}")
+            else:
+                logger.info(f"Average {metric_name}: {avg_value}")
 
 if __name__ == "__main__":
     main()

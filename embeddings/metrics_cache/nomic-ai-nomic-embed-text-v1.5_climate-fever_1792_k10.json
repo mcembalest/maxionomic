@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6131471927654584,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1792",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Greenland",
+    "Future_sea_level",
+    "Arctic_sea_ice_decline",
+    "List_of_companies_of_Greenland",
+    "Glacial_earthquake",
+    "Deglaciation",
+    "Retreat_of_glaciers_since_1850",
+    "Global_warming",
+    "Denmark_Strait",
+    "Geography_of_Greenland"
+  ],
+  "relevant_docs": [
+    "Sea_level_rise",
+    "Greenland"
+  ]
+}

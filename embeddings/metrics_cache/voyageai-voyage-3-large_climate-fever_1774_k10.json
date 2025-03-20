@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.617319681505689,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1774",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "CLOUD_experiment",
+    "Cloud_formation_and_climate_change",
+    "Journal_for_Geoclimatic_Studies",
+    "Iris_hypothesis",
+    "Climate:_Long_range_Investigation,_Mapping,_and_Prediction",
+    "Centauro_event",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming",
+    "Attribution_of_recent_climate_change",
+    "Willie_Soon",
+    "Temperature_record_of_the_past_1000_years"
+  ],
+  "relevant_docs": [
+    "Attribution_of_recent_climate_change",
+    "Climate_change_(general_concept)",
+    "CLOUD_experiment"
+  ]
+}

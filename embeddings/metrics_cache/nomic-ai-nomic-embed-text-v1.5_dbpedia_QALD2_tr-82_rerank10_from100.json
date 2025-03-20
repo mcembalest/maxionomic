@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.75369761125927,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-82",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:G'MIC>",
+    "<dbpedia:CinePaint>",
+    "<dbpedia:GTK+>",
+    "<dbpedia:GIMP_version_history>",
+    "<dbpedia:Great_Internet_Mersenne_Prime_Search>",
+    "<dbpedia:Seashore_(software)>",
+    "<dbpedia:List_of_C_Sharp_software>",
+    "<dbpedia:GraphicsMagick>",
+    "<dbpedia:C++>",
+    "<dbpedia:Cairo_(graphics)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:C_(programming_language)>",
+    "<dbpedia:G'MIC>",
+    "<dbpedia:GIMP_version_history>",
+    "<dbpedia:GTK+>"
+  ],
+  "tokens_reranked": 8300
+}

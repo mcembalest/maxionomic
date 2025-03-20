@@ -1,0 +1,42 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-60",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:The_Lakes,_Copenhagen>",
+    "<dbpedia:Lake_Esrum>",
+    "<dbpedia:Arres\u00f8>",
+    "<dbpedia:Tiss\u00f8>",
+    "<dbpedia:Moss\u00f8>",
+    "<dbpedia:Maribo>",
+    "<dbpedia:Madum_Lake>",
+    "<dbpedia:Damhus_Lake>",
+    "<dbpedia:Lake_Denmark>",
+    "<dbpedia:Brabrand_Lake>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Brabrand_Lake>",
+    "<dbpedia:Lake_Stubbe>",
+    "<dbpedia:Maribo>",
+    "<dbpedia:Damhus_Lake>",
+    "<dbpedia:List_of_lakes_of_Denmark>",
+    "<dbpedia:Arres\u00f8>",
+    "<dbpedia:Moss\u00f8>",
+    "<dbpedia:Lists_of_lakes>",
+    "<dbpedia:Tiss\u00f8>",
+    "<dbpedia:Lake_Denmark>",
+    "<dbpedia:The_Lakes,_Copenhagen>",
+    "<dbpedia:Lake_Pavilion,_Copenhagen>",
+    "<dbpedia:Madum_Lake>",
+    "<dbpedia:Lake_Esrum>",
+    "<dbpedia:Fures\u00f8_(lake)>",
+    "<dbpedia:B\u00f8lling_lake>",
+    "<dbpedia:Lake_Bagsv\u00e6rd>"
+  ],
+  "tokens_reranked": 6387
+}

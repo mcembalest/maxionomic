@@ -1,0 +1,28 @@
+{
+  "mrr": 0.1,
+  "ndcg": 0.11284514134893527,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1981",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Climate_Change_Science_Program",
+    "Regulation_of_greenhouse_gases_under_the_Clean_Air_Act",
+    "Climate_change_in_Canada",
+    "Politics_of_global_warming",
+    "Scott_Pruitt",
+    "Carbon_capture_and_storage_in_Australia",
+    "Greenhouse_gas_emissions_by_the_United_States",
+    "Energy_policy_of_the_Barack_Obama_administration",
+    "Carbon_bubble",
+    "Environmental_policy_of_the_Donald_Trump_administration"
+  ],
+  "relevant_docs": [
+    "Climate_change_policy_of_the_United_States",
+    "Emissions_trading",
+    "Environmental_policy_of_the_Donald_Trump_administration",
+    "Lisa_P._Jackson"
+  ]
+}

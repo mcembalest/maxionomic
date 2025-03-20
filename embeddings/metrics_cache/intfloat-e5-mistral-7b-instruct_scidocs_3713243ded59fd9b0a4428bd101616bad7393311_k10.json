@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "scidocs",
+  "query_id": "3713243ded59fd9b0a4428bd101616bad7393311",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "c0a2293809917839047c7ec98d942777ca426e57",
+    "494fc1e30be172fbe393e0d68695ae318e23da8c",
+    "227ed02b3e5edf4c5b08539c779eca90683549e6",
+    "abdb694ab4b1cb4f54f07ed16a657765ce8c47f5",
+    "3f4e71d715fce70c89e4503d747aad11fcac8a43",
+    "3bad518b0f56e72efadc4791a2bd65aaeaf47ec1",
+    "586407b38cc3bb0560ff9941a89f3402e34ee08b",
+    "5f09cb313b6fb14877c6b5be79294faf1f4f7f02",
+    "a5de09243b4b12fc4bcf4db56c8e38fc3beddf4f",
+    "f67acaa10ad4a0eb7130cd1f0b953478056f32af"
+  ],
+  "relevant_docs": [
+    "bc5e20c9e950a5dcedbe1caacc39afe097e3a6b0",
+    "93dbcdc45336f4d26575e8273b3d70f7a1a260b2",
+    "609ab78579f2f51e4677715c32d3370899bfd3a7",
+    "14316b885f65d2197ce8c6d4ab3ee61fdab052b8",
+    "7abeaf172af1129556ee8b3fcbb2139172e50bdf"
+  ]
+}

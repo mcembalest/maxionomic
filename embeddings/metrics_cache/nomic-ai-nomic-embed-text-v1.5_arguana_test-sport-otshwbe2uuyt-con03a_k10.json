@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-sport-otshwbe2uuyt-con03a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-sport-otshwbe2uuyt-pro03a",
+    "test-sport-otshwbe2uuyt-con02a",
+    "test-sport-otshwbe2uuyt-con03b",
+    "test-sport-otshwbe2uuyt-con04a",
+    "training-law-hrilhwsyh-pro03b",
+    "training-international-egilpwhbrh-con03a",
+    "test-sport-otshwbe2uuyt-con01b",
+    "training-law-hrilhwsyh-con03b",
+    "training-international-ehbesefe-pro04a",
+    "training-law-hrilhwsyh-con02b"
+  ],
+  "relevant_docs": [
+    "test-sport-otshwbe2uuyt-con03b"
+  ]
+}

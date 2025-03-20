@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "2214",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Urban_heat_island",
+    "Microclimate",
+    "Weather_station",
+    "2016_North_American_heat_wave",
+    "2010_Northern_Hemisphere_heat_waves",
+    "2006_North_American_heat_wave",
+    "Climate_of_Africa",
+    "Heat_index",
+    "2013_Southwestern_United_States_heat_wave",
+    "Highest_temperature_recorded_on_Earth"
+  ],
+  "relevant_docs": [
+    "Cooling_tower",
+    "Palo_Alto,_California",
+    "Grissom_Air_Reserve_Base"
+  ],
+  "tokens_reranked": 38616
+}

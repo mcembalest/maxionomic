@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "221252",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Single_(New_Kids_on_the_Block_and_Ne-Yo_song)",
+    "The_Block_(album)",
+    "Writer's_Block_(Just_Jack_song)",
+    "Untouchable_(Tupac_Shakur_song)",
+    "Beat'n_Down_Yo_Block!",
+    "Dirty_Dancing_(song)",
+    "Rock_the_Block",
+    "Boom_(Royce_da_5'9\"_song)",
+    "Blow:_Blocks_and_Boat_Docks",
+    "The_Unstoppable"
+  ],
+  "relevant_docs": [
+    "The_Block_(album)"
+  ]
+}

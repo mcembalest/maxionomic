@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "25290",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "The_Love_Club_EP",
+    "Lorde_discography",
+    "Billboard_Year-End_Hot_100_singles_of_2016",
+    "Saturn_Award_for_Best_Performance_by_a_Younger_Actor",
+    "FYF_Fest",
+    "Jordan_Smith_(musician)",
+    "Alex_Russo",
+    "Love_At_First_Sound",
+    "Chloe_East",
+    "All_the_Rage_(Cary_Brothers_EP)"
+  ],
+  "relevant_docs": [
+    "The_Love_Club_EP"
+  ],
+  "tokens_reranked": 14699
+}

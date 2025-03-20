@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "136604",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Americans",
+    "Zac_Efron",
+    "Tommy_Chong",
+    "Richard_Tucker_(actor)",
+    "Zo\u00eb_Soul",
+    "Dawson_(actor)",
+    "Political_positions_of_Jeb_Bush",
+    "United_States_Ambassador_to_Texas",
+    "Natural-born-citizen_clause",
+    "Richard_Dawson"
+  ],
+  "relevant_docs": [
+    "Zac_Efron",
+    "Americans"
+  ]
+}

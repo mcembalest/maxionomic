@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "26878",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Bank_of_America",
+    "BA_Merchant_Services",
+    "100_Federal_Street",
+    "Bank_of_America_Home_Loans",
+    "Bank_of_Italy_(United_States)",
+    "Hillary_Clinton_presidential_campaign,_2016",
+    "Bank_of_America,_Los_Angeles",
+    "Bank_of_America_Tower_(Phoenix)",
+    "First_American_National_Bank",
+    "Bank_of_America_500"
+  ],
+  "relevant_docs": [
+    "Bank_of_America"
+  ],
+  "tokens_reranked": 32161
+}

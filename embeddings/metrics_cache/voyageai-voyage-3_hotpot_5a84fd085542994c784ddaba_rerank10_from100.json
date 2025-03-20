@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "hotpot",
+  "query_id": "5a84fd085542994c784ddaba",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "1854777",
+    "1823117",
+    "3829591",
+    "460143",
+    "9171447",
+    "34744454",
+    "31950501",
+    "3600899",
+    "209943",
+    "20777181"
+  ],
+  "relevant_docs": [
+    "1823117",
+    "1854777"
+  ],
+  "tokens_reranked": 10579
+}

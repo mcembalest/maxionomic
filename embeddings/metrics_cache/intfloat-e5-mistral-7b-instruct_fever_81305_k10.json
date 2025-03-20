@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "81305",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Mikhail_Prokhorov",
+    "Viktor_Zubkov",
+    "Rem_Viakhirev",
+    "Mikhail_Margelov",
+    "Citi_Private_Bank",
+    "Rex_Tillerson",
+    "Russia_men's_national_ice_hockey_team",
+    "Vladimir_Romanov",
+    "Russian_Premier_League",
+    "Dmitry_Rybolovlev"
+  ],
+  "relevant_docs": [
+    "Mikhail_Prokhorov"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "179112",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "The_Good_German",
+    "Spider-Man_2",
+    "Jennifer_Garner",
+    "Good_(play)",
+    "2000s_in_film",
+    "Zen_Gesner",
+    "Norman_Snow",
+    "Cary_Elwes",
+    "Daniel_Craig",
+    "Harry_Potter_and_the_Goblet_of_Fire_(film)"
+  ],
+  "relevant_docs": [
+    "The_Good_German"
+  ],
+  "tokens_reranked": 22370
+}

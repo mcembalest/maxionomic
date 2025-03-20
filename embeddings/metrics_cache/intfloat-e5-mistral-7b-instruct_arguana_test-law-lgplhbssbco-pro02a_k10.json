@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-law-lgplhbssbco-pro02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-health-hpehwadvoee-con01a",
+    "training-law-ueegllghwhsl-pro01b",
+    "test-law-lgplhbssbco-con03a",
+    "test-health-hdond-con02a",
+    "training-law-ueegllghwhsl-con01a",
+    "test-law-lgplhbssbco-con03b",
+    "test-health-hpehwadvoee-pro05b",
+    "test-health-dhpelhbass-pro02b",
+    "test-health-hpehwadvoee-pro03b",
+    "test-health-dhpelhbass-pro01b"
+  ],
+  "relevant_docs": [
+    "test-law-lgplhbssbco-pro02b"
+  ]
+}

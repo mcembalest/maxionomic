@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7039180890341347,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1862",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Greenhouse_gas",
+    "Fossil_fuel",
+    "Carbon_dioxide",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "IPCC_First_Assessment_Report",
+    "Idealized_greenhouse_model",
+    "World_Climate_Report",
+    "Journal_for_Geoclimatic_Studies",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming",
+    "Politics_of_global_warming"
+  ],
+  "relevant_docs": [
+    "Greenhouse_gas",
+    "Scott_Pruitt",
+    "Carbon_dioxide"
+  ],
+  "tokens_reranked": 39190
+}

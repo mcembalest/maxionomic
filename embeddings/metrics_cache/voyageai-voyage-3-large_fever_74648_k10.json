@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "74648",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Ned_Stark",
+    "A_Game_of_Thrones",
+    "Bran_Stark",
+    "Stannis_Baratheon",
+    "Robert_Baratheon",
+    "Samwell_Tarly",
+    "Tywin_Lannister",
+    "Varys",
+    "Catelyn_Stark",
+    "Renly_Baratheon"
+  ],
+  "relevant_docs": [
+    "Ned_Stark"
+  ]
+}

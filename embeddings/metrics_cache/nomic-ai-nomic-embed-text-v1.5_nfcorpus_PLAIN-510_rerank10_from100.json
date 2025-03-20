@@ -1,0 +1,31 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.30260241349881345,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "nfcorpus",
+  "query_id": "PLAIN-510",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "MED-3617",
+    "MED-4075",
+    "MED-3623",
+    "MED-4980",
+    "MED-4379",
+    "MED-4884",
+    "MED-4807",
+    "MED-2940",
+    "MED-4178",
+    "MED-4593"
+  ],
+  "relevant_docs": [
+    "MED-3617",
+    "MED-3622",
+    "MED-3615",
+    "MED-3621",
+    "MED-3618",
+    "MED-3620"
+  ],
+  "tokens_reranked": 33663
+}

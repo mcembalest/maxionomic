@@ -1,0 +1,25 @@
+{
+  "mrr": 0.16666666666666666,
+  "ndcg": 0.3562071871080222,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "194432",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "1972_ABA_Playoffs",
+    "List_of_Indiana_Pacers_seasons",
+    "1968\u201369_Indiana_Pacers_season",
+    "1975\u201376_ABA_season",
+    "List_of_defunct_National_Basketball_Association_teams",
+    "Indiana_Pacers",
+    "2004\u201305_Indiana_Pacers_season",
+    "2008\u201309_Indiana_Pacers_season",
+    "List_of_Chicago_Bulls_seasons",
+    "1969\u201370_ABA_season"
+  ],
+  "relevant_docs": [
+    "Indiana_Pacers"
+  ]
+}

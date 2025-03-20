@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "163833",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "William_Blackstone",
+    "Commentaries_on_the_Laws_of_England",
+    "An_Analysis_of_the_Laws_of_England",
+    "Historical_figure",
+    "Massachusetts_Bay_Colony",
+    "Gay_Blackstone",
+    "Blackstone_&_Co",
+    "Blackstone_Canal",
+    "Northampton,_Massachusetts",
+    "Midlands_Enlightenment"
+  ],
+  "relevant_docs": [
+    "William_Blackstone"
+  ],
+  "tokens_reranked": 37821
+}

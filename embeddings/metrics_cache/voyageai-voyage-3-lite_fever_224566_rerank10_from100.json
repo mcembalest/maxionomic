@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "224566",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Vampire_Academy_(film)",
+    "Bloodlines_(Mead_novel)",
+    "Chloe_East",
+    "Tatiana_Maslany",
+    "Morena_Baccarin",
+    "Arielle_Kebbel",
+    "Horror_film",
+    "Kate_Lyn_Sheil",
+    "Fran\u00e7ois_Audouy",
+    "WE_tv_(U.S._TV_channel)"
+  ],
+  "relevant_docs": [
+    "Vampire_Academy_(film)"
+  ],
+  "tokens_reranked": 22345
+}

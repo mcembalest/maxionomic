@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-32",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Fitzgerald_Auto_Malls>",
+    "<dbpedia:List_of_South_Carolina_area_codes>",
+    "<dbpedia:List_of_shopping_malls_in_Pennsylvania>",
+    "<dbpedia:Herb_Chambers_Companies>",
+    "<dbpedia:Montgomery_Mall_(Pennsylvania)>",
+    "<dbpedia:The_Mall_in_Columbia>",
+    "<dbpedia:Eastland_Mall_(North_Versailles,_Pennsylvania)>",
+    "<dbpedia:Yorktown_Center>",
+    "<dbpedia:Juan_Carlos_(disambiguation)>",
+    "<dbpedia:Susquehanna_Valley_Mall>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Fitzgerald_Auto_Malls>"
+  ]
+}

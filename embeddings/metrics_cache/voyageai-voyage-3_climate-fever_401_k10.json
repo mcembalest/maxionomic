@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "401",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_warming_hiatus",
+    "March_2012_North_American_heat_wave",
+    "Hurricane_Katrina_and_global_warming",
+    "Global_warming_controversy",
+    "Media_coverage_of_climate_change",
+    "Global_warming",
+    "Global_cooling",
+    "Temperature_record_of_the_past_1000_years",
+    "Climate_change_in_the_United_States",
+    "2010_Northern_Hemisphere_summer_heat_waves"
+  ],
+  "relevant_docs": [
+    "Syracuse,_New_York",
+    "Instrumental_temperature_record"
+  ]
+}

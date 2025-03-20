@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "1758",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "MSU_temperature_measurements",
+    "Global_Historical_Climatology_Network",
+    "Instrumental_temperature_record",
+    "March_2012_North_American_heat_wave",
+    "Microwave_Sounding_Unit_temperature_measurements",
+    "Highest_temperature_recorded_on_Earth",
+    "Temperature_record_of_the_past_1000_years",
+    "Great_Lakes",
+    "2001_Eastern_North_America_heat_wave",
+    "Great_Lakes_region"
+  ],
+  "relevant_docs": [
+    "Lake_Superior",
+    "Permafrost",
+    "Little_Ice_Age",
+    "Precipitation"
+  ]
+}

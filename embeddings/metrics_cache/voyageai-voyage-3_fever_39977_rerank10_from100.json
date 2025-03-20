@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "39977",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Key_&_Peele",
+    "Malibu's_Most_Wanted",
+    "Road_to_Germany",
+    "Academy_of_Motion_Picture_Arts_and_Sciences",
+    "List_of_awards_and_nominations_received_by_The_Golden_Girls",
+    "Guardians_of_the_Galaxy_Vol._2",
+    "Comedy_hip_hop",
+    "The_Kilroys'_List",
+    "Screen_Actors_Guild_Award_for_Outstanding_Performance_by_an_Ensemble_in_a_Comedy_Series",
+    "Screener_(promotional)"
+  ],
+  "relevant_docs": [
+    "Key_&_Peele"
+  ],
+  "tokens_reranked": 35427
+}

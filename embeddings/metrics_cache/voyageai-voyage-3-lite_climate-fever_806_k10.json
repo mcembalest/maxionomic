@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "806",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "2016_North_American_heat_wave",
+    "2001_Eastern_North_America_heat_wave",
+    "2000_Southern_United_States_heat_wave",
+    "2013_Southwestern_United_States_heat_wave",
+    "2011_North_American_heat_wave",
+    "1911_Eastern_North_America_heat_wave",
+    "2006_North_American_heat_wave",
+    "2007_Western_North_American_heat_wave",
+    "2015_North_American_heat_wave",
+    "2016_American_Northeast_heat_wave"
+  ],
+  "relevant_docs": [
+    "2010_Northern_Hemisphere_heat_waves",
+    "Cold_wave"
+  ]
+}

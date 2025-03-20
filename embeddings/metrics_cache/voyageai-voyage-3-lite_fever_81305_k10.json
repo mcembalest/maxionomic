@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "81305",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Mikhail_Prokhorov",
+    "Prokhorov",
+    "Artyom_Prokhorov",
+    "Vitali_Prokhorov",
+    "Vladimir_Pekhtin",
+    "Rem_Viakhirev",
+    "Mikhail_Margelov",
+    "Viktor_Zubkov",
+    "Fyodor_Pronkov",
+    "Viktor_Korchnoi"
+  ],
+  "relevant_docs": [
+    "Mikhail_Prokhorov"
+  ]
+}

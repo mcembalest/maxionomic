@@ -1,0 +1,28 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.19519002499605084,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "2608",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Greenhouse_gas",
+    "Contribution_to_global_warming_by_Australia",
+    "Atmospheric_methane",
+    "List_of_countries_by_carbon_dioxide_emissions_per_capita",
+    "Deforestation_and_climate_change",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Atmospheric_carbon_cycle",
+    "Climate_change_in_the_United_States",
+    "Climate_change_in_China",
+    "Environmental_issue"
+  ],
+  "relevant_docs": [
+    "Atmospheric_methane",
+    "Biogas",
+    "Natural_gas",
+    "Methane"
+  ]
+}

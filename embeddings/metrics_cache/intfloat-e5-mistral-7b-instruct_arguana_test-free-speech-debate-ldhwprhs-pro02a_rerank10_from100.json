@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-free-speech-debate-ldhwprhs-pro02a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-free-speech-debate-ldhwprhs-pro01a",
+    "training-free-speech-debate-nvhbfemir-pro01a",
+    "training-philosophy-eppprfmhb-con01a",
+    "test-free-speech-debate-ldhwprhs-con02a",
+    "test-digital-freedoms-aihwbasmn-pro01a",
+    "training-philosophy-eppprfmhb-pro04a",
+    "training-free-speech-debate-nshbbhnpsb-con01a",
+    "test-free-speech-debate-ldhwbmclg-pro02a",
+    "validation-philosophy-ehbidachsb-pro02a",
+    "training-philosophy-eppprfmhb-pro03a"
+  ],
+  "relevant_docs": [
+    "test-free-speech-debate-ldhwprhs-pro02b"
+  ],
+  "tokens_reranked": 58609
+}

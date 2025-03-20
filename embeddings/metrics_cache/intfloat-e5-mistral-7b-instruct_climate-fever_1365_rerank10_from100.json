@@ -1,0 +1,27 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.3065735963827292,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1365",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "1997\u201398_El_Ni\u00f1o_event",
+    "Hockey_stick_graph",
+    "Global_warming_hiatus",
+    "Climate_change_in_the_United_States",
+    "MSU_temperature_measurements",
+    "Satellite_temperature_measurements",
+    "Microwave_Sounding_Unit_temperature_measurements",
+    "Hockey_stick_controversy",
+    "1908",
+    "Highest_temperature_recorded_on_Earth"
+  ],
+  "relevant_docs": [
+    "Global_warming_hiatus",
+    "List_of_heat_waves"
+  ],
+  "tokens_reranked": 34917
+}

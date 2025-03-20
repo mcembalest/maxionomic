@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "94779",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Petyr_Baelish",
+    "Tywin_Lannister",
+    "Varys",
+    "Michael_McElhatton",
+    "Robert_Pugh",
+    "Margaery_Tyrell",
+    "Richard_Dormer",
+    "A_Man_Without_Honor",
+    "Baelor",
+    "Anton_Lesser"
+  ],
+  "relevant_docs": [
+    "Petyr_Baelish"
+  ]
+}

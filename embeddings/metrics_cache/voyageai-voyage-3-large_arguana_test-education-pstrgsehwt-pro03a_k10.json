@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "arguana",
+  "query_id": "test-education-pstrgsehwt-pro03a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-education-pstrgsehwt-pro03b",
+    "test-education-pstrgsehwt-con01a",
+    "training-science-gsehbehdc-con03a",
+    "training-free-speech-debate-fkhbtcptww-con04a",
+    "training-free-speech-debate-fkhbtcptww-con04b",
+    "training-science-gsehbehdc-con01a",
+    "test-education-pstrgsehwt-pro01a",
+    "test-education-pstrgsehwt-pro02a",
+    "test-religion-yercfrggms-pro02a",
+    "test-education-pstrgsehwt-con02a"
+  ],
+  "relevant_docs": [
+    "test-education-pstrgsehwt-pro03b"
+  ]
+}

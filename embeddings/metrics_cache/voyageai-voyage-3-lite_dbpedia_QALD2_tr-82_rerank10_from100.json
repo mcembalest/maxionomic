@@ -1,0 +1,29 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.5654495432396527,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-82",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:NJCAA_Women's_Basketball_Championship>",
+    "<dbpedia:G'MIC>",
+    "<dbpedia:CinePaint>",
+    "<dbpedia:GTK+>",
+    "<dbpedia:GIMP_version_history>",
+    "<dbpedia:Shermann_Audio>",
+    "<dbpedia:Shermann_Audio>",
+    "<dbpedia:Shermann_Audio>",
+    "<dbpedia:Shermann_Audio>",
+    "<dbpedia:Great_Internet_Mersenne_Prime_Search>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:GIMP_version_history>",
+    "<dbpedia:G'MIC>",
+    "<dbpedia:C_(programming_language)>",
+    "<dbpedia:GTK+>"
+  ],
+  "tokens_reranked": 7345
+}

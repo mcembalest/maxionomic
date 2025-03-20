@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "arguana",
+  "query_id": "test-international-aghbfcpspr-pro03a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-international-aghbfcpspr-pro03a",
+    "test-international-aghbfcpspr-con02a",
+    "test-international-aghbfcpspr-pro03b",
+    "test-international-aghbfcpspr-con02b",
+    "test-international-aghbfcpspr-pro02a",
+    "test-international-aghbfcpspr-pro02b",
+    "test-international-aghbfcpspr-pro04a",
+    "training-free-speech-debate-efsdfkhwsds-con02b",
+    "test-international-aghbfcpspr-con04b",
+    "test-international-aghbfcpspr-con03a"
+  ],
+  "relevant_docs": [
+    "test-international-aghbfcpspr-pro03b"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "42963",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Betsy_Hodges",
+    "Gene_Hodges",
+    "Willard_Hodges",
+    "Draft_Condi_movement",
+    "Political_positions_of_Hillary_Clinton",
+    "Geraldine_Ferraro",
+    "Katherine_Harris",
+    "Catherine_E._Pugh",
+    "Luther_H._Hodges",
+    "James_L._Hodges"
+  ],
+  "relevant_docs": [
+    "Betsy_Hodges"
+  ]
+}

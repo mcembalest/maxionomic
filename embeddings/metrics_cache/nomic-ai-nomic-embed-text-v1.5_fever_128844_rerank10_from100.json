@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "128844",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Near-Earth_object",
+    "Asteroid_belt",
+    "2016_PQ",
+    "2201_Oljato",
+    "Astronomical_object",
+    "Inferior_and_superior_planets",
+    "(416151)_2002_RQ25",
+    "1999_XS35",
+    "1998_KY26",
+    "(394130)_2006_HY51"
+  ],
+  "relevant_docs": [
+    "Near-Earth_object"
+  ],
+  "tokens_reranked": 31363
+}

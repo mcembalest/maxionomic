@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6713860725233041,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "179815",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Vic_Mensa",
+    "Vic_(film)",
+    "Troy_Ave",
+    "Innanetape",
+    "Victor_Aloysius_Meyers",
+    "Consequence_(rapper)",
+    "Tha_Realest",
+    "Jerry_Garcia",
+    "Vic_Tanny",
+    "Papoose_(rapper)"
+  ],
+  "relevant_docs": [
+    "Vic_Mensa",
+    "Innanetape",
+    "Chance_the_Rapper"
+  ]
+}

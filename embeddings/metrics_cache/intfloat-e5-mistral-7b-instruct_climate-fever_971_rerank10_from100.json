@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.3903800499921017,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "971",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Arctic_sea_ice_decline",
+    "Arctic_resources_race",
+    "Copenhagen_Diagnosis",
+    "Wies\u0142aw_Mas\u0142owski",
+    "Measurement_of_sea_ice",
+    "Arctic_geoengineering",
+    "Quelccaya_Ice_Cap",
+    "Arctic_Ocean",
+    "Arctic_dipole_anomaly",
+    "Future_sea_level"
+  ],
+  "relevant_docs": [
+    "Sea_level_rise",
+    "Global_warming",
+    "Effects_of_global_warming",
+    "Arctic_sea_ice_decline"
+  ],
+  "tokens_reranked": 30566
+}

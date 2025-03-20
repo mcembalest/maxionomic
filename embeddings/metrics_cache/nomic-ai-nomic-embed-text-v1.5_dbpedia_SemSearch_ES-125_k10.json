@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-125",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Nokia_E63>",
+    "<dbpedia:Nokia_E71>",
+    "<dbpedia:Nokia_E72>",
+    "<dbpedia:Nokia_E70>",
+    "<dbpedia:Nokia_C3_Touch_and_Type>",
+    "<dbpedia:Sony_Ericsson_T707>",
+    "<dbpedia:Nokia_E6>",
+    "<dbpedia:Nokia_C3-00>",
+    "<dbpedia:Sony_Ericsson_K700>",
+    "<dbpedia:Nokia_5233>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:List_of_Nokia_products>",
+    "<dbpedia:Nokia>",
+    "<dbpedia:Nokia_Research_Center>",
+    "<dbpedia:Nokia_phone_series>",
+    "<dbpedia:Nokia_Networks>",
+    "<dbpedia:Nokia_Eseries>"
+  ]
+}

@@ -3,7 +3,7 @@
   "model": "nomic-ai/nomic-embed-text-v1.5",
   "batch_size": 512,
   "max_seq_length": 8192,
-  "total_duration_seconds": 18.96984076499939,
+  "total_duration_seconds": 15.871412992477417,
   "total_tokens": 458427,
-  "tokens_per_second": 24166.09636733631
+  "tokens_per_second": 28883.81773048694
 }

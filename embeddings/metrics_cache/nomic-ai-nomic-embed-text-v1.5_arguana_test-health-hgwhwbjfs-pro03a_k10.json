@@ -1,0 +1,25 @@
+{
+  "mrr": 0.16666666666666666,
+  "ndcg": 0.3562071871080222,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-health-hgwhwbjfs-pro03a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-health-hgwhwbjfs-con01b",
+    "test-health-hgwhwbjfs-con01a",
+    "test-health-hgwhwbjfs-con03a",
+    "training-economy-epeeghbpw-con01a",
+    "test-education-pshhghwpba0-pro02a",
+    "test-health-hgwhwbjfs-pro03b",
+    "test-education-pshhghwpba0-pro02b",
+    "training-economy-epeeghbpw-pro04a",
+    "test-health-hgwhwbjfs-pro02a",
+    "training-health-hgwsytpsctpf-con02a"
+  ],
+  "relevant_docs": [
+    "test-health-hgwhwbjfs-pro03b"
+  ]
+}

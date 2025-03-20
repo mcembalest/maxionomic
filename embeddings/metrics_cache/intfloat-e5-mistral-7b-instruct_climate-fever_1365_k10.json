@@ -1,0 +1,26 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.2640681225725909,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1365",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_cooling_(disambiguation)",
+    "Deforestation_and_climate_change",
+    "1997\u201398_El_Ni\u00f1o_event",
+    "Global_warming_hiatus",
+    "Antarctica_cooling_controversy",
+    "MSU_temperature_measurements",
+    "Timeline_of_glaciation",
+    "1908",
+    "Year_Without_a_Summer",
+    "Instrumental_temperature_record"
+  ],
+  "relevant_docs": [
+    "Global_warming_hiatus",
+    "List_of_heat_waves"
+  ]
+}

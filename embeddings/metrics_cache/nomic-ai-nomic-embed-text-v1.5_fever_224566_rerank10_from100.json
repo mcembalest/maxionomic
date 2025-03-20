@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "224566",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Vampire_Academy_(film)",
+    "Saturn_Award_for_Best_Performance_by_a_Younger_Actor",
+    "Bloodlines_(Mead_novel)",
+    "Beverly_Hills_Preparatory_School",
+    "Movie_theater",
+    "Theatre",
+    "Tony_Award",
+    "Tori_Spelling",
+    "Golden_Globe_Award_for_Best_Actor_\u2013_Motion_Picture_Musical_or_Comedy",
+    "Diane_Venora"
+  ],
+  "relevant_docs": [
+    "Vampire_Academy_(film)"
+  ],
+  "tokens_reranked": 28130
+}

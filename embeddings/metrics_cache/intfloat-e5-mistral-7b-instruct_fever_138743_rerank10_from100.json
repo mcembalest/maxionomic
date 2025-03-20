@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "138743",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Personality",
+    "Forensic_developmental_psychology",
+    "Personal_unconscious",
+    "Human_memory_process",
+    "Frontal_lobe_injury",
+    "Character_structure",
+    "Selective_retention",
+    "Trauma_model_of_mental_disorders",
+    "Cognitive_skill",
+    "Robert_R._McCrae"
+  ],
+  "relevant_docs": [
+    "Personality"
+  ],
+  "tokens_reranked": 25592
+}

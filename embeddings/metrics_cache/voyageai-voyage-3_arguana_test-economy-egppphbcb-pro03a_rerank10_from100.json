@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3",
+  "dataset": "arguana",
+  "query_id": "test-economy-egppphbcb-pro03a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-economy-egppphbcb-pro03a",
+    "test-economy-egppphbcb-pro03b",
+    "training-environment-pscisghwbs3-con01a",
+    "training-science-ncpshwlucpc-con01a",
+    "test-economy-egppphbcb-pro01a",
+    "training-health-bhhgwtnychrrs-pro01b",
+    "test-economy-beplcpdffe-con01b",
+    "test-economy-eptpghdtre-con02a",
+    "training-economy-epegppphw-pro03b",
+    "training-sport-lsgtshwrps-con01a"
+  ],
+  "relevant_docs": [
+    "test-economy-egppphbcb-pro03b"
+  ],
+  "tokens_reranked": 58599
+}

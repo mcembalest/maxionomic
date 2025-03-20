@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "arguana",
+  "query_id": "test-economy-epegiahsc-pro02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-economy-epegiahsc-pro02b",
+    "training-economy-ecegiehbe-pro04b",
+    "training-international-aghbusbh-con04a",
+    "training-international-aghbusbh-con04b",
+    "training-international-aghbusbh-con05b",
+    "validation-politics-ghbfsabun-con04b",
+    "training-international-aghbusbh-pro03b",
+    "training-economy-fegippghp-pro02b",
+    "test-economy-epegiahsc-con04a",
+    "validation-politics-ghbfsabun-pro01a"
+  ],
+  "relevant_docs": [
+    "test-economy-epegiahsc-pro02b"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "mrr": 0.14285714285714285,
+  "ndcg": 0.07336392209936005,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_LS-46",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Buckingham_Palace>",
+    "<dbpedia:Holyrood_Palace>",
+    "<dbpedia:Hampton_Court_Palace>",
+    "<dbpedia:Elizabeth_II>",
+    "<dbpedia:Kingdom_of_Great_Britain>",
+    "<dbpedia:List_of_heads_of_state_by_diplomatic_precedence>",
+    "<dbpedia:Monarchy_in_the_Irish_Free_State>",
+    "<dbpedia:List_of_Prime_Ministers_of_King_George_V>",
+    "<dbpedia:List_of_viceregal_representatives_of_Elizabeth_II>",
+    "<dbpedia:Prince_of_Wales>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Anne,_Queen_of_Great_Britain>",
+    "<dbpedia:Monarchy_of_the_Bahamas>",
+    "<dbpedia:Monarchy_of_the_Solomon_Islands>",
+    "<dbpedia:Monarchy_of_Jamaica>",
+    "<dbpedia:Monarchies_in_Europe>",
+    "<dbpedia:Monarchy_in_the_Irish_Free_State>",
+    "<dbpedia:Monarchy_of_Saint_Lucia>",
+    "<dbpedia:Monarchy_of_Grenada>",
+    "<dbpedia:Republicanism_in_the_United_Kingdom>",
+    "<dbpedia:Monarchy_of_Belize>",
+    "<dbpedia:Monarchy_of_Barbados>",
+    "<dbpedia:Politics_of_the_United_Kingdom>",
+    "<dbpedia:Governor_of_the_British_Virgin_Islands>",
+    "<dbpedia:Monarchism_in_Canada>",
+    "<dbpedia:Governor_of_Gibraltar>",
+    "<dbpedia:Monarchy_of_Antigua_and_Barbuda>"
+  ]
+}

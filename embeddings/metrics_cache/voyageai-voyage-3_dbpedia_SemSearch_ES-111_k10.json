@@ -1,0 +1,30 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.9838048780283076,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-111",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Eagle_Rock,_Los_Angeles>",
+    "<dbpedia:Eagle_Rock_(Santa_Monica_Mountains)>",
+    "<dbpedia:Eagle_Rock_Music_Festival>",
+    "<dbpedia:Eagle_Rock_High_School>",
+    "<dbpedia:Eagle_Rock,_Missouri>",
+    "<dbpedia:Center_for_the_Arts_Eagle_Rock>",
+    "<dbpedia:Eagle_Rock,_North_Carolina>",
+    "<dbpedia:Eagle_Rock_Reservation>",
+    "<dbpedia:Eagle_Ridge_High_School>",
+    "<dbpedia:Castle_Rock_State_Park_(California)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Eagle_Rock,_Los_Angeles>",
+    "<dbpedia:Eagle_Rock_High_School>",
+    "<dbpedia:Eagle_Rock,_North_Carolina>",
+    "<dbpedia:Eagle_Rock_Music_Festival>",
+    "<dbpedia:Eagle_Rock_(Santa_Monica_Mountains)>",
+    "<dbpedia:Center_for_the_Arts_Eagle_Rock>"
+  ]
+}

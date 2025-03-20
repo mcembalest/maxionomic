@@ -1,0 +1,29 @@
+{
+  "mrr": 0.1111111111111111,
+  "ndcg": 0.11751610475642714,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1971",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Alta_Wind_Energy_Center",
+    "Life-cycle_greenhouse-gas_emissions_of_energy_sources",
+    "Acciona_Energy",
+    "Wind_power_in_the_European_Union",
+    "Wind_power_in_the_United_Kingdom",
+    "Nuclear_power",
+    "Emission_intensity",
+    "Carbon-neutral_fuel",
+    "Zero-energy_building",
+    "Carbon_offset"
+  ],
+  "relevant_docs": [
+    "Renewable_energy",
+    "Carbon_neutrality",
+    "Carbon_footprint",
+    "Zero-energy_building"
+  ],
+  "tokens_reranked": 34531
+}

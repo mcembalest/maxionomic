@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.3903800499921017,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1510",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Climate_sensitivity",
+    "IPCC_First_Assessment_Report",
+    "Atmospheric_carbon_cycle",
+    "Svante_Arrhenius",
+    "Greenhouse_gas",
+    "2010_Northern_Hemisphere_heat_waves",
+    "2010_Northern_Hemisphere_summer_heat_waves",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Carbon_dioxide",
+    "Climate_change_mitigation_scenarios"
+  ],
+  "relevant_docs": [
+    "Global_warming",
+    "Climate_sensitivity",
+    "Climate_change_feedback",
+    "Permian\u2013Triassic_extinction_event"
+  ],
+  "tokens_reranked": 34584
+}

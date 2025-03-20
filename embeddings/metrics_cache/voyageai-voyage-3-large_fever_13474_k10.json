@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "13474",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah",
+    "Shailesh_Lodha",
+    "Don't_Worry_Chachu",
+    "Kasautii_Zindagii_Kay",
+    "Fifty_Fifty_(comedy_show)",
+    "Kehta_Hai_Dil",
+    "Indian_soap_opera",
+    "Baa_Bahoo_Aur_Baby",
+    "Daal_Mein_Kala",
+    "Father_Ted"
+  ],
+  "relevant_docs": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "msmarco",
+  "query_id": "1045374",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "7193888",
+    "6948296",
+    "1993059",
+    "6396838",
+    "3885193",
+    "5609247",
+    "3823641",
+    "5409486",
+    "4245585",
+    "1142358"
+  ],
+  "relevant_docs": [
+    "7193888"
+  ],
+  "tokens_reranked": 6503
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "25290",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "The_Love_Club_EP",
+    "Lorde_discography",
+    "Extended_play",
+    "Jordan_Smith_(musician)",
+    "List_of_Billboard_Hot_100_number-one_singles_of_1995",
+    "Room_93",
+    "FXX",
+    "Happy_Madison_Productions",
+    "Dancing_with_the_Stars_(U.S._TV_series)",
+    "Love_At_First_Sound"
+  ],
+  "relevant_docs": [
+    "The_Love_Club_EP"
+  ],
+  "tokens_reranked": 26346
+}

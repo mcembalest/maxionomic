@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "401",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Climate_change_in_the_United_States",
+    "Media_coverage_of_climate_change",
+    "Global_warming_controversy",
+    "Attribution_of_recent_climate_change",
+    "Satellite_temperature_measurements",
+    "Temperature_record_of_the_past_1000_years",
+    "Global_warming",
+    "1908",
+    "Global_Historical_Climatology_Network"
+  ],
+  "relevant_docs": [
+    "Syracuse,_New_York",
+    "Instrumental_temperature_record"
+  ],
+  "tokens_reranked": 38488
+}

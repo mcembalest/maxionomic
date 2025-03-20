@@ -1,0 +1,29 @@
+{
+  "mrr": 0.125,
+  "ndcg": 0.10699313236726378,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "3066",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Carbon_bubble",
+    "Climate_change_denial",
+    "The_Real_Global_Warming_Disaster",
+    "World_energy_consumption",
+    "Full_employment",
+    "Renewable_energy",
+    "Journal_for_Geoclimatic_Studies",
+    "Alternative_medicine",
+    "Energy_accidents",
+    "Greenhouse_gas_emissions_accounting"
+  ],
+  "relevant_docs": [
+    "History_of_economic_thought",
+    "Economics",
+    "Alternative_medicine",
+    "Minimum_wage",
+    "List_of_topics_characterized_as_pseudoscience"
+  ]
+}

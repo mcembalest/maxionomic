@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "25290",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Love_Club_EP",
+    "Aaron_Smith_(DJ)",
+    "Love_Stuff",
+    "Love_Story_(Taylor_Swift_song)",
+    "Country_Club_(2018_TV_series)",
+    "Beck's_Record_Club",
+    "Lonsdale_Boys_Club",
+    "Love's_Crazy",
+    "Dan_Smith_(singer)",
+    "DJ_Jayceeoh"
+  ],
+  "relevant_docs": [
+    "The_Love_Club_EP"
+  ]
+}

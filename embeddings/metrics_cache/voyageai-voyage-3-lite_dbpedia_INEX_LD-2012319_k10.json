@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.943473299121064,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-2012319",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Open_Secrets>",
+    "<dbpedia:List_of_short_stories_by_Alice_Munro>",
+    "<dbpedia:Vintage_Munro>",
+    "<dbpedia:Alice_Munro>",
+    "<dbpedia:Friend_of_My_Youth>",
+    "<dbpedia:Boys_and_Girls_(short_story)>",
+    "<dbpedia:Too_Much_Happiness>",
+    "<dbpedia:The_View_from_Castle_Rock>",
+    "<dbpedia:Youth_and_the_Bright_Medusa>",
+    "<dbpedia:Waste_of_Timelessness>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Friend_of_My_Youth>",
+    "<dbpedia:Too_Much_Happiness>",
+    "<dbpedia:Alice_Munro>",
+    "<dbpedia:Open_Secrets>",
+    "<dbpedia:List_of_short_stories_by_Alice_Munro>"
+  ]
+}

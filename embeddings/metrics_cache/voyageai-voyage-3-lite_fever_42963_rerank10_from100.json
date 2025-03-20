@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "42963",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Betsy_Hodges",
+    "Betsy_McCaughey",
+    "Respect_for_Marriage_Act",
+    "Lelia_Foley",
+    "LGBT_rights_in_Texas",
+    "James_L._Hodges",
+    "Betsy_Palmer",
+    "Same-sex_marriage_legislation_in_the_United_States",
+    "Loving_v._Virginia",
+    "Willard_Hodges"
+  ],
+  "relevant_docs": [
+    "Betsy_Hodges"
+  ],
+  "tokens_reranked": 31948
+}

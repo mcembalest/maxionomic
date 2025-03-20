@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7653606369886217,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "179815",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Vic_Mensa",
+    "Innanetape",
+    "Mensa_International",
+    "Death_Row_Records",
+    "Vic_Tanny",
+    "Hippie",
+    "Jefferson_Airplane",
+    "Vic_Ruggiero",
+    "N.W.A",
+    "1993_NBA_Playoffs"
+  ],
+  "relevant_docs": [
+    "Chance_the_Rapper",
+    "Vic_Mensa",
+    "Innanetape"
+  ],
+  "tokens_reranked": 29769
+}

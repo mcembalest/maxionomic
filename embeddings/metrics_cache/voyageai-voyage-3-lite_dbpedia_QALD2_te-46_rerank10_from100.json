@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6131471927654584,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-46",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Mara_Lopez>",
+    "<dbpedia:John_R._Gill>",
+    "<dbpedia:Phil_Rajzman>",
+    "<dbpedia:Marcel_Soros>",
+    "<dbpedia:Megan_Abubo>",
+    "<dbpedia:Carla_Balingit>",
+    "<dbpedia:Dayyan_Neve>",
+    "<dbpedia:Ronald_Evans_(astronaut)>",
+    "<dbpedia:Bobby_Martinez>",
+    "<dbpedia:Sunny_Garcia>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Marcus_Adoro>",
+    "<dbpedia:Mara_Lopez>"
+  ],
+  "tokens_reranked": 8894
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6005491084563833,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1334",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Ocean_acidification",
+    "PH",
+    "Estuarine_acidification",
+    "Total_inorganic_carbon",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Oceanic_carbon_cycle",
+    "Carbon_dioxide",
+    "Acid",
+    "Free_Ocean_CO2_Enrichment",
+    "Base_(chemistry)"
+  ],
+  "relevant_docs": [
+    "PH",
+    "Carbon_dioxide",
+    "Acid"
+  ],
+  "tokens_reranked": 35723
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.34620964322385606,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "1119",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "2013_extreme_weather_events",
+    "Arctic_sea_ice_decline",
+    "Adam_Scaife",
+    "Climate_change_in_the_Arctic",
+    "Scientific_consensus_on_climate_change",
+    "IPCC_First_Assessment_Report",
+    "Measurement_of_sea_ice",
+    "Hurricane_Katrina_and_global_warming",
+    "Scientific_opinion_on_climate_change",
+    "Attribution_of_recent_climate_change"
+  ],
+  "relevant_docs": [
+    "Scientific_consensus_on_climate_change",
+    "Adam_Scaife",
+    "Greenland",
+    "Climatic_Research_Unit_email_controversy"
+  ]
+}

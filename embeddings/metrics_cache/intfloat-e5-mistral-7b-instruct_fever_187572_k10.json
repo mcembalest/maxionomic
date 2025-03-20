@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "187572",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Dan_Brown",
+    "The_Da_Vinci_Code_(film)",
+    "Digital_Fortress",
+    "Author",
+    "Beverly_Hills_Preparatory_School",
+    "John_Brown_(American_author)",
+    "The_Da_Vinci_Treasure",
+    "Conspiracy_Theory_(film)",
+    "John_Gregory_Brown",
+    "Prince_of_Fire"
+  ],
+  "relevant_docs": [
+    "Dan_Brown"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "2836",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Arctic_sea_ice_decline",
+    "Measurement_of_sea_ice",
+    "Sea_ice",
+    "Past_sea_level",
+    "Deglaciation",
+    "Climate_change_in_the_Arctic",
+    "Arctic_Ocean",
+    "World_Climate_Research_Programme",
+    "Arctic_geoengineering",
+    "Cryosphere"
+  ],
+  "relevant_docs": [
+    "Glacier",
+    "Ice_age",
+    "Post-glacial_rebound"
+  ],
+  "tokens_reranked": 35984
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "129780",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Richard_Dawson",
+    "Richard_Dawson_(footballer,_born_1960)",
+    "Richard_Dawson_(footballer,_born_1962)",
+    "Richard_Dawson_(footballer,_born_1967)",
+    "Mark_Dawson",
+    "Dick_Carson",
+    "To_Kill_a_Mockingbird_(film)",
+    "Len_Dawson",
+    "Dawson_(actor)",
+    "Bobby_Dawson"
+  ],
+  "relevant_docs": [
+    "Richard_Dawson"
+  ],
+  "tokens_reranked": 24072
+}

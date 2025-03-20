@@ -1,0 +1,26 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.23719771276929622,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-46",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Megan_Abubo>",
+    "<dbpedia:Kolohe_Andino>",
+    "<dbpedia:Marcel_Soros>",
+    "<dbpedia:Bobby_Martinez>",
+    "<dbpedia:Mara_Lopez>",
+    "<dbpedia:Sunny_Garcia>",
+    "<dbpedia:Philippines_at_the_2011_World_Aquatics_Championships>",
+    "<dbpedia:Phil_Rajzman>",
+    "<dbpedia:Dayyan_Neve>",
+    "<dbpedia:Rusty_Keaulana>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Mara_Lopez>",
+    "<dbpedia:Marcus_Adoro>"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "127981",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Zoe_Saldana",
+    "Zo\u00eb_Soul",
+    "Wendy_Padbury",
+    "Natalie_Martinez",
+    "Charlotte_Spencer_(actress)",
+    "Sara_Tanaka",
+    "Rye_Rye",
+    "Lana_Parrilla",
+    "Vivian_Wu",
+    "Dawson_(actor)"
+  ],
+  "relevant_docs": [
+    "Zoe_Saldana"
+  ]
+}

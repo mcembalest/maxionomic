@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "3066",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Energy_development",
+    "Pseudoscience",
+    "Falsifiability",
+    "Junk_science",
+    "Climate_Change_Denial:_Heads_in_the_Sand",
+    "Renewable_energy",
+    "Renewable_energy_commercialization",
+    "Confirmation_bias",
+    "Heaven_and_Earth_(book)",
+    "Full_employment"
+  ],
+  "relevant_docs": [
+    "History_of_economic_thought",
+    "Alternative_medicine",
+    "Minimum_wage",
+    "List_of_topics_characterized_as_pseudoscience",
+    "Economics"
+  ],
+  "tokens_reranked": 45809
+}

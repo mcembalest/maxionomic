@@ -1,0 +1,26 @@
+{
+  "mrr": 0.14285714285714285,
+  "ndcg": 0.3333333333333333,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1935",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Solar_power_in_the_United_States",
+    "Renewable_energy_in_the_United_States",
+    "List_of_photovoltaic_power_stations",
+    "Solar_power",
+    "Wind_power_in_California",
+    "Ivanpah_Solar_Power_Facility",
+    "California",
+    "Solar_power_by_country",
+    "Renewable_energy",
+    "Wind_power_in_New_Mexico"
+  ],
+  "relevant_docs": [
+    "California"
+  ],
+  "tokens_reranked": 37044
+}

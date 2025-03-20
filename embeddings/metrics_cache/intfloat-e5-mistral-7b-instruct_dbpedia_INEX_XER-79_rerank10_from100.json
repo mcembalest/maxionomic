@@ -1,0 +1,36 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "INEX_XER-79",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Charles_Rennie_Mackintosh>",
+    "<dbpedia:Martyrs'_Public_School>",
+    "<dbpedia:78_Derngate>",
+    "<dbpedia:The_Artist's_Cottage_project>",
+    "<dbpedia:House_for_an_Art_Lover>",
+    "<dbpedia:Queen's_Cross_Church,_Glasgow>",
+    "<dbpedia:Willow_Tearooms>",
+    "<dbpedia:Scotland_Street_School_Museum>",
+    "<dbpedia:Glasgow_School_of_Art>",
+    "<dbpedia:Architecture_in_Glasgow>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:House_for_an_Art_Lover>",
+    "<dbpedia:78_Derngate>",
+    "<dbpedia:Scotland_Street_School_Museum>",
+    "<dbpedia:Honeyman_and_Keppie>",
+    "<dbpedia:Charles_Rennie_Mackintosh>",
+    "<dbpedia:The_Artist's_Cottage_project>",
+    "<dbpedia:Glasgow_School_of_Art>",
+    "<dbpedia:Willow_Tearooms>",
+    "<dbpedia:Architecture_in_Glasgow>",
+    "<dbpedia:Martyrs'_Public_School>",
+    "<dbpedia:Queen's_Cross_Church,_Glasgow>"
+  ],
+  "tokens_reranked": 7985
+}

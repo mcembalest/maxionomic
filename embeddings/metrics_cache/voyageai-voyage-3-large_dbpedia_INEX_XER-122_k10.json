@@ -1,0 +1,43 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.4631896595828492,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "INEX_XER-122",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:List_of_films_with_the_most_Oscars_per_ceremony>",
+    "<dbpedia:List_of_Best_Picture_milestones>",
+    "<dbpedia:List_of_Academy_Award-winning_films>",
+    "<dbpedia:Academy_Award_for_Best_Picture>",
+    "<dbpedia:Chicago_Film_Critics_Association_Awards_2008>",
+    "<dbpedia:List_of_American_films_of_1968>",
+    "<dbpedia:NAACP_Image_Award_for_Outstanding_Motion_Picture>",
+    "<dbpedia:List_of_Academy_Award_records>",
+    "<dbpedia:21st_Academy_Awards>",
+    "<dbpedia:Amadeus_(film)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Gandhi_(film)>",
+    "<dbpedia:List_of_films_with_the_most_Oscars_per_ceremony>",
+    "<dbpedia:List_of_Academy_Award-winning_films>",
+    "<dbpedia:On_the_Waterfront>",
+    "<dbpedia:Gigi_(1958_film)>",
+    "<dbpedia:Cabaret_(1972_film)>",
+    "<dbpedia:Academy_Award_for_Best_Actress>",
+    "<dbpedia:Amadeus>",
+    "<dbpedia:From_Here_to_Eternity>",
+    "<dbpedia:West_Side_Story_(film)>",
+    "<dbpedia:Ben-Hur_(1959_film)>",
+    "<dbpedia:Gone_with_the_Wind_(film)>",
+    "<dbpedia:The_English_Patient_(film)>",
+    "<dbpedia:The_Last_Emperor>",
+    "<dbpedia:Titanic_(1997_film)>",
+    "<dbpedia:The_Lord_of_the_Rings:_The_Return_of_the_King>",
+    "<dbpedia:Amadeus_(film)>",
+    "<dbpedia:My_Fair_Lady_(film)>",
+    "<dbpedia:List_of_Academy_Award_records>"
+  ]
+}

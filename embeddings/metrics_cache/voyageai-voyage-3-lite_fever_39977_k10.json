@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "39977",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Key_&_Peele",
+    "Whitney_Keyes",
+    "The_Kilroys'_List",
+    "Primetime_Emmy_Award_for_Outstanding_Drama_Series",
+    "Glee_(season_5)",
+    "The_Princess_and_the_Pea_(2002_film)",
+    "Wither_(Passarella_novel)",
+    "Nebula_Award",
+    "List_of_awards_and_nominations_received_by_Twin_Peaks",
+    "Primetime_Emmy_Award_for_Outstanding_Writing_for_a_Drama_Series"
+  ],
+  "relevant_docs": [
+    "Key_&_Peele"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "174991",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Man_in_the_Iron_Mask_(1998_film)",
+    "The_Iron_Giant",
+    "The_Mask_(film)",
+    "Iron_Man_2",
+    "The_Man_with_the_Iron_Fists",
+    "Robert_Downey_Jr.",
+    "The_Fifth_Element",
+    "The_Man_in_the_Iron_Mask_(1985_film)",
+    "Daniel_Br\u00fchl",
+    "Jeremy_Irons"
+  ],
+  "relevant_docs": [
+    "The_Man_in_the_Iron_Mask_(1998_film)"
+  ]
+}

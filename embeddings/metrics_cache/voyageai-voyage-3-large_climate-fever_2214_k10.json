@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "2214",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Urban_heat_island",
+    "MSU_temperature_measurements",
+    "Microclimate",
+    "Satellite_temperature_measurements",
+    "Global_Historical_Climatology_Network",
+    "Highest_temperature_recorded_on_Earth",
+    "Instrumental_temperature_record",
+    "Microwave_Sounding_Unit_temperature_measurements",
+    "Weather_station",
+    "2001_Eastern_North_America_heat_wave"
+  ],
+  "relevant_docs": [
+    "Cooling_tower",
+    "Grissom_Air_Reserve_Base",
+    "Palo_Alto,_California"
+  ]
+}

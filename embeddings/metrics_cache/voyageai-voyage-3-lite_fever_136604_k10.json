@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6131471927654584,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "136604",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Zac_Efron",
+    "Nathan_Efron",
+    "Marshall_Efron",
+    "Denzel_Whitaker",
+    "Franky_G",
+    "Kris_Kristofferson_filmography",
+    "Nicholas_Masson",
+    "Dawson_(actor)",
+    "Josh_Zuckerman_(musician)",
+    "Zac_Poor"
+  ],
+  "relevant_docs": [
+    "Zac_Efron",
+    "Americans"
+  ]
+}

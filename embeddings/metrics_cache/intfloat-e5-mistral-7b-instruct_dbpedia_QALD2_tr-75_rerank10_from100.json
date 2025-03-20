@@ -1,0 +1,29 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.19519002499605084,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-75",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Living_Presidents_of_the_United_States>",
+    "<dbpedia:United_States_presidential_election_in_Virginia,_1840>",
+    "<dbpedia:President_of_the_United_States>",
+    "<dbpedia:United_States_presidential_election_in_California,_1856>",
+    "<dbpedia:John_Campbell_(US_Treasurer)>",
+    "<dbpedia:Jefferson's_Birthday>",
+    "<dbpedia:Francisco_Lomuto>",
+    "<dbpedia:Government_Art_Collection>",
+    "<dbpedia:List_of_unnamed_fictional_United_States_Presidents>",
+    "<dbpedia:John_J._Adams>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:James_Monroe>",
+    "<dbpedia:List_of_Presidents_of_the_United_States>",
+    "<dbpedia:President_of_the_United_States>",
+    "<dbpedia:The_Presidents_of_the_United_States_of_America_(album)>"
+  ],
+  "tokens_reranked": 10283
+}

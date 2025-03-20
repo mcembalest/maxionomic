@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "412",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Hockey_stick_graph",
+    "Global_cooling",
+    "Temperature_record_of_the_past_1000_years",
+    "Hockey_stick_controversy",
+    "Greening_Earth_Society",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "1997\u201398_El_Ni\u00f1o_event",
+    "History_of_climate_change_science",
+    "Global_warming_controversy"
+  ],
+  "relevant_docs": [
+    "Global_warming",
+    "Paleocene",
+    "Eocene"
+  ]
+}

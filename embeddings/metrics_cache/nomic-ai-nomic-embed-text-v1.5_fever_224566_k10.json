@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "224566",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Vampire_Academy_(film)",
+    "New_York_Film_Academy",
+    "Vampire's_Kiss",
+    "Death_Academy",
+    "Academy_of_Motion_Picture_Arts_and_Sciences",
+    "Vermont_Academy",
+    "Bloodlines_(Mead_novel)",
+    "Worcester_Academy",
+    "The_Vampire_Diaries",
+    "Academy_Award_for_Best_Actress"
+  ],
+  "relevant_docs": [
+    "Vampire_Academy_(film)"
+  ]
+}

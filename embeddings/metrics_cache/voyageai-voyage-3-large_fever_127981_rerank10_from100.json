@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "127981",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Zoe_Saldana",
+    "List_of_accolades_received_by_Avatar_(2009_film)",
+    "Guardians_of_the_Galaxy_(film)",
+    "Guardians_of_the_Galaxy_Vol._2",
+    "Avatar_(2009_film)",
+    "Star_Trek_(film)",
+    "Klingon",
+    "Romulan",
+    "Hera_(Battlestar_Galactica)",
+    "Andorian"
+  ],
+  "relevant_docs": [
+    "Zoe_Saldana"
+  ],
+  "tokens_reranked": 28109
+}

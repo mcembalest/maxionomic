@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "135150",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Kung_Fu_Panda",
+    "Kung_Fu_Panda_2",
+    "Kung_Fu_Panda_World",
+    "Po_(Kung_Fu_Panda)",
+    "Kung_Fu_Panda:_Legends_of_Awesomeness_(season_3)",
+    "Tai_Shan_(giant_panda)",
+    "Madagascar_(2005_film)",
+    "Pandalian",
+    "The_Amazing_Panda_Adventure",
+    "Pandamen"
+  ],
+  "relevant_docs": [
+    "Kung_Fu_Panda"
+  ]
+}

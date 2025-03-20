@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1971",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Contribution_to_global_warming_by_Australia",
+    "Wind_power",
+    "Wind_power_in_California",
+    "Wind_power_in_New_Mexico",
+    "Wind_power_in_the_European_Union",
+    "Growth_of_wind_power_in_the_United_States",
+    "Carbon_diet",
+    "Energy_in_the_United_States",
+    "List_of_wind_farms_in_Lithuania",
+    "Climate_change_in_Australia"
+  ],
+  "relevant_docs": [
+    "Renewable_energy",
+    "Carbon_footprint",
+    "Carbon_neutrality",
+    "Zero-energy_building"
+  ]
+}

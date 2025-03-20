@@ -1,0 +1,31 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.37271737588323545,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-125",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Nokia_E72>",
+    "<dbpedia:Nokia_E63>",
+    "<dbpedia:Nokia_Eseries>",
+    "<dbpedia:Nokia_phone_series>",
+    "<dbpedia:Nokia_E71>",
+    "<dbpedia:Nokia_7370>",
+    "<dbpedia:Nokia_E70>",
+    "<dbpedia:Base_Band_5>",
+    "<dbpedia:Nokia>",
+    "<dbpedia:Series_30>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Nokia_Networks>",
+    "<dbpedia:List_of_Nokia_products>",
+    "<dbpedia:Nokia>",
+    "<dbpedia:Nokia_Eseries>",
+    "<dbpedia:Nokia_phone_series>",
+    "<dbpedia:Nokia_Research_Center>"
+  ],
+  "tokens_reranked": 8505
+}

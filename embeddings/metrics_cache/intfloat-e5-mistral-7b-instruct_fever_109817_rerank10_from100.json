@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "109817",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Louis_Malle",
+    "Humain,_trop_humain",
+    "Phantom_India",
+    "Cinema_of_France",
+    "The_Lovers_(1958_film)",
+    "May_Fools",
+    "French_New_Wave",
+    "My_Dinner_with_Andre",
+    "Theatre_of_the_Absurd",
+    "Preview_(theatre)"
+  ],
+  "relevant_docs": [
+    "Louis_Malle"
+  ],
+  "tokens_reranked": 14430
+}

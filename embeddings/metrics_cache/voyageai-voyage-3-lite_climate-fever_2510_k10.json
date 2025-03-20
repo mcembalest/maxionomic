@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "2510",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "PDO",
+    "Pacific_decadal_oscillation",
+    "Petroleum_Administration_for_Defense_Districts",
+    "Summer_of_1976_(Europe)",
+    "History_of_the_United_States_(1945\u201364)",
+    "PDOS",
+    "Cold_War",
+    "Post\u2013World_War_II_economic_expansion",
+    "Paleocene\u2013Eocene_Thermal_Maximum",
+    "Global_cooling_(disambiguation)"
+  ],
+  "relevant_docs": [
+    "Pacific_decadal_oscillation"
+  ]
+}

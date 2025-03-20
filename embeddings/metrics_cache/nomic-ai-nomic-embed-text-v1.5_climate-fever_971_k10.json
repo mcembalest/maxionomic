@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5413996682199069,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "971",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Arctic_sea_ice_decline",
+    "Sea_ice",
+    "Deglaciation",
+    "Measurement_of_sea_ice",
+    "Global_warming",
+    "Retreat_of_glaciers_since_1850",
+    "Sea_ice_thickness",
+    "Arctic_geoengineering",
+    "Fast_ice",
+    "Future_sea_level"
+  ],
+  "relevant_docs": [
+    "Arctic_sea_ice_decline",
+    "Sea_level_rise",
+    "Effects_of_global_warming",
+    "Global_warming"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1376",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_cooling",
+    "Pliocene_climate",
+    "Late_Glacial",
+    "Climate_change_in_the_United_States",
+    "Cool_tropics_paradox",
+    "Polar_amplification",
+    "History_of_climate_change_science",
+    "Global_cooling_(disambiguation)",
+    "Deforestation_and_climate_change",
+    "Climate_change"
+  ],
+  "relevant_docs": [
+    "Sun",
+    "Little_Ice_Age",
+    "Earth",
+    "Scientific_consensus_on_climate_change",
+    "Climate_of_India"
+  ]
+}

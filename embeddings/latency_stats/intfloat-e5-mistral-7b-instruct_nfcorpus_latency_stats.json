@@ -1,9 +1,9 @@
 {
   "dataset": "nfcorpus",
   "model": "intfloat/e5-mistral-7b-instruct",
-  "batch_size": 256,
+  "batch_size": 1024,
   "max_seq_length": 8192,
-  "total_duration_seconds": 305.7484540939331,
+  "total_duration_seconds": 298.27783489227295,
   "total_tokens": 1157381,
-  "tokens_per_second": 3785.402622655372
+  "tokens_per_second": 3880.211214547684
 }

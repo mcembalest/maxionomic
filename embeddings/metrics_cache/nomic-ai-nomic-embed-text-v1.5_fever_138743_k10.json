@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "138743",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Personality",
+    "Biological_basis_of_personality",
+    "Personality_development_disorder",
+    "Implicit_egotism",
+    "Memory_development",
+    "Memory_conformity",
+    "Memoir",
+    "Personal_unconscious",
+    "Personal_name",
+    "Personality_pathology"
+  ],
+  "relevant_docs": [
+    "Personality"
+  ]
+}

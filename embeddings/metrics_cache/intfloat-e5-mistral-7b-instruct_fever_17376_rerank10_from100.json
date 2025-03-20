@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "17376",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "The_Elephant_Man_(film)",
+    "Joseph_Merrick",
+    "Bradley_Cooper",
+    "Patricia_Clarkson",
+    "Fanny_by_Gaslight_(film)",
+    "The_Rocky_Horror_Show",
+    "Drama_(film_and_television)",
+    "The_Man_Who_Lived_Twice",
+    "Vampire's_Kiss",
+    "Joseph:_King_of_Dreams"
+  ],
+  "relevant_docs": [
+    "Joseph_Merrick",
+    "The_Elephant_Man_(film)"
+  ],
+  "tokens_reranked": 15816
+}

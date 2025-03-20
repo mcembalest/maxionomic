@@ -18,6 +18,9 @@ class EmbeddingsBenchmark:
         self.model_name = model_name
         self.use_cache = use_cache
         self.endpoint = endpoint
+        self.document_prefix = ""
+        if "nomic" in args.model:
+            self.document_prefix = "search_document: "
         self.headers = {"Content-Type": "application/json"}
         model_name_safe = model_name.replace("/", "-")
         self.cache_file = f"{self.cache_dir}/{model_name_safe}_{dataset_name}_s{max_seq_length}_embeddings"
@@ -46,7 +49,7 @@ class EmbeddingsBenchmark:
             response = requests.post(
                 f"{self.endpoint}/embed",
                 headers=self.headers,
-                json={"inputs": texts}
+                json={"inputs": [self.document_prefix + x for x in texts]}
             )
             if response.status_code != 200:
                 raise Exception(f"Embedding request failed with status {response.status_code}: {response.text}")
@@ -201,5 +204,5 @@ if __name__ == "__main__":
         }
         print(output_dict)
         if args.save:
-            with open(f"latency_stats/{model_name_safe}_{d}_b{args.batch_size}_s{args.max_seq_length}_latency_stats.json", 'w') as f:
+            with open(f"latency_stats/{model_name_safe}_{d}_latency_stats.json", 'w') as f:
                 json.dump(output_dict, f, indent=2)

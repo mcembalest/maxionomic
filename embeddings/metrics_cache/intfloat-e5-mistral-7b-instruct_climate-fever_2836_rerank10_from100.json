@@ -1,0 +1,28 @@
+{
+  "mrr": 0.1,
+  "ndcg": 0.13565197343244778,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "2836",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Arctic_sea_ice_decline",
+    "Measurement_of_sea_ice",
+    "Sea_ice",
+    "Past_sea_level",
+    "Deglaciation",
+    "Climate_change_in_the_Arctic",
+    "Arctic_Ocean",
+    "Regional_effects_of_global_warming",
+    "Arctic_resources_race",
+    "Ice_age"
+  ],
+  "relevant_docs": [
+    "Glacier",
+    "Post-glacial_rebound",
+    "Ice_age"
+  ],
+  "tokens_reranked": 34369
+}

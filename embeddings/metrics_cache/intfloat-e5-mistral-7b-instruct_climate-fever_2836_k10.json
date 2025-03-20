@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "2836",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Deforestation_and_climate_change",
+    "1908",
+    "Arctic_ice_pack",
+    "Measurement_of_sea_ice",
+    "Arctic_sea_ice_decline",
+    "2010_Northern_Hemisphere_heat_waves",
+    "Greening_Earth_Society",
+    "Past_sea_level",
+    "Global_cooling",
+    "Antarctic_ice_sheet"
+  ],
+  "relevant_docs": [
+    "Glacier",
+    "Post-glacial_rebound",
+    "Ice_age"
+  ]
+}

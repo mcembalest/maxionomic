@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "109",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Future_sea_level",
+    "Ocean_surface_topography",
+    "Past_sea_level",
+    "Annual_cycle_of_sea_level_height",
+    "Sea_level_rise",
+    "Tidal_range",
+    "Climate_variability",
+    "Tide_gauge",
+    "Regional_effects_of_global_warming",
+    "Tidal_flooding"
+  ],
+  "relevant_docs": [
+    "Sea_level",
+    "Sea"
+  ],
+  "tokens_reranked": 35198
+}

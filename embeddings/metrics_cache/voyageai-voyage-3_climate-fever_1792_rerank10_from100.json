@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "1792",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Future_sea_level",
+    "Arctic_resources_race",
+    "Tipping_points_in_the_climate_system",
+    "Greenland_ice_sheet",
+    "Copenhagen_Diagnosis",
+    "Climate_change_in_the_Arctic",
+    "Retreat_of_glaciers_since_1850",
+    "Arctic_Climate_Impact_Assessment",
+    "Climate_inertia",
+    "Deglaciation"
+  ],
+  "relevant_docs": [
+    "Greenland",
+    "Sea_level_rise"
+  ],
+  "tokens_reranked": 36202
+}

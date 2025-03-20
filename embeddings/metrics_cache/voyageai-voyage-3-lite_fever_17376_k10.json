@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6509209298071326,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "17376",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Leonard_Merrick",
+    "Joseph_Merrick",
+    "John_Merrick_(architect)",
+    "The_Elephant_Man_(film)",
+    "Joseph_Herrick",
+    "David_Garrick_(play)",
+    "Garrick_M\u00e9decin",
+    "Cato,_a_Tragedy",
+    "In_Lambeth_(play)",
+    "The_Haymarket_Tragedy"
+  ],
+  "relevant_docs": [
+    "The_Elephant_Man_(film)",
+    "Joseph_Merrick"
+  ]
+}

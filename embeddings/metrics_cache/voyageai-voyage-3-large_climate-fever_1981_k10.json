@@ -1,0 +1,28 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.16812753627111746,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1981",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Greenhouse_gas_emissions_by_the_United_States",
+    "Presidential_Climate_Action_Plan",
+    "Climate_change_in_the_United_States",
+    "Environmental_policy_of_the_Donald_Trump_administration",
+    "I'm_not_a_scientist",
+    "Carbon_dioxide_removal",
+    "Energy_policy_of_the_Barack_Obama_administration",
+    "Canada_and_the_Kyoto_Protocol",
+    "Climate_change_denial",
+    "Scott_Pruitt"
+  ],
+  "relevant_docs": [
+    "Environmental_policy_of_the_Donald_Trump_administration",
+    "Climate_change_policy_of_the_United_States",
+    "Emissions_trading",
+    "Lisa_P._Jackson"
+  ]
+}

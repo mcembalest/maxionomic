@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fiqa",
+  "query_id": "4600",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "493605",
+    "567749",
+    "130201",
+    "310601",
+    "29073",
+    "62669",
+    "286226",
+    "34925",
+    "582553",
+    "367137"
+  ],
+  "relevant_docs": [
+    "482415"
+  ]
+}

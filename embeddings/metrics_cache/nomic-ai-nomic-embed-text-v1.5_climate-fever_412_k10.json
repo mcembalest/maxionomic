@@ -1,0 +1,27 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.23463936301137822,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "412",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Global_cooling",
+    "Global_warming",
+    "Climate_change_in_the_United_States",
+    "1997\u201398_El_Ni\u00f1o_event",
+    "Antarctica_cooling_controversy",
+    "History_of_climate_change_science",
+    "Climatic_Research_Unit_email_controversy",
+    "Hockey_stick_graph",
+    "Global_warming_controversy"
+  ],
+  "relevant_docs": [
+    "Eocene",
+    "Global_warming",
+    "Paleocene"
+  ]
+}

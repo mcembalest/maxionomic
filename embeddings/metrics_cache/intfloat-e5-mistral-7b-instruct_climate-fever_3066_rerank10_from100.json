@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "3066",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Energy_development",
+    "Renewable_energy",
+    "Renewable_energy_commercialization",
+    "Alternative_energy",
+    "Carbon_tax",
+    "Life-cycle_greenhouse-gas_emissions_of_energy_sources",
+    "Reserves-to-production_ratio",
+    "Solar_power",
+    "Alta_Wind_Energy_Center",
+    "Global_warming_conspiracy_theory"
+  ],
+  "relevant_docs": [
+    "Alternative_medicine",
+    "List_of_topics_characterized_as_pseudoscience",
+    "History_of_economic_thought",
+    "Economics",
+    "Minimum_wage"
+  ],
+  "tokens_reranked": 38348
+}

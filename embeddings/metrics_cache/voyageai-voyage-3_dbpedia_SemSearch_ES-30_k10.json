@@ -1,0 +1,28 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.24630238874073,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-30",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Signature_line_of_credit>",
+    "<dbpedia:Line_of_credit>",
+    "<dbpedia:Home_equity_line_of_credit>",
+    "<dbpedia:L.E.O.>",
+    "<dbpedia:Warehouse_line_of_credit>",
+    "<dbpedia:ExPRESS_Logistics_Carrier>",
+    "<dbpedia:ABS_Loan_Level_Initiative>",
+    "<dbpedia:Ethernet_Private_Line>",
+    "<dbpedia:Ell_(architecture)>",
+    "<dbpedia:Ello_(social_network)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Loan>",
+    "<dbpedia:E-Loan>",
+    "<dbpedia:Line_of_credit>",
+    "<dbpedia:Transfer_credit>"
+  ]
+}

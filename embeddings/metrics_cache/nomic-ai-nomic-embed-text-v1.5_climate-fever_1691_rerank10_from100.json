@@ -1,0 +1,26 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1691",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Copenhagen_Diagnosis",
+    "Future_sea_level",
+    "Sea_level_rise",
+    "Arctic_resources_race",
+    "Retreat_of_glaciers_since_1850",
+    "Ice2sea",
+    "Tipping_points_in_the_climate_system",
+    "Arctic_sea_ice_decline",
+    "Deglaciation",
+    "IPCC_First_Assessment_Report"
+  ],
+  "relevant_docs": [
+    "Sea_level_rise"
+  ],
+  "tokens_reranked": 39738
+}

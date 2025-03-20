@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "163833",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "William_Blackstone",
+    "William_Leete_Stone,_Sr.",
+    "Francis_Stoughton_Sullivan",
+    "William_Everett",
+    "William_Penn",
+    "William_Hazlitt_(registrar)",
+    "William_IX,_Count_of_Poitiers",
+    "William_Short_(American_ambassador)",
+    "William_Davy_(lawyer)",
+    "William_Greene_(governor)"
+  ],
+  "relevant_docs": [
+    "William_Blackstone"
+  ]
+}

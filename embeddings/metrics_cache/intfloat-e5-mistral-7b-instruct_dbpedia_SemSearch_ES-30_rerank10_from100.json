@@ -1,0 +1,29 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.5028746730079328,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-30",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Signature_line_of_credit>",
+    "<dbpedia:Line_of_credit>",
+    "<dbpedia:Home_equity_line_of_credit>",
+    "<dbpedia:Warehouse_line_of_credit>",
+    "<dbpedia:Cleanup_clause>",
+    "<dbpedia:E-Loan>",
+    "<dbpedia:ExPRESS_Logistics_Carrier>",
+    "<dbpedia:Borrowing_base>",
+    "<dbpedia:Loan>",
+    "<dbpedia:Open_Range_Communications>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Line_of_credit>",
+    "<dbpedia:E-Loan>",
+    "<dbpedia:Transfer_credit>",
+    "<dbpedia:Loan>"
+  ],
+  "tokens_reranked": 7140
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.24630238874073,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "356",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_catastrophic_risk",
+    "Human_extinction",
+    "Centre_for_the_Study_of_Existential_Risk",
+    "Worst-case_scenario",
+    "Philosophy_of_statistics",
+    "Rare_events",
+    "Scenario_analysis",
+    "Alternatives_assessment",
+    "Error_catastrophe",
+    "Failing_badly"
+  ],
+  "relevant_docs": [
+    "Human_extinction",
+    "Futures_studies",
+    "Nick_Bostrom",
+    "Risk"
+  ]
+}

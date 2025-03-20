@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "81305",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Mikhail_Prokhorov",
+    "Prokhorov",
+    "Financial_University_under_the_Government_of_the_Russian_Federation",
+    "Mikhail_Margelov",
+    "Boutique_investment_bank",
+    "Russian_Premier_League",
+    "Louis_Dreyfus_Company",
+    "Vitali_Prokhorov",
+    "Luc_Vandevelde",
+    "Rem_Viakhirev"
+  ],
+  "relevant_docs": [
+    "Mikhail_Prokhorov"
+  ],
+  "tokens_reranked": 32046
+}

@@ -1,0 +1,27 @@
+{
+  "mrr": 0.14285714285714285,
+  "ndcg": 0.20438239758848611,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "806",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Climate_of_Salt_Lake_City",
+    "2015_North_American_heat_wave",
+    "2000_Southern_United_States_heat_wave",
+    "2006_North_American_heat_wave",
+    "Heat_wave",
+    "2010_Northern_Hemisphere_summer_heat_waves",
+    "2010_Northern_Hemisphere_heat_waves",
+    "Excessive_heat_watch",
+    "2012\u201313_North_American_drought",
+    "2013_Southwestern_United_States_heat_wave"
+  ],
+  "relevant_docs": [
+    "2010_Northern_Hemisphere_heat_waves",
+    "Cold_wave"
+  ],
+  "tokens_reranked": 29316
+}

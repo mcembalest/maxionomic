@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "quora",
+  "query_id": "155873",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "155874",
+    "392604",
+    "444541",
+    "146003",
+    "292617",
+    "122134",
+    "232469",
+    "170784",
+    "294020",
+    "439035"
+  ],
+  "relevant_docs": [
+    "155874"
+  ]
+}

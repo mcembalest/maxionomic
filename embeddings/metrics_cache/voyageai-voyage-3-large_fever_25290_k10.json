@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "25290",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Love_Club_EP",
+    "Jay_Park_discography",
+    "Lorde_discography",
+    "Love_(Musiq_Soulchild_song)",
+    "Love_At_First_Sound",
+    "Jon_Bellion",
+    "Mr._Smith_(album)",
+    "Nick_Jonas_discography",
+    "Thankful_(EP)",
+    "Isaiah_Rashad"
+  ],
+  "relevant_docs": [
+    "The_Love_Club_EP"
+  ]
+}

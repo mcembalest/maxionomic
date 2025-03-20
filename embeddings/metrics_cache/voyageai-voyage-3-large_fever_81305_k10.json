@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "81305",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Mikhail_Prokhorov",
+    "Vladimir_Romanov",
+    "Prokhorov",
+    "Rem_Viakhirev",
+    "Committee_2008",
+    "Anton_Bakov",
+    "Dmitry_Rybolovlev",
+    "Viktor_Zubkov",
+    "Financial_University_under_the_Government_of_the_Russian_Federation",
+    "Oleg_Deripaska"
+  ],
+  "relevant_docs": [
+    "Mikhail_Prokhorov"
+  ]
+}

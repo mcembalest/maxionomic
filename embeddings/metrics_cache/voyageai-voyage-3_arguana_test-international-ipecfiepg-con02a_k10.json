@@ -1,0 +1,25 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.38685280723454163,
+  "model": "voyageai/voyage-3",
+  "dataset": "arguana",
+  "query_id": "test-international-ipecfiepg-con02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-international-ipecfiepg-con01a",
+    "test-international-ipecfiepg-pro02a",
+    "test-politics-cpecfiepg-pro02b",
+    "test-international-ipecfiepg-pro03b",
+    "test-international-ipecfiepg-con02b",
+    "test-international-ipecfiepg-pro01b",
+    "test-politics-cpecfiepg-con01b",
+    "test-international-ipecfiepg-pro03a",
+    "test-international-ipecfiepg-con03b",
+    "training-economy-epiaghwpto-con01b"
+  ],
+  "relevant_docs": [
+    "test-international-ipecfiepg-con02b"
+  ]
+}

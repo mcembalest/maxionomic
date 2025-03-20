@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "109817",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Louis_Malle",
+    "Humain,_trop_humain",
+    "Phantom_India",
+    "Cinema_of_France",
+    "The_Lovers_(1958_film)",
+    "C\u00e9sar_Award",
+    "Brigitte_Bardot",
+    "May_Fools",
+    "Alain_Delon",
+    "French_New_Wave"
+  ],
+  "relevant_docs": [
+    "Louis_Malle"
+  ],
+  "tokens_reranked": 27775
+}

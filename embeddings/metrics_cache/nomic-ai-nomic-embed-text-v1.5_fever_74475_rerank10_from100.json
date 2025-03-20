@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7977228895450266,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "74475",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Quay_(film)",
+    "King_Kong_(1933_film)",
+    "Voodoo_Macbeth",
+    "Astor_Place_Theatre",
+    "Broadway_Theatre_(53rd_Street)",
+    "Roaring_Twenties",
+    "Times_Square",
+    "New_Century_Theatre",
+    "Film_Forum",
+    "Movie_theater"
+  ],
+  "relevant_docs": [
+    "Film_Forum",
+    "Quay_(film)"
+  ],
+  "tokens_reranked": 30429
+}

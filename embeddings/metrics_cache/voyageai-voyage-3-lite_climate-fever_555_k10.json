@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "555",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Kodiak_bear",
+    "Grizzly_bear",
+    "Brown_bear",
+    "Moose",
+    "Circumpolar_distribution",
+    "Sloth_bear",
+    "Hunting_and_fishing_in_Alaska",
+    "Polar_seas",
+    "Mount_Bear",
+    "Bering_Glacier"
+  ],
+  "relevant_docs": [
+    "Grizzly_bear",
+    "Brown_bear",
+    "Kodiak_bear"
+  ]
+}

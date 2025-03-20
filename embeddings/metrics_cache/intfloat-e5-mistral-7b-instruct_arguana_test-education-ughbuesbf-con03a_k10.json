@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-education-ughbuesbf-con03a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "training-education-uhwecpuu-con01a",
+    "test-education-udfakusma-pro01a",
+    "training-politics-pggvhbophd-con02a",
+    "training-digital-freedoms-dfaihbssp-con02a",
+    "test-education-pshhghwpba0-pro02a",
+    "validation-international-ehwmepslmb-pro03a",
+    "test-education-ughbuesbf-con01a",
+    "training-education-udfakhwst-pro01a",
+    "training-international-aghwrpusvpa-pro03b",
+    "training-education-uhwecpuu-pro04a"
+  ],
+  "relevant_docs": [
+    "test-education-ughbuesbf-con03b"
+  ]
+}

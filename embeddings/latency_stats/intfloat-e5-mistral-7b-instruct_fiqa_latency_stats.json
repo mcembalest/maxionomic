@@ -1,9 +1,9 @@
 {
   "dataset": "fiqa",
   "model": "intfloat/e5-mistral-7b-instruct",
-  "batch_size": 256,
+  "batch_size": 1024,
   "max_seq_length": 8192,
-  "total_duration_seconds": 271.96151089668274,
+  "total_duration_seconds": 279.0041470527649,
   "total_tokens": 1004491,
-  "tokens_per_second": 3693.5042634823526
+  "tokens_per_second": 3600.272650463622
 }

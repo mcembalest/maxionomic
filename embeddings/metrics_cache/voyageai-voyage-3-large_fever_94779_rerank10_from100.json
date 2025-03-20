@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "94779",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Petyr_Baelish",
+    "Aidan_Gillen",
+    "A_Feast_for_Crows",
+    "Power_behind_the_throne",
+    "A_Game_of_Thrones_(card_game)",
+    "Battle_of_the_Bastards",
+    "A_Game_of_Thrones",
+    "Personal_name",
+    "Iron_Throne_(A_Song_of_Ice_and_Fire)",
+    "George_R._R._Martin"
+  ],
+  "relevant_docs": [
+    "Petyr_Baelish"
+  ],
+  "tokens_reranked": 25591
+}

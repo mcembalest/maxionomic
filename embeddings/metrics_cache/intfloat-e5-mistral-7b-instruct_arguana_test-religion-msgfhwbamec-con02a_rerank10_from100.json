@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-religion-msgfhwbamec-con02a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-religion-msgfhwbamec-con02a",
+    "test-religion-msgfhwbamec-con02b",
+    "training-religion-frgsbnaofcs-con01b",
+    "training-environment-ahwbsawhnbsf-con04a",
+    "test-religion-msgfhwbamec-con01b",
+    "test-religion-msgfhwbamec-pro02b",
+    "training-free-speech-debate-nvhbfemir-con02a",
+    "training-philosophy-eppprfmhb-pro04a",
+    "validation-education-eggrhwbfs-con03a",
+    "training-science-ciidffehwa-con05a"
+  ],
+  "relevant_docs": [
+    "test-religion-msgfhwbamec-con02b"
+  ],
+  "tokens_reranked": 50059
+}

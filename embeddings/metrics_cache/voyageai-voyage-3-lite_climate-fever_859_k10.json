@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "859",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Climate_change_in_Europe",
+    "Droughts_in_the_United_States",
+    "History_of_sustainability",
+    "Climate_change_in_the_United_States",
+    "Drought_in_the_United_Kingdom",
+    "Abrupt_climate_change",
+    "Climate_change_mitigation_scenarios",
+    "Future_of_Earth",
+    "Effects_of_global_warming",
+    "Economics_of_global_warming"
+  ],
+  "relevant_docs": [
+    "Severe_weather",
+    "Europe",
+    "Global_warming"
+  ]
+}

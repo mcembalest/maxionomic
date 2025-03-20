@@ -1,0 +1,27 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.20210734650054757,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "555",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Polar_desert",
+    "Season_creep",
+    "Arctic_ecology",
+    "Kodiak_bear",
+    "Phenology",
+    "Deforestation_and_climate_change",
+    "Regional_effects_of_global_warming",
+    "Polar_seas",
+    "Poverty_in_the_Arctic",
+    "Last_Glacial_Period"
+  ],
+  "relevant_docs": [
+    "Kodiak_bear",
+    "Brown_bear",
+    "Grizzly_bear"
+  ]
+}

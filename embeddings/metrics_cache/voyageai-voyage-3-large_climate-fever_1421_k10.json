@@ -1,0 +1,28 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.24630238874073,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1421",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Arctic_methane_emissions",
+    "Climate_change_in_the_Arctic",
+    "Clathrate_gun_hypothesis",
+    "Methane_clathrate",
+    "Atmospheric_methane",
+    "Methane",
+    "Wetland_methane_emissions",
+    "Greenhouse_gas",
+    "Permafrost",
+    "Arctic_geoengineering"
+  ],
+  "relevant_docs": [
+    "Glacier",
+    "Retreat_of_glaciers_since_1850",
+    "Thaumasia_quadrangle",
+    "Climate_change_in_the_Arctic"
+  ]
+}

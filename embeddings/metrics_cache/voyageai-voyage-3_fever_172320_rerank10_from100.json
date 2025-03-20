@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "172320",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Scream_2",
+    "Art_film",
+    "Vera_Farmiga",
+    "Scream,_Baby,_Scream",
+    "G\u00fcnther_Schramm",
+    "Screamplay",
+    "Daniel_Br\u00fchl",
+    "Christian_Br\u00fcckner",
+    "Bleecker_Street_(company)",
+    "Scream_World_Tour"
+  ],
+  "relevant_docs": [
+    "Scream_2"
+  ],
+  "tokens_reranked": 23700
+}

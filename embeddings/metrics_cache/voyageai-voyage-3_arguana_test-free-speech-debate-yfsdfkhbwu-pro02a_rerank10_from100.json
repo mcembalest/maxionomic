@@ -1,0 +1,26 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.38685280723454163,
+  "model": "voyageai/voyage-3",
+  "dataset": "arguana",
+  "query_id": "test-free-speech-debate-yfsdfkhbwu-pro02a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-education-ufsdfkhbwu-con02b",
+    "test-education-ufsdfkhbwu-con02b",
+    "test-free-speech-debate-yfsdfkhbwu-con01b",
+    "test-free-speech-debate-yfsdfkhbwu-pro01b",
+    "test-free-speech-debate-yfsdfkhbwu-pro02b",
+    "test-free-speech-debate-yfsdfkhbwu-con02a",
+    "test-free-speech-debate-yfsdfkhbwu-pro03a",
+    "training-free-speech-debate-fchbnhampi-con01b",
+    "training-law-aullgsmhwchs-pro04b",
+    "training-free-speech-debate-nvhsibsv-pro01b"
+  ],
+  "relevant_docs": [
+    "test-free-speech-debate-yfsdfkhbwu-pro02b"
+  ],
+  "tokens_reranked": 50879
+}

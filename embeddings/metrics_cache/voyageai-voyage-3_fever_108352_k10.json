@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "108352",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "World_Extreme_Cagefighting",
+    "Nate_Diaz",
+    "Extreme_Championship_Wrestling",
+    "List_of_ECW_World_Television_Champions",
+    "Poli_D\u00edaz",
+    "The_ECW_Originals",
+    "No_Way_Out_(2004)",
+    "WWE_Extreme_Rules",
+    "WWE_NXT_(TV_series)",
+    "Hardcore_wrestling"
+  ],
+  "relevant_docs": [
+    "Nate_Diaz"
+  ]
+}

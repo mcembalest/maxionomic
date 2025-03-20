@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7365896932159578,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "2359",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Atmospheric_methane",
+    "Greenhouse_gas",
+    "Greenhouse_effect",
+    "Global_warming",
+    "History_of_climate_change_science",
+    "IPCC_First_Assessment_Report",
+    "Carbon_cycle_re-balancing",
+    "Attribution_of_recent_climate_change",
+    "Atmospheric_carbon_cycle"
+  ],
+  "relevant_docs": [
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Greenhouse_gas",
+    "Carbon_dioxide",
+    "Global_warming"
+  ],
+  "tokens_reranked": 38340
+}

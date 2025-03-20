@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "194432",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Indiana_Pacers",
+    "List_of_Indiana_Pacers_seasons",
+    "1968\u201369_Indiana_Pacers_season",
+    "List_of_defunct_National_Basketball_Association_teams",
+    "Indiana_Hoosiers_men's_basketball",
+    "1976_ABA_Dispersal_Draft",
+    "FIBA_Basketball_World_Cup",
+    "Indiana_Hoosiers",
+    "2010\u201311_Indiana_Pacers_season",
+    "1972_ABA_Playoffs"
+  ],
+  "relevant_docs": [
+    "Indiana_Pacers"
+  ]
+}

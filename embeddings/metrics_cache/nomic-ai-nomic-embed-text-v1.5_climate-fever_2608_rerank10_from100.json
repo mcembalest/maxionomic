@@ -1,0 +1,29 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.5646436081071458,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "2608",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Mootral",
+    "Atmospheric_methane",
+    "Methane",
+    "Wetland_methane_emissions",
+    "Global_warming_potential",
+    "Greenhouse_gas",
+    "Global_warming",
+    "Biogas",
+    "Carbon_neutrality",
+    "IPCC_First_Assessment_Report"
+  ],
+  "relevant_docs": [
+    "Atmospheric_methane",
+    "Biogas",
+    "Methane",
+    "Natural_gas"
+  ],
+  "tokens_reranked": 46360
+}

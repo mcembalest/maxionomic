@@ -1,0 +1,32 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.43802253610279657,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-81",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:On_the_Road>",
+    "<dbpedia:Haslam's_Book_Store>",
+    "<dbpedia:Paul_Maher,_Jr.>",
+    "<dbpedia:Jack_Kerouac>",
+    "<dbpedia:Scattered_Poems>",
+    "<dbpedia:Book_of_Sketches>",
+    "<dbpedia:Poetry_for_the_Beat_Generation>",
+    "<dbpedia:Doctor_Sax>",
+    "<dbpedia:Door_Wide_Open>",
+    "<dbpedia:The_Jack_Kerouac_Writers_in_Residence_Project_of_Orlando,_Inc.>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Jack_Kerouac>",
+    "<dbpedia:On_the_Road>",
+    "<dbpedia:And_the_Hippos_Were_Boiled_in_Their_Tanks>",
+    "<dbpedia:The_Dharma_Bums>",
+    "<dbpedia:You_Have_Seen_Their_Faces>",
+    "<dbpedia:Door_Wide_Open>",
+    "<dbpedia:Atop_an_Underwood:_Early_Stories_and_Other_Writings>",
+    "<dbpedia:Maggie_Cassidy>"
+  ]
+}

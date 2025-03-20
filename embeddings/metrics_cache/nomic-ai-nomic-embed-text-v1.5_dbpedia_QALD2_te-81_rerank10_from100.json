@@ -1,0 +1,33 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6265258279479395,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-81",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Atop_an_Underwood:_Early_Stories_and_Other_Writings>",
+    "<dbpedia:Good_Blonde_&_Others>",
+    "<dbpedia:On_the_Road>",
+    "<dbpedia:Paul_Maher,_Jr.>",
+    "<dbpedia:Jack_Kerouac>",
+    "<dbpedia:Doctor_Sax>",
+    "<dbpedia:Book_of_Sketches>",
+    "<dbpedia:Desolation_Angels_(novel)>",
+    "<dbpedia:Maggie_Cassidy>",
+    "<dbpedia:And_the_Hippos_Were_Boiled_in_Their_Tanks>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Maggie_Cassidy>",
+    "<dbpedia:Jack_Kerouac>",
+    "<dbpedia:The_Dharma_Bums>",
+    "<dbpedia:Atop_an_Underwood:_Early_Stories_and_Other_Writings>",
+    "<dbpedia:On_the_Road>",
+    "<dbpedia:Door_Wide_Open>",
+    "<dbpedia:And_the_Hippos_Were_Boiled_in_Their_Tanks>",
+    "<dbpedia:You_Have_Seen_Their_Faces>"
+  ],
+  "tokens_reranked": 9480
+}

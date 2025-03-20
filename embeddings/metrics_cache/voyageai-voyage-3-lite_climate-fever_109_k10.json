@@ -1,0 +1,26 @@
+{
+  "mrr": 0.1111111111111111,
+  "ndcg": 0.36181498356361597,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "109",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Past_sea_level",
+    "Sea_level_rise",
+    "Future_sea_level",
+    "Tide",
+    "Marine_transgression",
+    "Regional_effects_of_global_warming",
+    "Annual_cycle_of_sea_level_height",
+    "Marine_regression",
+    "Sea_level",
+    "Sea"
+  ],
+  "relevant_docs": [
+    "Sea",
+    "Sea_level"
+  ]
+}

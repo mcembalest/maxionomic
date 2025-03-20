@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1691",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Sea_level_rise",
+    "Future_sea_level",
+    "Past_sea_level",
+    "Climate_inertia",
+    "Deglaciation",
+    "Ice2sea",
+    "Marine_transgression",
+    "Antarctic_Cold_Reversal",
+    "Arctic_sea_ice_decline",
+    "Pliocene_climate"
+  ],
+  "relevant_docs": [
+    "Sea_level_rise"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5032251913410369,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1783",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Copenhagen_Diagnosis",
+    "IPCC_First_Assessment_Report",
+    "Greening_Earth_Society",
+    "IPCC_Fourth_Assessment_Report",
+    "Climate_variability",
+    "Earth's_internal_heat_budget",
+    "Climate_change_(general_concept)",
+    "Global_cooling",
+    "Attribution_of_recent_climate_change"
+  ],
+  "relevant_docs": [
+    "Global_warming_hiatus",
+    "Global_warming",
+    "Little_Ice_Age",
+    "Attribution_of_recent_climate_change"
+  ],
+  "tokens_reranked": 31667
+}

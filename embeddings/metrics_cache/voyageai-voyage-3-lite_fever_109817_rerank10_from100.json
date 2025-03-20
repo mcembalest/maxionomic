@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "109817",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Louis_Malle",
+    "Humain,_trop_humain",
+    "Phantom_India",
+    "Cinema_of_France",
+    "The_Lovers_(1958_film)",
+    "May_Fools",
+    "Alain_Delon",
+    "Economy_of_Paris",
+    "Charvet_Place_Vend\u00f4me",
+    "My_Dinner_with_Andre"
+  ],
+  "relevant_docs": [
+    "Louis_Malle"
+  ],
+  "tokens_reranked": 31145
+}

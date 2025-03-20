@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "221252",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Block_(album)",
+    "Single_(New_Kids_on_the_Block_and_Ne-Yo_song)",
+    "Beat'n_Down_Yo_Block!",
+    "Dirty_Dancing_(song)",
+    "New_Kids_on_the_Block_(album)",
+    "Writer's_Block_(Just_Jack_song)",
+    "Rock_the_Block",
+    "The_Block_(Richmond,_Virginia)",
+    "Thankful_(EP)",
+    "Love_Has_Left_the_Room"
+  ],
+  "relevant_docs": [
+    "The_Block_(album)"
+  ]
+}

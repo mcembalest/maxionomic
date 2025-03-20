@@ -1,9 +1,9 @@
 {
   "dataset": "fever",
   "model": "intfloat/e5-mistral-7b-instruct",
-  "batch_size": 256,
+  "batch_size": 1024,
   "max_seq_length": 8192,
-  "total_duration_seconds": 405.909255027771,
+  "total_duration_seconds": 401.2442650794983,
   "total_tokens": 1527953,
-  "tokens_per_second": 3764.2723861900176
+  "tokens_per_second": 3808.0369814064948
 }

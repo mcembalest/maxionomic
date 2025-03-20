@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "nfcorpus",
+  "query_id": "PLAIN-1621",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "MED-3783",
+    "MED-1016",
+    "MED-2111",
+    "MED-2530",
+    "MED-2428",
+    "MED-2444",
+    "MED-1839",
+    "MED-1765",
+    "MED-1634",
+    "MED-2292"
+  ],
+  "relevant_docs": [
+    "MED-4834",
+    "MED-4832",
+    "MED-4835",
+    "MED-4833"
+  ]
+}

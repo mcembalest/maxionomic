@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "1494",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Food_Network",
+    "Food_Network_(Australia)",
+    "Cooking_Channel_(Canada)",
+    "Food_Network_Star",
+    "Top_5_Restaurants",
+    "Road_Tasted",
+    "Food_Feuds",
+    "Food_Court_Wars",
+    "Florida",
+    "Food_Network:_Cook_or_Be_Cooked"
+  ],
+  "relevant_docs": [
+    "Food_Network"
+  ],
+  "tokens_reranked": 26621
+}

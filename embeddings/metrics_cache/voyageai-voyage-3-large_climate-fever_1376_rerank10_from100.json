@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1376",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Paleocene\u2013Eocene_Thermal_Maximum",
+    "Deglaciation",
+    "Late_Glacial",
+    "Eocene_Thermal_Maximum_2",
+    "B\u00f8lling-Aller\u00f8d_warming",
+    "Clathrate_gun_hypothesis",
+    "Marine_isotope_stage",
+    "Abrupt_climate_change",
+    "Thermal_optimum",
+    "Termination_(geomorphology)"
+  ],
+  "relevant_docs": [
+    "Climate_of_India",
+    "Earth",
+    "Sun",
+    "Little_Ice_Age",
+    "Scientific_consensus_on_climate_change"
+  ],
+  "tokens_reranked": 36233
+}

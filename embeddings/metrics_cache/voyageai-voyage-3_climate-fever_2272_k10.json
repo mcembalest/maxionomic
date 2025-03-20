@@ -1,0 +1,27 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.35853358850813305,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "2272",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "World_Climate_Change_Conference,_Moscow",
+    "Criticism_of_the_IPCC_Fourth_Assessment_Report",
+    "Climatic_Research_Unit_documents",
+    "Intergovernmental_Panel_on_Climate_Change",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming",
+    "Danish_Committees_on_Scientific_Dishonesty",
+    "Climatic_Research_Unit_email_controversy",
+    "Media_coverage_of_climate_change",
+    "Scientific_opinion_on_climate_change",
+    "Hockey_stick_controversy"
+  ],
+  "relevant_docs": [
+    "Intergovernmental_Panel_on_Climate_Change",
+    "Global_warming_conspiracy_theory",
+    "Climatic_Research_Unit_email_controversy"
+  ]
+}

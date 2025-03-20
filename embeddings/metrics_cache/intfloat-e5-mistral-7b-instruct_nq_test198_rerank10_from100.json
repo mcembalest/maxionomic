@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "nq",
+  "query_id": "test198",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "doc7165",
+    "doc355540",
+    "doc2004259",
+    "doc1664038",
+    "doc2298808",
+    "doc284394",
+    "doc355524",
+    "doc1982070",
+    "doc936624",
+    "doc1670303"
+  ],
+  "relevant_docs": [
+    "doc7166",
+    "doc7161"
+  ],
+  "tokens_reranked": 11863
+}

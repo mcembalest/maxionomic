@@ -1,0 +1,37 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6528642754944294,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-17",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Butte,_Montana>",
+    "<dbpedia:Church_Butte>",
+    "<dbpedia:Butte_High_School_(Butte,_Montana)>",
+    "<dbpedia:Butte,_America>",
+    "<dbpedia:Square_Butte_(Montana)>",
+    "<dbpedia:Butte_Central_Catholic_High_School>",
+    "<dbpedia:Heart_Butte,_Montana>",
+    "<dbpedia:St._John's_Episcopal_Church_(Butte,_Montana)>",
+    "<dbpedia:F._Augustus_Heinze>",
+    "<dbpedia:Marcus_Daly>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Butte\u2013Anaconda_Historic_District>",
+    "<dbpedia:St._John's_Episcopal_Church_(Butte,_Montana)>",
+    "<dbpedia:Silver_Bow,_Butte>",
+    "<dbpedia:Heart_Butte,_Montana>",
+    "<dbpedia:National_Register_of_Historic_Places_listings_in_Silver_Bow_County,_Montana>",
+    "<dbpedia:Square_Butte_(Montana)>",
+    "<dbpedia:Montana_Tech_of_the_University_of_Montana>",
+    "<dbpedia:Butte_High_School_(Butte,_Montana)>",
+    "<dbpedia:Butte,_America>",
+    "<dbpedia:Butte,_Montana>",
+    "<dbpedia:List_of_places_in_Montana>",
+    "<dbpedia:Rocker,_Butte>"
+  ],
+  "tokens_reranked": 7161
+}

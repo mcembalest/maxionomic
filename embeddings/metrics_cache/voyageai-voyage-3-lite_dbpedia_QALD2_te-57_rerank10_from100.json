@@ -1,0 +1,33 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.647939623894138,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-57",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Apollo_14>",
+    "<dbpedia:Edgar_Mitchell>",
+    "<dbpedia:Stuart_Roosa>",
+    "<dbpedia:Ronald_Evans_(astronaut)>",
+    "<dbpedia:Purdue_University_College_of_Engineering>",
+    "<dbpedia:James_Lloyd_Abbot,_Jr.>",
+    "<dbpedia:Aspartoacylase>",
+    "<dbpedia:Aspartoacylase>",
+    "<dbpedia:Aspartoacylase>",
+    "<dbpedia:Aspartoacylase>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Stuart_Roosa>",
+    "<dbpedia:Apollo_program>",
+    "<dbpedia:Ronald_Evans_(astronaut)>",
+    "<dbpedia:List_of_Apollo_astronauts>",
+    "<dbpedia:Apollo_14>",
+    "<dbpedia:Edgar_Mitchell>",
+    "<dbpedia:List_of_astronauts_by_name>",
+    "<dbpedia:Alan_Shepard>"
+  ],
+  "tokens_reranked": 9200
+}

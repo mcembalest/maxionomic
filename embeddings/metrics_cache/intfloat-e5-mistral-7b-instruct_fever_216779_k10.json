@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "216779",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Amir_Sultan",
+    "Timur",
+    "Mansur_Khan_(Moghul_Khan)",
+    "Tem\u00fcr_Khan",
+    "Shahrukh_Mirza",
+    "Khwarazmian_dynasty",
+    "History_of_Kazakhstan",
+    "Timurid_family_tree",
+    "Taimur_(disambiguation)",
+    "Siege_of_Samarkand_(1497)"
+  ],
+  "relevant_docs": [
+    "Timur"
+  ]
+}

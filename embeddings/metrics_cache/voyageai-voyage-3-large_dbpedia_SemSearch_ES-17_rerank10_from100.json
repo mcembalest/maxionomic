@@ -1,0 +1,37 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7191184989488184,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-17",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Butte,_Montana>",
+    "<dbpedia:Church_Butte>",
+    "<dbpedia:Butte_High_School_(Butte,_Montana)>",
+    "<dbpedia:Butte,_America>",
+    "<dbpedia:Square_Butte_(Montana)>",
+    "<dbpedia:Butte_Central_Catholic_High_School>",
+    "<dbpedia:Heart_Butte,_Montana>",
+    "<dbpedia:Butte\u2013Anaconda_Historic_District>",
+    "<dbpedia:St._John's_Episcopal_Church_(Butte,_Montana)>",
+    "<dbpedia:Butte_Roughriders>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Montana_Tech_of_the_University_of_Montana>",
+    "<dbpedia:National_Register_of_Historic_Places_listings_in_Silver_Bow_County,_Montana>",
+    "<dbpedia:Butte,_America>",
+    "<dbpedia:Butte_High_School_(Butte,_Montana)>",
+    "<dbpedia:Square_Butte_(Montana)>",
+    "<dbpedia:Silver_Bow,_Butte>",
+    "<dbpedia:Butte\u2013Anaconda_Historic_District>",
+    "<dbpedia:List_of_places_in_Montana>",
+    "<dbpedia:Rocker,_Butte>",
+    "<dbpedia:St._John's_Episcopal_Church_(Butte,_Montana)>",
+    "<dbpedia:Butte,_Montana>",
+    "<dbpedia:Heart_Butte,_Montana>"
+  ],
+  "tokens_reranked": 8178
+}

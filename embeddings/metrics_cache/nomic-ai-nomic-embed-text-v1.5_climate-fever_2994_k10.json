@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6366824387328317,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "2994",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Keeling_Curve",
+    "Mauna_Loa_Observatory",
+    "Mauna_Kea",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Explorer_7",
+    "Meteorological_astrology",
+    "New_Horizons",
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "Planetary_habitability",
+    "Outer_space"
+  ],
+  "relevant_docs": [
+    "Mauna_Loa_Observatory",
+    "Keeling_Curve",
+    "Greenhouse_effect",
+    "Global_warming"
+  ]
+}

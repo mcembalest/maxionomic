@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6131471927654584,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "136604",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Zac_Efron",
+    "Natural-born-citizen_clause",
+    "Zen_Gesner",
+    "Eian_Beron",
+    "Jason_Kravits",
+    "Daniel_Booko",
+    "Ansel_Elgort",
+    "Marshall_Efron",
+    "Denzel_Whitaker",
+    "Charlie_St._Cloud"
+  ],
+  "relevant_docs": [
+    "Zac_Efron",
+    "Americans"
+  ]
+}

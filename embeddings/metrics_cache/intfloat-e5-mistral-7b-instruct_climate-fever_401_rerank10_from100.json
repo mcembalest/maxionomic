@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "401",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Media_coverage_of_climate_change",
+    "Global_warming_controversy",
+    "Satellite_temperature_measurements",
+    "Temperature_record_of_the_past_1000_years",
+    "Global_warming",
+    "1908",
+    "Deforestation_and_climate_change",
+    "IPCC_Fourth_Assessment_Report",
+    "MSU_temperature_measurements"
+  ],
+  "relevant_docs": [
+    "Syracuse,_New_York",
+    "Instrumental_temperature_record"
+  ],
+  "tokens_reranked": 30113
+}

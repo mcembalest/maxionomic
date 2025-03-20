@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.5912352048230277,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "194187",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Marvin_Bush",
+    "Barbara_Bush",
+    "Bush_compound",
+    "Bush_(surname)",
+    "Political_positions_of_Jeb_Bush",
+    "Jonathan_Bush",
+    "Jeb_Bush",
+    "George_W._Bush",
+    "Laura_Bush",
+    "Bay_Buchanan"
+  ],
+  "relevant_docs": [
+    "Jeb_Bush",
+    "Barbara_Bush"
+  ]
+}

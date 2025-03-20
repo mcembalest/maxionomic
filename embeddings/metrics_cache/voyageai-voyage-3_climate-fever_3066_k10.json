@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.3391602052736161,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "3066",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Alternative_medicine",
+    "Alternative_energy",
+    "The_Real_Global_Warming_Disaster",
+    "Junk_science",
+    "Energy_in_the_United_States",
+    "Journal_for_Geoclimatic_Studies",
+    "Renewable_energy_commercialization",
+    "Renewable_energy",
+    "Alternative_fuel_vehicle",
+    "Environmental_skepticism"
+  ],
+  "relevant_docs": [
+    "Alternative_medicine",
+    "History_of_economic_thought",
+    "List_of_topics_characterized_as_pseudoscience",
+    "Minimum_wage",
+    "Economics"
+  ]
+}

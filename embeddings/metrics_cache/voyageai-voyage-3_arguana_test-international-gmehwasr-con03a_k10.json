@@ -1,0 +1,25 @@
+{
+  "mrr": 0.16666666666666666,
+  "ndcg": 0.3562071871080222,
+  "model": "voyageai/voyage-3",
+  "dataset": "arguana",
+  "query_id": "test-international-gmehwasr-con03a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-international-gmehwasr-pro02b",
+    "test-international-gmehwasr-con05a",
+    "test-international-gmehwasr-pro02a",
+    "test-international-gmehwasr-pro05b",
+    "test-international-gmehwasr-pro03a",
+    "test-international-gmehwasr-con03b",
+    "training-law-ilpwhbujufp-pro03a",
+    "test-international-gsciidffe-pro04b",
+    "test-international-gmehwasr-con05b",
+    "training-law-rgmelhrpwhbw-con02a"
+  ],
+  "relevant_docs": [
+    "test-international-gmehwasr-con03b"
+  ]
+}

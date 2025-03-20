@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "arguana",
+  "query_id": "test-law-lgplhbssbco-pro02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-law-lgplhbssbco-pro02b",
+    "test-law-lgplhbssbco-pro01a",
+    "test-health-dhpelhbass-con02a",
+    "test-health-hpehwadvoee-con01a",
+    "test-health-dhpelhbass-pro01b",
+    "test-law-lgplhbssbco-con03a",
+    "test-health-hpehwadvoee-pro03b",
+    "test-philosophy-elhbrd-con03a",
+    "training-law-ueegllghwhsl-con01a",
+    "test-law-lgplhbssbco-con03b"
+  ],
+  "relevant_docs": [
+    "test-law-lgplhbssbco-pro02b"
+  ]
+}

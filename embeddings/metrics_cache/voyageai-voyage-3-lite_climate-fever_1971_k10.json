@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1971",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Wind_power",
+    "Wind_power_in_the_United_Kingdom",
+    "Renewable_energy_debate",
+    "100%_renewable_energy",
+    "Growth_of_wind_power_in_the_United_States",
+    "Wind_power_in_the_United_States",
+    "Wind_power_in_the_European_Union",
+    "Wind_power_in_Colorado",
+    "Wind_power_by_country",
+    "Acciona_Energy"
+  ],
+  "relevant_docs": [
+    "Renewable_energy",
+    "Carbon_neutrality",
+    "Zero-energy_building",
+    "Carbon_footprint"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "nfcorpus",
+  "query_id": "PLAIN-1473",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "MED-4455",
+    "MED-3109",
+    "MED-2070",
+    "MED-5027",
+    "MED-1580",
+    "MED-890",
+    "MED-4456",
+    "MED-2098",
+    "MED-5127",
+    "MED-2074"
+  ],
+  "relevant_docs": [
+    "MED-4455"
+  ],
+  "tokens_reranked": 30569
+}

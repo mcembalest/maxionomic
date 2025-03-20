@@ -1,0 +1,37 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.494639655562801,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-84",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Captain_America>",
+    "<dbpedia:Jeffrey_Mace>",
+    "<dbpedia:Syd_Shores>",
+    "<dbpedia:Rik_Levins>",
+    "<dbpedia:Captain_America_(vol._5)>",
+    "<dbpedia:Captain_America_in_other_media>",
+    "<dbpedia:Peggy_Carter>",
+    "<dbpedia:Stan_Lee>",
+    "<dbpedia:Captain_America:_Reborn>",
+    "<dbpedia:All_Winners_Comics>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:The_Death_of_Captain_America>",
+    "<dbpedia:Fallen_Son:_The_Death_of_Captain_America>",
+    "<dbpedia:Stan_Lee>",
+    "<dbpedia:Jeffrey_Mace>",
+    "<dbpedia:Captain_America:_Civil_War>",
+    "<dbpedia:Captain_America:_The_First_Avenger>",
+    "<dbpedia:Captain_America_and_the_Falcon>",
+    "<dbpedia:Marvel_Cinematic_Universe_tie-in_comics>",
+    "<dbpedia:Jack_Kirby>",
+    "<dbpedia:Free_Spirit_(comics)>",
+    "<dbpedia:Captain_America:_Reborn>",
+    "<dbpedia:Nomad_(comics)>",
+    "<dbpedia:Captain_America>"
+  ]
+}

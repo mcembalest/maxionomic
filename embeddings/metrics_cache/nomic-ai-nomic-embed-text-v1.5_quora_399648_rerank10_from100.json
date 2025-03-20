@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "quora",
+  "query_id": "399648",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "399649",
+    "51453",
+    "212213",
+    "56332",
+    "28996",
+    "506410",
+    "97652",
+    "304588",
+    "104400",
+    "24197"
+  ],
+  "relevant_docs": [
+    "399649"
+  ],
+  "tokens_reranked": 2535
+}

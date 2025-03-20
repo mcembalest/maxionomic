@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-education-usuprmhbu-con02a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-education-usuprmhbu-con02b",
+    "test-education-usuprmhbu-pro03b",
+    "validation-society-gfhbcimrst-con01a",
+    "test-education-usuprmhbu-con01b",
+    "test-education-usuprmhbu-pro03a",
+    "test-philosophy-npppmhwup-pro03b",
+    "test-education-usuprmhbu-pro02b",
+    "training-politics-oapglvsghw-con02a",
+    "test-philosophy-npppmhwup-con02b",
+    "test-philosophy-npppmhwup-pro02a"
+  ],
+  "relevant_docs": [
+    "test-education-usuprmhbu-con02b"
+  ],
+  "tokens_reranked": 39092
+}

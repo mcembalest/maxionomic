@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "scifact",
+  "query_id": "1202",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "3475317",
+    "24707550",
+    "4391121",
+    "44935041",
+    "1049501",
+    "219475",
+    "29509926",
+    "23912923",
+    "5774746",
+    "52925737"
+  ],
+  "relevant_docs": [
+    "3475317"
+  ],
+  "tokens_reranked": 24803
+}

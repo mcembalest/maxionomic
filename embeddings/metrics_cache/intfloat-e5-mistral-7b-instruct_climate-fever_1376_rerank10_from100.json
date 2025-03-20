@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1376",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Paleocene\u2013Eocene_Thermal_Maximum",
+    "Deglaciation",
+    "Late_Glacial",
+    "Eocene_Thermal_Maximum_2",
+    "B\u00f8lling-Aller\u00f8d_warming",
+    "Marine_isotope_stage",
+    "Abrupt_climate_change",
+    "Termination_(geomorphology)",
+    "Milankovitch_cycles",
+    "Polar_forests_of_the_Cretaceous"
+  ],
+  "relevant_docs": [
+    "Scientific_consensus_on_climate_change",
+    "Sun",
+    "Earth",
+    "Climate_of_India",
+    "Little_Ice_Age"
+  ],
+  "tokens_reranked": 34523
+}

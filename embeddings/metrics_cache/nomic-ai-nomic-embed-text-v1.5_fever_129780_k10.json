@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "129780",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Richard_Dawson",
+    "Richard_Dawson_(footballer,_born_1962)",
+    "Richard_Dawson_(footballer,_born_1960)",
+    "Richard_Dawson_(footballer,_born_1967)",
+    "Mark_Dawson",
+    "Dawson_(actor)",
+    "Eddie_Dawson",
+    "Ross_Dawson",
+    "Richard_Norton_(actor)",
+    "George_Dawson_(author)"
+  ],
+  "relevant_docs": [
+    "Richard_Dawson"
+  ]
+}

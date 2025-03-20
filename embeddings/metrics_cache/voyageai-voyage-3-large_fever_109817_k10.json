@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "109817",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Humain,_trop_humain",
+    "Louis_Malle",
+    "Cinema_of_France",
+    "Phantom_India",
+    "May_Fools",
+    "The_Lovers_(1958_film)",
+    "Fran\u00e7ois_Truffaut",
+    "C\u00e9sar_Award",
+    "Luc_Moullet",
+    "Jacques_Rivette"
+  ],
+  "relevant_docs": [
+    "Louis_Malle"
+  ]
+}

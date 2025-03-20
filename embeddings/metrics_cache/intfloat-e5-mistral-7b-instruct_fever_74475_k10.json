@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8315546295836225,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "74475",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Quay_(film)",
+    "Gate_Theatre_(London)",
+    "Quad_(arts_centre)",
+    "Elizabeth_Quay",
+    "Quay_Bar",
+    "Film_Forum",
+    "Librairie_de_France",
+    "The_Screen_Room",
+    "New_Century_Theatre",
+    "Circular_Quay"
+  ],
+  "relevant_docs": [
+    "Quay_(film)",
+    "Film_Forum"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "179112",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "The_Good_German",
+    "Spider-Man_in_film",
+    "Spider-Man_2",
+    "Richard_Yates_(novelist)",
+    "Golden_Gate_Bridge_in_popular_culture",
+    "Amy_Adams",
+    "List_of_actors_nominated_for_Academy_Awards_for_foreign_language_performances",
+    "Good_(play)",
+    "Murmur_(company)",
+    "All_the_King's_Men_(2006_film)"
+  ],
+  "relevant_docs": [
+    "The_Good_German"
+  ],
+  "tokens_reranked": 27158
+}

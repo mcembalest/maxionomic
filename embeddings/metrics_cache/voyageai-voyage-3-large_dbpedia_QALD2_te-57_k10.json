@@ -1,0 +1,32 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7457912185292983,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-57",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Apollo_14>",
+    "<dbpedia:Stuart_Roosa>",
+    "<dbpedia:Edgar_Mitchell>",
+    "<dbpedia:Ronald_Evans_(astronaut)>",
+    "<dbpedia:List_of_Apollo_astronauts>",
+    "<dbpedia:Moon_Shot>",
+    "<dbpedia:Leon_Silver>",
+    "<dbpedia:NASA_Astronaut_Group_5>",
+    "<dbpedia:Jim_Lovell>",
+    "<dbpedia:John_Young_(astronaut)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:List_of_Apollo_astronauts>",
+    "<dbpedia:Alan_Shepard>",
+    "<dbpedia:Apollo_14>",
+    "<dbpedia:Edgar_Mitchell>",
+    "<dbpedia:Apollo_program>",
+    "<dbpedia:Stuart_Roosa>",
+    "<dbpedia:List_of_astronauts_by_name>",
+    "<dbpedia:Ronald_Evans_(astronaut)>"
+  ]
+}

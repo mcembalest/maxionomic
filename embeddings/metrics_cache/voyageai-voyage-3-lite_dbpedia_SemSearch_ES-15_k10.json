@@ -1,0 +1,26 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.23719771276929622,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-15",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Shermann_Audio>",
+    "<dbpedia:List_of_schools_in_Kolkata>",
+    "<dbpedia:List_of_television_stations_in_Missouri_(by_channel_number)>",
+    "<dbpedia:Aspartoacylase>",
+    "<dbpedia:BMO_Harris_Bradley_Center>",
+    "<dbpedia:NJCAA_Women's_Basketball_Championship>",
+    "<dbpedia:Brad_Richardson>",
+    "<dbpedia:John_R._Gill>",
+    "<dbpedia:Brad_Lohaus>",
+    "<dbpedia:Central_Division_(NBA)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:1996_WCHA_Men's_Ice_Hockey_Tournament>",
+    "<dbpedia:BMO_Harris_Bradley_Center>"
+  ]
+}

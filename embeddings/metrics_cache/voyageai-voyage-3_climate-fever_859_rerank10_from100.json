@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.46927872602275644,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "859",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Global_warming",
+    "Megadrought",
+    "Climate_engineering",
+    "Environmental_migrant",
+    "Special_Report_on_Global_Warming_of_1.5_\u00b0C",
+    "Droughts_in_the_United_States",
+    "Drylands",
+    "Life_zones_of_the_Mediterranean_region",
+    "Desert_climate",
+    "Desertification"
+  ],
+  "relevant_docs": [
+    "Europe",
+    "Severe_weather",
+    "Global_warming"
+  ],
+  "tokens_reranked": 42657
+}

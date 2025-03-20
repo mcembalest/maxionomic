@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1575",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Arctic_sea_ice_decline",
+    "Measurement_of_sea_ice",
+    "Antarctic_sea_ice",
+    "Antarctic_ice_sheet",
+    "Arctic_dipole_anomaly",
+    "Future_sea_level",
+    "Arctic_resources_race",
+    "Antarctic_Cold_Reversal",
+    "Arctic_geoengineering",
+    "Sea_ice_thickness"
+  ],
+  "relevant_docs": [
+    "Arctic",
+    "Sea_ice",
+    "Antarctica"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8315546295836225,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "85454",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Nero",
+    "Tiberius_Claudius_Nero",
+    "Nero,_Mozambique",
+    "Nero_AG",
+    "Neron_(DC_Comics)",
+    "Julio-Claudian_dynasty",
+    "Drusus_Claudius_Nero",
+    "Roman_usurper",
+    "Tiberius_Claudius_Nero_(consul)",
+    "Nero_Wolfe"
+  ],
+  "relevant_docs": [
+    "Nero",
+    "Julio-Claudian_dynasty"
+  ],
+  "tokens_reranked": 23808
+}

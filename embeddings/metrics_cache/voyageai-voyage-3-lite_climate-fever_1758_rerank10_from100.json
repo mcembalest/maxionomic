@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1758",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "March_2012_North_American_heat_wave",
+    "Global_Historical_Climatology_Network",
+    "Pneumonia_front",
+    "Instrumental_temperature_record",
+    "2001_Eastern_North_America_heat_wave",
+    "Thaw_(weather)",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "Proxy_(climate)",
+    "HadCRUT",
+    "Great_Lakes"
+  ],
+  "relevant_docs": [
+    "Permafrost",
+    "Little_Ice_Age",
+    "Lake_Superior",
+    "Precipitation"
+  ],
+  "tokens_reranked": 35788
+}

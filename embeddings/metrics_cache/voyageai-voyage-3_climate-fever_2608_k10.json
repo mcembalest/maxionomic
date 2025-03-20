@@ -1,0 +1,28 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.32531670832675136,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "2608",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Mootral",
+    "List_of_countries_by_carbon_dioxide_emissions_per_capita",
+    "Atmospheric_methane",
+    "Fossil_fuel",
+    "Atmospheric_carbon_cycle",
+    "Wetland_methane_emissions",
+    "Methane",
+    "Arctic_methane_emissions",
+    "Greenhouse_gas",
+    "Copenhagen_Diagnosis"
+  ],
+  "relevant_docs": [
+    "Natural_gas",
+    "Atmospheric_methane",
+    "Methane",
+    "Biogas"
+  ]
+}

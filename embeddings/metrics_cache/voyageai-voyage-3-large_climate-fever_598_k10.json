@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "598",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Climate_sensitivity",
+    "Earth's_energy_budget",
+    "Cool_tropics_paradox",
+    "Climate:_Long_range_Investigation,_Mapping,_and_Prediction",
+    "Climate_state",
+    "Idealized_greenhouse_model",
+    "Cloud_feedback",
+    "Planetary_equilibrium_temperature",
+    "DICE_model",
+    "Global_warming_hiatus"
+  ],
+  "relevant_docs": [
+    "Global_warming_controversy",
+    "Intergovernmental_Panel_on_Climate_Change",
+    "Global_warming"
+  ]
+}

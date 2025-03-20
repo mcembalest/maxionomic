@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "412",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Deforestation_and_climate_change",
+    "Greening_Earth_Society",
+    "Global_cooling",
+    "History_of_climate_change_science",
+    "Global_warming_hiatus",
+    "Scientific_consensus_on_climate_change",
+    "1908",
+    "Environmental_issue",
+    "Climate_change_in_the_Arctic",
+    "Global_warming_conspiracy_theory"
+  ],
+  "relevant_docs": [
+    "Global_warming",
+    "Paleocene",
+    "Eocene"
+  ]
+}

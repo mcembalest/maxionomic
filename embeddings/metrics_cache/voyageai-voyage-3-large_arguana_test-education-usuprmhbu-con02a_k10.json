@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "arguana",
+  "query_id": "test-education-usuprmhbu-con02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-education-usuprmhbu-con02b",
+    "test-education-usuprmhbu-pro03b",
+    "test-philosophy-npppmhwup-pro02a",
+    "test-education-usuprmhbu-con01b",
+    "test-education-usuprmhbu-pro01a",
+    "test-education-usuprmhbu-pro03a",
+    "test-philosophy-npppmhwup-pro03b",
+    "test-philosophy-npppmhwup-con02a",
+    "test-philosophy-npppmhwup-pro03a",
+    "test-education-usuprmhbu-pro02b"
+  ],
+  "relevant_docs": [
+    "test-education-usuprmhbu-con02b"
+  ]
+}

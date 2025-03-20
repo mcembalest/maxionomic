@@ -5,9 +5,9 @@
   "use_reranker": true,
   "initial_k": 100,
   "metrics": {
-    "MRR@10": 0.8895555555555557,
-    "NDCG@10": 0.9168506314151162,
-    "total_reranking_cost": 0.055430700000000006,
-    "total_tokens_reranked": 1108614
+    "MRR@10": 0.9406666666666667,
+    "NDCG@10": 0.9481783917415513,
+    "total_reranking_cost": 0.0554266,
+    "total_tokens_reranked": 1108532
   }
 }

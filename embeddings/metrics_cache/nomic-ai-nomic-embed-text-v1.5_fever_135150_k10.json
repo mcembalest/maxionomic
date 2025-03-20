@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "135150",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Kung_Fu_Panda",
+    "Kung_Fu_Panda_2",
+    "Peking_opera",
+    "Giant_Panda_(group)",
+    "Theatre",
+    "55_Days_at_Peking",
+    "Ip_Man_(film)",
+    "Kung_Phooey",
+    "Movie_theater",
+    "Drunken_Master_II"
+  ],
+  "relevant_docs": [
+    "Kung_Fu_Panda"
+  ]
+}

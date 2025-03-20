@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "2204",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Global_warming",
+    "Global_warming_controversy",
+    "Scientific_opinion_on_climate_change",
+    "Satellite_temperature_measurements",
+    "Retreat_of_glaciers_since_1850",
+    "Glacial_earthquake",
+    "MSU_temperature_measurements",
+    "2013_extreme_weather_events",
+    "Copenhagen_Diagnosis"
+  ],
+  "relevant_docs": [
+    "Global_warming"
+  ],
+  "tokens_reranked": 30973
+}

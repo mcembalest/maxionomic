@@ -1,0 +1,25 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.43067655807339306,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-politics-cpegiepgh-con01a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-politics-cpegiepgh-con01a",
+    "test-politics-cpegiepgh-con03b",
+    "test-politics-cpegiepgh-pro02b",
+    "test-politics-cpegiepgh-con01b",
+    "test-politics-cpegiepgh-pro01a",
+    "test-international-ehbfe-pro03b",
+    "test-politics-cpegiepgh-pro01b",
+    "test-society-asfhwapg-con03a",
+    "test-international-ehbfe-pro04b",
+    "test-economy-egecegphw-pro02b"
+  ],
+  "relevant_docs": [
+    "test-politics-cpegiepgh-con01b"
+  ]
+}

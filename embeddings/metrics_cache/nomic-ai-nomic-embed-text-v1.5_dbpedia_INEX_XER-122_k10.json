@@ -1,0 +1,43 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.21819512777734998,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "INEX_XER-122",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:List_of_submissions_to_the_32nd_Academy_Awards_for_Best_Foreign_Language_Film>",
+    "<dbpedia:American_Movie_Awards>",
+    "<dbpedia:List_of_American_films_of_1968>",
+    "<dbpedia:List_of_Moroccan_submissions_for_the_Academy_Award_for_Best_Foreign_Language_Film>",
+    "<dbpedia:List_of_films_with_the_most_Oscars_per_ceremony>",
+    "<dbpedia:List_of_submissions_to_the_53rd_Academy_Awards_for_Best_Foreign_Language_Film>",
+    "<dbpedia:List_of_directors_with_two_or_more_Academy_Awards_for_Best_Directing>",
+    "<dbpedia:List_of_Academy_Award-winning_films>",
+    "<dbpedia:61st_Academy_Awards>",
+    "<dbpedia:Amadeus_(film)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Amadeus>",
+    "<dbpedia:West_Side_Story_(film)>",
+    "<dbpedia:From_Here_to_Eternity>",
+    "<dbpedia:Cabaret_(1972_film)>",
+    "<dbpedia:List_of_Academy_Award-winning_films>",
+    "<dbpedia:Amadeus_(film)>",
+    "<dbpedia:Titanic_(1997_film)>",
+    "<dbpedia:On_the_Waterfront>",
+    "<dbpedia:The_English_Patient_(film)>",
+    "<dbpedia:Gandhi_(film)>",
+    "<dbpedia:Gone_with_the_Wind_(film)>",
+    "<dbpedia:List_of_Academy_Award_records>",
+    "<dbpedia:Ben-Hur_(1959_film)>",
+    "<dbpedia:The_Lord_of_the_Rings:_The_Return_of_the_King>",
+    "<dbpedia:My_Fair_Lady_(film)>",
+    "<dbpedia:Academy_Award_for_Best_Actress>",
+    "<dbpedia:The_Last_Emperor>",
+    "<dbpedia:List_of_films_with_the_most_Oscars_per_ceremony>",
+    "<dbpedia:Gigi_(1958_film)>"
+  ]
+}

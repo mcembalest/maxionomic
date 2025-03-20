@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "163833",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "William_Blackstone",
+    "Blackstone_Canal",
+    "An_Analysis_of_the_Laws_of_England",
+    "Commentaries_on_the_Laws_of_England",
+    "T._Jefferson_Coolidge",
+    "Harriet_Blackstone",
+    "Blackstone_&_Co",
+    "Nicholas_Brown,_Sr.",
+    "William_Brenton",
+    "The_Bostonian_Society"
+  ],
+  "relevant_docs": [
+    "William_Blackstone"
+  ]
+}

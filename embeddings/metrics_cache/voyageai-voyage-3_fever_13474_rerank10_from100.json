@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "13474",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah",
+    "Shailesh_Lodha",
+    "Drama_(film_and_television)",
+    "Indian_soap_opera",
+    "Star_Plus_(UK_and_Ireland)",
+    "Cancellation_(television)",
+    "Teleplay",
+    "9th_IIFA_Awards",
+    "Shobha_Kapoor",
+    "Screen_Actors_Guild_Award_for_Outstanding_Performance_by_an_Ensemble_in_a_Comedy_Series"
+  ],
+  "relevant_docs": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah"
+  ],
+  "tokens_reranked": 22018
+}

@@ -1,0 +1,37 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5321408435198608,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-84",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Captain_America>",
+    "<dbpedia:Captain_America:_Reborn>",
+    "<dbpedia:Captain_America_(vol._5)>",
+    "<dbpedia:Jeffrey_Mace>",
+    "<dbpedia:Captain_Britain>",
+    "<dbpedia:The_Death_of_Captain_America>",
+    "<dbpedia:Syd_Shores>",
+    "<dbpedia:Captain_Glory>",
+    "<dbpedia:John_Buscema>",
+    "<dbpedia:Rik_Levins>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Captain_America:_Civil_War>",
+    "<dbpedia:Captain_America>",
+    "<dbpedia:Captain_America_and_the_Falcon>",
+    "<dbpedia:Stan_Lee>",
+    "<dbpedia:Marvel_Cinematic_Universe_tie-in_comics>",
+    "<dbpedia:Nomad_(comics)>",
+    "<dbpedia:Free_Spirit_(comics)>",
+    "<dbpedia:The_Death_of_Captain_America>",
+    "<dbpedia:Captain_America:_The_First_Avenger>",
+    "<dbpedia:Jack_Kirby>",
+    "<dbpedia:Fallen_Son:_The_Death_of_Captain_America>",
+    "<dbpedia:Captain_America:_Reborn>",
+    "<dbpedia:Jeffrey_Mace>"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7653606369886217,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "179815",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Vic_Mensa",
+    "Innanetape",
+    "Mensa_International",
+    "Vic_Tanny",
+    "Vic_Ruggiero",
+    "1993_NBA_Playoffs",
+    "TriBeCa_(TV_series)",
+    "The_Academical_Village_People",
+    "Victor_Aloysius_Meyers",
+    "List_of_post-Vietnam_War_Medal_of_Honor_recipients"
+  ],
+  "relevant_docs": [
+    "Vic_Mensa",
+    "Innanetape",
+    "Chance_the_Rapper"
+  ],
+  "tokens_reranked": 29476
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-13",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Millipede>",
+    "<dbpedia:Myriochelata>",
+    "<dbpedia:Callipodida>",
+    "<dbpedia:Polyzoniida>",
+    "<dbpedia:Miltomiges>",
+    "<dbpedia:Myriacantherpestes>",
+    "<dbpedia:Neuroptera_in_the_10th_edition_of_Systema_Naturae>",
+    "<dbpedia:Miliolida>",
+    "<dbpedia:Myodocopa>",
+    "<dbpedia:Paeromopodidae>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Millipede>"
+  ]
+}

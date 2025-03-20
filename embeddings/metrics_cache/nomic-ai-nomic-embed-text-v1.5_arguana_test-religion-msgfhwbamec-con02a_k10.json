@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-religion-msgfhwbamec-con02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-religion-msgfhwbamec-con02a",
+    "test-religion-grcrgshwbr-pro03b",
+    "test-politics-grcrgshwbr-pro03b",
+    "test-religion-msgfhwbamec-pro01a",
+    "training-law-hrilsgihbes-con03a",
+    "training-environment-ahwbsawhnbsf-con04a",
+    "training-religion-frgsbnaofcs-pro03b",
+    "validation-free-speech-debate-nshwcb-pro02b",
+    "test-religion-msgfhwbamec-con01b",
+    "training-free-speech-debate-nvhbfemir-con02a"
+  ],
+  "relevant_docs": [
+    "test-religion-msgfhwbamec-con02b"
+  ]
+}

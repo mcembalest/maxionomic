@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "34583",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Wolfgang_Amadeus_Mozart",
+    "Der_Schauspieldirektor",
+    "Piano_Concerto_No._12_(Mozart)",
+    "Great_Mass_in_C_minor,_K._427",
+    "List_of_operas_by_Mozart",
+    "Dramma_per_musica",
+    "Mozart_and_Freemasonry",
+    "Eine_kleine_Nachtmusik",
+    "First_Viennese_School",
+    "Mozarteum_Orchestra_Salzburg"
+  ],
+  "relevant_docs": [
+    "Wolfgang_Amadeus_Mozart"
+  ]
+}

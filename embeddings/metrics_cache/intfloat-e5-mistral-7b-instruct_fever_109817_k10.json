@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "109817",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Humain,_trop_humain",
+    "Louis_Malle",
+    "Charles_Louis-Dreyfus",
+    "History_of_French_journalism",
+    "Luc_Moullet",
+    "Charles_Isherwood",
+    "Les_Milles_(film)",
+    "La_Presse_(French_newspaper)",
+    "List_of_filming_locations_in_Toronto",
+    "C\u00e9line_(1992_film)"
+  ],
+  "relevant_docs": [
+    "Louis_Malle"
+  ]
+}

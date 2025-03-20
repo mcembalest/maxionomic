@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1758",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Instrumental_temperature_record",
+    "Global_Historical_Climatology_Network",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "HadCRUT",
+    "Hockey_stick_graph",
+    "2001_Eastern_North_America_heat_wave",
+    "March_2012_North_American_heat_wave",
+    "Global_warming_hiatus",
+    "Highest_temperature_recorded_on_Earth",
+    "Climate_change_in_the_United_States"
+  ],
+  "relevant_docs": [
+    "Lake_Superior",
+    "Precipitation",
+    "Little_Ice_Age",
+    "Permafrost"
+  ]
+}

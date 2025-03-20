@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "967",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Hockey_stick_graph",
+    "Global_warming_hiatus",
+    "Temperature_record_of_the_past_1000_years",
+    "Global_warming",
+    "Milankovitch_cycles",
+    "Paleocene\u2013Eocene_Thermal_Maximum",
+    "Climate_change_in_the_United_States",
+    "Description_of_the_Medieval_Warm_Period_and_Little_Ice_Age_in_IPCC_reports",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "Global_cooling"
+  ],
+  "relevant_docs": [
+    "Ice_age",
+    "Little_Ice_Age",
+    "John_D._Hamaker"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "34583",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Wolfgang_Amadeus_Mozart",
+    "Mozart_and_Freemasonry",
+    "Mozart's_name",
+    "Amad\u00e9us_Leopold",
+    "Ludwig_van_Beethoven",
+    "Prussian_Quartets_(Mozart)",
+    "Felix_Mendelssohn",
+    "Exsultate,_jubilate",
+    "Franz_Xaver_S\u00fcssmayr",
+    "Bastien_und_Bastienne"
+  ],
+  "relevant_docs": [
+    "Wolfgang_Amadeus_Mozart"
+  ]
+}

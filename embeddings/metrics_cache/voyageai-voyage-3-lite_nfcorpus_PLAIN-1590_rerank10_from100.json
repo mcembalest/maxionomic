@@ -1,0 +1,43 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.25284102718517737,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "nfcorpus",
+  "query_id": "PLAIN-1590",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "MED-1344",
+    "MED-3759",
+    "MED-3604",
+    "MED-1240",
+    "MED-1803",
+    "MED-3760",
+    "MED-3601",
+    "MED-3603",
+    "MED-2428",
+    "MED-2086"
+  ],
+  "relevant_docs": [
+    "MED-3602",
+    "MED-3606",
+    "MED-2525",
+    "MED-3615",
+    "MED-2527",
+    "MED-2524",
+    "MED-3619",
+    "MED-3604",
+    "MED-2526",
+    "MED-2528",
+    "MED-3607",
+    "MED-3609",
+    "MED-2529",
+    "MED-3608",
+    "MED-2530",
+    "MED-3603",
+    "MED-3601",
+    "MED-3610"
+  ],
+  "tokens_reranked": 28411
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 0.14285714285714285,
+  "ndcg": 0.13012668333070054,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "356",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_catastrophic_risk",
+    "Climate_risk",
+    "Scientific_consensus_on_climate_change",
+    "Worst-case_scenario",
+    "Tipping_points_in_the_climate_system",
+    "Climate_change_mitigation_scenarios",
+    "Human_extinction",
+    "Effects_of_global_warming",
+    "Politics_of_global_warming",
+    "Human_Rights_and_Climate_Change"
+  ],
+  "relevant_docs": [
+    "Risk",
+    "Nick_Bostrom",
+    "Futures_studies",
+    "Human_extinction"
+  ]
+}

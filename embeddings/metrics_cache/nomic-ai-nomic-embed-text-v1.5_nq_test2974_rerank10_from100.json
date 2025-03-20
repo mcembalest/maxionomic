@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "nq",
+  "query_id": "test2974",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "doc102097",
+    "doc102077",
+    "doc155482",
+    "doc2414402",
+    "doc1732443",
+    "doc2179144",
+    "doc1344098",
+    "doc890730",
+    "doc313306",
+    "doc135521"
+  ],
+  "relevant_docs": [
+    "doc102089"
+  ],
+  "tokens_reranked": 9710
+}

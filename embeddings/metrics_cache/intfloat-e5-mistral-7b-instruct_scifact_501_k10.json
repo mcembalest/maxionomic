@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "scifact",
+  "query_id": "501",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "14566771",
+    "143868995",
+    "41735503",
+    "12667988",
+    "28419824",
+    "24055603",
+    "27024392",
+    "6123521",
+    "44562058",
+    "20492020"
+  ],
+  "relevant_docs": [
+    "17930286"
+  ]
+}

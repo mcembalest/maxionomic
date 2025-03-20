@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "33313",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Alex_Jones",
+    "Generation_Jones",
+    "Alex_Jones_(radio_host)",
+    "Alex_Jones_(preacher)",
+    "Alex_P._Keaton",
+    "Jim_Jones_(disambiguation)",
+    "Tony_Jones_(wrestler)",
+    "Alex_da_Kid",
+    "Alex_(A_Clockwork_Orange)",
+    "Alexandra_Hay"
+  ],
+  "relevant_docs": [
+    "Alex_Jones_(radio_host)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6131471927654584,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "17376",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Joseph_Merrick",
+    "The_Wars_of_the_Roses_(adaptation)",
+    "Macbeth_(1971_film)",
+    "Joseph_F._Merrell",
+    "Macbeth",
+    "Ivanhoe_(1982_film)",
+    "All_the_King's_Men_(2006_film)",
+    "Joseph_M._Merrow",
+    "I,_Claudius_(film)",
+    "Richard_III_(1955_film)"
+  ],
+  "relevant_docs": [
+    "Joseph_Merrick",
+    "The_Elephant_Man_(film)"
+  ]
+}

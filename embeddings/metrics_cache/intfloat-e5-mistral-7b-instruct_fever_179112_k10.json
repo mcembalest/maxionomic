@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "179112",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Good_German",
+    "The_Good_Son_(film)",
+    "The_Good_Doctor_(2011_film)",
+    "Spider_(2002_film)",
+    "The_Good_Guy_(film)",
+    "The_Box_(2009_film)",
+    "In_Good_Company_(2004_film)",
+    "Brad_Renfro",
+    "Conspiracy_Theory_(film)",
+    "Wolfgang_Bodison"
+  ],
+  "relevant_docs": [
+    "The_Good_German"
+  ]
+}

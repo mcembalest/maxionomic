@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "scifact",
+  "query_id": "1213",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "7948486",
+    "17934603",
+    "5107861",
+    "25988622",
+    "39084565",
+    "14386505",
+    "25148216",
+    "14492339",
+    "36444198",
+    "6853699"
+  ],
+  "relevant_docs": [
+    "14407673"
+  ],
+  "tokens_reranked": 29416
+}

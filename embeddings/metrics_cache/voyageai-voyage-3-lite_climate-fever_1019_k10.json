@@ -1,0 +1,26 @@
+{
+  "mrr": 0.125,
+  "ndcg": 0.19342640361727081,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1019",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "2014\u201316_El_Ni\u00f1o_event",
+    "1997\u201398_El_Ni\u00f1o_event",
+    "2010_Northern_Hemisphere_heat_waves",
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "Year_Without_a_Summer",
+    "2010_Northern_Hemisphere_summer_heat_waves",
+    "2016_North_American_heat_wave",
+    "El_Ni\u00f1o",
+    "Climate_change_in_the_United_States",
+    "Global_warming_hiatus"
+  ],
+  "relevant_docs": [
+    "El_Ni\u00f1o",
+    "La_Ni\u00f1a"
+  ]
+}

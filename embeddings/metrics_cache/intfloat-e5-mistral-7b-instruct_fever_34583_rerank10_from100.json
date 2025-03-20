@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "34583",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Mozart_and_Freemasonry",
+    "Wolfgang_Amadeus_Mozart",
+    "Mozart's_name",
+    "Maria_Anna_Mozart",
+    "Composer",
+    "Leopold_Mozart",
+    "The_Abduction_of_Figaro",
+    "Wunderkind_Little_Amadeus",
+    "Mozart's_Berlin_journey",
+    "C\u00e4cilia_Weber"
+  ],
+  "relevant_docs": [
+    "Wolfgang_Amadeus_Mozart"
+  ],
+  "tokens_reranked": 27375
+}

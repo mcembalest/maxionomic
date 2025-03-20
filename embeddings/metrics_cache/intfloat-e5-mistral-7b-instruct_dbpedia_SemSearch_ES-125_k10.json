@@ -1,0 +1,30 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.13032376591037062,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-125",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Nokia_6260_Slide>",
+    "<dbpedia:Nokia_E71>",
+    "<dbpedia:Nokia_C3-00>",
+    "<dbpedia:Nokia_Eseries>",
+    "<dbpedia:Nokia_5630_XpressMusic>",
+    "<dbpedia:Nokia_E72>",
+    "<dbpedia:Nokia_3250>",
+    "<dbpedia:Nokia_C3_Touch_and_Type>",
+    "<dbpedia:Nokia_6290>",
+    "<dbpedia:Nokia_E70>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Nokia>",
+    "<dbpedia:Nokia_Eseries>",
+    "<dbpedia:Nokia_Networks>",
+    "<dbpedia:Nokia_Research_Center>",
+    "<dbpedia:List_of_Nokia_products>",
+    "<dbpedia:Nokia_phone_series>"
+  ]
+}

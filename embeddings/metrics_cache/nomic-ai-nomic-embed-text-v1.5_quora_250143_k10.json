@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "quora",
+  "query_id": "250143",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "250142",
+    "473276",
+    "148079",
+    "57156",
+    "509758",
+    "459370",
+    "225655",
+    "38409",
+    "229130",
+    "509757"
+  ],
+  "relevant_docs": [
+    "250142"
+  ]
+}

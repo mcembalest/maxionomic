@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "33313",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Alex_Jones_(radio_host)",
+    "Alex_Jones_(preacher)",
+    "Alex_Jones",
+    "Generation_Jones",
+    "The_Obama_Deception:_The_Mask_Comes_Off",
+    "List_of_Billboard_Hot_100_number-one_singles_of_1995",
+    "List_of_Billboard_Hot_100_number-one_singles_of_2008",
+    "James_Matthew_Jones",
+    "Innuendo_(song)",
+    "Lazlow_Jones"
+  ],
+  "relevant_docs": [
+    "Alex_Jones_(radio_host)"
+  ],
+  "tokens_reranked": 32173
+}

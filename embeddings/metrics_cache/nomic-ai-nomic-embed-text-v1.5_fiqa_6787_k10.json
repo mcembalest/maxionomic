@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fiqa",
+  "query_id": "6787",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "106104",
+    "38287",
+    "311782",
+    "511678",
+    "23217",
+    "580534",
+    "323731",
+    "207929",
+    "343219",
+    "390864"
+  ],
+  "relevant_docs": [
+    "587120"
+  ]
+}

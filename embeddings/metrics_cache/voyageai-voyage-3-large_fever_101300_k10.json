@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "101300",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "List_of_cities_and_towns_in_the_San_Francisco_Bay_Area",
+    "San_Jose-San_Francisco-Oakland,_CA_Combined_Statistical_Area",
+    "San_Francisco_Bay_Area",
+    "San_Francisco_Bay",
+    "Hillsborough,_California",
+    "Sports_in_the_San_Francisco_Bay_Area",
+    "North_Bay_(San_Francisco_Bay_Area)",
+    "San_Francisco_Bay_AVA",
+    "San_Francisco",
+    "South_San_Francisco,_California"
+  ],
+  "relevant_docs": [
+    "San_Francisco_Bay_Area"
+  ]
+}

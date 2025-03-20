@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "13474",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah",
+    "Shailesh_Lodha",
+    "Filmfare_Awards",
+    "Indian_soap_opera",
+    "Star_Plus_(UK_and_Ireland)",
+    "Pratima_Kazmi",
+    "9th_IIFA_Awards",
+    "Rekha",
+    "Taj_Television",
+    "Juhi_Chawla"
+  ],
+  "relevant_docs": [
+    "Taarak_Mehta_Ka_Ooltah_Chashmah"
+  ],
+  "tokens_reranked": 23636
+}

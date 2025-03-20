@@ -1,0 +1,29 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.5646436081071458,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "2608",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Mootral",
+    "Atmospheric_methane",
+    "Methane",
+    "Wetland_methane_emissions",
+    "Global_warming_potential",
+    "Greenhouse_gas",
+    "Global_warming",
+    "Biogas",
+    "Carbon_neutrality",
+    "Permafrost_carbon_cycle"
+  ],
+  "relevant_docs": [
+    "Biogas",
+    "Natural_gas",
+    "Atmospheric_methane",
+    "Methane"
+  ],
+  "tokens_reranked": 37617
+}

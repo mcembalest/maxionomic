@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "179112",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "The_Good_German",
+    "Good_(play)",
+    "Drunken_Master_II",
+    "Dan_Kemp",
+    "Red_Curtain_Trilogy",
+    "Howard_Caine",
+    "The_Fall_of_the_Roman_Empire_(film)",
+    "Rory_Mallinson",
+    "Charles_Eldridge",
+    "Red_Skull"
+  ],
+  "relevant_docs": [
+    "The_Good_German"
+  ],
+  "tokens_reranked": 22047
+}

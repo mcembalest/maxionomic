@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "95",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Hurricane_Katrina_and_global_warming",
+    "Global_warming",
+    "Scientific_opinion_on_climate_change",
+    "Effects_of_global_warming_on_humans",
+    "The_Real_Global_Warming_Disaster",
+    "Climate_change_in_the_United_States",
+    "Global_warming_controversy",
+    "Attribution_of_recent_climate_change",
+    "Climate_change_feedback",
+    "Hurricane_Katrina"
+  ],
+  "relevant_docs": [
+    "Hurricane_Harvey",
+    "Effects_of_global_warming"
+  ]
+}

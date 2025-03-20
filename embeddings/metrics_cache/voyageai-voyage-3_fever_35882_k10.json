@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "35882",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Pearl_(Steven_Universe)",
+    "Pearl_(2016_film)",
+    "Steven_Universe_(character)",
+    "Pearl_Forrester",
+    "Pearl_(poem)",
+    "Pearl_vortex",
+    "Shelby_Rabara",
+    "Jennifer_Paz",
+    "The_Pearl_and_the_Wave",
+    "Black_Pearl,_New_Orleans"
+  ],
+  "relevant_docs": [
+    "Pearl_(Steven_Universe)"
+  ]
+}

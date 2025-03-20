@@ -1,0 +1,30 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.9068250379649666,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-2012319",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Open_Secrets>",
+    "<dbpedia:Vintage_Munro>",
+    "<dbpedia:Alice_Munro>",
+    "<dbpedia:List_of_short_stories_by_Alice_Munro>",
+    "<dbpedia:Too_Much_Happiness>",
+    "<dbpedia:Friend_of_My_Youth>",
+    "<dbpedia:The_View_from_Castle_Rock>",
+    "<dbpedia:Short_story_collection>",
+    "<dbpedia:Boys_and_Girls_(short_story)>",
+    "<dbpedia:Louvre>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Friend_of_My_Youth>",
+    "<dbpedia:Open_Secrets>",
+    "<dbpedia:Too_Much_Happiness>",
+    "<dbpedia:Alice_Munro>",
+    "<dbpedia:List_of_short_stories_by_Alice_Munro>"
+  ],
+  "tokens_reranked": 7240
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7757386182436072,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-82",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:G'MIC>",
+    "<dbpedia:GIMP_version_history>",
+    "<dbpedia:CinePaint>",
+    "<dbpedia:Seashore_(software)>",
+    "<dbpedia:GNU_Paint>",
+    "<dbpedia:GTK+>",
+    "<dbpedia:ImageMagick>",
+    "<dbpedia:Graphics_Environment_for_Multimedia>",
+    "<dbpedia:Asymptote_(vector_graphics_language)>",
+    "<dbpedia:CiMPLE>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:GTK+>",
+    "<dbpedia:GIMP_version_history>",
+    "<dbpedia:C_(programming_language)>",
+    "<dbpedia:G'MIC>"
+  ]
+}

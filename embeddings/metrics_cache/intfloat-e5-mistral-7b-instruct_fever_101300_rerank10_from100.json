@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "101300",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "San_Francisco_Bay_Area",
+    "San_Francisco_Bay",
+    "East_Bay_(San_Francisco_Bay_Area)",
+    "Hillsborough,_California",
+    "San_Jose-San_Francisco-Oakland,_CA_Combined_Statistical_Area",
+    "North_Bay_(San_Francisco_Bay_Area)",
+    "San_Francisco",
+    "Sports_in_the_San_Francisco_Bay_Area",
+    "San_Francisco_Bay_AVA",
+    "Metropolitan_statistical_area"
+  ],
+  "relevant_docs": [
+    "San_Francisco_Bay_Area"
+  ],
+  "tokens_reranked": 22559
+}

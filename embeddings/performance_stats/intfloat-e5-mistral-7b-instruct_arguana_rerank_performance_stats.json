@@ -6,8 +6,8 @@
   "initial_k": 100,
   "metrics": {
     "MRR@10": 0.3016666666666667,
-    "NDCG@10": 0.3520265441986951,
-    "total_reranking_cost": 0.12542370000000003,
-    "total_tokens_reranked": 2508474
+    "NDCG@10": 0.35976360034338595,
+    "total_reranking_cost": 0.1254251,
+    "total_tokens_reranked": 2508502
   }
 }

@@ -1,0 +1,31 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.2816249726597774,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-125",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Nokia_E72>",
+    "<dbpedia:Nokia_E63>",
+    "<dbpedia:Nokia_Eseries>",
+    "<dbpedia:Nokia_phone_series>",
+    "<dbpedia:Nokia_E71>",
+    "<dbpedia:Nokia_7370>",
+    "<dbpedia:Shermann_Audio>",
+    "<dbpedia:Shermann_Audio>",
+    "<dbpedia:Shermann_Audio>",
+    "<dbpedia:Shermann_Audio>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Nokia_Networks>",
+    "<dbpedia:Nokia_Eseries>",
+    "<dbpedia:Nokia_phone_series>",
+    "<dbpedia:Nokia>",
+    "<dbpedia:List_of_Nokia_products>",
+    "<dbpedia:Nokia_Research_Center>"
+  ],
+  "tokens_reranked": 7526
+}

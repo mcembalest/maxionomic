@@ -1,0 +1,25 @@
+{
+  "mrr": 0.14285714285714285,
+  "ndcg": 0.3333333333333333,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "arguana",
+  "query_id": "test-free-speech-debate-ldhwprhs-pro02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "validation-free-speech-debate-nshwcb-pro01a",
+    "training-religion-fmshbrdmhg-pro02a",
+    "test-free-speech-debate-ldhwprhs-pro01a",
+    "training-philosophy-eppprfmhb-pro04a",
+    "validation-free-speech-debate-nshwcb-pro02b",
+    "training-law-aullgsmhwchs-pro02b",
+    "test-free-speech-debate-ldhwprhs-pro02b",
+    "training-free-speech-debate-nvhbfemir-pro01a",
+    "test-free-speech-debate-ldhwprhs-con02a",
+    "training-free-speech-debate-nvhbfemir-con02a"
+  ],
+  "relevant_docs": [
+    "test-free-speech-debate-ldhwprhs-pro02b"
+  ]
+}

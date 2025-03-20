@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "163833",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "William_Blackstone",
+    "Blackstone_Canal",
+    "Commentaries_on_the_Laws_of_England",
+    "Blackstone_&_Co",
+    "An_Analysis_of_the_Laws_of_England",
+    "Blackstone_Chronicles",
+    "William_Sprague_(1609\u20131675)",
+    "Whitey_Bulger",
+    "William_Brenton",
+    "Harriet_Blackstone"
+  ],
+  "relevant_docs": [
+    "William_Blackstone"
+  ]
+}

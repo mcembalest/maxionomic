@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "35882",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Pearl_(Steven_Universe)",
+    "Steven_Universe_(character)",
+    "Pearl_(poem)",
+    "Pearl_Forrester",
+    "Pearl_(2016_film)",
+    "Pok\u00e9mon_Diamond_and_Pearl",
+    "List_of_Jewelpet_Twinkle_episodes",
+    "Phoebe_and_Her_Unicorn",
+    "PEARL_(programming_language)",
+    "Penelope_Princess_of_Pets"
+  ],
+  "relevant_docs": [
+    "Pearl_(Steven_Universe)"
+  ]
+}

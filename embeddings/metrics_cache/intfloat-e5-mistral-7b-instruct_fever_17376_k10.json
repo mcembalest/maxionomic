@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.9197207891481876,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "17376",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Joseph_Merrick",
+    "The_Eichmann_Show",
+    "The_Elephant_Man_(film)",
+    "Galileo_(1975_film)",
+    "Patricia_Clarkson",
+    "The_Miracle_Worker_(1979_film)",
+    "Elegy_(film)",
+    "The_Man_Without_a_Face",
+    "The_Merchant_of_Venice_(1969_film)",
+    "Sharpe's_Waterloo_(TV_programme)"
+  ],
+  "relevant_docs": [
+    "The_Elephant_Man_(film)",
+    "Joseph_Merrick"
+  ]
+}

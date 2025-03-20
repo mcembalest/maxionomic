@@ -1,0 +1,25 @@
+{
+  "mrr": 0.125,
+  "ndcg": 0.31546487678572877,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-culture-mthbah-pro05a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-culture-mthbah-pro05a",
+    "test-culture-mthbah-pro04a",
+    "test-culture-mthbah-pro02a",
+    "test-culture-mthbah-con03b",
+    "test-culture-mthbah-pro01b",
+    "test-culture-mmctghwbsa-pro03b",
+    "test-culture-mthbah-pro02b",
+    "test-culture-mthbah-pro05b",
+    "test-culture-mmctghwbsa-con04b",
+    "test-culture-mthbah-pro04b"
+  ],
+  "relevant_docs": [
+    "test-culture-mthbah-pro05b"
+  ]
+}

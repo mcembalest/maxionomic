@@ -1,0 +1,28 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.5805485932475565,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1510",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Climate_change_mitigation_scenarios",
+    "Global_warming",
+    "Climate_change_feedback",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Idealized_greenhouse_model",
+    "Climate_sensitivity",
+    "Greenhouse_gas",
+    "Climate_change_mitigation",
+    "Special_Report_on_Global_Warming_of_1.5_\u00b0C",
+    "Ozone_depletion_and_climate_change"
+  ],
+  "relevant_docs": [
+    "Climate_sensitivity",
+    "Climate_change_feedback",
+    "Global_warming",
+    "Permian\u2013Triassic_extinction_event"
+  ]
+}

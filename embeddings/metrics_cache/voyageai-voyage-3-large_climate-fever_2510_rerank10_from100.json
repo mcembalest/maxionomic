@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "2510",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Pacific_decadal_oscillation",
+    "Global_warming_hiatus",
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "Marine_isotope_stage",
+    "El_Ni\u00f1o",
+    "Condensation_cloud",
+    "Oceanic_climate",
+    "Western_Mediterranean_oscillation",
+    "Antarctic_Cold_Reversal",
+    "Retreat_of_glaciers_since_1850"
+  ],
+  "relevant_docs": [
+    "Pacific_decadal_oscillation"
+  ],
+  "tokens_reranked": 34999
+}

@@ -1,0 +1,32 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8104616303452685,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_LS-24",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:Daddio>",
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:Ant_&_Dec's_Push_the_Button>",
+    "<dbpedia:Matthew_Berry_(politician)>",
+    "<dbpedia:Matt_Marksberry>",
+    "<dbpedia:List_of_Kingdom_(2014_TV_series)_episodes>",
+    "<dbpedia:4_O'Clock_Club>",
+    "<dbpedia:List_of_White_Collar_episodes>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:Smiles_of_a_Summer_Night_(Desperate_Housewives)>",
+    "<dbpedia:Daddio>",
+    "<dbpedia:Ant_&_Dec's_Push_the_Button>",
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:The_IT_Crowd>"
+  ],
+  "tokens_reranked": 8756
+}

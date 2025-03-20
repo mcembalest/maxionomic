@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1783",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Scientific_consensus_on_climate_change",
+    "History_of_climate_change_science",
+    "Climate_variability",
+    "Climate_change_(general_concept)",
+    "Deforestation_and_climate_change",
+    "Climate_change",
+    "Climate_state",
+    "Physical_impacts_of_climate_change",
+    "Climate_oscillation",
+    "Climate_sensitivity"
+  ],
+  "relevant_docs": [
+    "Global_warming",
+    "Attribution_of_recent_climate_change",
+    "Little_Ice_Age",
+    "Global_warming_hiatus"
+  ]
+}

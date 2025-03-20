@@ -1,0 +1,35 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.627507133061656,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-2010019",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Ar\u00e8nes_de_Lut\u00e8ce>",
+    "<dbpedia:Thermes_de_Cluny>",
+    "<dbpedia:Pillar_of_the_Boatmen>",
+    "<dbpedia:Notre_Dame_de_Paris>",
+    "<dbpedia:City_walls_of_Paris>",
+    "<dbpedia:Petit_Pont>",
+    "<dbpedia:Lutetia>",
+    "<dbpedia:Perrault's_Colonnade>",
+    "<dbpedia:Saint-S\u00e9verin,_Paris>",
+    "<dbpedia:Jacques-Germain_Soufflot>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Thiais>",
+    "<dbpedia:Ar\u00e8nes_de_Lut\u00e8ce>",
+    "<dbpedia:La_Villette,_Seine>",
+    "<dbpedia:Lutetia>",
+    "<dbpedia:Pillar_of_the_Boatmen>",
+    "<dbpedia:Maison_Carr\u00e9e>",
+    "<dbpedia:Gallo-Roman_religion>",
+    "<dbpedia:Art_in_Paris>",
+    "<dbpedia:City_walls_of_Paris>",
+    "<dbpedia:Thermes_de_Cluny>"
+  ],
+  "tokens_reranked": 9322
+}

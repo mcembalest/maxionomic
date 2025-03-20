@@ -1,0 +1,25 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.43067655807339306,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "204557",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Commodore",
+    "Commodore_(Royal_Navy)",
+    "Commodore_(United_States)",
+    "Commodore_(rank)",
+    "Commodore-in-Chief",
+    "Air_commodore",
+    "Acer_campestre_'Commodore'",
+    "Lieutenant_colonel_(United_Kingdom)",
+    "Philip_F._Roach",
+    "Major-general_(United_Kingdom)"
+  ],
+  "relevant_docs": [
+    "Commodore_(rank)"
+  ]
+}

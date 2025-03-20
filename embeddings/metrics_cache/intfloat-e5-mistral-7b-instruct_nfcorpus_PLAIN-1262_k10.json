@@ -1,0 +1,34 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.30523488393970116,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "nfcorpus",
+  "query_id": "PLAIN-1262",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "MED-5293",
+    "MED-1634",
+    "MED-1410",
+    "MED-1703",
+    "MED-5303",
+    "MED-1056",
+    "MED-2804",
+    "MED-4096",
+    "MED-3939",
+    "MED-1194"
+  ],
+  "relevant_docs": [
+    "MED-2079",
+    "MED-5293",
+    "MED-2076",
+    "MED-2078",
+    "MED-2080",
+    "MED-2083",
+    "MED-2082",
+    "MED-5303",
+    "MED-2085",
+    "MED-2077"
+  ]
+}

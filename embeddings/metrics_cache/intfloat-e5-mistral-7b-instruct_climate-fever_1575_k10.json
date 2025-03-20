@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1575",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Arctic_sea_ice_decline",
+    "Deforestation_and_climate_change",
+    "Polar_see-saw",
+    "Measurement_of_sea_ice",
+    "Climate_change_in_the_Arctic",
+    "Arctic_ice_pack",
+    "Antarctic_ice_sheet",
+    "Scientific_consensus_on_climate_change",
+    "Future_sea_level",
+    "Global_cooling"
+  ],
+  "relevant_docs": [
+    "Antarctica",
+    "Arctic",
+    "Sea_ice"
+  ]
+}

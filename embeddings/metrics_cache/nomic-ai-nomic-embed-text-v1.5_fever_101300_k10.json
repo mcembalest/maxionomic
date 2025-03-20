@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "101300",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "San_Francisco_Bay_Area",
+    "San_Francisco",
+    "List_of_cities_and_towns_in_the_San_Francisco_Bay_Area",
+    "San_Francisco_Bay",
+    "Santa_Clara_County,_California",
+    "List_of_Bay_Area_Rapid_Transit_stations",
+    "South_San_Francisco,_California",
+    "East_Bay_(San_Francisco_Bay_Area)",
+    "North_Bay_(San_Francisco_Bay_Area)",
+    "Japantown,_San_Francisco"
+  ],
+  "relevant_docs": [
+    "San_Francisco_Bay_Area"
+  ]
+}

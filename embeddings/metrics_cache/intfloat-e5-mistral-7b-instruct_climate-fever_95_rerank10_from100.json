@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "95",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Hurricane_Katrina_and_global_warming",
+    "Global_warming",
+    "Extreme_weather",
+    "United_States_rainfall_climatology",
+    "Brown_ocean_effect",
+    "Reasons_for_concern",
+    "Climate_change_in_Texas",
+    "Sea_level_rise",
+    "Scientific_opinion_on_climate_change",
+    "Regional_effects_of_global_warming"
+  ],
+  "relevant_docs": [
+    "Hurricane_Harvey",
+    "Effects_of_global_warming"
+  ],
+  "tokens_reranked": 34313
+}

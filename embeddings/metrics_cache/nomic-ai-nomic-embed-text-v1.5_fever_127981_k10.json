@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "127981",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Zoe_Saldana",
+    "Salma_Hayek",
+    "Lori_Salda\u00f1a",
+    "Avatar_(2009_film)",
+    "Zoe_Levin",
+    "Joe_Saldana",
+    "Zo\u00eb_Soul",
+    "Liza_Soberano",
+    "Wendy_Padbury",
+    "Vera_Farmiga"
+  ],
+  "relevant_docs": [
+    "Zoe_Saldana"
+  ]
+}

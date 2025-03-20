@@ -1,0 +1,26 @@
+{
+  "mrr": 0.2,
+  "ndcg": 0.38685280723454163,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-health-dhiacihwph-pro01a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-health-dhiacihwph-pro04a",
+    "test-health-dhiacihwph-con03a",
+    "test-health-dhiacihwph-con01b",
+    "test-health-dhiacihwph-pro02b",
+    "test-health-dhiacihwph-pro01b",
+    "test-health-dhiacihwph-con02a",
+    "test-health-dhiacihwph-pro03a",
+    "test-international-segiahbarr-pro01b",
+    "test-health-dhiacihwph-con03b",
+    "test-international-segiahbarr-pro01a"
+  ],
+  "relevant_docs": [
+    "test-health-dhiacihwph-pro01b"
+  ],
+  "tokens_reranked": 44153
+}

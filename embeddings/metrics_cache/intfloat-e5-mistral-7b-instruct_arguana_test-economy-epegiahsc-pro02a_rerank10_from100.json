@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-economy-epegiahsc-pro02a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-economy-epegiahsc-pro01b",
+    "training-economy-ecegiehbe-pro04b",
+    "training-culture-aeuhbdcaal-pro02a",
+    "test-culture-mthbah-pro04a",
+    "test-free-speech-debate-ldhwprhs-pro01a",
+    "test-free-speech-debate-nshbbsbfb-pro01a",
+    "validation-free-speech-debate-radhbrap-pro02a",
+    "training-law-rgmelhrpwhbw-pro01a",
+    "test-economy-epegiahsc-pro01a",
+    "training-digital-freedoms-aihbied-pro01a"
+  ],
+  "relevant_docs": [
+    "test-economy-epegiahsc-pro02b"
+  ],
+  "tokens_reranked": 45610
+}

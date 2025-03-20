@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "nq",
+  "query_id": "test2233",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "doc1323081",
+    "doc77634",
+    "doc739705",
+    "doc77640",
+    "doc1994393",
+    "doc349744",
+    "doc864822",
+    "doc2206589",
+    "doc1604800",
+    "doc349747"
+  ],
+  "relevant_docs": [
+    "doc77634"
+  ]
+}

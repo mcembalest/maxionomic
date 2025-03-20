@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "42963",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Betsy_Hodges",
+    "Betsy_McCaughey",
+    "Luther_H._Hodges",
+    "Delaware's_10th_state_senate_district_special_election,_2017",
+    "Elizabeth_Ray",
+    "Gene_Hodges",
+    "Political_positions_of_Hillary_Clinton",
+    "United_States_presidential_election,_1920",
+    "Draft_Condi_movement",
+    "Hurricane_Betsy"
+  ],
+  "relevant_docs": [
+    "Betsy_Hodges"
+  ]
+}

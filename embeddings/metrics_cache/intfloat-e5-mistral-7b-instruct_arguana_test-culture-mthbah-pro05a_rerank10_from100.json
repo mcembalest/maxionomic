@@ -1,0 +1,26 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.43067655807339306,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-culture-mthbah-pro05a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-culture-mthbah-pro05a",
+    "validation-science-cpecshmpj-con02a",
+    "test-culture-mthbah-pro02a",
+    "test-culture-mthbah-pro05b",
+    "training-law-cpshbsdcc-con02a",
+    "test-culture-mthbah-pro04b",
+    "test-culture-mmctghwbsa-con04b",
+    "training-health-hgwsytpsctpf-pro03b",
+    "training-law-ucgllghwbg-pro06a",
+    "test-culture-mmctghwbsa-pro02b"
+  ],
+  "relevant_docs": [
+    "test-culture-mthbah-pro05b"
+  ],
+  "tokens_reranked": 24204
+}

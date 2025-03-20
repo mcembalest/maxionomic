@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1360",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Trend_stationary",
+    "Regression_toward_the_mean",
+    "Soft_landing_(economics)",
+    "Antarctica_cooling_controversy",
+    "Tendency_of_the_rate_of_profit_to_fall",
+    "Global_warming_hiatus",
+    "List_of_recessions_in_the_United_States",
+    "Mean_reversion_(finance)",
+    "Phillips_curve",
+    "Statistical_significance"
+  ],
+  "relevant_docs": [
+    "Usage_share_of_operating_systems",
+    "Hysterectomy",
+    "Solar_cycle",
+    "Uptick_rule"
+  ]
+}

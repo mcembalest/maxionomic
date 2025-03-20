@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "216779",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Taimur_(disambiguation)",
+    "Timur",
+    "Shahrukh_Mirza",
+    "Amir_Sultan",
+    "Mengu-Timur",
+    "Timariots",
+    "Timur_Beg",
+    "Timur_ruby",
+    "Tem\u00fcr_Khan",
+    "Bayandur"
+  ],
+  "relevant_docs": [
+    "Timur"
+  ]
+}

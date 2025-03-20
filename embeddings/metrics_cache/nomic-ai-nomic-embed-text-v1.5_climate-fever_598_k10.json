@@ -1,0 +1,27 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.2960819109658652,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "598",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Global_warming",
+    "Earth's_energy_budget",
+    "Climate_variability",
+    "Scientific_opinion_on_climate_change",
+    "Climate_change_mitigation_scenarios",
+    "Climate_sensitivity",
+    "Effects_of_global_warming_on_humans",
+    "Idealized_greenhouse_model",
+    "IPCC_Fourth_Assessment_Report"
+  ],
+  "relevant_docs": [
+    "Global_warming_controversy",
+    "Intergovernmental_Panel_on_Climate_Change",
+    "Global_warming"
+  ]
+}

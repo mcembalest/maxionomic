@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "2836",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Measurement_of_sea_ice",
+    "Arctic_sea_ice_decline",
+    "Sea_ice",
+    "Polar_seas",
+    "Deglaciation",
+    "Arctic_ice_pack",
+    "Sea_ice_thickness",
+    "West_Ice",
+    "Copenhagen_Diagnosis",
+    "Antarctic_ice_sheet"
+  ],
+  "relevant_docs": [
+    "Post-glacial_rebound",
+    "Glacier",
+    "Ice_age"
+  ]
+}

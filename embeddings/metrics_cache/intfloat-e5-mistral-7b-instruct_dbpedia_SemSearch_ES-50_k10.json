@@ -1,0 +1,26 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.3065735963827292,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-50",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Bob_Kevoian>",
+    "<dbpedia:Good_Ol'_Boys_(The_Bob_&_Tom_Show_album)>",
+    "<dbpedia:The_Bob_&_Tom_Show>",
+    "<dbpedia:Radiogram_(album)>",
+    "<dbpedia:Brickleberry>",
+    "<dbpedia:Find_My_Keys_and_We'll_Drive_Out!>",
+    "<dbpedia:The_Aquabats!_Super_Show!>",
+    "<dbpedia:With_a_Little_Help_from_Our_Friends>",
+    "<dbpedia:Bob_(TV_series)>",
+    "<dbpedia:It's_a_Wonderful_Laugh>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:The_Bob_&_Tom_Show>",
+    "<dbpedia:Bob_Steele_(actor)>"
+  ]
+}

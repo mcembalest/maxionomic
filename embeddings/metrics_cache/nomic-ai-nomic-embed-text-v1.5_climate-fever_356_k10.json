@@ -1,0 +1,28 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.16812753627111746,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "356",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Global_catastrophic_risk",
+    "Endogenous_risk",
+    "Learning_the_hard_way",
+    "Risk",
+    "Hypotheticals",
+    "Error_catastrophe",
+    "Project_risk_management",
+    "Risk_assessment",
+    "Risk_(statistics)",
+    "Wishful_thinking"
+  ],
+  "relevant_docs": [
+    "Human_extinction",
+    "Futures_studies",
+    "Risk",
+    "Nick_Bostrom"
+  ]
+}

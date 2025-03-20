@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1365",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "MSU_temperature_measurements",
+    "Satellite_temperature_measurements",
+    "Microwave_Sounding_Unit_temperature_measurements",
+    "List_of_climate_research_satellites",
+    "Weather_satellite",
+    "Hockey_stick_graph",
+    "1908",
+    "Instrumental_temperature_record",
+    "Climate_change_in_the_United_States",
+    "NOAA-6"
+  ],
+  "relevant_docs": [
+    "List_of_heat_waves",
+    "Global_warming_hiatus"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "mrr": 0.14285714285714285,
+  "ndcg": 0.2532778777010656,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "356",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Centre_for_the_Study_of_Existential_Risk",
+    "Global_catastrophic_risk",
+    "Black_swan_theory",
+    "Failing_badly",
+    "Malthusianism",
+    "Swiss_cheese_model",
+    "Human_extinction",
+    "Nick_Bostrom",
+    "Postcautionary_principle",
+    "Falsity"
+  ],
+  "relevant_docs": [
+    "Human_extinction",
+    "Futures_studies",
+    "Nick_Bostrom",
+    "Risk"
+  ],
+  "tokens_reranked": 30566
+}

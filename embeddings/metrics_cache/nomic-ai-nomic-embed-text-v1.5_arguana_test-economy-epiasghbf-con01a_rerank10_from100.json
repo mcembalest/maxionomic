@@ -1,0 +1,26 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.8175293653079347,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-economy-epiasghbf-con01a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-economy-epiasghbf-con01a",
+    "test-economy-epiasghbf-con03a",
+    "test-society-epiasghbf-con02b",
+    "test-economy-epiasghbf-con01b",
+    "test-economy-epiasghbf-con01b",
+    "test-economy-epiasghbf-con03b",
+    "test-economy-epiasghbf-con03b",
+    "test-economy-epiasghbf-pro03b",
+    "test-economy-epiasghbf-pro03b",
+    "test-economy-epiasghbf-pro02b"
+  ],
+  "relevant_docs": [
+    "test-economy-epiasghbf-con01b"
+  ],
+  "tokens_reranked": 35871
+}

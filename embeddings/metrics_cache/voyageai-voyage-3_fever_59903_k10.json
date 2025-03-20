@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "59903",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Paper_(magazine)",
+    "Paper_Project",
+    "The_Paper_(film)",
+    "The_Paper_(TV_series)",
+    "Illustrated_Paper",
+    "The_Berlin_Paper",
+    "The_Saturday_Paper",
+    "The_Paperboys_(Canadian_band)",
+    "Paper_War_of_1752\u20131753",
+    "Tha_City_Paper"
+  ],
+  "relevant_docs": [
+    "The_Paper_(film)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-health-hgwhwbjfs-pro03a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-health-hgwhwbjfs-pro02a",
+    "test-health-hgwhwbjfs-con03a",
+    "test-health-hgwhwbjfs-pro01b",
+    "test-economy-thhghwhwift-con03b",
+    "test-economy-thhghwhwift-con02a",
+    "test-economy-thhghwhwift-con03a",
+    "training-health-hgwhwilfepe-pro02a",
+    "test-economy-thhghwhwift-pro01a",
+    "training-health-hgwhwilfepe-pro02b",
+    "test-economy-thhghwhwift-pro02b"
+  ],
+  "relevant_docs": [
+    "test-health-hgwhwbjfs-pro03b"
+  ],
+  "tokens_reranked": 62654
+}

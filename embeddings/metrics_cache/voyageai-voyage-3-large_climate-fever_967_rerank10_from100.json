@@ -1,0 +1,28 @@
+{
+  "mrr": 0.16666666666666666,
+  "ndcg": 0.16716045496620227,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "967",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Hockey_stick_graph",
+    "Milutin_Milankovi\u0107",
+    "Temperature_record_of_the_past_1000_years",
+    "Timeline_of_glaciation",
+    "Marine_isotope_stage",
+    "Little_Ice_Age",
+    "Description_of_the_Medieval_Warm_Period_and_Little_Ice_Age_in_IPCC_reports",
+    "Neoglaciation",
+    "Milankovitch_cycles",
+    "Karl_Friedrich_Schimper"
+  ],
+  "relevant_docs": [
+    "Little_Ice_Age",
+    "John_D._Hamaker",
+    "Ice_age"
+  ],
+  "tokens_reranked": 37010
+}

@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.3903800499921017,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "1783",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Global_warming_hiatus",
+    "Copenhagen_Diagnosis",
+    "IPCC_First_Assessment_Report",
+    "Antarctica_cooling_controversy",
+    "IPCC_Fourth_Assessment_Report",
+    "Climate_variability",
+    "Earth's_internal_heat_budget",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming",
+    "Climate_change_(general_concept)",
+    "Global_cooling"
+  ],
+  "relevant_docs": [
+    "Little_Ice_Age",
+    "Global_warming",
+    "Global_warming_hiatus",
+    "Attribution_of_recent_climate_change"
+  ],
+  "tokens_reranked": 36083
+}

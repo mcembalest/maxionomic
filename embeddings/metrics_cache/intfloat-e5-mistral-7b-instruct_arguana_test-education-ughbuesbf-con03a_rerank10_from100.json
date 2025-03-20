@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-education-ughbuesbf-con03a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "training-education-uhwecpuu-pro02b",
+    "test-education-ughbuesbf-con01a",
+    "training-education-uhwecpuu-con01a",
+    "training-education-uhwecpuu-pro04a",
+    "test-education-udfakusma-pro01a",
+    "training-culture-mrrtdnsnhpc-pro03a",
+    "training-international-ahwweac-pro03a",
+    "training-science-sguhwcm-pro02a",
+    "test-free-speech-debate-yfsdfkhbwu-pro03a",
+    "training-education-udfakhwst-pro02a"
+  ],
+  "relevant_docs": [
+    "test-education-ughbuesbf-con03b"
+  ],
+  "tokens_reranked": 47075
+}

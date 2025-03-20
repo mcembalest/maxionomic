@@ -1,0 +1,34 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.1584091525685025,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-2010019",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:H\u00f4tel_de_Gu\u00e9n\u00e9gaud>",
+    "<dbpedia:Rue_de_la_Chauss\u00e9e-d'Antin>",
+    "<dbpedia:H\u00f4tel_du_Petit-Bourbon>",
+    "<dbpedia:Maison_Carr\u00e9e>",
+    "<dbpedia:Notre-Dame-en-Vaux>",
+    "<dbpedia:Galerie_Vivienne>",
+    "<dbpedia:Perrault's_Colonnade>",
+    "<dbpedia:Pavillon_de_l'Arsenal>",
+    "<dbpedia:French_Decorative_styles_during_the_Reign_of_Louis_XVI_(1774\u201391)>",
+    "<dbpedia:Pillar_of_the_Boatmen>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Lutetia>",
+    "<dbpedia:Pillar_of_the_Boatmen>",
+    "<dbpedia:City_walls_of_Paris>",
+    "<dbpedia:Thiais>",
+    "<dbpedia:Ar\u00e8nes_de_Lut\u00e8ce>",
+    "<dbpedia:Thermes_de_Cluny>",
+    "<dbpedia:Art_in_Paris>",
+    "<dbpedia:Maison_Carr\u00e9e>",
+    "<dbpedia:La_Villette,_Seine>",
+    "<dbpedia:Gallo-Roman_religion>"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.6131471927654584,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-46",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Mara_Lopez>",
+    "<dbpedia:Phil_Rajzman>",
+    "<dbpedia:Marcel_Soros>",
+    "<dbpedia:Megan_Abubo>",
+    "<dbpedia:Dayyan_Neve>",
+    "<dbpedia:Bobby_Martinez>",
+    "<dbpedia:Sunny_Garcia>",
+    "<dbpedia:Miguel_Pupo>",
+    "<dbpedia:Rusty_Keaulana>",
+    "<dbpedia:Taylor_Steele_(filmmaker)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Mara_Lopez>",
+    "<dbpedia:Marcus_Adoro>"
+  ],
+  "tokens_reranked": 5762
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.787702056960637,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-82",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:GIMP_version_history>",
+    "<dbpedia:G'MIC>",
+    "<dbpedia:CinePaint>",
+    "<dbpedia:C++>",
+    "<dbpedia:GTK+>",
+    "<dbpedia:CiMPLE>",
+    "<dbpedia:Greenspun's_tenth_rule>",
+    "<dbpedia:NewLISP>",
+    "<dbpedia:General-purpose_programming_language>",
+    "<dbpedia:Seashore_(software)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:GTK+>",
+    "<dbpedia:GIMP_version_history>",
+    "<dbpedia:C_(programming_language)>",
+    "<dbpedia:G'MIC>"
+  ]
+}

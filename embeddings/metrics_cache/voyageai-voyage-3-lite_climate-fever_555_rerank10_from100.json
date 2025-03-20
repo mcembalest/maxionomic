@@ -1,0 +1,28 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.49818925746641285,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "climate-fever",
+  "query_id": "555",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Arctostaphylos",
+    "Brown_bear",
+    "Rubus_arcticus",
+    "Kodiak_bear",
+    "Acclimatization",
+    "Season_creep",
+    "Arctic_Alaska",
+    "Arctic_ecology",
+    "Surplus_killing",
+    "CO2_fertilization_effect"
+  ],
+  "relevant_docs": [
+    "Kodiak_bear",
+    "Brown_bear",
+    "Grizzly_bear"
+  ],
+  "tokens_reranked": 35586
+}

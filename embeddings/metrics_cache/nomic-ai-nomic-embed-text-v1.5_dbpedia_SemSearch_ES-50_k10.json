@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-50",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Bob_Steele_(actor)>",
+    "<dbpedia:The_Bob_&_Tom_Show>",
+    "<dbpedia:Laura_Handy>",
+    "<dbpedia:Midge_and_Bob_Pinciotti>",
+    "<dbpedia:Laura_Donnelly_(Love_Is_a_Many_Splendored_Thing)>",
+    "<dbpedia:Laura-Leigh>",
+    "<dbpedia:Bob_Fires_the_Kids>",
+    "<dbpedia:Laura_Ann_Kesling>",
+    "<dbpedia:Sally_Grossman>",
+    "<dbpedia:Bob_Thomas_(actor)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:The_Bob_&_Tom_Show>",
+    "<dbpedia:Bob_Steele_(actor)>"
+  ]
+}

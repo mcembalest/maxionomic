@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-politics-lghwdecm-con02a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-politics-lghwdecm-pro01a",
+    "test-politics-lghwdecm-pro02b",
+    "test-politics-lghwdecm-con02b",
+    "test-politics-lghwdecm-pro02a",
+    "test-politics-lghwdecm-pro03b",
+    "test-politics-lghwdecm-con01a",
+    "training-economy-epiaghwpto-con01b",
+    "training-politics-pgghwbnap-pro01b",
+    "training-politics-yppplhbmlgl-pro03a",
+    "test-politics-gvhwhnerse-con02a"
+  ],
+  "relevant_docs": [
+    "test-politics-lghwdecm-con02b"
+  ]
+}

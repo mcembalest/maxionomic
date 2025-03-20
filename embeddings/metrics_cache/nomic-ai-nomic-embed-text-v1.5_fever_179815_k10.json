@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7653606369886217,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "179815",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Vic_Mensa",
+    "Innanetape",
+    "Mensa_International",
+    "Vic_Tanny",
+    "Victor_Aloysius_Meyers",
+    "Vic_(film)",
+    "Alejandro_Sosa",
+    "Tori_Spelling",
+    "Ric_Menello",
+    "Vice_Versa_(song)"
+  ],
+  "relevant_docs": [
+    "Vic_Mensa",
+    "Chance_the_Rapper",
+    "Innanetape"
+  ]
+}

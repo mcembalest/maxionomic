@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "88977",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Woodrow_Wilson",
+    "Frank_Woodrow_Wilson",
+    "American_Expeditionary_Force_Siberia",
+    "Qajar_dynasty",
+    "Valerian_Zubov",
+    "American_entry_into_World_War_I",
+    "Wilson_(book)",
+    "Presidency_of_Woodrow_Wilson",
+    "Trebizond_Peace_Conference",
+    "Trading_with_the_Enemy_Act_of_1917"
+  ],
+  "relevant_docs": [
+    "Woodrow_Wilson"
+  ],
+  "tokens_reranked": 44695
+}

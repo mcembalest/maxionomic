@@ -1,0 +1,27 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.2960819109658652,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1575",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Antarctic_ice_sheet",
+    "Sea_ice",
+    "Antarctic_sea_ice",
+    "Measurement_of_sea_ice",
+    "Arctic_ice_pack",
+    "Ice_shelf",
+    "Polar_seas",
+    "Arctic_sea_ice_decline",
+    "Polar_see-saw",
+    "Arctic_geoengineering"
+  ],
+  "relevant_docs": [
+    "Arctic",
+    "Antarctica",
+    "Sea_ice"
+  ]
+}

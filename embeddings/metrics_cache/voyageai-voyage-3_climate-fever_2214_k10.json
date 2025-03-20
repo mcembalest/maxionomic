@@ -1,0 +1,27 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "2214",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Weather_station",
+    "MSU_temperature_measurements",
+    "Satellite_temperature_measurements",
+    "Weatherization",
+    "US_Weather_Bureau_Station_(Block_Island)",
+    "Microwave_Sounding_Unit_temperature_measurements",
+    "Earth_rainfall_climatology",
+    "Highest_temperature_recorded_on_Earth",
+    "Climate",
+    "Effect_of_Sun_angle_on_climate"
+  ],
+  "relevant_docs": [
+    "Cooling_tower",
+    "Palo_Alto,_California",
+    "Grissom_Air_Reserve_Base"
+  ]
+}

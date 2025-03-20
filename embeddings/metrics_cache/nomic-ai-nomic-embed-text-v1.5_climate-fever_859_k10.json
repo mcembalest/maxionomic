@@ -1,0 +1,27 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.20210734650054757,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "859",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Dust_Bowl",
+    "Droughts_in_the_United_States",
+    "2012\u201313_North_American_drought",
+    "Global_warming",
+    "Effects_of_global_warming_on_humans",
+    "Climate_change_adaptation",
+    "Climate_change_in_Europe",
+    "European_Union_Emission_Trading_Scheme",
+    "Eurasia",
+    "Climate_change_in_the_United_States"
+  ],
+  "relevant_docs": [
+    "Europe",
+    "Global_warming",
+    "Severe_weather"
+  ]
+}

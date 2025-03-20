@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "39977",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Key_&_Peele",
+    "Kath_&_Kim",
+    "A_Feast_for_Crows",
+    "Nebula_Award",
+    "To_Kill_a_Mockingbird_(film)",
+    "Hugo_Award_for_Best_Fan_Artist",
+    "Hugo_Award_for_Best_Related_Work",
+    "A_Game_of_Thrones",
+    "Roman_\u00e0_clef",
+    "The_Pillars_of_the_Earth_(miniseries)"
+  ],
+  "relevant_docs": [
+    "Key_&_Peele"
+  ]
+}

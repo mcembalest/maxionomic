@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "arguana",
+  "query_id": "test-philosophy-elhbrd-pro03a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-philosophy-elhbrd-pro03b",
+    "test-health-dhpelhbass-pro01a",
+    "test-health-dhpelhbass-pro01b",
+    "test-philosophy-elhbrd-con03a",
+    "test-law-lgplhbssbco-pro01b",
+    "test-health-hpehwadvoee-pro03b",
+    "test-law-lgplhbssbco-pro02b",
+    "validation-philosophy-ehbidachsb-con03a",
+    "test-health-hpehwadvoee-con01a",
+    "test-philosophy-elhbrd-con03b"
+  ],
+  "relevant_docs": [
+    "test-philosophy-elhbrd-pro03b"
+  ]
+}

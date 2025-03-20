@@ -1,0 +1,25 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1935",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Renewable_energy_commercialization",
+    "Solar_power_in_the_United_States",
+    "Wind_power_in_California",
+    "List_of_power_stations_in_Texas",
+    "Contribution_to_global_warming_by_Australia",
+    "Wind_power_in_New_Mexico",
+    "Growth_of_wind_power_in_the_United_States",
+    "Solar_power",
+    "Solar_power_in_Michigan",
+    "List_of_photovoltaic_power_stations"
+  ],
+  "relevant_docs": [
+    "California"
+  ]
+}

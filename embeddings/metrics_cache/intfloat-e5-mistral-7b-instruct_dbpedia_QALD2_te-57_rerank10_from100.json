@@ -1,0 +1,33 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5390031312763821,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-57",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Apollo_14>",
+    "<dbpedia:Edgar_Mitchell>",
+    "<dbpedia:Stuart_Roosa>",
+    "<dbpedia:Purdue_University_College_of_Engineering>",
+    "<dbpedia:Jim_Lovell>",
+    "<dbpedia:Neil_Armstrong>",
+    "<dbpedia:Spacefacts>",
+    "<dbpedia:Charles_L._Veach>",
+    "<dbpedia:Farouk_El-Baz>",
+    "<dbpedia:Roger_B._Chaffee>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Edgar_Mitchell>",
+    "<dbpedia:List_of_Apollo_astronauts>",
+    "<dbpedia:Stuart_Roosa>",
+    "<dbpedia:Apollo_14>",
+    "<dbpedia:Alan_Shepard>",
+    "<dbpedia:List_of_astronauts_by_name>",
+    "<dbpedia:Apollo_program>",
+    "<dbpedia:Ronald_Evans_(astronaut)>"
+  ],
+  "tokens_reranked": 7028
+}

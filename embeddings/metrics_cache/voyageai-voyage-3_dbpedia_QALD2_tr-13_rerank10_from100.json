@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-13",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Millipede>",
+    "<dbpedia:Myriochelata>",
+    "<dbpedia:Polyzoniida>",
+    "<dbpedia:Sphaerotheriida>",
+    "<dbpedia:Callipodida>",
+    "<dbpedia:Chelodesmidea>",
+    "<dbpedia:Paeromopodidae>",
+    "<dbpedia:Chordeumatida>",
+    "<dbpedia:Synxenidae>",
+    "<dbpedia:Pleurojulidae>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Millipede>"
+  ],
+  "tokens_reranked": 7789
+}

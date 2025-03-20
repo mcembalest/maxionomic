@@ -1,0 +1,29 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.615733440277688,
+  "model": "voyageai/voyage-3",
+  "dataset": "scidocs",
+  "query_id": "1eed0e731008236ddc956ffbbe9051e13d54f2ec",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "d7260b8cf64aca3f538080369390490830a1e248",
+    "b2e83112b2956483c6cc5982b56f5987788dd973",
+    "48d103f81e9b70dc2de82508973bc35f61f8ed01",
+    "cbc5d3e04f80a07b49ac3fbdb41f4bd577664cdc",
+    "cfdb77b2cb9f8ca9616fa34a84d23685c0a4c45e",
+    "0d3de784c0a418d2c6eefdfcbc8f5a93da97af7e",
+    "64da24aad2e99514ab26d093c19cebec07350099",
+    "b40b8a2b528a88f45bba5ecd23cec02840798e72",
+    "6fdbf20f50dfd6276d9b89e494f86fbcc7b0b9b7",
+    "f9cd7da733c5b5b54a4bbd35f67a913c05df83ea"
+  ],
+  "relevant_docs": [
+    "b40b8a2b528a88f45bba5ecd23cec02840798e72",
+    "7294d9fa5c5524a43619ad7e52d132a90cfe91bb",
+    "d7260b8cf64aca3f538080369390490830a1e248",
+    "48d103f81e9b70dc2de82508973bc35f61f8ed01",
+    "95ded03f3eb9d60b3e3d51931147d5049be4ba5e"
+  ]
+}

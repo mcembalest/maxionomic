@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "106404",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Burbank,_California",
+    "Convair_B-58_Hustler",
+    "List_of_Douglas_A-1_Skyraider_operators",
+    "Convair_B-36_Peacemaker",
+    "North_American_XB-70_Valkyrie",
+    "Hughes_XF-11",
+    "Burbank_Western_Channel",
+    "Boeing_B-17_Flying_Fortress",
+    "Henry_H._Arnold",
+    "Lockheed_A-12"
+  ],
+  "relevant_docs": [
+    "Burbank,_California"
+  ]
+}

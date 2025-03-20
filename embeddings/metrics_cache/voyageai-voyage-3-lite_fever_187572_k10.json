@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "187572",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "John_Brown_(American_author)",
+    "John_Gregory_Brown",
+    "Dan_Brown",
+    "Digital_Fortress",
+    "Larry_Brown_(author)",
+    "David_Icke",
+    "Dominic_Brown",
+    "Alex_Jones",
+    "Carrie_Brown_(author)",
+    "Tom_Brown_(satirist)"
+  ],
+  "relevant_docs": [
+    "Dan_Brown"
+  ]
+}

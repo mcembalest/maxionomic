@@ -1,0 +1,28 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.23463936301137822,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "967",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Temperature_record_of_the_past_1000_years",
+    "Timeline_of_glaciation",
+    "Little_Ice_Age",
+    "Description_of_the_Medieval_Warm_Period_and_Little_Ice_Age_in_IPCC_reports",
+    "Milankovitch_cycles",
+    "Neoglaciation",
+    "Greenhouse_and_icehouse_Earth",
+    "Termination_(geomorphology)",
+    "Climate_oscillation",
+    "ANDRILL"
+  ],
+  "relevant_docs": [
+    "John_D._Hamaker",
+    "Little_Ice_Age",
+    "Ice_age"
+  ],
+  "tokens_reranked": 28943
+}

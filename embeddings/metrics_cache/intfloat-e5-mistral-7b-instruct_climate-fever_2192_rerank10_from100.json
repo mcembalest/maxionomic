@@ -1,0 +1,30 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "2192",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Ian_Clark_(geologist)",
+    "Climate_variability",
+    "Attribution_of_recent_climate_change",
+    "History_of_climate_change_science",
+    "Climate_change",
+    "Milankovitch_cycles",
+    "Solar_cycle",
+    "Earth's_energy_budget",
+    "Climate_change_(general_concept)",
+    "Weather"
+  ],
+  "relevant_docs": [
+    "Climate",
+    "Cosmic_ray",
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "Global_warming",
+    "21st_century"
+  ],
+  "tokens_reranked": 24719
+}

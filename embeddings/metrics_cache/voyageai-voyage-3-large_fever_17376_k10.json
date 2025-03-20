@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "17376",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Elephant_Man_(film)",
+    "Joseph_Merrick",
+    "We_Are_Marshall",
+    "Gladiator_(2000_film)",
+    "Fanny_by_Gaslight_(film)",
+    "The_Man_Without_a_Face",
+    "Philadelphia_(film)",
+    "Les_Mis\u00e9rables_(1998_film)",
+    "Dreamchild",
+    "Jeremy_Irons"
+  ],
+  "relevant_docs": [
+    "Joseph_Merrick",
+    "The_Elephant_Man_(film)"
+  ]
+}

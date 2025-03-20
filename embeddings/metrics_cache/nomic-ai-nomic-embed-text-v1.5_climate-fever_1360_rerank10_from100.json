@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "1360",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Arctic_sea_ice_decline",
+    "Global_cooling",
+    "Hockey_stick_graph",
+    "Global_warming_hiatus",
+    "Global_stilling",
+    "Antarctica_cooling_controversy",
+    "Rosenfeld's_law",
+    "Dematerialization_(economics)",
+    "Retreat_of_glaciers_since_1850",
+    "Tendency_of_the_rate_of_profit_to_fall"
+  ],
+  "relevant_docs": [
+    "Usage_share_of_operating_systems",
+    "Uptick_rule",
+    "Hysterectomy",
+    "Solar_cycle"
+  ],
+  "tokens_reranked": 38962
+}

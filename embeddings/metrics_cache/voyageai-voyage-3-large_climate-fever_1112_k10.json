@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.38685280723454163,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "1112",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Polar_vortex",
+    "Jet_stream",
+    "Shutdown_of_thermohaline_circulation",
+    "Arctic_oscillation",
+    "Polar_front",
+    "Global_stilling",
+    "Cold-air_damming",
+    "Arctic_dipole_anomaly",
+    "Antarctic_oscillation",
+    "Rear-inflow_jet"
+  ],
+  "relevant_docs": [
+    "Jet_stream",
+    "Global_warming"
+  ]
+}

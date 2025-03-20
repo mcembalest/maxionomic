@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "88977",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Woodrow_Wilson",
+    "Presidency_of_Woodrow_Wilson",
+    "Wilson_(book)",
+    "Wilson_(1944_film)",
+    "American_entry_into_World_War_I",
+    "1918_State_of_the_Union_Address",
+    "American_Expeditionary_Force_Siberia",
+    "Frank_Woodrow_Wilson",
+    "History_of_the_United_States_(1865\u20131918)",
+    "Presidency_of_Warren_G._Harding"
+  ],
+  "relevant_docs": [
+    "Woodrow_Wilson"
+  ]
+}

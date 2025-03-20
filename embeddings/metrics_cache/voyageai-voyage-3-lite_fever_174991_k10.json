@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "174991",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "The_Man_in_the_Iron_Mask_(1998_film)",
+    "The_Man_in_the_Iron_Mask_(film)",
+    "The_Iron_Mask",
+    "The_Iron_Giant",
+    "The_Man_in_the_Iron_Mask_(1985_film)",
+    "The_Mask_(film)",
+    "The_Man_with_the_Iron_Fists",
+    "Iron_Man_2",
+    "The_Mask",
+    "Will_Smith_filmography"
+  ],
+  "relevant_docs": [
+    "The_Man_in_the_Iron_Mask_(1998_film)"
+  ]
+}

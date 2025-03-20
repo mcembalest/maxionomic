@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.7653606369886217,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "791",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Coal_pollution_mitigation",
+    "Carbon_capture_and_storage",
+    "Clean_coal_technology",
+    "Carbon_capture_and_storage_in_Australia",
+    "Carbon_sequestration",
+    "Mitigation_of_global_warming_in_Australia",
+    "Coal_gasification_commercialization",
+    "Carbon_dioxide_removal",
+    "Fossil_fuel_power_station",
+    "Refined_coal"
+  ],
+  "relevant_docs": [
+    "Coal_pollution_mitigation",
+    "Carbon_capture_and_storage",
+    "Climate_change_mitigation"
+  ]
+}

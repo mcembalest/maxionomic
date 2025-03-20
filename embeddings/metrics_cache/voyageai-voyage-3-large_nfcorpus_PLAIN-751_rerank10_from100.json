@@ -1,0 +1,32 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "nfcorpus",
+  "query_id": "PLAIN-751",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "MED-3130",
+    "MED-3129",
+    "MED-10",
+    "MED-2103",
+    "MED-3200",
+    "MED-3849",
+    "MED-4756",
+    "MED-3857",
+    "MED-2437",
+    "MED-3238"
+  ],
+  "relevant_docs": [
+    "MED-3136",
+    "MED-3137",
+    "MED-3138",
+    "MED-3141",
+    "MED-3123",
+    "MED-3132",
+    "MED-3143"
+  ],
+  "tokens_reranked": 33701
+}

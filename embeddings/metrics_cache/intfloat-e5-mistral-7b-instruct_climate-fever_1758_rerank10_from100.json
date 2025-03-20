@@ -1,0 +1,29 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "query_id": "1758",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Pneumonia_front",
+    "Instrumental_temperature_record",
+    "Thaw_(weather)",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "Proxy_(climate)",
+    "Great_Lakes",
+    "Microwave_Sounding_Unit_temperature_measurements",
+    "Temperature_record_of_the_past_1000_years",
+    "Urban_heat_island",
+    "MSU_temperature_measurements"
+  ],
+  "relevant_docs": [
+    "Lake_Superior",
+    "Permafrost",
+    "Precipitation",
+    "Little_Ice_Age"
+  ],
+  "tokens_reranked": 29636
+}

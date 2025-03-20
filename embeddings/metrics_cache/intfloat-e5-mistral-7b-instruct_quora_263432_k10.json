@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "quora",
+  "query_id": "263432",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "263433",
+    "193792",
+    "261419",
+    "473794",
+    "254526",
+    "238602",
+    "509502",
+    "314622",
+    "20409",
+    "309718"
+  ],
+  "relevant_docs": [
+    "263433"
+  ]
+}

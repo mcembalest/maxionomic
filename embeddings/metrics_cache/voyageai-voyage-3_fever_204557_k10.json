@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "204557",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Commodore",
+    "Commodore_(United_States)",
+    "Commodore_(rank)",
+    "Commodore_(Royal_Navy)",
+    "Air_commodore",
+    "Commodore-in-Chief",
+    "Convoy_commodore",
+    "Captain_1st_rank",
+    "Buffer_(navy)",
+    "Midshipman"
+  ],
+  "relevant_docs": [
+    "Commodore_(rank)"
+  ]
+}

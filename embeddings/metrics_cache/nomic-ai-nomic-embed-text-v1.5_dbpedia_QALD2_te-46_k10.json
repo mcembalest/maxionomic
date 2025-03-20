@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_te-46",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Dayyan_Neve>",
+    "<dbpedia:Marcel_Soros>",
+    "<dbpedia:Phil_Rajzman>",
+    "<dbpedia:Sunny_Garcia>",
+    "<dbpedia:Tom_Carroll_(surfer)>",
+    "<dbpedia:Garrett_McNamara>",
+    "<dbpedia:Kolohe_Andino>",
+    "<dbpedia:Bobby_Martinez>",
+    "<dbpedia:Megan_Abubo>",
+    "<dbpedia:Derek_Ho>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Mara_Lopez>",
+    "<dbpedia:Marcus_Adoro>"
+  ]
+}

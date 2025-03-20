@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "194432",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Indiana_Pacers",
+    "List_of_Indiana_Pacers_seasons",
+    "Richard_Tinkham",
+    "1968\u201369_Indiana_Pacers_season",
+    "1976_ABA_Dispersal_Draft",
+    "1975\u201376_ABA_season",
+    "1969\u201370_ABA_season",
+    "1972_ABA_Playoffs",
+    "1967\u201368_Pittsburgh_Pipers_season",
+    "Nate_Barnett"
+  ],
+  "relevant_docs": [
+    "Indiana_Pacers"
+  ],
+  "tokens_reranked": 32219
+}

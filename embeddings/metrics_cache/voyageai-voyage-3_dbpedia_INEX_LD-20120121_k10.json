@@ -1,0 +1,35 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.2906246349515899,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-20120121",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:List_of_Vietnamese_dishes>",
+    "<dbpedia:Vietnamese_cuisine>",
+    "<dbpedia:B\u00e1nh_b\u1ed9t_chi\u00ean>",
+    "<dbpedia:Amok_(dish)>",
+    "<dbpedia:Nem_ngu\u1ed9i>",
+    "<dbpedia:B\u00e1nh_t\u00e9t>",
+    "<dbpedia:B\u00e1nh_chu\u1ed1i>",
+    "<dbpedia:Canh_chua>",
+    "<dbpedia:B\u00e1nh_tr\u00e1ng_n\u01b0\u1edbng>",
+    "<dbpedia:B\u00fan_m\u1eafm>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:B\u00e1nh_b\u00f2>",
+    "<dbpedia:Kuy_teav>",
+    "<dbpedia:Allrecipes.com>",
+    "<dbpedia:Cendol>",
+    "<dbpedia:B\u00e1nh_chu\u1ed1i>",
+    "<dbpedia:Dog_meat>",
+    "<dbpedia:Lumpia>",
+    "<dbpedia:Vietnamese_cuisine>",
+    "<dbpedia:B\u00e1nh_t\u00e9t>",
+    "<dbpedia:Hoisin_sauce>",
+    "<dbpedia:Wheat_gluten_(food)>"
+  ]
+}

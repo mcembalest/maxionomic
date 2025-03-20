@@ -1,0 +1,28 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.4441228664487979,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "1334",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Ocean_acidification",
+    "PH",
+    "Carbon_capture_and_storage",
+    "Estuarine_acidification",
+    "Total_inorganic_carbon",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Oceanic_carbon_cycle",
+    "Carbon_dioxide",
+    "Paleocene\u2013Eocene_Thermal_Maximum",
+    "Fossil_fuel"
+  ],
+  "relevant_docs": [
+    "PH",
+    "Carbon_dioxide",
+    "Acid"
+  ],
+  "tokens_reranked": 40252
+}

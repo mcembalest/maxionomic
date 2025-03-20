@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "voyageai/voyage-3",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-32",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Chambersburg_Mall>",
+    "<dbpedia:Fitzgerald_Auto_Malls>",
+    "<dbpedia:List_of_shopping_malls_in_Pennsylvania>",
+    "<dbpedia:Pyramid_Motors>",
+    "<dbpedia:Fairlane_Village_Mall>",
+    "<dbpedia:Plymouth_Meeting_Mall>",
+    "<dbpedia:Herb_Chambers_Companies>",
+    "<dbpedia:Firewheel_Town_Center>",
+    "<dbpedia:Philadelphia_Premium_Outlets>",
+    "<dbpedia:Gulph_Mills_(SEPTA_station)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Fitzgerald_Auto_Malls>"
+  ]
+}

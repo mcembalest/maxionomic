@@ -1,0 +1,28 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.4776237035032179,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "climate-fever",
+  "query_id": "2272",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Climatic_Research_Unit_documents",
+    "Climatic_Research_Unit_email_controversy",
+    "World_Climate_Change_Conference,_Moscow",
+    "Criticism_of_the_IPCC_Fourth_Assessment_Report",
+    "Intergovernmental_Panel_on_Climate_Change",
+    "Global_warming_controversy",
+    "Scientific_opinion_on_climate_change",
+    "Attribution_of_recent_climate_change",
+    "Research_ethics",
+    "Pseudoscience"
+  ],
+  "relevant_docs": [
+    "Climatic_Research_Unit_email_controversy",
+    "Global_warming_conspiracy_theory",
+    "Intergovernmental_Panel_on_Climate_Change"
+  ],
+  "tokens_reranked": 39544
+}

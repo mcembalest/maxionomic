@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5855700749881525,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "2359",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "History_of_climate_change_science",
+    "Greenhouse_gas",
+    "Environmental_issue",
+    "Paleocene\u2013Eocene_Thermal_Maximum",
+    "Attribution_of_recent_climate_change",
+    "Climate_change_mitigation_scenarios",
+    "Ocean_acidification",
+    "Fossil_fuel",
+    "Eocene_Thermal_Maximum_2"
+  ],
+  "relevant_docs": [
+    "Greenhouse_gas",
+    "Carbon_dioxide",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Global_warming"
+  ]
+}

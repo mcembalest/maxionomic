@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "fever",
+  "query_id": "180702",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Cary_Elwes",
+    "The_Office_(UK_TV_series)",
+    "The_Pillars_of_the_Earth_(miniseries)",
+    "L.A._Law",
+    "The_Hunchback_of_Notre_Dame_(1996_film)",
+    "The_Alphabet_Killer",
+    "The_Daily_Show",
+    "Batman_Begins",
+    "Heathers",
+    "List_of_programs_broadcast_by_Fox"
+  ],
+  "relevant_docs": [
+    "Cary_Elwes"
+  ],
+  "tokens_reranked": 30488
+}

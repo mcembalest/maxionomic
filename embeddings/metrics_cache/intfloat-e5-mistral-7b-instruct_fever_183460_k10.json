@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "183460",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Antoine_of_Navarre",
+    "Duke_of_Nemours",
+    "Henry_III_of_France",
+    "Charles_IX_of_France",
+    "Catherine_Henriette_de_Bourbon",
+    "Charles_II_de_Bourbon-Vend\u00f4me",
+    "House_of_Orl\u00e9ans",
+    "Legitimists",
+    "Charles,_Count_of_Soissons",
+    "Louis_XVII_of_France"
+  ],
+  "relevant_docs": [
+    "Henry_III_of_France"
+  ]
+}

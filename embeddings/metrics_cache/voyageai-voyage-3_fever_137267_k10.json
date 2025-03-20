@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "137267",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Menace_II_Society",
+    "Society_(film)",
+    "The_Manchurian_Candidate_(1962_film)",
+    "Queen_II",
+    "Mensa_International",
+    "San_Francisco_in_the_1970s",
+    "Cold_War",
+    "Prince_Planet",
+    "David_Icke",
+    "Red_Scare"
+  ],
+  "relevant_docs": [
+    "Menace_II_Society"
+  ]
+}

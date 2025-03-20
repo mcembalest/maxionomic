@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "fever",
+  "query_id": "127981",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Zoe_Saldana",
+    "Santa_Monica,_California",
+    "Sacramento_metropolitan_area",
+    "Warped_Tour_1997",
+    "Santo_Domingo",
+    "1989_Loma_Prieta_earthquake",
+    "Joe_Saldana",
+    "Solo_(Solo_album)",
+    "Bonaire",
+    "Martine_Liautaud"
+  ],
+  "relevant_docs": [
+    "Zoe_Saldana"
+  ],
+  "tokens_reranked": 25108
+}

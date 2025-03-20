@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "query_id": "598",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Climate:_Long_range_Investigation,_Mapping,_and_Prediction",
+    "Explorer_7",
+    "Cool_tropics_paradox",
+    "Idealized_greenhouse_model",
+    "Earth's_energy_budget",
+    "Global_warming_hiatus",
+    "The_Real_Global_Warming_Disaster",
+    "IPCC_First_Assessment_Report",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "Global_cooling"
+  ],
+  "relevant_docs": [
+    "Global_warming",
+    "Global_warming_controversy",
+    "Intergovernmental_Panel_on_Climate_Change"
+  ],
+  "tokens_reranked": 39227
+}

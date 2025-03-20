@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "2510",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Pacific_decadal_oscillation",
+    "Global_warming_hiatus",
+    "Year_Without_a_Summer",
+    "Pliocene_climate",
+    "El_Ni\u00f1o\u2013Southern_Oscillation",
+    "1936_North_American_cold_wave",
+    "El_Ni\u00f1o",
+    "Climate_oscillation",
+    "Global_cooling",
+    "2014\u201316_El_Ni\u00f1o_event"
+  ],
+  "relevant_docs": [
+    "Pacific_decadal_oscillation"
+  ]
+}

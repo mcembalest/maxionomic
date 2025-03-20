@@ -1,0 +1,25 @@
+{
+  "mrr": 0.25,
+  "ndcg": 0.43067655807339306,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-economy-egppphbcb-pro01a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-economy-egppphbcb-pro01a",
+    "test-economy-egppphbcb-pro04a",
+    "test-economy-thsptr-con01a",
+    "test-economy-egppphbcb-pro01b",
+    "test-economy-thsptr-pro03a",
+    "test-economy-bepighbdb-con04a",
+    "test-education-ughbuesbf-pro01a",
+    "training-science-cidfiphwa-con02a",
+    "test-health-dhghwapgd-pro05a",
+    "test-health-dhghwapgd-con04b"
+  ],
+  "relevant_docs": [
+    "test-economy-egppphbcb-pro01b"
+  ]
+}

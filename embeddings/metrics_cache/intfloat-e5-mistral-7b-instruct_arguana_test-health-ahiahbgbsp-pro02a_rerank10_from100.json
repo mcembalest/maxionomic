@@ -1,0 +1,26 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-health-ahiahbgbsp-pro02a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-health-ahiahbgbsp-pro03a",
+    "test-economy-bhahwbsps-con01b",
+    "test-health-ahiahbgbsp-pro01b",
+    "test-law-tahglcphsld-pro04a",
+    "test-international-iighbopcc-pro02b",
+    "training-law-cplgpsyhwsas-con03a",
+    "training-free-speech-debate-ifcidffe-con03a",
+    "training-health-oeghsshwpsst-pro01a",
+    "training-philosophy-eppprfmhb-con02a",
+    "test-economy-bepighbdb-pro01b"
+  ],
+  "relevant_docs": [
+    "test-health-ahiahbgbsp-pro02b"
+  ],
+  "tokens_reranked": 37384
+}

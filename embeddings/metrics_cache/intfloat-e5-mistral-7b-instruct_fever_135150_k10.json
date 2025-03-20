@@ -1,0 +1,25 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "query_id": "135150",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Kung_Fu_Panda_2",
+    "Kung_Fu_Panda",
+    "Kung_Fu_Panda_World",
+    "Madagascar_(2005_film)",
+    "My_Kung-Fu_Sweetheart",
+    "Po_(Kung_Fu_Panda)",
+    "The_Amazing_Panda_Adventure",
+    "Kong:_The_Animated_Series",
+    "Kung_Fu_Kid_(1994_film)",
+    "The_Mummy_(2017_film)"
+  ],
+  "relevant_docs": [
+    "Kung_Fu_Panda"
+  ]
+}

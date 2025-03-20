@@ -1,0 +1,25 @@
+{
+  "mrr": 0.3333333333333333,
+  "ndcg": 0.5,
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "arguana",
+  "query_id": "test-digital-freedoms-dfiphbgs-pro01a",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "test-digital-freedoms-dfiphbgs-con03a",
+    "test-digital-freedoms-dfiphbgs-con02b",
+    "test-digital-freedoms-dfiphbgs-pro01b",
+    "training-digital-freedoms-fehwiwcb-con04b",
+    "training-digital-freedoms-ifakhbwfg-pro02a",
+    "training-digital-freedoms-pidfakhwnfawn-con02a",
+    "training-digital-freedoms-fehwiwcb-pro03a",
+    "training-digital-freedoms-pidfakhwnfawn-pro01b",
+    "training-digital-freedoms-pidfakhwnfawn-pro02a",
+    "training-economy-epegppphw-pro02a"
+  ],
+  "relevant_docs": [
+    "test-digital-freedoms-dfiphbgs-pro01b"
+  ]
+}

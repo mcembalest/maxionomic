@@ -1,0 +1,25 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "nq",
+  "query_id": "test3193",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "doc108892",
+    "doc626438",
+    "doc873559",
+    "doc626445",
+    "doc2393669",
+    "doc108902",
+    "doc1119808",
+    "doc1119544",
+    "doc1373324",
+    "doc1220654"
+  ],
+  "relevant_docs": [
+    "doc108892"
+  ]
+}

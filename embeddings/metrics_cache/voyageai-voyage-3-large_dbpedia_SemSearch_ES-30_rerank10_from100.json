@@ -1,0 +1,29 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.35914753008966527,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_ES-30",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Signature_line_of_credit>",
+    "<dbpedia:Line_of_credit>",
+    "<dbpedia:Home_equity_line_of_credit>",
+    "<dbpedia:Warehouse_line_of_credit>",
+    "<dbpedia:List_of_schools_in_Kolkata>",
+    "<dbpedia:List_of_schools_in_Kolkata>",
+    "<dbpedia:List_of_schools_in_Kolkata>",
+    "<dbpedia:List_of_schools_in_Kolkata>",
+    "<dbpedia:Cleanup_clause>",
+    "<dbpedia:E-Loan>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Line_of_credit>",
+    "<dbpedia:Transfer_credit>",
+    "<dbpedia:E-Loan>",
+    "<dbpedia:Loan>"
+  ],
+  "tokens_reranked": 6667
+}

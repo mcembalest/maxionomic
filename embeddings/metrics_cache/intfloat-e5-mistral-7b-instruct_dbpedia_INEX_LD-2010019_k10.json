@@ -1,0 +1,34 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.20248323207250624,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "INEX_LD-2010019",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Chris_MacKintosh>",
+    "<dbpedia:City_walls_of_Paris>",
+    "<dbpedia:Butte_(Besan\u00e7on)>",
+    "<dbpedia:Pont_Neuf>",
+    "<dbpedia:Parisii_(Gaul)>",
+    "<dbpedia:List_of_provinces_of_the_Netherlands>",
+    "<dbpedia:Pont_du_Garigliano>",
+    "<dbpedia:Notre_Dame_de_Paris>",
+    "<dbpedia:Paris_in_the_18th_century>",
+    "<dbpedia:Lutetia>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:La_Villette,_Seine>",
+    "<dbpedia:Lutetia>",
+    "<dbpedia:Maison_Carr\u00e9e>",
+    "<dbpedia:Ar\u00e8nes_de_Lut\u00e8ce>",
+    "<dbpedia:Thermes_de_Cluny>",
+    "<dbpedia:Pillar_of_the_Boatmen>",
+    "<dbpedia:Thiais>",
+    "<dbpedia:Gallo-Roman_religion>",
+    "<dbpedia:Art_in_Paris>",
+    "<dbpedia:City_walls_of_Paris>"
+  ]
+}

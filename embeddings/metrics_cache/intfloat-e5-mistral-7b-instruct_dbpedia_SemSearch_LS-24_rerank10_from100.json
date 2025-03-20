@@ -1,0 +1,32 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.8104616303452685,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "SemSearch_LS-24",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:Daddio>",
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:The_IT_Crowd>",
+    "<dbpedia:NJCAA_Women's_Basketball_Championship>",
+    "<dbpedia:4_O'Clock_Club>",
+    "<dbpedia:Matt_Nix>",
+    "<dbpedia:List_of_productions_using_the_Vasquez_Rocks_as_a_filming_location>",
+    "<dbpedia:The_Ladybirds_(band)>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:Matt_Berry>",
+    "<dbpedia:Smiles_of_a_Summer_Night_(Desperate_Housewives)>",
+    "<dbpedia:Toast_of_London>",
+    "<dbpedia:Matthew_Berry>",
+    "<dbpedia:The_IT_Crowd>",
+    "<dbpedia:Ant_&_Dec's_Push_the_Button>",
+    "<dbpedia:Daddio>"
+  ],
+  "tokens_reranked": 5876
+}

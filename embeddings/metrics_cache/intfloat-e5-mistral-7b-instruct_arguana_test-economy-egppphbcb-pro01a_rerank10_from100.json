@@ -1,0 +1,26 @@
+{
+  "mrr": 0.5,
+  "ndcg": 0.6309297535714575,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "arguana",
+  "query_id": "test-economy-egppphbcb-pro01a",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "test-economy-egppphbcb-pro01a",
+    "test-economy-egppphbcb-pro01b",
+    "training-economy-epegppphw-pro01b",
+    "training-economy-epegppphw-pro02a",
+    "training-economy-epegppphw-con03a",
+    "test-economy-egppphbcb-pro03a",
+    "training-economy-epegppphw-con02a",
+    "validation-free-speech-debate-bphwpbsas-pro01a",
+    "test-culture-mthbah-pro02a",
+    "training-politics-pgglgvhciu-pro01a"
+  ],
+  "relevant_docs": [
+    "test-economy-egppphbcb-pro01b"
+  ],
+  "tokens_reranked": 65825
+}

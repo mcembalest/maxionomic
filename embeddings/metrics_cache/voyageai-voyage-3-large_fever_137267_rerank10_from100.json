@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fever",
+  "query_id": "137267",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Menace_II_Society",
+    "San_Francisco_in_the_1970s",
+    "Black_Mafia",
+    "Fillmore_District,_San_Francisco",
+    "The_Block_(Richmond,_Virginia)",
+    "Mass_racial_violence_in_the_United_States",
+    "List_of_1970s_American_television_episodes_with_LGBT_themes",
+    "Stonewall_riots",
+    "The_Get_Down",
+    "New_Orleans_school_desegregation_crisis"
+  ],
+  "relevant_docs": [
+    "Menace_II_Society"
+  ],
+  "tokens_reranked": 29680
+}

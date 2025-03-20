@@ -1,0 +1,28 @@
+{
+  "mrr": 0,
+  "ndcg": 0.0,
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "dbpedia",
+  "query_id": "QALD2_tr-75",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "<dbpedia:Thomas_McKean>",
+    "<dbpedia:Jefferson's_Birthday>",
+    "<dbpedia:John_Brown_(Kentucky)>",
+    "<dbpedia:List_of_unnamed_fictional_United_States_Presidents>",
+    "<dbpedia:E._E._B._Mackintosh>",
+    "<dbpedia:United_States_presidential_election_in_Virginia,_1840>",
+    "<dbpedia:United_States_presidential_election_in_Maine,_1840>",
+    "<dbpedia:Isaac_Jefferson>",
+    "<dbpedia:Robert_Macaulay_Stevenson>",
+    "<dbpedia:Living_Presidents_of_the_United_States>"
+  ],
+  "relevant_docs": [
+    "<dbpedia:List_of_Presidents_of_the_United_States>",
+    "<dbpedia:President_of_the_United_States>",
+    "<dbpedia:James_Monroe>",
+    "<dbpedia:The_Presidents_of_the_United_States_of_America_(album)>"
+  ]
+}

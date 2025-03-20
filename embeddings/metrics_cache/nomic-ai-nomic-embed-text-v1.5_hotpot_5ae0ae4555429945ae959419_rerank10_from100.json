@@ -1,0 +1,27 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "hotpot",
+  "query_id": "5ae0ae4555429945ae959419",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "76592",
+    "6673260",
+    "42943433",
+    "60003",
+    "21005627",
+    "5977485",
+    "94987",
+    "597659",
+    "24848176",
+    "30435"
+  ],
+  "relevant_docs": [
+    "76592",
+    "6673260"
+  ],
+  "tokens_reranked": 13688
+}

@@ -1,0 +1,28 @@
+{
+  "mrr": 1.0,
+  "ndcg": 0.5855700749881525,
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "query_id": "2994",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "ranking": [
+    "Keeling_Curve",
+    "Carbon_dioxide_in_Earth's_atmosphere",
+    "Mauna_Loa_Observatory",
+    "CO2_fertilization_effect",
+    "Atmospheric_methane",
+    "Climate:_Long_range_Investigation,_Mapping,_and_Prediction",
+    "Total_Carbon_Column_Observing_Network",
+    "Airborne_fraction",
+    "List_of_large-scale_temperature_reconstructions_of_the_last_2,000_years",
+    "List_of_scientists_opposing_the_mainstream_scientific_assessment_of_global_warming"
+  ],
+  "relevant_docs": [
+    "Mauna_Loa_Observatory",
+    "Global_warming",
+    "Greenhouse_effect",
+    "Keeling_Curve"
+  ]
+}

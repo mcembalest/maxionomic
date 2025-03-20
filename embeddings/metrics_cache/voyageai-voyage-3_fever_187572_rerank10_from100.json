@@ -1,0 +1,26 @@
+{
+  "mrr": 1.0,
+  "ndcg": 1.0,
+  "model": "voyageai/voyage-3",
+  "dataset": "fever",
+  "query_id": "187572",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "ranking": [
+    "Dan_Brown",
+    "Beverly_Hills_Preparatory_School",
+    "Digital_Fortress",
+    "The_Da_Vinci_Code_(film)",
+    "John_Brown_(American_author)",
+    "Author",
+    "Historical_figure",
+    "Hugo_Award_for_Best_Related_Work",
+    "Closed_circle_of_suspects",
+    "Leonardo's_Swans"
+  ],
+  "relevant_docs": [
+    "Dan_Brown"
+  ],
+  "tokens_reranked": 25431
+}
