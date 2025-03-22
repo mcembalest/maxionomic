@@ -32,9 +32,11 @@ e5_mistral_prompt_dict = {
     "touche": "Given a question, retrieve detailed and persuasive arguments that answer the question: ",
 }
 
-def get_prefix(dataset_name: str) -> str:
-    
-    raise ValueError(f"unrecognized dataset: {dataset_name}")
+def compute_dcg_at_k(relevances, k):
+    dcg = 0
+    for i in range(min(len(relevances), k)):
+        dcg += relevances[i] / np.log2(i + 2)  # +2 as we start our idx at 0
+    return dcg
 
 class EmbeddingEvaluator:
     def __init__(self, model_name, dataset_name, endpoint="", k=10, use_reranker=False, initial_k=100):
@@ -82,7 +84,6 @@ class EmbeddingEvaluator:
             processed_queries = {str(s["_id"]): s["text"] 
                                for s in queries if len(s["text"].strip()) > 0}
             
-            # FIX: Process relevance judgments - store ALL relevant docs per query
             processed_qrels = {}
             for item in qrels:
                 query_id = str(item["query-id"])
@@ -100,7 +101,6 @@ class EmbeddingEvaluator:
             
             if missing_docs:
                 logger.warning(f"Found {len(missing_docs)} referenced documents that don't exist in corpus")
-                # Remove queries with no relevant documents
                 processed_qrels = {qid: docs for qid, docs in processed_qrels.items() if docs}
             
             logger.info(f"Dataset loaded: {len(processed_corpus)} docs, {len(processed_queries)} queries")
@@ -114,8 +114,7 @@ class EmbeddingEvaluator:
         cache_dir = "embeddings_cache"
         model_name_safe = self.model_name.replace("/", "-")
 
-        # todo: dont hard code sequence length in filename (e.g. s8192)
-        cache_file = f"{cache_dir}/{model_name_safe}_{self.dataset_name}_s8192_embeddings"
+        cache_file = f"{cache_dir}/{model_name_safe}_{self.dataset_name}_embeddings"
         
         if not os.path.exists(cache_file + '.npy') or not os.path.exists(cache_file + '_ids.json'):
             raise FileNotFoundError(f"Cached embeddings not found at {cache_file}")
@@ -130,7 +129,7 @@ class EmbeddingEvaluator:
         """Load cached query embeddings if they exist"""
         cache_dir = "embeddings_cache"
         model_name_safe = self.model_name.replace("/", "-")
-        cache_file = f"{cache_dir}/{model_name_safe}_{self.dataset_name}_queries_s8192"
+        cache_file = f"{cache_dir}/{model_name_safe}_{self.dataset_name}_queries"
         
         if os.path.exists(cache_file + '.npy') and os.path.exists(cache_file + '_ids.json'):
             embeddings_array = np.load(cache_file + '.npy')
@@ -148,7 +147,7 @@ class EmbeddingEvaluator:
         os.makedirs(cache_dir, exist_ok=True)
         
         model_name_safe = self.model_name.replace("/", "-")
-        cache_file = f"{cache_dir}/{model_name_safe}_{self.dataset_name}_queries_s8192"
+        cache_file = f"{cache_dir}/{model_name_safe}_{self.dataset_name}_queries"
         
         query_ids = list(query_embeddings.keys())
         embeddings_array = np.array([query_embeddings[qid] for qid in query_ids])
@@ -173,9 +172,6 @@ class EmbeddingEvaluator:
                 )
                 embeddings = result.embeddings
             else:
-                # note: we used consistent prefix for nomic server-side, 
-                # but benchmark-dataset-specific prefixes are needed for e5-mistral
-                
                 if "e5-mistral" in self.model_name:
                     payload = {
                         "inputs": [
@@ -212,27 +208,21 @@ class EmbeddingEvaluator:
 
     def calculate_metrics(self, query_embedding, query_id):
         """Calculate metrics for a single query with caching"""
-        # Check if cached results exist
         cache_path = self._get_metrics_cache_path(query_id)
         if os.path.exists(cache_path):
             try:
                 with open(cache_path, 'r') as f:
                     cached_results = json.load(f)
                     logger.debug(f"Loaded cached metrics for query {query_id}")
-                    
-                    # Update reranking cost metrics if using reranker
                     if self.use_reranker and "tokens_reranked" in cached_results:
                         self.total_tokens_reranked += cached_results["tokens_reranked"]
                         self.total_reranking_cost += (cached_results["tokens_reranked"] / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
                     
                     return cached_results["mrr"], cached_results["ndcg"]
             except Exception as e:
-                logger.warning(f"Failed to load cached metrics for query {query_id}: {e}")
-        
-        # If not cached or cache loading failed, calculate metrics
-        relevant_docs = self.qrels[query_id]  # Now this is a set of relevant document IDs
+                logger.warning(f"Failed to load cached metrics for query {query_id}: {e}")       
+        relevant_docs = self.qrels[query_id]
         all_doc_ids = list(self.corpus_embeddings.keys())
-        
         query_norm = np.linalg.norm(query_embedding)
         query_embedding = query_embedding / query_norm if query_norm > 0 else query_embedding
         
@@ -250,46 +240,28 @@ class EmbeddingEvaluator:
         if self.use_reranker:
             docs_to_rerank = [self.corpus[doc_id] for _, doc_id in initial_ranking]
             doc_id_map = {doc: doc_id for doc, (_, doc_id) in zip(docs_to_rerank, initial_ranking)}
-            
             reranking = self.vo.rerank(
                 self.queries[query_id],
                 docs_to_rerank,
                 model="rerank-2",
                 top_k=self.k
             )
-
             tokens_reranked = reranking.total_tokens
-            
             self.total_tokens_reranked += tokens_reranked
             self.total_reranking_cost += (tokens_reranked / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
-            
-            # Extract doc_ids in order of relevance scores
             ranking = [doc_id_map[result.document] for result in reranking.results]
         else:
             ranking = [doc_id for _, doc_id in initial_ranking[:self.k]]
-
-        # Calculate MRR@k
         mrr = 0
         for rank, doc_id in enumerate(ranking):
             if doc_id in relevant_docs:
                 mrr = 1.0 / (rank + 1)
                 break
 
-        # Calculate NDCG@k using the proper implementation from comments
-        def compute_dcg_at_k(relevances, k):
-            dcg = 0
-            for i in range(min(len(relevances), k)):
-                dcg += relevances[i] / np.log2(i + 2)  # +2 as we start our idx at 0
-            return dcg
-
-        # Create relevance arrays for predicted and ideal rankings
         predicted_relevance = [1 if doc_id in relevant_docs else 0 for doc_id in ranking[:self.k]]
         true_relevances = [1] * len(relevant_docs)
-        
-        # Calculate NDCG using the helper function
         dcg = compute_dcg_at_k(predicted_relevance, self.k)
         idcg = compute_dcg_at_k(true_relevances, min(self.k, len(relevant_docs)))
-        
         ndcg = dcg / idcg if idcg > 0 else 0
         cache_data = {
             "mrr": mrr,
@@ -300,7 +272,7 @@ class EmbeddingEvaluator:
             "k": self.k,
             "use_reranker": self.use_reranker,
             "initial_k": self.initial_k,
-            "ranking": ranking[:self.k],  # Save top-k rankings
+            "ranking": ranking[:self.k],
             "relevant_docs": list(relevant_docs)
         }
         

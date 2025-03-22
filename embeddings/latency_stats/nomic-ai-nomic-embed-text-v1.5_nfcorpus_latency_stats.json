@@ -2,8 +2,9 @@
   "dataset": "nfcorpus",
   "model": "nomic-ai/nomic-embed-text-v1.5",
   "batch_size": 512,
+  "concurrency": 5,
   "max_seq_length": 8192,
-  "total_duration_seconds": 14.994804382324219,
-  "total_tokens": 1006020,
-  "tokens_per_second": 67091.2386950436
+  "total_duration_seconds": 9.130000829696655,
+  "total_tokens": 1017832,
+  "tokens_per_second": 111482.13663785806
 }

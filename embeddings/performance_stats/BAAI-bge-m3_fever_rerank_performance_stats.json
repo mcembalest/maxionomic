@@ -1,0 +1,13 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.9306666666666666,
+    "NDCG@10": 0.9317360508163897,
+    "total_reranking_cost": 0.07393624999999997,
+    "total_tokens_reranked": 1478725
+  }
+}

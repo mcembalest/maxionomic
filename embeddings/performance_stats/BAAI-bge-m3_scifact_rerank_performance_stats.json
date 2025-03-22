@@ -1,0 +1,13 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "scifact",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.7747222222222221,
+    "NDCG@10": 0.79276505892286,
+    "total_reranking_cost": 0.08382459999999999,
+    "total_tokens_reranked": 1676492
+  }
+}

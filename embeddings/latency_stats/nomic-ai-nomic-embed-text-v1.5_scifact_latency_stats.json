@@ -1,9 +1,10 @@
 {
   "dataset": "scifact",
   "model": "nomic-ai/nomic-embed-text-v1.5",
-  "batch_size": 512,
+  "batch_size": 16,
+  "concurrency": 128,
   "max_seq_length": 8192,
-  "total_duration_seconds": 14.927712678909302,
-  "total_tokens": 945652,
-  "tokens_per_second": 63348.7541152952
+  "total_duration_seconds": 7.668327808380127,
+  "total_tokens": 957328,
+  "tokens_per_second": 124841.82000589617
 }

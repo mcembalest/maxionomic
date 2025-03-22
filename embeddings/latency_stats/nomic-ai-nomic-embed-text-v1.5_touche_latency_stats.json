@@ -1,9 +1,10 @@
 {
   "dataset": "touche",
   "model": "nomic-ai/nomic-embed-text-v1.5",
-  "batch_size": 512,
+  "batch_size": 16,
+  "concurrency": 128,
   "max_seq_length": 8192,
-  "total_duration_seconds": 44.81672811508179,
-  "total_tokens": 2688027,
-  "tokens_per_second": 59978.207090388234
+  "total_duration_seconds": 22.019232034683228,
+  "total_tokens": 2711003,
+  "tokens_per_second": 123119.77982382894
 }

@@ -1,0 +1,10 @@
+{
+  "dataset": "nq",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 8.092663049697876,
+  "total_tokens": 653289,
+  "tokens_per_second": 80726.08435419652
+}

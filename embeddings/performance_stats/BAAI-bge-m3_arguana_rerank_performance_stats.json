@@ -1,0 +1,13 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "arguana",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.5713571428571428,
+    "NDCG@10": 0.6903404069231691,
+    "total_reranking_cost": 0.11844145000000002,
+    "total_tokens_reranked": 2368829
+  }
+}

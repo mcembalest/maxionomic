@@ -1,0 +1,11 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "nfcorpus",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.5078888888888887,
+    "NDCG@10": 0.3266940949462404
+  }
+}

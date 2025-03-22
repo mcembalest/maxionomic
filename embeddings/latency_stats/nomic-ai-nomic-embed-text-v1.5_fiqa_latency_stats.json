@@ -1,9 +1,10 @@
 {
   "dataset": "fiqa",
   "model": "nomic-ai/nomic-embed-text-v1.5",
-  "batch_size": 512,
+  "batch_size": 16,
+  "concurrency": 128,
   "max_seq_length": 8192,
-  "total_duration_seconds": 16.674393892288208,
-  "total_tokens": 943837,
-  "tokens_per_second": 56603.97649815134
+  "total_duration_seconds": 7.503989934921265,
+  "total_tokens": 962121,
+  "tokens_per_second": 128214.59095015364
 }

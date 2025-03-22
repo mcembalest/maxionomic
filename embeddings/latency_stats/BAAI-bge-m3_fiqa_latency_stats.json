@@ -1,0 +1,10 @@
+{
+  "dataset": "fiqa",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 12.502233028411865,
+  "total_tokens": 1001706,
+  "tokens_per_second": 80122.1667940103
+}

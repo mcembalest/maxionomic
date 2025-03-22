@@ -46,57 +46,54 @@ def format_cost(x, p):
         return f'$0'
     
 def get_latency_file(model, dataset):
-    model_to_latency_file = {
-        'nomic-embed-text-v1.5': f'nomic-ai-nomic-embed-text-v1.5_{dataset}_latency_stats.json',
-        'voyage-3-large': f'voyageai-voyage-3-large_{dataset}_latency_stats.json',
-        'voyage-3': f'voyageai-voyage-3_{dataset}_latency_stats.json',
-        'voyage-3-lite': f'voyageai-voyage-3-lite_{dataset}_latency_stats.json'
-    }
-    return'latency_stats/'+model_to_latency_file[model]
+    return f'latency_stats/{get_model_prefix(model)}_{dataset}_latency_stats.json'
 
 def get_performance_file(model, dataset, rerank_key):
-    model_to_performance_file = {
-        'nomic-embed-text-v1.5': {
-            'default': f'nomic-ai-nomic-embed-text-v1.5_{dataset}_performance_stats.json',
-            'rerank': f'nomic-ai-nomic-embed-text-v1.5_{dataset}_rerank_performance_stats.json'
-        },
-        'voyage-3-large': {
-            'default': f'voyageai-voyage-3-large_{dataset}_performance_stats.json',
-            'rerank': f'voyageai-voyage-3-large_{dataset}_rerank_performance_stats.json'
-        },
-        'voyage-3': {
-            'default': f'voyageai-voyage-3_{dataset}_performance_stats.json',
-            'rerank': f'voyageai-voyage-3_{dataset}_rerank_performance_stats.json'
-        },
-        'voyage-3-lite': {
-            'default': f'voyageai-voyage-3-lite_{dataset}_performance_stats.json',
-            'rerank': f'voyageai-voyage-3-lite_{dataset}_rerank_performance_stats.json'
-        }
-    }
-    return 'performance_stats/'+model_to_performance_file[model][rerank_key]
+    rerank_part = "rerank_" if rerank_key == "rerank" else ""
+    return f'performance_stats/{get_model_prefix(model)}_{dataset}_{rerank_part}performance_stats.json'
 
-model_names = ['nomic-embed-text-v1.5', 'voyage-3-large', 'voyage-3', 'voyage-3-lite']
+def get_model_prefix(model):
+    prefixes = {
+        'nomic-embed-text-v1.5': 'nomic-ai-nomic-embed-text-v1.5',
+        'voyage-3-large': 'voyageai-voyage-3-large',
+        'voyage-3': 'voyageai-voyage-3',
+        'voyage-3-lite': 'voyageai-voyage-3-lite',
+        'e5-mistral-7b-instruct': 'intfloat-e5-mistral-7b-instruct',
+        'bge-m3': 'BAAI-bge-m3'
+    }
+    return prefixes[model]
+
+model_names = [
+    'nomic-embed-text-v1.5', 
+    'voyage-3-large', 
+    'voyage-3', 
+    'voyage-3-lite', 
+    # 'e5-mistral-7b-instruct',
+    'bge-m3'
+]
 model_colors = {
     'nomic-embed-text-v1.5': '#179266', 
     'voyage-3-large': '#B80505',
     'voyage-3': '#E72727',
     'voyage-3-lite': '#FA8989',
-    'e5-mistral-7b-instruct': '#FFC700'
+    'e5-mistral-7b-instruct': '#FFC700',
+    'bge-m3': '#FCBD88'
 }
 
-def load_data(datasets, metric):
+def load_data(datasets, metric, cost_per_million=False):
     """Load data for one or multiple datasets and return plot_data"""
-    all_results = defaultdict(lambda: {'costs': [], 'metrics': [], 'total_cost': 0})
-    
-    # Handle single dataset case
+    all_results = defaultdict(lambda: {
+        'costs': [], 
+        'metrics': [], 
+        'total_cost': 0,
+        'total_tokens': 0,
+        'total_duration': 0
+    })    
     if isinstance(datasets, str):
-        datasets = [datasets]
-        
+        datasets = [datasets]   
     for dataset in datasets:
         latency_stats = {}
         performance_stats = {}
-        
-        # Load latency stats
         for model_name in model_names:
             file_path = get_latency_file(model_name, dataset)
             if os.path.exists(file_path):
@@ -107,10 +104,7 @@ def load_data(datasets, metric):
                         'total_tokens': data['total_tokens'],
                         'total_duration_seconds': data['total_duration_seconds']
                     }
-
-        # Load performance stats (default and rerank)
         for model_name in model_names:
-            # Default (no reranker) stats
             default_file_path = get_performance_file(model_name, dataset, 'default')
             if os.path.exists(default_file_path):
                 with open(default_file_path, 'r') as f:
@@ -122,8 +116,6 @@ def load_data(datasets, metric):
                     }
             else:
                 print(f"Warning: Performance file not found: {default_file_path}")
-                
-            # Reranker stats
             rerank_file_path = get_performance_file(model_name, dataset, 'rerank')
             if os.path.exists(rerank_file_path):
                 with open(rerank_file_path, 'r') as f:
@@ -137,67 +129,83 @@ def load_data(datasets, metric):
                     }
             else:
                 print(f"Warning: Rerank performance file not found: {rerank_file_path}")
-
-        # Calculate costs for each model/variant
         for model, data in performance_stats.items():
             base_model_name = model.replace("-rerank", "")
             if base_model_name not in latency_stats:
                 print(f"Warning: No latency data for {base_model_name}, skipping...")
                 continue
-                
-            # Calculate embedding cost based on model type
+            total_tokens = latency_stats[base_model_name]['total_tokens']
+            processing_time = latency_stats[base_model_name]['total_duration_seconds']
             if 'voyage' in base_model_name.lower():
-                # For Voyage models, use API costs based on token usage
-                total_tokens = latency_stats[base_model_name]['total_tokens']
                 if 'large' in base_model_name.lower():
                     embedding_cost = (total_tokens / 1_000_000) * VOYAGE_3_LARGE_COST_PER_MILLION_TOKENS
+                    cost_per_million_tokens = VOYAGE_3_LARGE_COST_PER_MILLION_TOKENS
                 elif 'lite' in base_model_name.lower():
                     embedding_cost = (total_tokens / 1_000_000) * VOYAGE_3_LITE_COST_PER_MILLION_TOKENS
+                    cost_per_million_tokens = VOYAGE_3_LITE_COST_PER_MILLION_TOKENS
                 else:
                     embedding_cost = (total_tokens / 1_000_000) * VOYAGE_3_COST_PER_MILLION_TOKENS
+                    cost_per_million_tokens = VOYAGE_3_COST_PER_MILLION_TOKENS
             else:
-                # For Nomic models, use compute costs
-                processing_time = latency_stats[base_model_name]['total_duration_seconds']
                 embedding_cost = processing_time * EC2_COST_PER_SECOND
-            
-            # Add reranking cost if applicable
+                cost_per_million_tokens = (processing_time * EC2_COST_PER_SECOND) / (total_tokens / 1_000_000)
             total_cost = embedding_cost
+            reranking_tokens = 0
             if data['use_reranker']:
                 reranking_tokens = data.get('total_tokens_reranked', 0)
                 reranking_cost = (reranking_tokens / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
-                total_cost += reranking_cost
-            
-            # Store results for single dataset or average calculation
-            if len(datasets) == 1:  # Single dataset
-                key = f"{base_model_name}_{data['use_reranker']}"
+                total_cost += reranking_cost                
+                if cost_per_million:
+                    cost_per_million_tokens += VOYAGE_RERANK_COST_PER_MILLION_TOKENS
+            cost_to_use = cost_per_million_tokens if cost_per_million else total_cost           
+            key = f"{base_model_name}_{data['use_reranker']}"
+            if len(datasets) == 1: 
                 all_results[key] = {
                     'model': base_model_name,
                     metric: data[metric],
-                    'cost': total_cost,
+                    'cost': cost_to_use,
                     'use_reranker': data['use_reranker']
                 }
-            else:  # Multiple datasets for averaging
-                key = f"{base_model_name}_{data['use_reranker']}"
-                all_results[key]['costs'].append(total_cost)
+            else:
+                all_results[key]['costs'].append(cost_to_use if cost_per_million else 0)
                 all_results[key]['metrics'].append(data[metric])
                 all_results[key]['total_cost'] += total_cost
+                all_results[key]['total_tokens'] += total_tokens
+                all_results[key]['total_duration'] += processing_time
+                if data['use_reranker']:
+                    all_results[key]['total_reranking_tokens'] = all_results[key].get('total_reranking_tokens', 0) + reranking_tokens
                 all_results[key]['model'] = base_model_name
                 all_results[key]['use_reranker'] = data['use_reranker']
-
-    # Convert results to plot data format
     plot_data = []
-    if len(datasets) == 1:  # Single dataset mode
+    if len(datasets) == 1:
         plot_data = list(all_results.values())
-    else:  # Average mode
+    else: 
         for key, stats in all_results.items():
             if len(stats['metrics']) > 0:
+                if cost_per_million:
+                    if 'voyage' in stats['model'].lower():
+                        if 'large' in stats['model'].lower():
+                            cost_per_million_val = VOYAGE_3_LARGE_COST_PER_MILLION_TOKENS
+                        elif 'lite' in stats['model'].lower():
+                            cost_per_million_val = VOYAGE_3_LITE_COST_PER_MILLION_TOKENS
+                        else:
+                            cost_per_million_val = VOYAGE_3_COST_PER_MILLION_TOKENS                        
+                        if stats['use_reranker']:
+                            cost_per_million_val += VOYAGE_RERANK_COST_PER_MILLION_TOKENS
+                    else:
+                        total_compute_cost = stats['total_duration'] * EC2_COST_PER_SECOND
+                        cost_per_million_val = total_compute_cost / (stats['total_tokens'] / 1_000_000)
+                        if stats['use_reranker'] and 'total_reranking_tokens' in stats:
+                            cost_per_million_val += VOYAGE_RERANK_COST_PER_MILLION_TOKENS                   
+                    avg_cost = cost_per_million_val
+                else:
+                    avg_cost = stats['total_cost']                    
                 plot_data.append({
                     'model': stats['model'],
-                    metric: sum(stats['metrics']) / len(stats['metrics']),  # Average metric
-                    'cost': stats['total_cost'],  # Total cost across all datasets
+                    metric: sum(stats['metrics']) / len(stats['metrics']),
+                    'cost': avg_cost,
                     'use_reranker': stats['use_reranker']
                 })
-
     return plot_data
 
 def create_plot(plot_data, title, metric, filename, x_axis_log, cost_label="Estimated Cost ($)"):
@@ -209,18 +217,14 @@ def create_plot(plot_data, title, metric, filename, x_axis_log, cost_label="Esti
     ax.grid(True, which='minor', linestyle=':', alpha=0.1)
     ax.minorticks_on()
 
-    markers = {False: 'o', True: '^'}
+    rerank_indicators = {False: 'o', True: '^'}
     model_points = {}
-    
-    # Group by model
     for entry in plot_data:
         if entry['model'] not in model_points:
             model_points[entry['model']] = []
         model_points[entry['model']].append(entry)
-    
-    # Draw connecting lines between regular and reranked versions
     for model, points in model_points.items():
-        if len(points) == 2:  # Only if we have both regular and reranked
+        if len(points) == 2:
             points.sort(key=lambda x: x['use_reranker'])
             plt.plot(
                 [p['cost'] for p in points],
@@ -235,33 +239,25 @@ def create_plot(plot_data, title, metric, filename, x_axis_log, cost_label="Esti
         else:
             print(f"Warning: Unexpected number of points ({len(points)}) for {model}")
 
-    # Plot points with proper legend entries
     legend_handles = []
-    
     for entry in plot_data:
         x = entry['cost']
         y = entry[metric]
-        
-        # Create label for legend
         rerank_suffix = ' + rerank' if entry['use_reranker'] else ''
         label = f"{entry['model']}{rerank_suffix}"
-        
-        # Plot point
         point = plt.scatter(
             x, y,
             c=model_colors[entry['model']],
-            marker=markers[entry['use_reranker']],
-            s=150,
+            marker=rerank_indicators[entry['use_reranker']],
+            s=50,
             label=label,
             zorder=2
         )
         legend_handles.append(point)
 
-    # Set left x-limit to 0 while preserving right limit
     if not x_axis_log:
         _, x_max = plt.xlim()
         plt.xlim(0, x_max)
-
         plt.xlabel(cost_label, fontsize=12, labelpad=10)
     else:
         plt.xlabel("log cost", fontsize=12, labelpad=10)
@@ -271,8 +267,6 @@ def create_plot(plot_data, title, metric, filename, x_axis_log, cost_label="Esti
           fontweight='bold', 
           fontfamily='Crimson Pro',
           pad=20)
-    
-    # Add legend with good formatting
     plt.legend(
         handles=legend_handles,
         loc='best',
@@ -282,21 +276,14 @@ def create_plot(plot_data, title, metric, filename, x_axis_log, cost_label="Esti
         facecolor='white',
         bbox_to_anchor=(1.02, 1),
     )
-    
-    # Ensure directory exists
     os.makedirs('plots', exist_ok=True)
-    
     plt.gcf().patch.set_linewidth(2)
     plt.gcf().patch.set_edgecolor('#0D4A34')
-
     if x_axis_log:
         plt.xscale('log', base=10)
-        # Add grid lines for log scale
         plt.grid(True, which="both", ls="-", alpha=0.2)
-        # Format x-axis tick labels to be more readable
         plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"${x:.2f}"))
         filename = filename.replace("plots/", "plots/log_")
-
     plt.tight_layout()
     plt.savefig(filename, bbox_inches='tight', dpi=300, facecolor='#FEFBF6')
     plt.close()
@@ -308,33 +295,36 @@ def main():
     parser.add_argument('--average', action='store_true', help='Plot average metrics across all datasets')
     parser.add_argument('--all', action='store_true', help='Plot all datasets')
     parser.add_argument('--log_x', action='store_true', help='Make X axis logarithmic')
+    parser.add_argument('--cost_per_million', action='store_true', help='Plot cost per million tokens instead of total cost')
 
     args = parser.parse_args()
+    cost_label = "Cost per Million Tokens ($)" if args.cost_per_million else "Estimated Cost ($)"
+    avg_cost_label = "Cost per Million Tokens ($)" if args.cost_per_million else "Total Cost Across All Datasets ($)"
     if args.all:
         datasets = list(DATASET_PATHS.keys())
         for dataset in datasets:
             print(f"Creating plot for dataset: {dataset} with metric: {args.metric}")
-            plot_data = load_data(dataset, args.metric)
-            title = f'Performance vs Cost on Nano{dataset.upper()}'
-            filename = f'plots/performance_vs_cost_{dataset}_{args.metric}.png'
-            create_plot(plot_data, title, args.metric, filename, args.log_x)
+            plot_data = load_data(dataset, args.metric, args.cost_per_million)
+            title = f'Performance vs {cost_label.replace(" ($)", "")} on Nano{dataset.upper()}'
+            filename = f'plots/{"cost_per_million" if args.cost_per_million else "performance_vs_cost"}_{dataset}_{args.metric}.png'
+            create_plot(plot_data, title, args.metric, filename, args.log_x, cost_label=cost_label)
         print(f"Creating average plot for metric: {args.metric}")
-        plot_data = load_data(list(DATASET_PATHS.keys()), args.metric)
-        title = f'Average NanoBEIR Performance vs Cost'
-        filename = f'plots/average_performance_vs_cost_{args.metric}.png'
-        create_plot(plot_data, title, args.metric, filename, args.log_x, cost_label="Total Cost Across All Datasets ($)")
+        plot_data = load_data(list(DATASET_PATHS.keys()), args.metric, args.cost_per_million)
+        title = f'Average NanoBEIR Performance vs {cost_label.replace(" ($)", "")}'
+        filename = f'plots/average_{"cost_per_million" if args.cost_per_million else "performance_vs_cost"}_{args.metric}.png'
+        create_plot(plot_data, title, args.metric, filename, args.log_x, cost_label=avg_cost_label)
     elif args.average:
         print(f"Creating average plot for metric: {args.metric}")
-        plot_data = load_data(list(DATASET_PATHS.keys()), args.metric)
-        title = f'Average NanoBEIR Performance vs Cost'
-        filename = f'plots/average_performance_vs_cost_{args.metric}.png'
-        create_plot(plot_data, title, args.metric, filename, args.log_x, cost_label="Total Cost Across All Datasets ($)")
+        plot_data = load_data(list(DATASET_PATHS.keys()), args.metric, args.cost_per_million)
+        title = f'Average NanoBEIR Performance vs {cost_label.replace(" ($)", "")}'
+        filename = f'plots/average_{"cost_per_million" if args.cost_per_million else "performance_vs_cost"}_{args.metric}.png'
+        create_plot(plot_data, title, args.metric, filename, args.log_x, cost_label=avg_cost_label)
     else:
         print(f"Creating plot for dataset: {args.dataset} with metric: {args.metric}")
-        plot_data = load_data(args.dataset)
-        title = f'Performance vs Cost on Nano{args.dataset.upper()}'
-        filename = f'plots/performance_vs_cost_{args.dataset}_{args.metric}.png'
-        create_plot(plot_data, title, args.metric, filename, args.log_x)
+        plot_data = load_data(args.dataset, args.metric, args.cost_per_million)
+        title = f'Performance vs {cost_label.replace(" ($)", "")} on Nano{args.dataset.upper()}'
+        filename = f'plots/{"cost_per_million" if args.cost_per_million else "performance_vs_cost"}_{args.dataset}_{args.metric}.png'
+        create_plot(plot_data, title, args.metric, filename, args.log_x, cost_label=cost_label)
 
 if __name__ == "__main__":
     main()

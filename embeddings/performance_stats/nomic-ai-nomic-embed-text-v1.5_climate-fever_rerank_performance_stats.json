@@ -7,7 +7,7 @@
   "metrics": {
     "MRR@10": 0.470404761904762,
     "NDCG@10": 0.35023440335803135,
-    "total_reranking_cost": 0.10471040000000002,
-    "total_tokens_reranked": 2094208
+    "total_reranking_cost": 0.10471690000000002,
+    "total_tokens_reranked": 2094338
   }
 }

@@ -1,0 +1,10 @@
+{
+  "dataset": "arguana",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 10.170521974563599,
+  "total_tokens": 822565,
+  "tokens_per_second": 80877.36323241118
+}

@@ -2,8 +2,9 @@
   "dataset": "msmarco",
   "model": "nomic-ai/nomic-embed-text-v1.5",
   "batch_size": 512,
+  "concurrency": 5,
   "max_seq_length": 8192,
-  "total_duration_seconds": 12.878039121627808,
-  "total_tokens": 374211,
-  "tokens_per_second": 29058.072930648083
+  "total_duration_seconds": 3.497300148010254,
+  "total_tokens": 394383,
+  "tokens_per_second": 112767.84471140671
 }

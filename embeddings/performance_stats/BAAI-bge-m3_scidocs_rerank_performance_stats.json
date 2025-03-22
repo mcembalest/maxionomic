@@ -1,0 +1,13 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.6161904761904761,
+    "NDCG@10": 0.3793963026058968,
+    "total_reranking_cost": 0.05561595000000001,
+    "total_tokens_reranked": 1112319
+  }
+}
