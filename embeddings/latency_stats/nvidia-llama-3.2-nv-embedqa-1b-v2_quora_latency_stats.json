@@ -1,0 +1,12 @@
+{
+  "dataset": "quora",
+  "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+  "batch_size": 512,
+  "concurrency": 5,
+  "max_seq_length": 8192,
+  "total_documents": 5046,
+  "total_duration_seconds": 39.8586,
+  "total_tokens": 67689,
+  "tokens_per_second": 1698.23,
+  "error": null
+}

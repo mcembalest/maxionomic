@@ -1,0 +1,12 @@
+{
+  "dataset": "scifact",
+  "model": "nvidia/NV-Embed-v2",
+  "batch_size": 8,
+  "concurrency": 1,
+  "max_seq_length": 8192,
+  "total_documents": 2919,
+  "total_duration_seconds": 208.0298,
+  "total_tokens": 1073986,
+  "tokens_per_second": 5162.66,
+  "error": null
+}

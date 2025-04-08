@@ -11,7 +11,13 @@ fm.fontManager.addfont("/Library/Fonts/CrimsonPro-VariableFont_wght.ttf")
 from corpus_embedding import DATASET_PATHS
 
 COLORS = ['#0D4A34', '#E5B300', '#0D4A34', '#179266', '#FA8989']
-EC2_COST_PER_SECOND = 5.67 / 3600  # $5.67 per hour (G5.12xlarge cost) converted to per second
+G5_12XLARGE_EC2_COST_PER_SECOND = 5.67 / 3600  # $5.67 per hour (G5.12xlarge cost) converted to per second
+G6E_8XLARGE_EC2_COST_PER_SECOND = 4.53 / 3600  # $5.67 per hour (G5.12xlarge cost) converted to per second
+
+def model_to_ec2_cost(model_name):
+    if "NV-Embed-v2" in model_name: return G6E_8XLARGE_EC2_COST_PER_SECOND
+    return G5_12XLARGE_EC2_COST_PER_SECOND
+
 
 VOYAGE_RERANK_COST_PER_MILLION_TOKENS = 0.05
 VOYAGE_3_LARGE_COST_PER_MILLION_TOKENS = 0.18
@@ -59,7 +65,9 @@ def get_model_prefix(model):
         'voyage-3': 'voyageai-voyage-3',
         'voyage-3-lite': 'voyageai-voyage-3-lite',
         'e5-mistral-7b-instruct': 'intfloat-e5-mistral-7b-instruct',
-        'bge-m3': 'BAAI-bge-m3'
+        'bge-m3': 'BAAI-bge-m3',
+        'NV-Embed-v2': 'nvidia-NV-Embed-v2',
+        'llama-3.2-nv-embedqa-1b-v2': 'nvidia-llama-3.2-nv-embedqa-1b-v2'
     }
     return prefixes[model]
 
@@ -69,7 +77,9 @@ model_names = [
     'voyage-3', 
     'voyage-3-lite', 
     # 'e5-mistral-7b-instruct',
-    'bge-m3'
+    'bge-m3',
+    'NV-Embed-v2',
+    'llama-3.2-nv-embedqa-1b-v2'
 ]
 model_colors = {
     'nomic-embed-text-v1.5': '#179266', 
@@ -77,7 +87,9 @@ model_colors = {
     'voyage-3': '#E72727',
     'voyage-3-lite': '#FA8989',
     'e5-mistral-7b-instruct': '#FFC700',
-    'bge-m3': '#FCBD88'
+    'bge-m3': '#FCBD88',
+    'NV-Embed-v2': '#04281B',
+    'llama-3.2-nv-embedqa-1b-v2': '#FEDF72'
 }
 
 def load_data(datasets, metric, cost_per_million=False):
@@ -147,8 +159,8 @@ def load_data(datasets, metric, cost_per_million=False):
                     embedding_cost = (total_tokens / 1_000_000) * VOYAGE_3_COST_PER_MILLION_TOKENS
                     cost_per_million_tokens = VOYAGE_3_COST_PER_MILLION_TOKENS
             else:
-                embedding_cost = processing_time * EC2_COST_PER_SECOND
-                cost_per_million_tokens = (processing_time * EC2_COST_PER_SECOND) / (total_tokens / 1_000_000)
+                embedding_cost = processing_time * model_to_ec2_cost(model)
+                cost_per_million_tokens = (processing_time * model_to_ec2_cost(model)) / (total_tokens / 1_000_000)
             total_cost = embedding_cost
             reranking_tokens = 0
             if data['use_reranker']:
@@ -193,7 +205,7 @@ def load_data(datasets, metric, cost_per_million=False):
                         if stats['use_reranker']:
                             cost_per_million_val += VOYAGE_RERANK_COST_PER_MILLION_TOKENS
                     else:
-                        total_compute_cost = stats['total_duration'] * EC2_COST_PER_SECOND
+                        total_compute_cost = stats['total_duration'] * model_to_ec2_cost(stats['model'])
                         cost_per_million_val = total_compute_cost / (stats['total_tokens'] / 1_000_000)
                         if stats['use_reranker'] and 'total_reranking_tokens' in stats:
                             cost_per_million_val += VOYAGE_RERANK_COST_PER_MILLION_TOKENS                   

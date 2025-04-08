@@ -1,0 +1,12 @@
+{
+  "dataset": "scifact",
+  "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+  "batch_size": 512,
+  "concurrency": 5,
+  "max_seq_length": 8192,
+  "total_documents": 2919,
+  "total_duration_seconds": 39.4802,
+  "total_tokens": 898408,
+  "tokens_per_second": 22755.9,
+  "error": null
+}

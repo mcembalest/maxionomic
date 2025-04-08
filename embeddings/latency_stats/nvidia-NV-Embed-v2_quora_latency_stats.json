@@ -1,0 +1,12 @@
+{
+  "dataset": "quora",
+  "model": "nvidia/NV-Embed-v2",
+  "batch_size": 8,
+  "concurrency": 1,
+  "max_seq_length": 8192,
+  "total_documents": 5046,
+  "total_duration_seconds": 34.9725,
+  "total_tokens": 77912,
+  "tokens_per_second": 2227.8,
+  "error": null
+}

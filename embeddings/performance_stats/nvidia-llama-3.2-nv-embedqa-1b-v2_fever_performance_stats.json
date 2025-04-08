@@ -1,0 +1,12 @@
+{
+  "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+  "dataset": "fever",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "use_sentence_transformer": false,
+  "metrics": {
+    "MRR@10": 0.98,
+    "NDCG@10": 0.97413122658984
+  }
+}

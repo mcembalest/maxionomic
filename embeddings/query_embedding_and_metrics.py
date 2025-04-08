@@ -10,27 +10,34 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 import requests
 import voyageai
+from openai import OpenAI
+from sentence_transformers import SentenceTransformer
 
 
 from corpus_embedding import DATASET_PATHS
 
 VOYAGE_RERANK_COST_PER_MILLION_TOKENS = 0.05
 
-e5_mistral_prompt_dict = {
-    "arguana": "Given a claim, find documents that refute the claim: ",
-    "climate-fever": "Given a claim about climate change, retrieve documents that support or refute the claim: ",
-    "dbpedia": "Given a query, retrieve relevant entity descriptions from DBPedia: ",
-    "fever": "Given a claim, retrieve documents that support or refute the claim: ",
-    "fiqa": "Given a financial question, retrieve user replies that best answer the question: ",
-    "hotpot": "Given a multi-hop question, retrieve documents that can help answer the question: ",
-    "msmarco": "Given a web search query, retrieve relevant passages that answer the query: ",
-    "nfcorpus": "Given a question, retrieve relevant documents that best answer the question: ",
-    "nq": "Given a question, retrieve Wikipedia passages that answer the question: ",
-    "quora": "Given a question, retrieve questions that are semantically equivalent to the given question: ",
-    "scidocs": "Given a scientific paper title, retrieve paper abstracts that are cited by the given paper: ",
-    "scifact": "Given a scientific claim, retrieve documents that support or refute the claim: ",
-    "touche": "Given a question, retrieve detailed and persuasive arguments that answer the question: ",
+prompt_dict = {
+    "arguana": "Instruct: Given a claim, find documents that refute the claim\nQuery: ",
+    "climate-fever": "Instruct: Given a claim about climate change, retrieve documents that support or refute the claim\nQuery: ",
+    "dbpedia": "Instruct: Given a query, retrieve relevant entity descriptions from DBPedia\nQuery: ",
+    "fever": "Instruct: Given a claim, retrieve documents that support or refute the claim\nQuery: ",
+    "fiqa": "Instruct: Given a financial question, retrieve user replies that best answer the question\nQuery: ",
+    "hotpot": "Instruct: Given a multi-hop question, retrieve documents that can help answer the question\nQuery: ",
+    "msmarco": "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery: ",
+    "nfcorpus": "Instruct: Given a question, retrieve relevant documents that best answer the question\nQuery: ",
+    "nq": "Instruct: Given a question, retrieve Wikipedia passages that answer the question\nQuery: ",
+    "quora": "Instruct: Given a question, retrieve questions that are semantically equivalent to the given question\nQuery: ",
+    "scidocs": "Instruct: Given a scientific paper title, retrieve paper abstracts that are cited by the given paper\nQuery: ",
+    "scifact": "Instruct: Given a scientific claim, retrieve documents that support or refute the claim\nQuery: ",
+    "touche": "Instruct: Given a question, retrieve detailed and persuasive arguments that answer the question\nQuery: ",
 }
+
+def add_eos(input_examples, eos_token):
+  input_examples = [input_example + eos_token for input_example in input_examples]
+  return input_examples
+
 
 def compute_dcg_at_k(relevances, k):
     dcg = 0
@@ -39,7 +46,7 @@ def compute_dcg_at_k(relevances, k):
     return dcg
 
 class EmbeddingEvaluator:
-    def __init__(self, model_name, dataset_name, endpoint="", k=10, use_reranker=False, initial_k=100):
+    def __init__(self, model_name, dataset_name, endpoint="", k=10, use_reranker=False, initial_k=100, use_st=False, st_model=None):
         """Initialize the embedding evaluator"""
         self.model_name = model_name
         self.dataset_name = dataset_name
@@ -48,24 +55,78 @@ class EmbeddingEvaluator:
         self.k = k
         self.use_reranker = use_reranker
         self.initial_k = initial_k if use_reranker else k
+        self.use_sentence_transformer = use_st
+        self.st_model = st_model  # Store pre-loaded ST model
+        
+        # Determine query prefix based on model and dataset
         if "nomic" in model_name:
             self.query_prefix="search_query: "
         elif "e5-mistral" in model_name:
-            self.query_prefix = e5_mistral_prompt_dict[dataset_name]
+            self.query_prefix = prompt_dict.get(dataset_name, "")
+            if not self.query_prefix:
+                logger.warning(f"Dataset {dataset_name} not found in e5_prompt_dict. Using empty query prefix.")
+        elif "NV-Embed-v2" in model_name:
+            self.query_prefix = prompt_dict.get(dataset_name, "")
+            logger.info(f"FOUND QUERY PREFIX: {self.query_prefix}")
+            if not self.query_prefix:
+                logger.warning(f"Dataset {dataset_name} not found in nv_prompt_dict. Using empty query prefix.")
         else:
             self.query_prefix = ""
         
         self.total_reranking_cost = 0.0
         self.total_tokens_reranked = 0
         
+        # Initialize clients/APIs as needed
         self.use_voyage = "voyage" in model_name.lower()
+        self.use_nvidia_api = "nvidia/llama-3.2-nv-embedqa-1b-v2" in model_name # Specific check for Nvidia API model
+        self.vo = None
+        self.nvidia_client = None
+        
+        # Initialize Voyage client if using Voyage model OR reranker
         voyage_api_key = os.environ.get("VOYAGE_API_KEY", None)
-        if not voyage_api_key and (use_reranker or self.use_voyage):
-            raise ValueError("Voyage API key required for reranking or Voyage models")
         if use_reranker or self.use_voyage:
+            if not voyage_api_key:
+                raise ValueError("Voyage API key (VOYAGE_API_KEY env var) required for reranking or Voyage models")
             voyageai.api_key = voyage_api_key
             self.vo = voyageai.Client()
+            logger.info("Voyage AI client initialized.")
         
+        # Initialize Nvidia client if using the specific Nvidia API model AND NOT using SentenceTransformer locally
+        if self.use_nvidia_api and not self.use_sentence_transformer:
+            if not endpoint:
+                raise ValueError("Endpoint URL required for Nvidia API model when not using SentenceTransformer locally (--use_st)")
+            self.nvidia_client = OpenAI(
+                api_key="not-needed", 
+                base_url=self.endpoint
+            )
+            logger.info(f"Nvidia API client initialized for endpoint: {self.endpoint}")
+        
+        # Initialize SentenceTransformer model parts (tokenizer) only if using ST
+        self.tokenizer = None
+        if self.use_sentence_transformer:
+            if self.st_model:
+                self.tokenizer = self.st_model.tokenizer
+                logger.info("Using pre-loaded SentenceTransformer model and tokenizer.")
+            else:
+                # This case should ideally not happen if main logic is correct,
+                # but signifies an issue if st_model wasn't passed when use_st=True.
+                raise ValueError("use_st is True, but no SentenceTransformer model was provided.")
+        elif self.use_nvidia_api:
+             # If using Nvidia API, might still need a tokenizer for other purposes (e.g. future token counting)
+             # Use the standard one associated with the model if needed elsewhere.
+             try:
+                 # Let's use a default tokenizer for Nvidia API path if needed later
+                 # self.tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B") ? Decide if needed
+                 pass # No tokenizer needed for current Nvidia API embedding logic
+             except Exception as e:
+                 logger.warning(f"Could not load default tokenizer for Nvidia model: {e}")
+        else:
+            # If using a generic endpoint (not ST, not Voyage, not Nvidia API), we might need a tokenizer
+            # if the endpoint doesn't handle prefixing or if we need token counts later.
+            # For now, assume endpoint handles everything if not ST.
+             pass
+        
+        # Load dataset components after initializing clients/models
         self.corpus, self.queries, self.qrels = self._load_dataset()
         self.corpus_embeddings = self._load_cached_embeddings()
         
@@ -161,41 +222,82 @@ class EmbeddingEvaluator:
         """Embed multiple queries at once"""
         cached_embeddings = self._load_cached_query_embeddings()
         if cached_embeddings is not None:
-            return cached_embeddings
+            # Ensure cached embeddings match the requested query IDs
+            if set(cached_embeddings.keys()) == set(query_ids):
+                logger.info("Using cached query embeddings.")
+                return cached_embeddings
+            else:
+                logger.warning("Cached query IDs mismatch requested IDs. Recomputing.")
+
         query_embeddings = {}
+        logger.info(f"Embedding {len(query_texts)} queries using model: {self.model_name}")
+
         try:
-            if self.use_voyage:
+            if self.use_sentence_transformer:
+                if not self.st_model or not self.tokenizer:
+                    raise ValueError("SentenceTransformer model or tokenizer not available.")
+                # Add EOS token if required by the model/tokenizer
+                # texts_to_embed = add_eos(query_texts, self.tokenizer.eos_token)
+                texts_to_embed = query_texts
+                logger.debug(f"Embedding queries with ST. Example: '{texts_to_embed[0][:100]}...'")
+                # Specify query prompt name if applicable for the model
+                embeddings = self.st_model.encode(texts_to_embed, batch_size=len(query_texts), normalize_embeddings=True)
+            elif self.use_voyage:
+                if not self.vo: raise ValueError("Voyage AI client not initialized.")
+                logger.debug("Embedding queries with Voyage API.")
+                # Prefixing is handled by input_type='query'
                 result = self.vo.embed(
-                    query_texts, 
-                    model=self.model_name.replace("voyageai/", ""), 
+                    query_texts,
+                    model=self.model_name.replace("voyageai/", ""),
                     input_type="query"
                 )
                 embeddings = result.embeddings
+            elif self.use_nvidia_api:
+                if not self.nvidia_client: raise ValueError("Nvidia API client not initialized.")
+                logger.debug("Embedding queries with Nvidia API.")
+                # Apply prefix if needed (though input_type='query' might handle it)
+                prefixed_texts = [self.query_prefix + text for text in query_texts]
+                try:
+                    response = self.nvidia_client.embeddings.create(
+                        input=prefixed_texts, # Send prefixed text
+                        model=self.model_name, # Use the actual model name from args
+                        encoding_format="float",
+                        extra_body={"input_type": "query", "truncate": "END"}
+                    )
+                    embeddings = [data.embedding for data in response.data]
+                except Exception as e:
+                    logger.error(f"Nvidia embedding request failed: {str(e)}")
+                    return None # Indicate failure
             else:
-                if "e5-mistral" in self.model_name:
-                    payload = {
-                        "inputs": [
-                            e5_mistral_prompt_dict[self.dataset_name] + x
-                            for x in query_texts
-                        ]
-                    }
-                else:
-                    payload = {"inputs": [self.query_prefix + x for x in query_texts]}
-                response = requests.post( 
+                logger.debug(f"Embedding queries with generic endpoint: {self.endpoint}")
+                if not self.endpoint:
+                    raise ValueError("Endpoint URL required for generic model embedding.")
+
+                prefixed_texts = [self.query_prefix + x for x in query_texts]
+                payload = {"inputs": prefixed_texts, "normalize": True} # Add normalize=True standardly
+                response = requests.post(
                     f"{self.endpoint}/embed",
                     headers=self.headers,
                     json=payload
                 )
-                if response.status_code != 200:
-                    raise Exception(f"Embedding request failed: {response.status_code}")
+                response.raise_for_status() # Raise HTTPError for bad responses (4xx or 5xx)
                 embeddings = response.json()
-            
+                # Ensure response is a list of lists (embeddings)
+                if not isinstance(embeddings, list) or (embeddings and not isinstance(embeddings[0], list)):
+                    raise ValueError(f"Unexpected response format from endpoint: {type(embeddings)}")
+
+            # Check if the number of embeddings matches the number of queries
+            if len(embeddings) != len(query_ids):
+                raise ValueError(f"Mismatch in query count ({len(query_ids)}) and embeddings received ({len(embeddings)}). Check API response.")
+
             query_embeddings = {qid: emb for qid, emb in zip(query_ids, embeddings)}
-            self._save_query_embeddings(query_embeddings)
+            self._save_query_embeddings(query_embeddings) # Save successfully computed embeddings
+            logger.info(f"Successfully embedded {len(query_embeddings)} queries.")
             return query_embeddings
+
         except Exception as e:
-            logger.error(f"Error embedding queries: {str(e)}")
-            return None
+            logger.error(f"Error during query embedding: {str(e)}", exc_info=True) # Log traceback
+            return None # Indicate failure
     
     def _get_metrics_cache_path(self, query_id):
         """Get cache path for metrics results"""
@@ -240,12 +342,14 @@ class EmbeddingEvaluator:
         if self.use_reranker:
             docs_to_rerank = [self.corpus[doc_id] for _, doc_id in initial_ranking]
             doc_id_map = {doc: doc_id for doc, (_, doc_id) in zip(docs_to_rerank, initial_ranking)}
+            logger.info(f"Reranking top {self.initial_k} docs for query {query_id} with Voyage...")
             reranking = self.vo.rerank(
                 self.queries[query_id],
                 docs_to_rerank,
                 model="rerank-2",
                 top_k=self.k
             )
+            logger.info(f"Voyage reranking completed for query {query_id}.")
             tokens_reranked = reranking.total_tokens
             self.total_tokens_reranked += tokens_reranked
             self.total_reranking_cost += (tokens_reranked / 1_000_000) * VOYAGE_RERANK_COST_PER_MILLION_TOKENS
@@ -317,66 +421,164 @@ class EmbeddingEvaluator:
 
 def main():
     parser = argparse.ArgumentParser(description="Calculate MRR using cached embeddings")
-    parser.add_argument("--model", type=str)
-    parser.add_argument("--dataset", type=str)
-    parser.add_argument("--skip_datasets", type=str, default = '')
-    parser.add_argument("--k", type=int, default=10,
-                      help="Number of documents to consider for metrics (default: 10)")
-    parser.add_argument("--endpoint", type=str, default="")
-    parser.add_argument("--save", action="store_true")
-    parser.add_argument("--use_reranker", action="store_true",
-                      help="Whether to use Voyage reranker after initial retrieval")
-    parser.add_argument("--initial_k", type=int, default=100,
-                      help="Number of documents to retrieve before reranking (default: 100)")
+    parser.add_argument("--model", type=str, required=True, help="Model name for embeddings (HuggingFace name, 'voyageai/...' or 'nvidia/...')")
+    parser.add_argument("--dataset", type=str, required=True, help="Dataset name or 'all' to run on multiple datasets")
+    parser.add_argument("--skip_datasets", type=str, default='', help="Comma-separated list of datasets to skip if --dataset=all")
+    parser.add_argument("--k", type=int, default=10, help="Number of documents to consider for metrics (default: 10)")
+    parser.add_argument("--endpoint", type=str, default="", help="Endpoint URL for API-based models (Nvidia or generic TGI)")
+    parser.add_argument("--save", action="store_true", help="Save performance metrics to a file")
+    parser.add_argument("--use_reranker", action="store_true", help="Whether to use Voyage reranker after initial retrieval")
+    parser.add_argument("--initial_k", type=int, default=100, help="Number of documents to retrieve before reranking (default: 100)")
+    parser.add_argument("--use_st", action="store_true", help="Force using SentenceTransformer for local model loading/embedding, even for models that might have API options (e.g., Nvidia)")
+    parser.add_argument("--max_seq_length", type=int, default=8192, help="Maximum sequence length for SentenceTransformer models (default: 512)")
+
     args = parser.parse_args()
+
+    # --- Pre-load SentenceTransformer model if specified ---
+    st_model = None
+    if args.use_st:
+        logger.info(f"--- Loading SentenceTransformer Model ({args.model}) ---")
+        try:
+            # Consider adding device selection if needed: device='cuda'
+            st_model = SentenceTransformer(args.model, trust_remote_code=True)
+            st_model.max_seq_length = args.max_seq_length
+            # Use half precision for efficiency, ensure compatibility if changing
+            st_model = st_model.half()
+            logger.info(f"SentenceTransformer model loaded successfully. Max seq length: {st_model.max_seq_length}")
+            logger.info("--- Model Loaded ---")
+        except Exception as e:
+            logger.error(f"Failed to load SentenceTransformer model '{args.model}': {e}", exc_info=True)
+            exit(1) # Exit if ST model loading fails when explicitly requested
+
     if args.dataset == 'all':
-        datasets = list(set(DATASET_PATHS.keys()) - set(args.skip_datasets.split()))
+        datasets_to_skip = set(ds.strip() for ds in args.skip_datasets.split(',') if ds.strip())
+        datasets = [d for d in DATASET_PATHS.keys() if d not in datasets_to_skip]
+        logger.info(f"Running on all datasets except: {datasets_to_skip}")
     else:
         datasets = [args.dataset]
+        if args.dataset not in DATASET_PATHS:
+            logger.error(f"Specified dataset '{args.dataset}' is not valid. Available: {list(DATASET_PATHS.keys())}")
+            exit(1)
 
-    all_metrics = {}
+    all_metrics_summary = {} # Store metrics per dataset
+    aggregated_metrics = {} # Store sum of metrics across datasets for averaging
+
     for d in datasets:
-        logger.info(f"Starting evaluation for {args.model} on {d}")
-        evaluator = EmbeddingEvaluator(
-            args.model, 
-            d, 
-            endpoint=args.endpoint, 
-            k=args.k,
-            use_reranker=args.use_reranker,
-            initial_k=args.initial_k,
-        )
-        metrics = evaluator.evaluate()
-        for metric_name, metric_value in metrics.items():
-            if metric_name not in all_metrics:
-                all_metrics[metric_name] = 0
-            all_metrics[metric_name] += metric_value
-            logger.info(f"{metric_name}: {metric_value}")
-                
-        if args.save:
-            model_name_safe = args.model.replace("/", "-")
-            output_dict = {
-                "model": args.model,
-                "dataset": d,
-                "k": args.k,
-                "use_reranker": args.use_reranker,
-                "initial_k": args.initial_k if args.use_reranker else args.k,
-                "metrics": metrics
-            }
-            output_filename = f"performance_stats/{model_name_safe}_{d}_performance_stats.json"
-            if args.use_reranker:
-                output_filename = f"performance_stats/{model_name_safe}_{d}_rerank_performance_stats.json"
-            with open(output_filename, 'w') as f:
-                json.dump(output_dict, f, indent=2)
-            logger.info(f"Metrics saved to {output_filename}")
-    
-    if len(datasets) > 0:
-        logger.info(f"\n===== Average metrics across {len(datasets)} datasets =====")
-        for metric_name, metric_sum in all_metrics.items():
-            avg_value = metric_sum / len(datasets)
+        logger.info(f"\n--- Starting Evaluation: Model '{args.model}' on Dataset '{d}' ---")
+        try:
+            evaluator = EmbeddingEvaluator(
+                model_name=args.model,
+                dataset_name=d,
+                endpoint=args.endpoint,
+                k=args.k,
+                use_reranker=args.use_reranker,
+                initial_k=args.initial_k,
+                use_st=args.use_st,
+                st_model=st_model # Pass the pre-loaded model (or None)
+            )
+            metrics = evaluator.evaluate()
+
+            # Store metrics for this dataset
+            all_metrics_summary[d] = metrics
+            logger.info(f"--- Results for {d} --- ")
+            for metric_name, metric_value in metrics.items():
+                 # Accumulate for averaging later
+                if metric_name not in aggregated_metrics:
+                    aggregated_metrics[metric_name] = 0
+                # Handle potential None values if evaluation failed partially
+                if metric_value is not None:
+                     aggregated_metrics[metric_name] += metric_value
+
+                # Log individual dataset results
+                if isinstance(metric_value, float):
+                     logger.info(f"{metric_name}: {metric_value:.4f}")
+                else:
+                     logger.info(f"{metric_name}: {metric_value}")
+            logger.info("------------------------")
+
+            if args.save:
+                # Define output filename
+                model_name_safe = args.model.replace("/", "-")
+                rerank_part = "rerank_performance_stats" if args.use_reranker else "performance_stats"
+                output_dir = "performance_stats"
+                os.makedirs(output_dir, exist_ok=True)
+                output_filename = f"{output_dir}/{model_name_safe}_{d}_{rerank_part}.json"
+
+                # Prepare output data
+                output_dict = {
+                    "model": args.model,
+                    "dataset": d,
+                    "k": args.k,
+                    "use_reranker": args.use_reranker,
+                    "initial_k": args.initial_k if args.use_reranker else args.k, # Use initial_k if reranking
+                    "use_sentence_transformer": args.use_st,
+                    "metrics": metrics
+                }
+
+                # Save the JSON file
+                try:
+                    with open(output_filename, 'w') as f:
+                        json.dump(output_dict, f, indent=2)
+                    logger.info(f"Metrics successfully saved to {output_filename}")
+                except IOError as e:
+                     logger.error(f"Error saving metrics to {output_filename}: {e}")
+
+        except FileNotFoundError as e:
+             logger.error(f"Evaluation failed for {d}: Required cache file not found - {e}. Ensure corpus embeddings were generated first.")
+             all_metrics_summary[d] = {"error": f"Cache file not found: {e}"}
+        except Exception as e:
+            logger.error(f"!!! Evaluation failed for Model '{args.model}' on Dataset '{d}': {e} !!!", exc_info=True)
+            # Record the error in the summary
+            all_metrics_summary[d] = {"error": str(e)}
+            # Continue to the next dataset
+
+    # --- Summary Across Datasets ---
+    num_successful_datasets = sum(1 for d in datasets if all_metrics_summary.get(d) and 'error' not in all_metrics_summary[d])
+
+    if num_successful_datasets > 0:
+        logger.info(f"\n===== Aggregated Metrics Across {num_successful_datasets} Successful Datasets =====")
+        for metric_name, metric_sum in aggregated_metrics.items():
+            avg_value = metric_sum / num_successful_datasets
             if isinstance(avg_value, float):
                 logger.info(f"Average {metric_name}: {avg_value:.4f}")
             else:
-                logger.info(f"Average {metric_name}: {avg_value}")
+                 # Handle aggregated non-float values like total cost/tokens if needed
+                 logger.info(f"Total {metric_name}: {metric_sum}") # Log sum for totals
+                 # logger.info(f"Average {metric_name}: {avg_value}") # Log average if meaningful
+
+        # Optionally save the overall summary if multiple datasets were run
+        if len(datasets) > 1 and args.save:
+            model_name_safe = args.model.replace("/", "-")
+            rerank_part = f"rerank{args.k}from{args.initial_k}" if args.use_reranker else f"k{args.k}"
+            summary_filename = f"performance_stats/{model_name_safe}_ALL-DATASETS_{rerank_part}_summary.json"
+            summary_data = {
+                 "model": args.model,
+                 "datasets_run": datasets,
+                 "datasets_skipped": list(datasets_to_skip) if args.dataset == 'all' else [],
+                 "k": args.k,
+                 "use_reranker": args.use_reranker,
+                 "initial_k": args.initial_k if args.use_reranker else args.k,
+                 "use_sentence_transformer": args.use_st,
+                 "num_successful_datasets": num_successful_datasets,
+                 "average_metrics": {
+                     name: (total / num_successful_datasets)
+                     for name, total in aggregated_metrics.items()
+                 },
+                 "per_dataset_metrics": all_metrics_summary
+            }
+            try:
+                with open(summary_filename, 'w') as f:
+                    json.dump(summary_data, f, indent=2)
+                logger.info(f"Overall summary saved to {summary_filename}")
+            except IOError as e:
+                logger.error(f"Error saving overall summary to {summary_filename}: {e}")
+
+    elif len(datasets) > 0:
+         logger.warning("\nNo datasets completed successfully. Cannot calculate average metrics.")
+    else:
+         logger.info("\nNo datasets were selected to run.")
+
+    logger.info("\n--- Evaluation Run Finished ---")
 
 if __name__ == "__main__":
     main()

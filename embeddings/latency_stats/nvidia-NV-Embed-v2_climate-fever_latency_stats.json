@@ -1,0 +1,12 @@
+{
+  "dataset": "climate-fever",
+  "model": "nvidia/NV-Embed-v2",
+  "batch_size": 8,
+  "concurrency": 1,
+  "max_seq_length": 8192,
+  "total_documents": 3408,
+  "total_duration_seconds": 261.7945,
+  "total_tokens": 1266286,
+  "tokens_per_second": 4836.95,
+  "error": null
+}

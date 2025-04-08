@@ -1,0 +1,12 @@
+{
+  "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "use_sentence_transformer": false,
+  "metrics": {
+    "MRR@10": 0.6336904761904762,
+    "NDCG@10": 0.4245957876381556
+  }
+}

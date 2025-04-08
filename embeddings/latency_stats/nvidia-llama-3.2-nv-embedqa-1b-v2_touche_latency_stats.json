@@ -1,0 +1,12 @@
+{
+  "dataset": "touche",
+  "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+  "batch_size": 512,
+  "concurrency": 5,
+  "max_seq_length": 8192,
+  "total_documents": 5745,
+  "total_duration_seconds": 128.6584,
+  "total_tokens": 2580147,
+  "tokens_per_second": 20054.25,
+  "error": null
+}

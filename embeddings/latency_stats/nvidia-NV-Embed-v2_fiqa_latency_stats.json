@@ -1,0 +1,12 @@
+{
+  "dataset": "fiqa",
+  "model": "nvidia/NV-Embed-v2",
+  "batch_size": 8,
+  "concurrency": 1,
+  "max_seq_length": 8192,
+  "total_documents": 4571,
+  "total_duration_seconds": 281.2703,
+  "total_tokens": 1004491,
+  "tokens_per_second": 3571.27,
+  "error": null
+}

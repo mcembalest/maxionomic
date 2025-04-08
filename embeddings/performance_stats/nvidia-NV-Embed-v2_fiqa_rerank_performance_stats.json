@@ -1,0 +1,14 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "fiqa",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.47488888888888886,
+    "NDCG@10": 0.3824377422400489,
+    "total_reranking_cost": 0.04879625000000002,
+    "total_tokens_reranked": 975925
+  }
+}

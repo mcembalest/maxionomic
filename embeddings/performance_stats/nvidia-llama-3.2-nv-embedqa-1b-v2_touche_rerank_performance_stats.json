@@ -1,0 +1,14 @@
+{
+  "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+  "dataset": "touche",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "use_sentence_transformer": false,
+  "metrics": {
+    "MRR@10": 0.8744897959183674,
+    "NDCG@10": 0.5869099826599985,
+    "total_reranking_cost": 0.15078910000000006,
+    "total_tokens_reranked": 3015782
+  }
+}
