@@ -1,0 +1,13 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "touche",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.8028020732102366,
+    "NDCG@10": 0.4488550201494983,
+    "total_reranking_cost": 0.04617290000000001,
+    "total_tokens_reranked": 923458
+  }
+}

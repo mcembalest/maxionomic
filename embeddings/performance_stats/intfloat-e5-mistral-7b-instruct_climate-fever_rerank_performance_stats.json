@@ -1,0 +1,13 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "climate-fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.460047619047619,
+    "NDCG@10": 0.32969018316448384,
+    "total_reranking_cost": 0.08055725000000002,
+    "total_tokens_reranked": 1611145
+  }
+}

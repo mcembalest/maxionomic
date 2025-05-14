@@ -1,0 +1,166 @@
+{{Short description|Anguillan footballer (born 1978)}}
+{{Use mdy dates|date=December 2024}}
+
+{{Infobox football biography
+| name = Richard O'Connor
+| image = 
+| image_size = 
+| caption = 
+| fullname = 
+| birth_date = {{birth date and age|1978|8|30|df=y}}
+| birth_place = [[Wandsworth]], [[London]], England
+| height = 175 cm
+| currentclub = 
+| clubnumber = 
+| position = [[Midfielder (association football)|Midfielder]]
+| youthyears1 = 
+| youthclubs1 = 
+| years1 = 1994–2000
+| clubs1 = [[Wimbledon F.C.|Wimbledon]]
+| caps1 = 0
+| goals1 = 0
+| years2 = 1999–2000
+| clubs2 = → [[Kingstonian F.C.|Kingstonian]] (loan)
+| caps2 = 
+| goals2 = 
+| nationalyears1 = 2000–2006
+| nationalteam1 = [[Anguilla national football team|Anguilla]]
+| nationalcaps1 = 5
+| nationalgoals1 = 5
+| club-update = 
+| nationalteam-update = 
+| years3 = 2000–2001
+| years4 = 2001–2005
+| clubs3 = [[Leatherhead F.C.|Leatherhead]]
+| clubs4 = [[Hampton & Richmond Borough F.C.|Hampton & Richmond Borough]]
+| years5 = 2002
+| clubs5 = →  [[Maidenhead United F.C.|Maidenhead United]] (loan)
+| years6 = 2003
+| clubs6 = → Maidenhead United (loan)
+| clubs7 = → [[Hornchurch F.C.|Hornchurch]] (loan)
+| years7 = 2005
+| clubs8 = [[Carshalton Athletic F.C.|Carshalton Athletic]]
+| years8 = 2005
+| years9 = 2005–2006
+| clubs9 = Leatherhead
+}}
+
+'''Richard O'Connor''' (born 30 August 1978) is an [[England|English]]-born [[Anguilla|Anguillan]] former [[Association football|footballer]] who played as a [[Midfielder (association football)|midfielder]] for several English [[Non-League football|non-League]] clubs.<ref>[http://www.soccerfactsuk.co.uk/s2005/player_details.php?playerid=3980 Player Details: Season 2005-2006] - Soccerfacts UK</ref> Internationally, he represented the [[Anguilla national football team|Anguilla national team]] and he is tied with two other players as their their [[List of top international men's football goalscorers by country|all time top goalscorer]] with five goals.<ref name=":0">{{Cite web |title=Richard O'Connor |url=https://www.national-football-teams.com/player/234/Richard_O_Connor.html |website=National Football Teams}}</ref>
+
+== Career statistics ==
+
+=== International ===
+
+: ''As of match played 24 September 2006''.<ref name=":0" />
+
+{| class="wikitable" style="text-align: center;"
+|+Appearances and goals by national team and year
+!National team
+!Year
+!Apps
+!Goals
+|-
+| rowspan="7" |[[Anguilla national football team|Anguilla]]
+|2000
+|2
+|3
+|-
+|2001
+|0
+|0
+|-
+|2002
+|0
+|0
+|-
+|2003
+|0
+|0
+|-
+|2004
+|0
+|0
+|-
+|2005
+|0
+|0
+|-
+|2006
+|3
+|2
+|-
+! colspan="2" |Total
+!5
+!5
+|}
+
+: ''Scores and results list Anguilla's goal tally first, score column indicates score after each O'Connor goal''.<ref name=":0" />
+
+{| class="wikitable sortable" style="text-align:center;"
+|+List of international goals scored by Richard O'Connor
+! scope="col" |No.
+! scope="col" |Date
+! scope="col" |Venue
+!Cap
+! scope="col" |Opponent
+! scope="col" |Score
+! scope="col" |Result
+! scope="col" |Competition
+! class="unsortable" scope="col" |{{Abbr|Ref.|References}}
+|-
+|1.
+| rowspan="2" style="text-align:left;" |25 February 2000
+| rowspan="2" style="text-align:left;" |[[A. O. Shirley Recreation Ground]], [[Road Town]], British Virgin Islands
+| rowspan="2" |1
+| rowspan="2" style="text-align:left;" |{{fb|BVI}}
+|'''1'''–?
+| rowspan="2" |4–3
+| rowspan="2" |[[Exhibition game|Friendly]]
+| rowspan="2" |<ref name=":3">{{Cite web |title=British Virgin Islands vs. Anguilla 2000-02-25 |url=https://www.national-football-teams.com/matches/report/23420/British_Virgin_Islands_Anguilla.html |website=National Football Teams}}</ref>
+|-
+|2.
+|'''2'''–?
+|-
+|3.
+|19 March 2000
+|[[Thomas Robinson Stadium]], [[Nassau, The Bahamas|Nassau]], The Bahamas
+|2
+|{{Fb|BAH}}
+|'''1'''–1
+|1–2
+|[[2002 FIFA World Cup qualification – CONCACAF Caribbean Zone|2002 FIFA World Cup qualification]]
+|<ref name=":5">{{Cite web |title=Bahamas vs. Anguilla 2000-03-19 |url=https://www.national-football-teams.com/matches/report/23418/Bahamas_Anguilla.html |website=National Football Teams}}</ref>
+|-
+|4.
+|20 September 2006
+| rowspan="2" |[[Antigua Recreation Ground]], [[St. John's, Antigua and Barbuda|St. Johns]], Antigua and Barbuda
+|3
+|{{Fb|ATG}}
+|'''3'''–4
+|3–5
+| rowspan="2" |[[2007 Caribbean Cup#First qualifying round|2007 Caribbean Cup qualification]]
+|<ref>{{Cite web |title=Antigua and Barbuda vs. Anguilla 2006-09-20 |url=https://www.national-football-teams.com/matches/report/2069/Antigua_And_Barbuda_Anguilla.html |website=National Football Teams}}</ref>
+|-
+|5.
+|22 September 2006
+|4
+|{{Fb|SKN}}
+|'''1'''–1
+|1–6
+|<ref>{{Cite web |title=Anguilla vs. Saint Kitts & Nevis 2006-09-22 |url=https://www.national-football-teams.com/matches/report/2071/Anguilla_Saint_Kitts_Nevis.html |website=National Football Teams}}</ref>
+|}
+==References==
+{{reflist}}
+
+
+{{DEFAULTSORT:O'Connor, Richard}}
+[[Category:Living people]]
+[[Category:1978 births]]
+[[Category:Anguilla men's international footballers]]
+[[Category:Anguillan men's footballers]]
+[[Category:Wimbledon F.C. players]]
+[[Category:Leatherhead F.C. players]]
+[[Category:Hampton & Richmond Borough F.C. players]]
+[[Category:Maidenhead United F.C. players]]
+[[Category:Hornchurch F.C. players]]
+[[Category:Carshalton Athletic F.C. players]]

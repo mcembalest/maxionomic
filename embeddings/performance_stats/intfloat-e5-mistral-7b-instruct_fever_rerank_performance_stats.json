@@ -1,0 +1,13 @@
+{
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "dataset": "fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.9406666666666667,
+    "NDCG@10": 0.9481783917415513,
+    "total_reranking_cost": 0.0554266,
+    "total_tokens_reranked": 1108532
+  }
+}

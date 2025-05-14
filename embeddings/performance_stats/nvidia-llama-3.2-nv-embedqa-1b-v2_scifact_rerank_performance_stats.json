@@ -1,0 +1,14 @@
+{
+  "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+  "dataset": "scifact",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "use_sentence_transformer": false,
+  "metrics": {
+    "MRR@10": 0.7652222222222221,
+    "NDCG@10": 0.7884604337060466,
+    "total_reranking_cost": 0.08940844999999999,
+    "total_tokens_reranked": 1788169
+  }
+}

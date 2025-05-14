@@ -1,0 +1,10 @@
+{
+  "dataset": "dbpedia",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 3.941833972930908,
+  "total_tokens": 482607,
+  "tokens_per_second": 122432.09716952202
+}

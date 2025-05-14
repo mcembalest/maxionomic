@@ -1,0 +1,58 @@
+{{short description|2024 film by Luan Zhang}}
+{{Use dmy dates|date=October 2024}}
+{{Infobox film
+| name           = Panda Plan
+| image          = 
+| caption        = 
+| native_name    = {{Infobox Chinese|child=yes|t = 熊猫计划}}
+| director       = Luan Zhang
+| writer         = Yida Meng, Wei Xu, Luan Zhang
+| producer       = {{Plainlist|
+*Tianjin Maoyan 
+*Weiying Culture Media Co., Ltd.
+*Emei Film Group Co., Ltd.
+}}
+| starring       = {{Plainlist|
+* [[Jackie Chan]]
+* Xiang Wei
+* Ce Shi
+* Yanbo Han
+}}
+| released       = {{filmdate|2024|10|1|China|2024|10|10|Malaysia|2024|10|17|Singapore|2024|12|12|Hong Kong}}<ref name="singrel">Hsia, Heidi (30 September 2024). [https://sg.style.yahoo.com/jackie-chan-returns-panda-plan-062900697.html Jackie Chan returns with "Panda Plan"], Yahoo Life Singapore</ref>
+| runtime        = 99 minutes
+| country        = China
+| language       = Mandarin
+| budget         = USD 180 million yuan
+}} 
+
+'''''Panda Plan''''' ({{lang-zh|s=熊猫计划}}) is a 2024 Chinese action comedy film starring [[Jackie Chan]].  It was released in China on October 1, 2024.
+
+==Plot==
+In this family movie, Jackie Chan plays himself, and gets involved in the rescue operation to save a zoo panda named Hu Hu from mercenaries.<ref name="yahoonz1">General, Ryan (19 September 2024). [https://nz.news.yahoo.com/jackie-chan-pokes-fun-martial-185238901.html Jackie Chan pokes fun at his martial arts legacy in new ‘Panda Plan’ trailer], Yahoo News New Zealand</ref><ref name="gulfnews1">Radhakrishnan, Manjusha (30 October 2024). [https://gulfnews.com/entertainment/hollywood/action-superstar-jackie-chan-at-70-talks-age-legacy-and-new-movie-panda-plan-1.1730296073580 Action superstar Jackie Chan at 70: Talks age, legacy, and new movie 'Panda Plan'], ''Gulf News''</ref>
+
+== Cast ==
+* [[Jackie Chan]] as Jackie (international kung fu superstar)
+* Wei Xiang as David (Gold agent) 
+* Shi Ce as Su Xiaozhu (panda keeper) 
+* Han Yanbo as Cha Kun (leader of international criminal organization)
+* Jia Bing as ice cream store manager
+* Rui Dani as Harry
+* Andi as Director 
+
+== Production ==
+The production was official announced on August 10, 2023, including the participation of actors Jackie Chan and Han Yanbo.   Filming was completed in October 2023, and the official October 1, 2024 release date for China was announced on August 30, 2024.
+
+== Reception ==
+
+== References ==
+{{reflist}}
+
+== External links ==
+* {{IMDb title|id=28630624|title=Panda Plan}}
+
+{{DEFAULTSORT:Panda Plan}}
+[[Category:2020s Mandarin-language films]]
+[[Category:2024 action films]]
+[[Category:Chinese action adventure films]]
+[[Category:Chinese action films]]
+[[Category:2024 action adventure films]]

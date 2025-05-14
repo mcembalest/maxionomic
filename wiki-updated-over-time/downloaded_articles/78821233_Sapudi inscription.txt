@@ -1,0 +1,121 @@
+{{short description|Madurese inscription in Sapudi Island, Indonesia}}
+{{Infobox artifact
+| name          = Sapudi inscription 
+| image         = 
+| image_caption = 
+| material      = Stone ([[Limestone]]?)
+| size          = {{convert|34.5|×|49.5|×|8|cm|abbr=on}}
+| writing       = [[Pegon script|Arabic–Javanese]] ({{lang|mad|Pèghu}}) in [[Javanese language|Eastern Javanese]] 
+| created       = {{circa}} 43 Hijri / 663 CE
+| discovered    = [[Sapudi Islands|Sapudi]] ([[Indonesia]])  
+| location      = {{lang|id|Balai Pelestarian Kebudayaan Wilayah XI Jawa Timur}} ({{lit|Center of Cultural Preservation Region IX of East Java}}) 
+| id            = 
+| registration  = 
+}}
+
+The '''Sapudi inscription''' ({{langx|jv|ꦥꦿꦱꦱ꧀ꦠꦶꦤꦸꦱꦱꦥꦸꦣꦪ꧀|prasasti nusa Sapuday}}; {{langx|mad|prasastè nosa Sapoday}}), or '''Koattas inscription''' ({{langx|id|prasasti dusun Koattas}}) is an [[Javanese language|Eastern Javanese]] inscription discovered at the Koattas urban area of Gayam district in the [[Indonesia]]n region of [[Sapudi Islands|Sapudi]] in [[East Java]].<ref>{{cite web |title=Prasasti Dusun Koattas |language=id |trans-title= Koattas Inscription |url=https://www.lontarmadura.com/sejarah-peninggalan-budaya-pulau-sepudi/prasasti-dusun-koattas/ |publisher= Lontar Madura|year=2012}}</ref>
+
+These stone inscription was found in 1988 by a laborer during the excavation process of the ''[[Masjid]]'' (a Muslim prayer place) renovation,<ref name="LM">{{cite web |title= Menengok Kediaman dan Asta Panembahan Wirokromo |language= id |trans-title=Glance at Panembahan Wirakrama’s Historical House and Burial |url= https://www.lontarmadura.com/menengok-kediaman-asta-panem-wirokromo/2/ |publisher= Lontar Madura |year=2012}}</ref> located within the historical Asta Blingi complex.
+The inscription written in [[Madurese language|Madurese]]-type of Eastern Javanese (most of it appears to be the [[Old Javanese]]), using [[Pegon script|Arabic–Javanese]] writing system (known locally in Sapudi as {{lang|mad|Pèghu}}, derived from Javanese {{lang|jv|Pegon}}), with several mentions of Javanese honorifics and some [[Arabic]]-derived words.
+
+Since 2020, according to the Indonesian law on Cultural Preservation, the Asta Blingi complex — location where these inscription located at, is officially determined as Cultural Site, and any historical matters within the region is protected under the law.<ref>{{cite web |title=Resmi, Asta Blingi Sapudi Jadi Situs Cagar Budaya Sumenep |language=id |trans-title=Its Official, Asta Blingi in Sapudi Become the Cultural Site of Sumenep |url= https://jatim.indonesiasatu.co.id/resmi-asta-blingi-sapudi-jadi-situs-cagar-budaya-sumenep|publisher= |year=2021}}</ref>
+
+==Description==
+The inscription is made out of [[limestone]] with the size of 34.5 cm × 49.5 cm × 8 cm (13.6 in × 19.5 in × 3.1 in).<ref name="LM"/> A commom material found on the island.
+
+It records the genealogy of several [[Javanese people|Javanese]]-origin monarch leaders of the archipelagic region off the coastal Eastern Java, namely the [[Madura Island|Madura]], [[Raas Island|Raas]], [[Sapudi Island|Sapudi]], [[Kangean Archipelago|Kangean]], as well as [[Makassar]] in [[Southern Sulawesi]].<ref name="LM"/>
+
+==Text==
+{| class="wikitable"
+!Line
+! Transliteration (by East Java Cultural Preservation team)
+! Translation
+! Notes
+|-
+| 1 
+| {{lang|jv|punika sejarane}} 
+| this is the history
+| 
+|-
+| 2 
+| {{lang|jv|luhure kang duwe masjid}}
+| [of] the ancestor of the ''masjid'' owner
+| 
+|-
+| 3 
+| {{lang|jv|anak putune Tumenggung Puger arane Cinde}} ..
+| the grandchildren of {{lang|jv|Tumenggung}} Puger, his/her name is Cinde ..
+| {{lang|jv|Tumenggung}} is the Javanese nobility/honorific title of [[Temanggung]]-origin
+|-
+| 4 
+| .. {{lang|jv|Amo. Cinde Amo ngaputra Tumenggung Ratu Jumeneng Risbanggah}} ..
+| .. Amo. Cinde Amo taking a son/having a son(?) {{lang|jv|Tumenggung Ratu}} {{lang|jv|Jumeneng}}(?) Risbanggah ..
+| the {{lang|jv|Tumenggung Ratu Jumeneng}} is either the longer honorific title or the {{lang|jv|jumeneng}} could be translated as 'named' (named as Risbanggah), but it is likely merely the nobility/honorific Javanese title, since the term still commonly used by modern Javanese royals.
+|-
+| 5 
+| .. {{lang|jv|Madura. Tumenggung Ratu aduwe putra satunggal jaler, punika angone}} ..
+| .. of [[Madura Island|Madura]]. The {{lang|jv|Tumenggung Ratu}} having a son,  that he .. 
+| 
+|-
+| 6 
+| .. {{lang|jv|ngagawarwa susunan Ampel wejange ilmu hakikat. Sawise}} .. 
+| .. married to {{lang|jv|[[Susuhunan]]}} of [[Tumapel]] ''(with instruct of religious spells(?))''. After ..
+| 
+|-
+| 7 
+| .. {{lang|jv|anglalana mangetan aduwe dakwa ing Pulo Sapudi masuara tapane}} .. 
+| .. wandering ''(or missionaring)'' by doing the ''[[Dawah|daʿwāh]]'' in Sapudi Island, proselytizing ..
+| 
+|-
+| 8 
+| .. {{lang|jv|ngagata ṣaḥabat jumeneng Panembahan. Panembahan ngaputra satunggal}} ..  
+| .. acts of ''[[sahaba|ṣaḥāba]]'' named Panembahan. Panembahan having a child ..
+| the {{lang|jv|Panembahan}} here is actually a Javanese noble title, but used as reference to someone, similar to English sense of “Queen Elizabeth” but only mentioned as “The Queen”.
+|-
+| 9 
+| .. {{lang|jv|jalu ngajajuluk Ngabehi Kanduruhan. Kanduruhan ngaputra}} ..
+| .. known as Ngabehi Kanduruhan. Kanduruhan having children ..
+| {{lang|jv|Ngabehi}} is cognates to the modern Javanese noble title of {{lang|jv|Bêi}} or {{lang|jv|Bhre}}.
+|-
+| 10 
+| .. {{lang|jv|nenem. Kakalih ngestri, kang lanang papat, kang sepuh ngajujuluk (Barbarat)}} ..
+| .. six in total. Two are female, and four males, the eldest (Barbarat) ..
+|
+|-
+| 11
+| .. {{lang|jv|jumeneng ing kidul. adine jumeneng in Raas ngajujuluk Demang Jaga Krama. adine jumeneng ing Kangeyan ngajujuluk Wira Krama. adine }} ..
+| .. having a throne in the south. the younger brother having a throne in [[Raas Island|Raas]], his name is Demang Jaga Krama. the younger brother in [[Kangean Island|Kangean]], his name is Wira Krama. the younger brother ..
+|
+|-
+| 12
+| .. {{lang|jv|jumeneng najaga ing Mekasan ngajajuluk Bangsa Kusuma}}. ..
+|.. that protected Makassar named Bangsa Kusuma.
+|
+|-
+| 13
+| {{lang|jv|Kang ngestri satunggal aduwe putra jalu satunggal jumeneng ing Sapudi}} ..
+| The one female having a son, reign in [[Sapudi Island|Sapudi]] ..
+|
+|-
+| 14
+| .. {{lang|jv| ngajujuluk Wira Dipa. Punika kang anjenengaken masjid tatkala}}..
+| .. named Wira Dipa. That is the one who built the ''masjid'' back then ..
+|
+|-
+| 15
+| .. {{lang|jv|Ngadek Saka Jawa #Patang Matelu Batu Ngetan#}}.
+| .. [the founder] are of [[Java Island|Java]]-origin. ''#Fourty three of eastern time#''? 
+| The ''#Fourty three of eastern time#'' probably corresponds to 43 Hijri year in Islamic calendar, equals to 663 CE in Gregorian calendar. The word ''batu'' here is not to be confused with ''watu'' ({{lit|stone}}), since it is using Madurese-type Eastern Javanese language, the word {{lang|mad|batu}} here actually referring to 'time', derived from the Arabic word وَقْط (''waqṭ''), in Modern Madurese it is spelt as {{lang|mad|bekto}}.
+|-
+|} 
+
+==References==
+{{reflist}}
+
+[[Category:Pegon script]]
+[[Category:663 establishments]]
+[[Category:Javanese inscriptions]]
+[[Category:Madurese inscriptions]]
+[[Category:Inscriptions in Indonesia]]
+[[Category:7th-century inscriptions]]
+[[Category:History of Java]]

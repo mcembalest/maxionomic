@@ -1,0 +1,14 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "touche",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.6653304178814381,
+    "NDCG@10": 0.2990831913246865,
+    "total_reranking_cost": 0.08425115,
+    "total_tokens_reranked": 1685023
+  }
+}

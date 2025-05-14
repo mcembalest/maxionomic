@@ -1,0 +1,13 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "nq",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.7393333333333334,
+    "NDCG@10": 0.7803477087602715,
+    "total_reranking_cost": 0.03533554999999999,
+    "total_tokens_reranked": 706711
+  }
+}

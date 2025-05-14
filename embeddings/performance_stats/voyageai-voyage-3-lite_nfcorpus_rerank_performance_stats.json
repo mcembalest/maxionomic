@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "nfcorpus",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.5771666666666666,
+    "NDCG@10": 0.3700567106310972,
+    "total_reranking_cost": 0.08436805000000001,
+    "total_tokens_reranked": 1687361
+  }
+}

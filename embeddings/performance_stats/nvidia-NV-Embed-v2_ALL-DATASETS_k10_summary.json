@@ -1,0 +1,82 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "datasets_run": [
+    "arguana",
+    "climate-fever",
+    "dbpedia",
+    "fever",
+    "fiqa",
+    "hotpot",
+    "msmarco",
+    "nfcorpus",
+    "nq",
+    "quora",
+    "scidocs",
+    "scifact",
+    "touche"
+  ],
+  "datasets_skipped": [],
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "use_sentence_transformer": true,
+  "num_successful_datasets": 13,
+  "average_metrics": {
+    "MRR@10": 0.7051552789614015,
+    "NDCG@10": 0.630914161333856
+  },
+  "per_dataset_metrics": {
+    "arguana": {
+      "MRR@10": 0.5479126984126983,
+      "NDCG@10": 0.649688585990593
+    },
+    "climate-fever": {
+      "MRR@10": 0.4432460317460318,
+      "NDCG@10": 0.3590136306136615
+    },
+    "dbpedia": {
+      "MRR@10": 0.7953571428571428,
+      "NDCG@10": 0.6106126844618025
+    },
+    "fever": {
+      "MRR@10": 0.97,
+      "NDCG@10": 0.9642057390574662
+    },
+    "fiqa": {
+      "MRR@10": 0.5128571428571428,
+      "NDCG@10": 0.40137461801008434
+    },
+    "hotpot": {
+      "MRR@10": 0.965,
+      "NDCG@10": 0.9217321716294689
+    },
+    "msmarco": {
+      "MRR@10": 0.5927142857142856,
+      "NDCG@10": 0.6577881156226191
+    },
+    "nfcorpus": {
+      "MRR@10": 0.4955555555555555,
+      "NDCG@10": 0.28405791950664394
+    },
+    "nq": {
+      "MRR@10": 0.7562698412698413,
+      "NDCG@10": 0.8010928363074082
+    },
+    "quora": {
+      "MRR@10": 0.9566666666666667,
+      "NDCG@10": 0.9580393601815183
+    },
+    "scidocs": {
+      "MRR@10": 0.6168571428571429,
+      "NDCG@10": 0.42773185824084736
+    },
+    "scifact": {
+      "MRR@10": 0.8211904761904762,
+      "NDCG@10": 0.8503859423433585
+    },
+    "touche": {
+      "MRR@10": 0.6933916423712342,
+      "NDCG@10": 0.3161606353746579
+    }
+  }
+}

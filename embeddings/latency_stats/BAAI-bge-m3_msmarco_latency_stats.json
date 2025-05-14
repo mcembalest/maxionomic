@@ -1,0 +1,10 @@
+{
+  "dataset": "msmarco",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 5.268467903137207,
+  "total_tokens": 413561,
+  "tokens_per_second": 78497.39385405336
+}

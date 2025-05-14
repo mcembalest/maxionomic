@@ -1,0 +1,10 @@
+{
+  "dataset": "touche",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 39.41004228591919,
+  "total_tokens": 2891556,
+  "tokens_per_second": 73371.0453549329
+}

@@ -1,0 +1,11 @@
+{
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "touche",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.7442743764172336,
+    "NDCG@10": 0.53267818433254
+  }
+}

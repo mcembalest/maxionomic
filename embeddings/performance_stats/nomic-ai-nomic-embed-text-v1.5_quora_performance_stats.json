@@ -1,0 +1,11 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "quora",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.9265000000000001,
+    "NDCG@10": 0.9405518763024122
+  }
+}

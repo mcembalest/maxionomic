@@ -1,0 +1,12 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "climate-fever",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.4432460317460318,
+    "NDCG@10": 0.3590136306136615
+  }
+}

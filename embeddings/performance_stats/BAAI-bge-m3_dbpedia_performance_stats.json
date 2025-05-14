@@ -1,0 +1,11 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "dbpedia",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.8483333333333334,
+    "NDCG@10": 0.6054103510281814
+  }
+}

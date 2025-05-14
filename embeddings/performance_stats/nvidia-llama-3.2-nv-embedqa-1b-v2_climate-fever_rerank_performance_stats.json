@@ -1,0 +1,14 @@
+{
+  "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+  "dataset": "climate-fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "use_sentence_transformer": false,
+  "metrics": {
+    "MRR@10": 0.4486587301587301,
+    "NDCG@10": 0.33816027853367303,
+    "total_reranking_cost": 0.09807575000000002,
+    "total_tokens_reranked": 1961515
+  }
+}

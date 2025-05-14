@@ -1,0 +1,9 @@
+{
+  "dataset": "scidocs",
+  "model": "voyageai/voyage-3-lite",
+  "batch_size": 1000,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 5.3435821533203125,
+  "total_tokens": 384249,
+  "tokens_per_second": 71908.50425332028
+}

@@ -1,0 +1,12 @@
+{
+  "dataset": "touche",
+  "model": "nvidia/NV-Embed-v2",
+  "batch_size": 8,
+  "concurrency": 1,
+  "max_seq_length": 8192,
+  "total_documents": 5745,
+  "total_duration_seconds": 923.4017,
+  "total_tokens": 2834265,
+  "tokens_per_second": 3069.37,
+  "error": null
+}

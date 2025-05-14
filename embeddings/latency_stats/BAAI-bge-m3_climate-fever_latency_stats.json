@@ -1,0 +1,10 @@
+{
+  "dataset": "climate-fever",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 17.11262798309326,
+  "total_tokens": 1352505,
+  "tokens_per_second": 79035.4936329027
+}

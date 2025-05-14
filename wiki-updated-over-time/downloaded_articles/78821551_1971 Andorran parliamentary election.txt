@@ -1,0 +1,73 @@
+{{Infobox legislative election
+| country = Andorra
+| previous_election = [[1969 Andorran parliamentary election|1969]]
+| next_election = [[1973 Andorran parliamentary election|1973]]
+| election_date = 14 December 1971 (first round)<br>21 December 1971 (second round)
+| seats_for_election = 12 of the 24 seats in the [[General Council (Andorra)|General Council]]
+| noleader = yes
+| party1 = Independents | percentage1 = 100 | seats1 = 12 | last_election1 = 12
+}}{{Politics of Andorra}}
+
+Parliamentary elections were held in [[Andorra]] on 14 December 1971 to elect half of the members of the [[General Council (Andorra)|General Council]]. In constituencies where not all seats were filled in the first round, a second round was held on 21 December.
+
+The elections were the first after women were granted the right to vote in 1970.<ref>{{cite web|url=https://data.ipu.org/parliament/AD/AD-LC01/data-on-women/|title=Andorra|website=Inter-Parliamentary Union}}</ref>
+
+==Electoral system==
+Each parish had four seats in the [[General Council (Andorra)|General Council]]. The seats were elected on a staggered basis, with two members elected from each parish every two years. In [[Andorra la Vella]] parish two members represented the town of Andorra la Vella and two represented [[Les Escaldes]], with one member elected from each every two years.
+
+All candidates had to run on lists of candidates, although voters could split their votes between candidates on different lists. Any candidate receiving a majority of the vote was elected in the first round. If there were remaining seats to fill, a second round was held, in which candidates had to receive a majority of the vote to be elected. If there were still remaining seats to fill, a third round would be held in which the candidate(s) with the most votes would be elected.<ref name=NS>[[Dieter Nohlen]] & Philip Stöver (2010) ''Elections in Europe: A data handbook'', p156 {{ISBN|978-3-8329-5609-7}}</ref>
+
+==Results==
+{{Election results
+|party1=Independents|votes1=|seats1=9|votes1_2=|seats1_2=3|totseats1=12
+|blank=
+|invalid=
+|totalvotes=
+|electorate=2344|electorate2=822
+|source=[http://hemeroteca.lavanguardia.com/preview/1975/12/11/pagina-44/34227520/pdf.html La Vanguardia]
+}}
+
+===Elected members===
+{| class=wikitable
+!Constituency
+!Elected members
+!Round
+|-
+|[[Andorra la Vella]]|| ||Second round
+|-
+|rowspan=2|[[Canillo]]|| ||Second round
+|-
+| ||Second round
+|-
+|rowspan=2|[[Encamp]]||[[Josep Mas Font]]||First round
+|-
+|[[Enric Paris Torres]]||First round
+|-
+|rowspan=2|[[La Massana]]||[[Gil Font Molné]]||First round
+|-
+|[[Salvador Mora Calvet]]||First round
+|-
+|[[Les Escaldes]]||[[Josep Maria Barbat Pla]]||First round
+|-
+|rowspan=2|[[Ordino]]||[[Pere Babi Baró]]||First round
+|-
+|[[Artur Comas Pons]]||First round
+|-
+|rowspan=2|[[Sant Julià de Lòria]]||[[Òscar Ribas Reig]]||First round
+|-
+|[[Ladislau Baró Solà]]||First round
+|-
+|colspan=3|Source: [http://hemeroteca.lavanguardia.com/preview/1971/12/14/pagina-44/34278998/pdf.html La Vanguardia]
+|}
+
+==References==
+{{reflist}}
+
+{{Andorran elections}}
+
+[[Category:1971 elections in Europe|Andorra]]
+[[Category:1971 in Andorra|Parliamentary election]]
+[[Category:Parliamentary elections in Andorra]]
+[[Category:Non-partisan elections]]
+[[Category:December 1971 events in Europe|Andorra]]
+[[Category:Election and referendum articles with incomplete results]]

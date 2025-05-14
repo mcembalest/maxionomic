@@ -1,0 +1,9 @@
+{
+  "dataset": "fever",
+  "model": "voyageai/voyage-3-large",
+  "batch_size": 256,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 64.6550567150116,
+  "total_tokens": 1392955,
+  "tokens_per_second": 21544.40921983731
+}

@@ -1,0 +1,12 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "arguana",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.5479126984126983,
+    "NDCG@10": 0.649688585990593
+  }
+}

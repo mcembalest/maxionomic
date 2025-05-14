@@ -1,0 +1,23 @@
+{{Italics title}}
+
+{{Speciesbox
+| image = Amphicarpum_amphicarpon.jpg
+| taxon = Amphicarpum amphicarpon
+| authority = (Pursh) Nash
+| synonyms = *''Amphicarpum purshii''
+| synonyms_ref = <ref>{{Cite book |last=Haines |first=Arthur |url=https://www.google.com/books/edition/New_England_Wild_Flower_Society_s_Flora/RKKWVwC_sdoC?hl=en&gbpv=0 |title=New England Wild Flower Society's Flora Novae Angliae: A Manual for the Identification of Native and Naturalized Higher Vascular Plants of New England |date=2011-11-08 |publisher=Yale University Press |isbn=978-0-300-17154-9 |pages=230 |language=en}}</ref>
+}}{{Short description|Species of plant}}
+'''''Amphicarpum amphicarpon''''', commonly known as '''peanut grass''' or '''Pursh's blue maidencane''', is an annual wetland species found in the eastern United States. Its common name honours botanist [[Frederick Traugott Pursh]].<ref name=":0">{{Cite web |title=Amphicarpum amphicarpon (Blue Maidencane, Hairy Maidencane, New Jersey Goober-grass, Peanut Grass, Pine-barrens Goobergrass, Pine-barrens Peanut Grass, Pursh's Blue Maidencane) {{!}} North Carolina Extension Gardener Plant Toolbox |url=https://plants.ces.ncsu.edu/plants/amphicarpum-amphicarpon/ |access-date=2025-01-07 |website=plants.ces.ncsu.edu}}</ref> It was previously considered to be part of the genus [[Milium (plant)|''Milium'']].<ref name=":1">{{Cite web |title=Peanut Grass Guide - New York Natural Heritage Program |url=https://guides.nynhp.org/peanut-grass/ |access-date=2025-01-07 |website=guides.nynhp.org}}</ref> 
+
+== Distribution ==
+It is found along the coastal areas from New Jersey to Georgia.<ref name=":0" /> It was previously found within New York state but is now considered possibly extirpated.<ref name=":1" /> A single population was discovered on [[Nantucket]] in 1988, 240 miles north of its previously known northernmost site.<ref name=":2">{{Cite web |title=Amphicarpum amphicarpon (Pursh's blue maidencane): Go Botany |url=https://gobotany.nativeplanttrust.org/species/amphicarpum/amphicarpon/ |access-date=2025-01-07 |website=gobotany.nativeplanttrust.org}}</ref>
+
+== Description ==
+''Amphicarpum amphicarpon'' grows 1 to 2 feet tall. Its stems and leaves are bristly and hairy; the leaves ascend.<ref name=":3">{{Cite web |title=Vascular Plants of North Carolina |url=https://auth1.dpr.ncparks.gov/flora/species_account.php?id=3658 |access-date=2025-01-07 |website=auth1.dpr.ncparks.gov}}</ref>
+
+The plant produces subterranean fruits early in the growing season, which are self-fertilizing (chasmogamous).<ref name=":2" /> Later, it produces aerial fruits.<ref name=":0" /> It flowers and fruits between August and October.<ref name=":3" /> 
+
+== References ==
+{{Reflist}}{{Taxonbar|from=Q15503700}}
+[[Category:Endemic flora of the United States]]
+[[Category:Panicoideae]]

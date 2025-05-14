@@ -1,0 +1,10 @@
+{
+  "dataset": "hotpot",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 5.748811960220337,
+  "total_tokens": 449636,
+  "tokens_per_second": 78213.72539427549
+}

@@ -1,0 +1,53 @@
+{{short description|French footballer}}
+{{Infobox football biography
+| name = François Barat
+| image =
+| image_size =
+| alt = 
+| caption =
+| fullname = François Marie Barat
+| birth_date = {{Birth date|1889|02|10|df=y}}
+| birth_place = [[Saint-Brisson]], [[Nièvre]], France
+| death_date = Unknown
+| death_place =
+| height =
+| position = [[Midfielder]]
+| youthyears1 = 
+| youthclubs1 = 
+| years1 = 1905–1910 | clubs1 = [[Patronage du Bon Conseil|''AS Bon Conseil'']] | caps1 = | goals1 =
+| totalcaps = 
+| totalgoals = 
+| nationalyears1 = 1909
+| nationalteam1  = [[France national football team|France]]
+| nationalcaps1  = 2
+| nationalgoals1 = 0
+}}
+'''François Marie Barat''' (10 February 1889 – unknown) was a French [[Association football|footballer]] who played as a [[midfielder]] for [[Patronage du Bon Conseil|''AS Bon Conseil'']] and the [[France national football team|French national team]] between 1908 and 1910.<ref name=EU>{{cite web |url=https://eu-football.info/_player.php?id=1245 |title=François Barat, international footballer |website=eu-football.info |accessdate=7 January 2025}}</ref><ref name=Net>{{cite web |url=https://www.worldfootball.net/player_summary/jean-marie-barat/ |title=Jean-Marie Barat |website=www.worldfootball.net |accessdate=7 January 2025}}</ref><ref name=FFF>{{cite web |url=https://www.fff.fr/equipe-nationale/joueur/9988-barat-jean-marie/fiche.html |title=Jean-Marie Barat |language=fr |website=www.fff.fr |access-date=7 January 2025}}</ref><ref name=Player>{{cite web |url=https://www.national-football-teams.com/player/51819/Jean_Marie_Barat.html |title=Jean-Marie Barat (Player) |website=www.national-football-teams.com |access-date=7 January 2025}}</ref>
+
+==Early life==
+Born in [[Saint-Brisson]], [[Nièvre]], on 10 February 1889,<ref name=EU/> Barat played his entire football career in the patronage clubs, most notably at the ''AS Bon Conseil'', one of the many Catholic clubs affiliated with the [[Gymnastic and Sports Federation of French Patronages]] (FGSPF), then presided by [[Charles Simon (sports manager)|Charles Simon]].<ref name=Blues>{{cite web |url=https://www.chroniquesbleues.fr/A-la-recherche-du-benjamin |title=A la recherche du benjamin des Bleus |trans-title=In search of the youngest of the Blues |language=fr |website=www.chroniquesbleues.fr |date=12 September 2020 |access-date=7 January 2025}}</ref> He had a younger brother, Elie Barat, and both resided at the {{ill|Avenue de Ségur|fr}} in the [[7th arrondissement of Paris]], where the ''AS Bon Conseil'' club is still located today.<ref name=Blues/>
+
+On 28 May 1905, the 16-year-old Barat engaged in a [[shot put]] competition at the patronage championships, in which his fellow international [[Ernest Tossier]], only a year younger, also participated.<ref name=Blues/>
+
+==Playing career==
+Barat was playing in Conseil's football team as early as January 1906.<ref>{{cite web |url=https://gallica.bnf.fr/ark:/12148/bpt6k53250907/f3.item.r=barat.zoom |title=L'A. S. Bon Conseil |language=fr |website=gallica.bnf.fr |publisher=[[Les Jeunes]] |page=3 |date=20 January 1906 |accessdate=7 January 2025 }}</ref> On 20 January 1907, Barat played for an FGSPF team made up of the best players from the patronages in a [[Exhibition game|friendly match]] against the English club North [[London]] AFC, helping his side to a 4–2 win.<ref name=Blues/><ref>{{cite web |url=https://gallica.bnf.fr/ark:/12148/bpt6k46232895/f7.item.r=BaiT.zoom |title=Les Patronages contre North London A.F.C. |trans-title=The Patronages against North London AFC |language=fr |website=gallica.bnf.fr |publisher=[[L'Équipe|L'Auto]] |page=7 |date=20 January 1907 |access-date=7 January 2025}}</ref> Despite being one of the best players from the patronages around 1906–08, Barat was not called up for the French national team because the national coach of the time, the northerner [[André Billy (football manager)|André Billy]] of [[Union des Sociétés Françaises de Sports Athlétiques|USFSA]], preferred players from the [[Nord (French department)|Nord]].<ref name=Blues/> When the USFSA was replaced by Simon's [[French Interfederal Committee|CFI]], however, he was immediately called up for the first two matches of the CFI reign,<ref name=Blues/> both in May 1909, in friendlies against [[Belgium national football team|Belgium]] in [[Brussels]] and [[England national amateur football team|England amateurs]] in [[Gentilly, Val-de-Marne|Gentilly]], losing on both occasions.<ref name=EU/><ref name=FFF/><ref name=Player/> Even though the latter match ended in a resounding 0–11 loss, the French newspaper ''L'Auto'' (the forerunner of ''[[L'Équipe]]'') stated that "Barat was good".<ref>{{cite web |url=https://gallica.bnf.fr/ark:/12148/bpt6k4624149m/f5.image.r=barat.zoom |title=L'Angleterre (F.A) bat la France (C.F.I.) par 11 buts à 0 |trans-title=England (F.A) beat France (C.F.I.) by 11 goals to 0 |language=fr |website=gallica.bnf.fr |publisher=[[L'Équipe|L'Auto]] |page=5 |date=23 May 1909 |access-date=7 January 2025}}</ref> He remains one of only three players of ''Bon Conseil'' to have represented the French national team, the other two being [[Félix Julien]] and [[Goalkeeper (association football)|goalkeeper]] [[Louis Tessier]].<ref>{{cite web |url=https://eu-football.info/_club.php?id=646 |title=AS Bon Conseil, Paris, football club |website=eu-football.info |accessdate=7 January 2025}}</ref>
+
+Like many French internationals from the start of the 20th century, Barat was the victim of mistakes by historians, being initially confused with a certain Jean-Marie Barat born in [[Paris]] on 1 August 1892,<ref name=FFF/><ref name=Player/><ref name=Blues/> which led many historians to wrongly claim that he was the youngest French international in history, at the age of 16 years and 9 months during his international debut in May 1909, as well as one of only two players to have represented the ''"Bleues"'' before his 17th birthday, alongside [[Jules Verbrugge]], who was also the victim of a mistake in his civil status; the youngest French international is actually [[Félix Vial]], aged 17 years and 4 months.<ref name=Blues/>
+
+==Later life==
+A carpenter by profession, Barat was mobilized at the outbreak of the [[First World War]] in August 1914, becoming a sergeant of the 168th Infantry Regiment, and being seriously wounded during the [[Bois-le-Prêtre fighting]] in June 1915.<ref>{{cite web |url=https://archives.paris.fr/arkotheque/visionneuse/visionneuse.php?arko=YTo2OntzOjQ6ImRhdGUiO3M6MTA6IjIwMjItMDEtMDYiO3M6MTA6InR5cGVfZm9uZHMiO3M6MTE6ImFya29fc2VyaWVsIjtzOjQ6InJlZjEiO2k6MTc7czo0OiJyZWYyIjtpOjEzOTI0MzU7czoxNjoidmlzaW9ubmV1c2VfaHRtbCI7YjoxO3M6MjE6InZpc2lvbm5ldXNlX2h0bWxfbW9kZSI7czo0OiJwcm9kIjt9#uielem_move=0%2C0&uielem_rotate=F&uielem_islocked=0&uielem_zoom=100 |title=Barat, François Marie, Matricule 336 |language=fr |website=archives.paris.fr |access-date=7 January 2025}}</ref>
+
+The date of his death remains unknown, which means that it is not known whether he survived the War.<ref name=EU/>
+
+==References==
+{{reflist}}
+
+{{DEFAULTSORT:Barat, François}}
+[[Category:1889 births]]
+[[Category:Year of death missing]]
+[[Category:Footballers from Nièvre]]
+[[Category:French men's footballers]]
+[[Category:France men's international footballers]]
+[[Category:Men's association football midfielders]]
+[[Category:20th-century French sportsmen]]
+[[Category:French military personnel of World War I]]

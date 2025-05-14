@@ -1,0 +1,13 @@
+{
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.5974126984126983,
+    "NDCG@10": 0.3725667386947564,
+    "total_reranking_cost": 0.054565000000000016,
+    "total_tokens_reranked": 1091300
+  }
+}

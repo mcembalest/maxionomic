@@ -1,0 +1,10 @@
+{
+  "dataset": "fever",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 19.54862928390503,
+  "total_tokens": 1554693,
+  "tokens_per_second": 79529.51470004217
+}

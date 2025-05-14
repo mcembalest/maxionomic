@@ -1,0 +1,11 @@
+{
+  "model": "voyageai/voyage-3",
+  "dataset": "climate-fever",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.3885476190476189,
+    "NDCG@10": 0.3057211492065509
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "fiqa",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.6822222222222223,
+    "NDCG@10": 0.6312611139453468,
+    "total_reranking_cost": 0.06344235,
+    "total_tokens_reranked": 1268847
+  }
+}

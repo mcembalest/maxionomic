@@ -1,0 +1,10 @@
+{
+  "dataset": "nq",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 512,
+  "concurrency": 5,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 5.353199243545532,
+  "total_tokens": 609262,
+  "tokens_per_second": 113812.68887658167
+}

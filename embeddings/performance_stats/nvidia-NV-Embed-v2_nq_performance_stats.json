@@ -1,0 +1,12 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "nq",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.7562698412698413,
+    "NDCG@10": 0.8010928363074082
+  }
+}

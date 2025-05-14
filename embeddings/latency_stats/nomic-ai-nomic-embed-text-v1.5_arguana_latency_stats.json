@@ -1,0 +1,10 @@
+{
+  "dataset": "arguana",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 5.9986701011657715,
+  "total_tokens": 762735,
+  "tokens_per_second": 127150.68292416536
+}

@@ -1,0 +1,11 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "hotpot",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.8760000000000001,
+    "NDCG@10": 0.8143055188706184
+  }
+}

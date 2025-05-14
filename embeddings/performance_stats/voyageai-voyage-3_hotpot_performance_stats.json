@@ -1,0 +1,11 @@
+{
+  "model": "voyageai/voyage-3",
+  "dataset": "hotpot",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.8546666666666667,
+    "NDCG@10": 0.7997993677319041
+  }
+}

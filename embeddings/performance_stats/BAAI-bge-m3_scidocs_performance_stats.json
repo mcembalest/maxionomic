@@ -1,0 +1,11 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.5404365079365079,
+    "NDCG@10": 0.3682099225149631
+  }
+}

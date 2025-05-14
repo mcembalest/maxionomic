@@ -1,0 +1,10 @@
+{
+  "dataset": "quora",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "batch_size": 512,
+  "concurrency": 5,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 1.4281411170959473,
+  "total_tokens": 94225,
+  "tokens_per_second": 65977.3735746799
+}

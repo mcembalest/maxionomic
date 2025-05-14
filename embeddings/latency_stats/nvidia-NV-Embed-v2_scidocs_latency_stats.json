@@ -1,0 +1,12 @@
+{
+  "dataset": "scidocs",
+  "model": "nvidia/NV-Embed-v2",
+  "batch_size": 8,
+  "concurrency": 1,
+  "max_seq_length": 8192,
+  "total_documents": 1866,
+  "total_duration_seconds": 87.1866,
+  "total_tokens": 429145,
+  "tokens_per_second": 4922.14,
+  "error": null
+}

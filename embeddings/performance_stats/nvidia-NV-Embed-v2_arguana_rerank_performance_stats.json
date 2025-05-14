@@ -1,0 +1,14 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "arguana",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.5713571428571428,
+    "NDCG@10": 0.6903404069231691,
+    "total_reranking_cost": 0.11603550000000003,
+    "total_tokens_reranked": 2320710
+  }
+}

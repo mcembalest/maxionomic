@@ -1,0 +1,11 @@
+{
+  "model": "voyageai/voyage-3-large",
+  "dataset": "fiqa",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.7108333333333333,
+    "NDCG@10": 0.6704045363298888
+  }
+}

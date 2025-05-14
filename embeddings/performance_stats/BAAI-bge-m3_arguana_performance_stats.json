@@ -1,0 +1,11 @@
+{
+  "model": "BAAI/bge-m3",
+  "dataset": "arguana",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.4007698412698412,
+    "NDCG@10": 0.5113128191096172
+  }
+}

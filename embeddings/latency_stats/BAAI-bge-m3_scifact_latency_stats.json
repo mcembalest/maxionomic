@@ -1,0 +1,10 @@
+{
+  "dataset": "scifact",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 13.264103889465332,
+  "total_tokens": 1047134,
+  "tokens_per_second": 78944.94861666899
+}

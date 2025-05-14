@@ -1,0 +1,110 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "datasets_run": [
+    "arguana",
+    "climate-fever",
+    "dbpedia",
+    "fever",
+    "fiqa",
+    "hotpot",
+    "msmarco",
+    "nfcorpus",
+    "nq",
+    "quora",
+    "scidocs",
+    "scifact",
+    "touche"
+  ],
+  "datasets_skipped": [],
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "use_sentence_transformer": true,
+  "num_successful_datasets": 13,
+  "average_metrics": {
+    "MRR@10": 0.6996102763449701,
+    "NDCG@10": 0.6303551657713615,
+    "total_reranking_cost": 0.05592848846153846,
+    "total_tokens_reranked": 1118569.7692307692
+  },
+  "per_dataset_metrics": {
+    "arguana": {
+      "MRR@10": 0.5713571428571428,
+      "NDCG@10": 0.6903404069231691,
+      "total_reranking_cost": 0.11603550000000003,
+      "total_tokens_reranked": 2320710
+    },
+    "climate-fever": {
+      "MRR@10": 0.4519365079365079,
+      "NDCG@10": 0.33541334948324747,
+      "total_reranking_cost": 0.08899574999999998,
+      "total_tokens_reranked": 1779915
+    },
+    "dbpedia": {
+      "MRR@10": 0.8605555555555555,
+      "NDCG@10": 0.7172834892547165,
+      "total_reranking_cost": 0.01846875,
+      "total_tokens_reranked": 369375
+    },
+    "fever": {
+      "MRR@10": 0.9306666666666666,
+      "NDCG@10": 0.9380607923351478,
+      "total_reranking_cost": 0.06683120000000002,
+      "total_tokens_reranked": 1336624
+    },
+    "fiqa": {
+      "MRR@10": 0.47488888888888886,
+      "NDCG@10": 0.3824377422400489,
+      "total_reranking_cost": 0.04879625000000002,
+      "total_tokens_reranked": 975925
+    },
+    "hotpot": {
+      "MRR@10": 0.9766666666666666,
+      "NDCG@10": 0.9422439388772318,
+      "total_reranking_cost": 0.02352155,
+      "total_tokens_reranked": 470431
+    },
+    "msmarco": {
+      "MRR@10": 0.646047619047619,
+      "NDCG@10": 0.7161472074898875,
+      "total_reranking_cost": 0.019201250000000003,
+      "total_tokens_reranked": 384025
+    },
+    "nfcorpus": {
+      "MRR@10": 0.4390476190476191,
+      "NDCG@10": 0.2583108785494804,
+      "total_reranking_cost": 0.08643925000000001,
+      "total_tokens_reranked": 1728785
+    },
+    "nq": {
+      "MRR@10": 0.7458333333333331,
+      "NDCG@10": 0.794394062440677,
+      "total_reranking_cost": 0.029167150000000003,
+      "total_tokens_reranked": 583343
+    },
+    "quora": {
+      "MRR@10": 0.94,
+      "NDCG@10": 0.952859708818672,
+      "total_reranking_cost": 0.004863050000000001,
+      "total_tokens_reranked": 97261
+    },
+    "scidocs": {
+      "MRR@10": 0.6076031746031745,
+      "NDCG@10": 0.3677181315367588,
+      "total_reranking_cost": 0.05373514999999999,
+      "total_tokens_reranked": 1074703
+    },
+    "scifact": {
+      "MRR@10": 0.785,
+      "NDCG@10": 0.8003242557539757,
+      "total_reranking_cost": 0.08676434999999999,
+      "total_tokens_reranked": 1735287
+    },
+    "touche": {
+      "MRR@10": 0.6653304178814381,
+      "NDCG@10": 0.2990831913246865,
+      "total_reranking_cost": 0.08425115,
+      "total_tokens_reranked": 1685023
+    }
+  }
+}

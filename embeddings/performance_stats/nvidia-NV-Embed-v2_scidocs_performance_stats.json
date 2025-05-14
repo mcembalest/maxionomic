@@ -1,0 +1,12 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.6168571428571429,
+    "NDCG@10": 0.42773185824084736
+  }
+}

@@ -1,0 +1,435 @@
+{{TennisEventInfo|2025|Australian Open (real tennis)|
+| date=6-14 January
+| edition=93nd (men)<br>35th (women)
+| category=[[International Real Tennis Professionals Association|IRTPA]] (men)<br>None (women)
+| draw=16S / 8D (men)<br>7S / 4D (women) 
+| location= [[Hobart]], [[Tasmania]]
+| venue=[[Hobart Real Tennis Club]] 
+| champms=TBC
+| champws=TBC
+| champmd=TBC
+| champwd=TBC
+}}
+
+The '''2025 [[Real Tennis]] Australian Open''' will be the 93rd edition of the [[Australian Open (real tennis)|Australian Open]]. It will be held at the [[Hobart Real Tennis Club]] in [[Hobart]], [[Tasmania]] between January 6–14, 2025 and will be organised by the [[Australian Real Tennis Association]]. The men's event will be the first event in the qualifying series for the 2027 Real Tennis World Championship.<ref>{{cite web |title=Australian Open - Draw and Results for 2025 |url=https://www.hobarttennis.com.au/draws |publisher=Hobart Real Tennis Club |access-date=31 December 2024}}</ref><ref>{{cite web |title=Australian Open 2025 |date=31 December 2024 |url=https://www.irtpa.com/ladder/434/ |publisher=International Real Tennis Professionals Association |access-date=22 May 2024}}</ref> The event will be held alongside festivities for the 150th anniversary of the founding of the Hobart club. The men's draw will be the first [[Grand Slam (real tennis)|grand slam]] event of the year.<ref>{{cite web|title = Australian Open & Australian Women's Open Singles & Doubles |url=https://rmtc.com.au/events/australian-open-mens-womens-singles-doubles-2 |publisher=Royal Melbourne Tennis Club |access-date=31 December 2024}}</ref>
+
+The men's singles draw will feature the return of current [[Real Tennis World Championship|World Champion]] [[Camden Riviere]] after a five-year absence at the event. Defending men's champion [[John Lumley (real tennis)|John Lumley]] will not return to defend his title. World Number 3 [[Nick Howell (real tennis)|Nick Howell]] was originally due to play, but withdrew prior to the start of the tournament. The women's singles draw will be defended by incumbent World Champion [[Claire Fahey]].
+
+==Draw and results==
+
+''Amateur players are marked as (A)''
+
+===Men's Singles Qualifying===
+
+====First Qualifier====
+
+{{3TeamBracket
+| sets = 3
+| compact = yes
+| boldwinner = high
+| RD1 = First Round
+| RD1-team1 = {{flagicon|AUS}} [[Sammy Legg|S Legg]] (A)
+| RD1-seed1 = 
+| RD1-score1-1 = 5
+| RD1-score1-2 = 6
+| RD1-score1-3 = 2
+| RD1-team2 = {{flagicon|AUS}} [[Darcy Webster-Jones|D Webster-Jones]] (A)
+| RD1-seed2 =
+| RD1-score2-1 = 6
+| RD1-score2-2 = 3
+| RD1-score2-3 = 6
+| RD2-team1 = {{flagicon|AUS}} [[Tony Blom|T Blom]] (A)
+| RD2-score1-1 = 1
+| RD2-score1-2 = 1
+| RD2-team2 = {{flagicon|AUS}} [[Darcy Webster-Jones|D Webster-Jones]] (A)
+| RD2-score2-1 = 6
+| RD2-score2-2 = 6
+}}
+
+===Men's Singles===
+
+{{16TeamBracket
+| sets = 5
+| compact = yes
+| boldwinner = high
+| RD1-team1 = {{flagicon|USA}}&nbsp;[[Camden Riviere|C Riviere]]
+| RD1-seed1 = 1
+| RD1-score1-1 = 6
+| RD1-score1-2 = 6
+| RD1-score1-3 = 6
+| RD1-score1-4 = 
+| RD1-score1-5 = 
+| RD1-team2 = {{flagicon|AUS}}&nbsp;[[Nick Stenning|N Stenning]] (A)
+| RD1-seed2 = 
+| RD1-score2-1 = 0
+| RD1-score2-2 = 0
+| RD1-score2-3 = 0
+| RD1-score2-4 = 
+| RD1-score2-5 = 
+| RD1-team3 = {{flagicon|AUS}} [[Jackson Pastoor|J Pastoor]]
+| RD1-seed3 = &nbsp;
+| RD1-score3-1 = 2
+| RD1-score3-2 = 2
+| RD1-score3-3 = 3
+| RD1-score3-4 = 
+| RD1-team4 = {{flagicon|AUS}} [[John Woods-Casey|J Woods-Casey]]
+| RD1-seed4 = 7
+| RD1-score4-1 = 6
+| RD1-score4-2 = 6
+| RD1-score4-3 = 6
+| RD1-score4-4 = 
+| RD1-team5 = {{flagicon|AUS}} [[Oliver Pridmore|O Pridmore]] (A)
+| RD1-seed5 = 8
+| RD1-score5-1 = 
+| RD1-score5-2 = 
+| RD1-score5-3 = 
+| RD1-score5-4 = 
+| RD1-team6 = {{flagicon|AUS}} [[Tony Blom|T Blom]] (A)
+| RD1-seed6 = LL
+| RD1-score6-1 = 
+| RD1-score6-2 = 
+| RD1-score6-3 = 
+| RD1-team7 = {{flagicon|FRA}} [[Baudouin Huynh-Lenhardt|B Huynh-Lenhardt]]
+| RD1-seed7 = 
+| RD1-score7-1 = 0
+| RD1-score7-2 = 3
+| RD1-score7-3 = 4
+| RD1-team8 = {{flagicon|AUS}} [[Robert Fahey|R Fahey]]
+| RD1-seed8 = 4
+| RD1-score8-1 = 6
+| RD1-score8-2 = 6
+| RD1-score8-3 = 6
+| RD1-team9 = {{nowrap|{{flagicon|AUS}} [[Chris Chapman (real tennis)|C Chapman]]}}
+| RD1-seed9 = 3
+| RD1-score9-1 = 
+| RD1-score9-2 = 
+| RD1-score9-3 = 
+| RD1-team10 = {{flagicon|FRA}} [[Lea Van Der Zwalmen|L Van Der Zwalmen]] (A)
+| RD1-seed10 = &nbsp;
+| RD1-score10-1 = 
+| RD1-score10-2 = 
+| RD1-score10-3 = 
+| RD1-team11 = {{flagicon|AUS}} [[Darcy Webster-Jones|D Webster-Jones]] (A)
+| RD1-seed11 = Q
+| RD1-score11-1 = 1
+| RD1-score11-2 = 1
+| RD1-score11-3 = 0
+| RD1-score11-4 = 
+| RD1-score11-5 = 
+| RD1-team12 = {{flagicon|AUS}} [[Kieran Booth|K Booth]] (A)
+| RD1-seed12 = 6
+| RD1-score12-1 = 6
+| RD1-score12-2 = 6
+| RD1-score12-3 = 6
+| RD1-score12-4 = 
+| RD1-score12-5 = 
+| RD1-team13 = {{flagicon|GBR}} [[Lewis Williams (real tennis)|L Williams]]
+| RD1-seed13 = 5
+| RD1-score13-1 = 3
+| RD1-score13-2 = 6
+| RD1-score13-3 = 6
+| RD1-score13-4 = 6
+| RD1-score13-5 = 
+| RD1-team14 = {{flagicon|GBR}} [[Claire Fahey|C Fahey]]
+| RD1-seed14 = &nbsp;
+| RD1-score14-1 = 6
+| RD1-score14-2 = 2
+| RD1-score14-3 = 5
+| RD1-score14-4 = 4
+| RD1-score14-5 = 
+| RD1-team15 = {{flagicon|GBR}} [[Will Flynn|W Flynn]]
+| RD1-seed15 = &nbsp;
+| RD1-score15-1 = 
+| RD1-score15-2 = 
+| RD1-score15-3 = 
+| RD1-team16 = {{flagicon|GBR}} [[Ben Taylor-Matthews|B Taylor-Matthews]]
+| RD1-seed16 = 2
+| RD1-score16-1 = 
+| RD1-score16-2 = 
+| RD1-score16-3 =
+
+| RD2-team1 = {{flagicon|USA}}&nbsp;[[Camden Riviere|C Riviere]]
+| RD2-seed1 = 1
+| RD2-score1-1 = 
+| RD2-score1-2 = 
+| RD2-score1-3 = 
+| RD2-score1-4 = 
+| RD2-team2 = {{flagicon|AUS}} [[John Woods-Casey|J Woods-Casey]]
+| RD2-seed2 = 7
+| RD2-score2-1 = 
+| RD2-score2-2 = 
+| RD2-score2-3 = 
+| RD2-score2-4 = 
+| RD2-team3 = {{flagicon|AUS}}
+| RD2-seed3 = 
+| RD2-score3-1 = 
+| RD2-score3-2 = 
+| RD2-score3-3 = 
+| RD2-score3-4 = 
+| RD2-team4 = {{flagicon|AUS}} [[Robert Fahey|R Fahey]] 
+| RD2-seed4 = 3
+| RD2-score4-1 = 
+| RD2-score4-2 = 
+| RD2-score4-3 = 
+| RD2-score4-4 = 
+| RD2-team5 = 
+| RD2-seed5 =
+| RD2-score5-1 = 
+| RD2-score5-2 = 
+| RD2-score5-3 = 
+| RD2-score5-4 = 
+| RD2-team6 = {{flagicon|AUS}} [[Kieran Booth|K Booth]] (A)
+| RD2-seed6 = 6
+| RD2-score6-1 = 
+| RD2-score6-2 = 
+| RD2-score6-3 = 
+| RD2-score6-4 = 
+| RD2-team7 = {{flagicon|GBR}} [[Lewis Williams (real tennis)|L Williams]]
+| RD2-seed7 = 5
+| RD2-score7-1 = 
+| RD2-score7-2 = 
+| RD2-score7-3 = 
+| RD2-score7-4 = 
+| RD2-score7-5 = 
+| RD2-team8 = {{flagicon|GBR}} 
+| RD2-seed8 = 
+| RD2-score8-1 = 
+| RD2-score8-2 = 
+| RD2-score8-3 = 
+| RD2-score8-4 = 
+| RD2-score8-5 =
+
+| RD3-team1 = 
+| RD3-seed1 = 
+| RD3-score1-1 = 
+| RD3-score1-2 = 
+| RD3-score1-3 =
+| RD3-score1-4 = 
+| RD3-score1-5 = 
+| RD3-team2 = {{flagicon|AUS}}
+| RD3-seed2 = 
+| RD3-score2-1 = 
+| RD3-score2-2 = 
+| RD3-score2-3 = 
+| RD3-score2-4 = 
+| RD3-score2-5 = 
+| RD3-team3 = 
+| RD3-seed3 = 
+| RD3-score3-1 = 
+| RD3-score3-2 = 
+| RD3-score3-3 = 
+| RD3-score3-4 = 
+| RD3-team4 = 
+| RD3-seed4 = 
+| RD3-score4-1 = 
+| RD3-score4-2 = 
+| RD3-score4-3 = 
+| RD3-score4-4 =
+
+| RD4-team1 = 
+| RD4-seed1 = 
+| RD4-score1-1 = 
+| RD4-score1-2 = 
+| RD4-score1-3 = 
+| RD4-score1-4 = 
+| RD4-team2 = 
+| RD4-seed2 = 
+| RD4-score2-1 = 
+| RD4-score2-2 = 
+| RD4-score2-3 = 
+| RD4-score2-4 = 
+}}
+
+===Men's Doubles===
+
+{{8TeamBracket
+| sets = 5
+| compact = yes
+| RD1-team1 = {{flagicon|USA}} [[Camden Riviere|C Riviere]] <br> {{flagicon|AUS}} [[Chris Chapman (real tennis)|C Chapman]]
+| RD1-seed1 = 1
+| RD1-score1-1 = 
+| RD1-score1-2 = 
+| RD1-score1-3 = 
+| RD1-team2 = {{flagicon|AUS}} [[Sammy Legg|S Legg]] (A) <br> {{flagicon|FRA}} [[Baudouin Huynh-Lenhardt|B Huynh-Lenhardt]]
+| RD1-seed2 = 
+| RD1-score2-1 = 
+| RD1-score2-2 = 
+| RD1-score2-3 = 
+| RD1-team3 = {{flagicon|AUS}} [[Nick Stenning|N Stenning]] (A) <br> {{flagicon|AUS}} [[Darcy Webster-Jones|D Webster-Jones]] (A)
+| RD1-seed3 = 
+| RD1-score3-1 = 
+| RD1-score3-2 = 
+| RD1-score3-3 = 
+| RD1-score3-4 = 
+| RD1-score3-5 = 
+| RD1-team4 = {{flagicon|GBR}} [[Lewis Williams (real tennis)|L Williams]] <br> {{flagicon|AUS}} [[John Woods-Casey|J Woods-Casey]]
+| RD1-seed4 = 3
+| RD1-score4-1 =
+| RD1-score4-2 = 
+| RD1-score4-3 = 
+| RD1-score4-4 = 
+| RD1-score4-5 = 
+| RD1-team5 = {{flagicon|AUS}} [[Kieran Booth|K Booth]] (A) <br> {{flagicon|AUS}} [[Oliver Pridmore|O Pridmore]] (A)
+| RD1-seed5 = 4
+| RD1-score5-1 = 
+| RD1-score5-2 = 
+| RD1-score5-3 = 
+| RD1-score5-4 =
+| RD1-team6 = {{flagicon|GBR}} [[Claire Fahey|C Fahey]] <br> {{flagicon|GBR}} [[Will Flynn|W Flynn]] (A)
+| RD1-seed6 = 
+| RD1-score6-1 = 
+| RD1-score6-2 = 
+| RD1-score6-3 = 
+| RD1-score6-4 = 
+| RD1-team7 = {{flagicon|AUS}} [[Tony Blom|T Blom]] (A) <br> {{flagicon|AUS}} [[Jackson Pastoor|J Pastoor]]
+| RD1-seed7 = 
+| RD1-score7-1 = 
+| RD1-score7-2 = 
+| RD1-score7-3 = 
+| RD1-score7-4 = 
+| RD1-team8 = {{flagicon|AUS}} [[Robert Fahey|R Fahey]] <br> {{flagicon|GBR}} [[Ben Taylor-Matthews|B Taylor-Matthews]]
+| RD1-seed8 = 2
+| RD1-score8-1 = 
+| RD1-score8-2 = 
+| RD1-score8-3 = 
+| RD1-score8-4 =
+
+| RD2-team1 = {{flagicon|AUS}}
+| RD2-seed1 = 
+| RD2-score1-1 =
+| RD2-score1-2 = 
+| RD2-score1-3 = 
+| RD2-score1-4 = 
+| RD2-team2 = {{flagicon|AUS}}
+| RD2-seed2 = 
+| RD2-score2-1 = 
+| RD2-score2-2 = 
+| RD2-score2-3 = 
+| RD2-score2-4 = 
+| RD2-team3 = 
+| RD2-seed3 = 
+| RD2-score3-1 = 
+| RD2-score3-2 = 
+| RD2-score3-3 = 
+| RD2-team4 = {{flagicon|AUS}}
+| RD2-seed4 = 
+| RD2-score4-1 = 
+| RD2-score4-2 = 
+| RD2-score4-3 =
+
+| RD3-team1 = 
+| RD3-seed1 = 
+| RD3-score1-1 = 
+| RD3-score1-2 =
+| RD3-score1-3 = 
+| RD3-team2 = 
+| RD3-seed2 = 
+| RD3-score2-1 = 
+| RD3-score2-2 = 
+| RD3-score2-3 = 
+}}
+
+===Women's Singles===
+
+''Note: all players are [[Amateur sports|amateurs]] except [[Claire Fahey]]''
+
+{{8TeamBracket-Byes
+| sets = 3
+| compact = yes
+| boldwinner = high
+
+| RD1-team3 = {{flagicon|AUS}} [[Jo See Tan|JS Tan]]
+| RD1-seed3 = 
+| RD1-score3-1 = 
+| RD1-score3-2 = 
+| RD1-team4 = {{flagicon|CAN}} [[Jacqueline Siu (immunologist)|J Siu]]
+| RD1-seed4 = &nbsp;
+| RD1-score4-1 = 
+| RD1-score4-2 = 
+| RD1-team5 = {{flagicon|NED}} [[Saskia Bollerman|S Bollerman]]
+| RD1-seed5 = 3
+| RD1-score5-1 = 
+| RD1-score5-2 = 
+| RD1-team6 = {{flagicon|GBR}} [[Jess Garside|J Garside]]
+| RD1-seed6 = &nbsp;
+| RD1-score6-1 = 
+| RD1-score6-2 = 
+| RD1-team7 = {{flagicon|AUS}} [[Ange Green|A Green]]
+| RD1-seed7 = 
+| RD1-score7-1 = 
+| RD1-score7-2 = 
+| RD1-team8 = {{flagicon|FRA}} [[Lea Van Der Zwalmen|L Van Der Zwalmen]]
+| RD1-seed8 = 2
+| RD1-score8-1 = 
+| RD1-score8-2 =
+
+| RD2-team1 = {{flagicon|GBR}} [[Claire Fahey|C Fahey]]
+| RD2-seed1 = 1
+| RD2-score1-1 = 
+| RD2-score1-2 = 
+| RD2-team2 = 
+| RD2-seed2 = 
+| RD2-score2-1 = 
+| RD2-score2-2 = 
+| RD2-team3 = 
+| RD2-seed3 = 
+| RD2-score3-1 = 
+| RD2-score3-2 = 
+| RD2-team4 = 
+| RD2-seed4 = 
+| RD2-score4-1 = 
+| RD2-score4-2 =
+
+| RD3-team1 = 
+| RD3-seed1 = 
+| RD3-score1-1 = 
+| RD3-score1-2 = 
+| RD3-team2 = 
+| RD3-seed2 = 
+| RD3-score2-1 = 
+| RD3-score2-2 = 
+}}
+
+===Women's Doubles===
+
+''Note: all players are [[Amateur sports|amateurs]] except [[Claire Fahey]]''
+
+{{4TeamBracket
+| sets = 3
+| compact = yes
+| boldwinner = high
+
+| RD1-team1 = {{flagicon|GBR}} [[Claire Fahey|C Fahey]] <br> {{flagicon|NED}} [[Saskia Bollerman|S Bollerman]]
+| RD1-seed1 = 1
+| RD1-score1-1 =
+| RD1-score1-2 = 
+| RD1-team2 = {{flagicon|AUS}} [[Jo See Tan|JS Tan]] <br> {{flagicon|AUS}} [[Xanthe Ranger|X Ranger]]
+| RD1-score2-1 = 
+| RD1-score2-2 = 
+| RD1-team3 = {{flagicon|AUS}} [[Ange Green|A Green]] <br> {{flagicon|CAN}} [[Jacqueline Siu (immunologist)|J Siu]]
+| RD1-seed3 = 
+| RD1-score3-1 = 
+| RD1-score3-2 = 
+| RD1-team4 = {{flagicon|FRA}} [[Lea Van Der Zwalmen|L Van Der Zwalmen]] <br> {{flagicon|GBR}} [[Jess Garside|J Garside]]
+| RD1-seed4 = 2
+| RD1-score4-1 = 
+| RD1-score4-2 =
+
+| RD2-team1 = 
+| RD2-seed1 = 
+| RD2-score1-1 = 
+| RD2-score1-2 =
+| RD2-team2 = 
+| RD2-seed2 = 
+| RD2-score2-1 = 
+| RD2-score2-2 = 
+}}
+
+==See also==
+* [[Grand Slam (real tennis)]]
+
+==References==
+{{reflist}}
+
+[[Category:Australian Open (real tennis)]]
+[[Category:2025 in Australian sport|Real Tennis Australian Open]]

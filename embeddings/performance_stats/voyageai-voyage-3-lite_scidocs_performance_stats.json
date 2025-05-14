@@ -1,0 +1,11 @@
+{
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "metrics": {
+    "MRR@10": 0.6248263888888889,
+    "NDCG@10": 0.3997076257652809
+  }
+}

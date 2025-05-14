@@ -1,0 +1,9 @@
+{
+  "dataset": "hotpot",
+  "model": "voyageai/voyage-3-lite",
+  "batch_size": 1000,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 7.536501884460449,
+  "total_tokens": 433702,
+  "tokens_per_second": 57546.857500858896
+}

@@ -1,0 +1,10 @@
+{
+  "dataset": "nfcorpus",
+  "model": "BAAI/bge-m3",
+  "batch_size": 16,
+  "concurrency": 128,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 13.859525918960571,
+  "total_tokens": 1097386,
+  "tokens_per_second": 79179.18739909548
+}

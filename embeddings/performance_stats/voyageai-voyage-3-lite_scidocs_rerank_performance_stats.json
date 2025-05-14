@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3-lite",
+  "dataset": "scidocs",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.6093998015873016,
+    "NDCG@10": 0.3728976256018086,
+    "total_reranking_cost": 0.052454749999999994,
+    "total_tokens_reranked": 1049095
+  }
+}

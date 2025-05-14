@@ -1,0 +1,9 @@
+{
+  "dataset": "climate-fever",
+  "model": "voyageai/voyage-3-lite",
+  "batch_size": 1000,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 19.119141101837158,
+  "total_tokens": 1145752,
+  "tokens_per_second": 59926.959788476306
+}

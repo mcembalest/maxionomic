@@ -1,0 +1,12 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "fiqa",
+  "k": 10,
+  "use_reranker": false,
+  "initial_k": 10,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.5128571428571428,
+    "NDCG@10": 0.40137461801008434
+  }
+}

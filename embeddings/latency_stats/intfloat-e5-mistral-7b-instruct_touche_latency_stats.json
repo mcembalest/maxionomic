@@ -1,0 +1,9 @@
+{
+  "dataset": "touche",
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "batch_size": 512,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 740.2453100681305,
+  "total_tokens": 2834265,
+  "tokens_per_second": 3828.8185841246877
+}

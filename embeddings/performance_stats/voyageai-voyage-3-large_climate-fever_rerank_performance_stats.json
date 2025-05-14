@@ -1,0 +1,13 @@
+{
+  "model": "voyageai/voyage-3-large",
+  "dataset": "climate-fever",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "metrics": {
+    "MRR@10": 0.43674603174603177,
+    "NDCG@10": 0.32608861580938303,
+    "total_reranking_cost": 0.08997434999999998,
+    "total_tokens_reranked": 1799487
+  }
+}

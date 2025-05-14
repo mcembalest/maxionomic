@@ -1,0 +1,77 @@
+{{Short description|Peruvian band}}
+{{Infobox musical artist
+| name             = Manzanita y su Conjunto
+| alias            = 
+| image            = 
+| caption          = 
+| landscape        = 
+| background       = group_or_band
+| origin           = [[Lima]], Peru
+| genre            = [[Peruvian cumbia|cumbia]], [[guaracha]]{{r|cosmalon}}
+| years_active     = 1969–present
+| label            = Dinsa, Virrey
+| website          = {{url|manzanitaysuconjunto.com}}
+| current_members  = {{hlist|Berardo Hernández Jr.}}
+| past_members     = {{hlist|Berardo Hernández|Héctor Mattos|Antonio Medina|Ricardo Valles|Enrique Ibérico|Hernan Huamán}}
+}}
+'''Manzanita y su Conjunto''' are a [[Peru]]vian band founded by guitarist Berardo "Manzanita" Hernández in 1969.
+The band played an important role in the development of [[Peruvian cumbia]] as a genre distinct from its [[Cumbia (Colombia)|Colombian]] roots.{{r|cosmalon}}
+''[[Songlines (magazine)|Songlines]]'' wrote that Manzanita's music "revolutionised the music scene in Peru and left an indelible mark on Latin American music as a whole."{{r|songlines-2024}}
+
+Alongside Hernández on guitar, Manzanita y su Conjunto also included Héctor Mattos on congos, Antonio Medina on bongos, Ricardo Valles on [[timbales]], Enrique Ibérico on bass, and  Hernan Huamán on organ.{{r|klof}}
+When Hernández died in 2007, his son took up leadership of the group.
+
+==History==
+Berardo Hernández grew up in [[Trujillo province, Peru]] (possibly in [[Chiclín]] or [[Laredo, Trujillo|Laredo]]) and moved to [[Lima]] in 1955 at the age of 12.{{r|klof|songlines190}}
+At the age of 20 he played on the 1964 album ''Los Ídolos del Pueblo'' by Los Pacharacos.{{r|chicha-1}}
+Hernández adopted the name Manzanita, meaning "little apple", in 1969, and that year Manzanita y su Conjunto released their first album ''Arre Caballito'' on Dinsa Records.{{r|chicha-1}}
+
+In 1973 Manzanita y su Conjunto signed to Virrey Records.{{r|mojo}}
+Their 1973 album ''El Nuevo Sonido de Manzanita'' has a transitional sound between Peruvian [[tropical music]] and [[Peruvian cumbia]], and unusually for the time features a horn section.{{r|cosmalon|songlines190}}
+In 1974 ''Manzaneando con Manzanita'', the group's second album on Virrey, was released.{{r|klof}}
+
+Manzanita died in 2007, and his son Berardo Hernández Jr. took up leadership of the band, using the name Manzanita Jr.{{r|songlines-2024}}
+In 2021 [[Analog Africa]] released a compilation of Manzanita y su Conjunto tracks from the 1970s called ''Trujillo, Perú 1971–1974''.{{r|trujillo-reviews}}
+Manzanita y su Conjunto toured the UK in 2024.{{r|songlines-2024}}
+
+==Discography==
+;Albums
+*''Arre Caballito'' (1969, Dinsa)
+*''El Nuevo Sonido de Manzanita'' (1973, Virrey)
+*''Manzaneando con Manzanita'' (1974, Virrey)
+
+;Compilations
+*''Trujillo, Perú 1971–1974'' (2021, Analog Africa)
+
+==References==
+{{reflist | refs = 
+<ref name=mojo>{{citation |title=Trujillo, Perú 1971–1974 (review) |work=[[Mojo (magazine)|Mojo]] |author=[[David Katz (author)|David Katz]] |issue=334 (Sep 2021) |page=98}}</ref>
+
+<ref name=trujillo-reviews>
+''Trujillo, Perú 1971–1974'' reviews:
+*{{citation |title=Trujillo, Perú 1971–1974 (review) |work=[[Record Collector]] |author=Jason Draper |issue=522 (Sep 2021) |page=106}}
+*{{citation |url=https://www.songlines.co.uk/review/trujillo-peru-1971-1974 |url-access=limited |title=Trujillo, Perú 1971–1974 (review) |work=[[Songlines (magazine)|Songlines]] |author=Russ Slater |issue=171 (Oct 2021) |page=46 |issn=1464-8113 |access-date=2025-01-06}}
+*{{citation |url=https://www.thetimes.com/article/5d2f7c02-e4aa-11eb-afdb-c7b01afbcfc5 |title=Trujillo, Perú 1971–1974 (review) |work=[[The Times]] |author=Clive Davis |date=2021-07-14 |access-date=2025-01-06}}
+*{{citation |title=Trujillo, Perú 1971–1974 (review) |work=[[The Wire (magazine)|The Wire]] |author=Francis Gooding |issue=450 (Aug 2021) |page=68}}
+</ref>
+
+<ref name=songlines190>{{citation |title=Songlines Essential 10: Peruvian Cumbia |work=[[Songlines (magazine)|Songlines]] |author=Diego Hernández |issue=190 (Aug/Sep 2023) |page=82 |issn=1464-8113}}</ref>
+
+<ref name=songlines-2024>{{citation |url=https://www.songlines.co.uk/news/cumbia-legends-manzanita-y-su-conjunto-embark-on-their-first-uk-tour |url-access=limited |title=Cumbia Legends Manzanita y Su Conjunto Embark on Their First UK Tour |work=[[Songlines (magazine)|Songlines]] |author=Izzy Felton |access-date=2025-01-06}}</ref>
+
+<ref name=cosmalon>{{cite book |title=Historia de la Cumbia Peruana |language=es |edition=1st |publisher={{ill|Instituto de Estudios Peruanos|es}} |date=July 2022 |isbn=978-612-326-174-0 |author=Jesús Cosamalón Aguilar |pages=124–126}}</ref>
+
+<ref name=chicha-1>{{citation |url=https://archivo.super45.cl/articulos/chichadelica-los-origenes-de-la-musica-tropical-andina-primera-parte/ |title=Chichadélica: Los orígenes de la música tropical andina (primera parte) |trans-title=Chichadélica: The origins of Andean tropical music (part one) |language=es |website={{ill|Super 45 (radio station)|es|Super 45}} |author=Alfredo Villar |date=2010-09-22 |access-date=2025-01-06}}</ref>
+
+<ref name=klof>{{citation |url=https://klofmag.com/2021/07/manzanita-y-su-conjunto-trujillo-peru/ |title=Manzanita y Su Conjunto: Trujillo, Perú 1971-1974 |work=[[KLOF Magazine]] |author=David Pratt |date=2021-07-13 |access-date=2025-01-06}}</ref>
+}}
+
+==External links==
+*{{discogs artist|artist=1838385|name=Manzanita y su Conjunto}}
+
+{{Authority control}}
+
+[[Category:Musical groups established in 1969]]
+[[Category:1969 establishments in Peru]]
+[[Category:Peruvian musical groups]]
+[[Category:Peruvian cumbia musical groups]]

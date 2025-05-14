@@ -1,0 +1,14 @@
+{
+  "model": "nvidia/NV-Embed-v2",
+  "dataset": "dbpedia",
+  "k": 10,
+  "use_reranker": true,
+  "initial_k": 100,
+  "use_sentence_transformer": true,
+  "metrics": {
+    "MRR@10": 0.8605555555555555,
+    "NDCG@10": 0.7172834892547165,
+    "total_reranking_cost": 0.01846875,
+    "total_tokens_reranked": 369375
+  }
+}

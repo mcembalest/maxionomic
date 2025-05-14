@@ -1,0 +1,9 @@
+{
+  "dataset": "nq",
+  "model": "intfloat/e5-mistral-7b-instruct",
+  "batch_size": 1024,
+  "max_seq_length": 8192,
+  "total_duration_seconds": 188.52991700172424,
+  "total_tokens": 676226,
+  "tokens_per_second": 3586.836565539969
+}
