@@ -3,7 +3,6 @@ import anthropic
 from nomic import AtlasDataset
 import pandas as pd 
 import requests
-import json
 
 NOMIC_API_KEY = os.getenv("NOMIC_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
@@ -105,28 +104,156 @@ def topic_hierarchy_report(atlas_map, features, topic_datum_counts):
                 report += f"      Keywords: {child_keywords}\n"
     return report
 
-def display_topic_comparison(data_df, topics_df, indexed_field, num_samples=3):
+def create_topic_mapping(atlas_map, claude_topic_hierarchy):
+    """
+    Creates a mapping from Nomic Atlas topic keywords to Claude-generated topic names.
+    Returns two dictionaries - one for depth 1 and one for depth 2 mappings.
+    """
+    depth1_mapping = {}
+    depth2_mapping = {}
+    
+    # Get the ordered list of topics from the hierarchy
+    hierarchy = atlas_map.topics.hierarchy
+    nomic_depth1_topics = [topic_key[0] for topic_key in hierarchy.keys() if topic_key[1] == 1]
+    
+    # Create depth 1 mapping
+    for i, parent_topic in enumerate(claude_topic_hierarchy['parent_topics']):
+        if i < len(nomic_depth1_topics):
+            nomic_topic = nomic_depth1_topics[i]
+            claude_topic = parent_topic['parent_name']
+            depth1_mapping[nomic_topic] = claude_topic
+    
+    # Create depth 2 mapping
+    for parent_key, child_topics in hierarchy.items():
+        parent_name, parent_depth = parent_key
+        if parent_depth == 1 and parent_name in depth1_mapping:
+            # Find corresponding Claude parent
+            claude_parent_name = depth1_mapping[parent_name]
+            claude_parent = next((p for p in claude_topic_hierarchy['parent_topics'] if p['parent_name'] == claude_parent_name), None)
+            if claude_parent and len(child_topics) > 0:
+                # Map child topics in order
+                for i, nomic_child in enumerate(child_topics):
+                    if i < len(claude_parent['child_topics']):
+                        claude_child = claude_parent['child_topics'][i]['child_name']
+                        depth2_mapping[(parent_name, nomic_child)] = claude_child
+    
+    return depth1_mapping, depth2_mapping
+
+def topic_comparison(data_df, topics_df, indexed_field, claude_depth1_mapping=None, claude_depth2_mapping=None):
     """
     Constructs and returns a DataFrame comparing ground truth topics, Nomic Atlas topics,
-    and a placeholder for the proposed GeoJSON + Claude Sonnet topics.
+    and Claude Sonnet topics.
     """
     cols_to_join = ['topic_depth_1', 'topic_depth_2']
     topics_df_subset = topics_df[[col for col in cols_to_join if col in topics_df.columns]]
     merged_df = data_df.join(topics_df_subset, how='left') 
-    sample_df = merged_df.sample(min(num_samples, len(merged_df)))
+    # sample_df = merged_df.sample(min(num_samples, len(merged_df)))
     comparison_data = []
-    for index, row in sample_df.iterrows():
+    
+    for index, row in merged_df.iterrows():
+        nomic_depth1 = row.get('topic_depth_1', "N/A")
+        nomic_depth2 = row.get('topic_depth_2', "N/A")
+        claude_depth1 = claude_depth1_mapping.get(nomic_depth1, "N/A")
+        claude_depth2 = claude_depth2_mapping.get((nomic_depth1, nomic_depth2), "N/A")
         comparison_data.append({
             'Datum ID': index,
-            'Indexed Field': str(row.get(indexed_field, "N/A"))[:40] + "...",
-            'NomicAtlasTopicDepth1': row.get('topic_depth_1', "N/A"),
-            'NomicAtlasTopicDepth2': row.get('topic_depth_2', "N/A"),
-            'ProposedClaudeTopic': "TODO",
+            'Indexed Field': row.get(indexed_field, "N/A"),
+            'NomicAtlasTopicDepth1': nomic_depth1,
+            'NomicAtlasTopicDepth2': nomic_depth2,
+            'NomicClaudeTopicDepth1': claude_depth1,
+            'NomicClaudeTopicDepth2': claude_depth2,
             'GroundTruthTopic': row.get('Topic', "N/A"),
         })
-    comparison_df = pd.DataFrame(comparison_data)
-    column_order = ['ItemIndex', 'Indexed Field', 'GroundTruthTopic', 'NomicAtlasTopicDepth1', 'NomicAtlasTopicDepth2', 'ProposedClaudeTopic']
-    return comparison_df[[col for col in column_order if col in comparison_df.columns]]
+    return pd.DataFrame(comparison_data)
+
+def get_topic_hierarchy_from_claude(report):
+    anthropic_client = anthropic.Anthropic()
+
+    # Define the structured output schema for topic hierarchy
+    topic_hierarchy_schema = {
+        "name": "topic_hierarchy",
+        "description": "Create a structured topic hierarchy with short description labels",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "parent_topics": {
+                    "type": "array",
+                    "description": "Array of 8 parent topics at depth 1",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "parent_id": {
+                                "type": "integer",
+                                "description": "ID of the parent topic (1-8)"
+                            },
+                            "parent_name": {
+                                "type": "string",
+                                "description": "Short descriptive name for the parent topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS."
+                            },
+                            "parent_datum_count": {
+                                "type": "integer",
+                                "description": "Number of data points in this parent topic cluster"
+                            },
+                            "child_topics": {
+                                "type": "array",
+                                "description": "Array of child topics for this parent (variable number)",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "child_id": {
+                                            "type": "integer",
+                                            "description": "ID of the child topic"
+                                        },
+                                        "child_name": {
+                                            "type": "string",
+                                            "description": "Short descriptive name for the child topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS."
+                                        },
+                                        "child_datum_count": {
+                                            "type": "integer",
+                                            "description": "Number of data points in this child topic cluster"
+                                        }
+                                    },
+                                    "required": ["child_id", "child_name", "child_datum_count"]
+                                }
+                            }
+                        },
+                        "required": ["parent_id", "parent_name", "parent_datum_count", "child_topics"]
+                    }
+                }
+            },
+            "required": ["parent_topics"]
+        }
+    }
+    message = anthropic_client.messages.create(
+        model="claude-3-7-sonnet-20250219",
+        max_tokens=4000,
+        temperature=0.7,
+        system="""You are a topological semiotician specializing in structured hierarhical ontology optimization.
+You are given a tree-shaped topic model in keyword form and must produce an equivalently shaped model in short description form (5-20 characters each).
+Your primary goal is to REDUCE REDUNDANCY while maintaining the hierarchical structure:
+
+1. Ensure each parent topic has a distinct conceptual focus that doesn't overlap significantly with other parent topics
+2. Each child topic should have a clear, unique relationship to its parent topic that differentiates it from children of other parents
+3. Use distinct terminology across topics to avoid semantic overlap (e.g., don't use 'Medical AI' under multiple parent categories)
+4. When topics appear conceptually similar, use more specific terms to highlight their unique aspects
+5. Strive for orthogonal topic dimensions where possible, minimizing cross-cutting concerns
+
+You maintain the SAME STRUCTURE of parent child topics as the input hierarchy, but make each topic description conceptually distinct while preserving accurate representation.""",
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": report
+                    }
+                ]
+            }
+        ],
+        tools=[topic_hierarchy_schema],
+        tool_choice={"type": "tool", "name": "topic_hierarchy"}
+    )
+    return message.content[0].input
 
 if __name__ == "__main__":
 
@@ -150,114 +277,17 @@ if __name__ == "__main__":
     report = topic_hierarchy_report(atlas_map, features, topic_datum_counts)
     print(report)
 
-    anthropic_client = anthropic.Anthropic()
+    # Get topic hierarchy from Claude Sonnet
+    claude_topic_hierarchy = get_topic_hierarchy_from_claude(report)
+    depth1_mapping, depth2_mapping = create_topic_mapping(atlas_map, claude_topic_hierarchy)
+    print("\n--- Formatted Topic Hierarchy ---")
+    for parent in claude_topic_hierarchy['parent_topics']:
+        print(f"\n## {parent['parent_name']} (Datums: {parent['parent_datum_count']})")
+        for child in parent['child_topics']:
+            print(f"- {child['child_name']} ({child['child_datum_count']})")
 
-    
-
-    # Define the structured output schema for topic hierarchy
-    topic_hierarchy_schema = {
-        "name": "topic_hierarchy",
-        "description": "Create a structured topic hierarchy with short description labels",
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "parent_topics": {
-                    "type": "array",
-                    "description": "Array of 8 parent topics at depth 1",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "parent_id": {
-                                "type": "integer",
-                                "description": "ID of the parent topic (1-8)"
-                            },
-                            "parent_name": {
-                                "type": "string",
-                                "description": "Short descriptive name (5-20 chars) for the parent topic"
-                            },
-                            "parent_datum_count": {
-                                "type": "integer",
-                                "description": "Number of data points in this parent topic cluster"
-                            },
-                            "child_topics": {
-                                "type": "array",
-                                "description": "Array of exactly 8 child topics for this parent",
-                                "items": {
-                                    "type": "object",
-                                    "properties": {
-                                        "child_id": {
-                                            "type": "integer",
-                                            "description": "ID of the child topic (1-8)"
-                                        },
-                                        "child_name": {
-                                            "type": "string",
-                                            "description": "Short descriptive name (5-20 chars) for the child topic"
-                                        },
-                                        "child_datum_count": {
-                                            "type": "integer",
-                                            "description": "Number of data points in this child topic cluster"
-                                        }
-                                    },
-                                    "required": ["child_id", "child_name", "child_datum_count"]
-                                }
-                            }
-                        },
-                        "required": ["parent_id", "parent_name", "parent_datum_count", "child_topics"]
-                    }
-                }
-            },
-            "required": ["parent_topics"]
-        }
-    }
-
-    # Use structured outputs with Claude (streaming)
-    with anthropic_client.messages.stream(
-        model="claude-3-7-sonnet-20250219",
-        max_tokens=4000,
-        temperature=0.7,
-        system="You are a brilliant semiotic topologist. You are given a tree-shaped topic model in keyword form and must produce an equivalently shaped model in short description form (5-20 characters each). Never repeat yourself. You MUST maintain the same structure as the input hierarchy.",
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": report
-                    }
-                ]
-            }
-        ],
-        tools=[topic_hierarchy_schema],
-        tool_choice={"type": "tool", "name": "topic_hierarchy"}
-    ) as stream:
-        message = None
-        tool_content = ""
-        
-        for chunk in stream:
-            if chunk.type == "content_block_delta" and chunk.delta.type == "input_json_delta":
-                tool_content += chunk.delta.partial_json
-                print(chunk.delta.partial_json, end="", flush=True)
-            elif chunk.type == "message_stop":
-                message = chunk.message
-
-    # # Print and parse the structured response
-    # print("Claude's Structured Response:")
-    # if hasattr(message, 'content') and message.content:
-    #     for content in message.content:
-    #         if content.type == 'tool_use':
-    #             topic_hierarchy = json.loads(content.input)
-    #             print(json.dumps(topic_hierarchy, indent=2))
-                
-    #             # You can now use this structured data as needed
-    #             print("\n--- Formatted Topic Hierarchy ---")
-    #             for parent in topic_hierarchy['parent_topics']:
-    #                 print(f"\n## {parent['parent_name']} (Datums: {parent['parent_datum_count']})")
-    #                 for child in parent['child_topics']:
-    #                     print(f"- {child['child_name']} ({child['child_datum_count']})")
-    # else:
-    #     print("No valid structured output received")
-
-    comparison_result_df = display_topic_comparison(data_df, topics_df, indexed_field, num_samples=5)
-    if comparison_result_df is not None:
-        print("\n--- Topic Comparison DataFrame ---")
-        print(comparison_result_df.to_string())
+    # Compare ground truth topics, Nomic Atlas topics, and Claude Sonnet topics
+    comparison_result_df = topic_comparison(data_df, topics_df, indexed_field, claude_depth1_mapping=depth1_mapping, claude_depth2_mapping=depth2_mapping)            
+    print("\n--- Topic Comparison DataFrame ---")
+    print(comparison_result_df.to_string())
+    comparison_result_df.to_csv('comparison_result_df.csv', index=False)
