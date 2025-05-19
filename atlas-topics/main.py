@@ -3,12 +3,13 @@ import anthropic
 from nomic import AtlasDataset
 import pandas as pd 
 import requests
+import json
 
 NOMIC_API_KEY = os.getenv("NOMIC_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 CLAUDE_MODEL_NAME = "claude-3-7-sonnet-20250219" 
 
-def get_topic_datum_counts(atlas_map, depths_to_fetch=[1, 2, 3]):
+def get_topic_datum_counts(atlas_map, depths_to_fetch=[1, 2]):
     """
     Fetches topic info for specified depths and returns a dictionary
     mapping (depth, topic_short_description) to datum_count.
@@ -72,8 +73,6 @@ def print_topic_model_summary_statistics(features):
         print(f"    Features with depth {d}: {count}")    
     avg_short_desc_len = sum(short_desc_lengths) / len(short_desc_lengths) if short_desc_lengths else 0
     print(f"    Average 'topic_short_description' length: {avg_short_desc_len:.2f} characters (for {len(short_desc_lengths)} descriptions)")
-    # print(f"    Overall unique names by topic_field_level: {overall_unique_names_by_topic_field_level}") # Optional: for debugging
-    # print(f"    Unique names by actual feature depth: {unique_names_by_feature_depth}") # Optional: for debugging
     print('---------------------------------')
 
 def topic_hierarchy_report(atlas_map, features, topic_datum_counts):
@@ -153,16 +152,110 @@ if __name__ == "__main__":
 
     anthropic_client = anthropic.Anthropic()
 
-    topic_hierarchy_token_count = anthropic_client.messages.count_tokens(
-        model="claude-3-7-sonnet-20250219",
-        system="You are a scientist",
-        messages=[{
-            "role": "user",
-            "content": report
-        }],
-    )
+    
 
-    print(topic_hierarchy_token_count.model_dump())
+    # Define the structured output schema for topic hierarchy
+    topic_hierarchy_schema = {
+        "name": "topic_hierarchy",
+        "description": "Create a structured topic hierarchy with short description labels",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "parent_topics": {
+                    "type": "array",
+                    "description": "Array of 8 parent topics at depth 1",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "parent_id": {
+                                "type": "integer",
+                                "description": "ID of the parent topic (1-8)"
+                            },
+                            "parent_name": {
+                                "type": "string",
+                                "description": "Short descriptive name (5-20 chars) for the parent topic"
+                            },
+                            "parent_datum_count": {
+                                "type": "integer",
+                                "description": "Number of data points in this parent topic cluster"
+                            },
+                            "child_topics": {
+                                "type": "array",
+                                "description": "Array of exactly 8 child topics for this parent",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "child_id": {
+                                            "type": "integer",
+                                            "description": "ID of the child topic (1-8)"
+                                        },
+                                        "child_name": {
+                                            "type": "string",
+                                            "description": "Short descriptive name (5-20 chars) for the child topic"
+                                        },
+                                        "child_datum_count": {
+                                            "type": "integer",
+                                            "description": "Number of data points in this child topic cluster"
+                                        }
+                                    },
+                                    "required": ["child_id", "child_name", "child_datum_count"]
+                                }
+                            }
+                        },
+                        "required": ["parent_id", "parent_name", "parent_datum_count", "child_topics"]
+                    }
+                }
+            },
+            "required": ["parent_topics"]
+        }
+    }
+
+    # Use structured outputs with Claude (streaming)
+    with anthropic_client.messages.stream(
+        model="claude-3-7-sonnet-20250219",
+        max_tokens=4000,
+        temperature=0.7,
+        system="You are a brilliant semiotic topologist. You are given a tree-shaped topic model in keyword form and must produce an equivalently shaped model in short description form (5-20 characters each). Never repeat yourself. You MUST maintain the same structure as the input hierarchy.",
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": report
+                    }
+                ]
+            }
+        ],
+        tools=[topic_hierarchy_schema],
+        tool_choice={"type": "tool", "name": "topic_hierarchy"}
+    ) as stream:
+        message = None
+        tool_content = ""
+        
+        for chunk in stream:
+            if chunk.type == "content_block_delta" and chunk.delta.type == "input_json_delta":
+                tool_content += chunk.delta.partial_json
+                print(chunk.delta.partial_json, end="", flush=True)
+            elif chunk.type == "message_stop":
+                message = chunk.message
+
+    # # Print and parse the structured response
+    # print("Claude's Structured Response:")
+    # if hasattr(message, 'content') and message.content:
+    #     for content in message.content:
+    #         if content.type == 'tool_use':
+    #             topic_hierarchy = json.loads(content.input)
+    #             print(json.dumps(topic_hierarchy, indent=2))
+                
+    #             # You can now use this structured data as needed
+    #             print("\n--- Formatted Topic Hierarchy ---")
+    #             for parent in topic_hierarchy['parent_topics']:
+    #                 print(f"\n## {parent['parent_name']} (Datums: {parent['parent_datum_count']})")
+    #                 for child in parent['child_topics']:
+    #                     print(f"- {child['child_name']} ({child['child_datum_count']})")
+    # else:
+    #     print("No valid structured output received")
 
     comparison_result_df = display_topic_comparison(data_df, topics_df, indexed_field, num_samples=5)
     if comparison_result_df is not None:
