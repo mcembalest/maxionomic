@@ -15,6 +15,3 @@ dependencies = [
     "typer",
 ]
 
-
-[tool.setuptools]
-packages = ["atlas_topics"]
