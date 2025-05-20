@@ -205,7 +205,7 @@ def get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth):
         },
         "child_name": {
             "type": "string",
-            "description": "Short descriptive name for the child topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS."
+            "description": "Short descriptive name for the child topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS AND IS REQUIRED FOR EVERY CHILD."
         }
     }
     required_child_fields = ["child_id", "child_name"]
@@ -215,7 +215,7 @@ def get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth):
     if actual_max_depth == 3:
         base_child_properties["grandchild_topics"] = {
             "type": "array",
-            "description": "Array of grandchild topics for this child (variable number)",
+            "description": "Array of grandchild topics for this child (variable number). EACH CHILD MUST HAVE ALL ITS GRANDCHILDREN NAMED.",
             "items": {
                 "type": "object",
                 "properties": {
@@ -225,7 +225,7 @@ def get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth):
                     },
                     "grandchild_name": {
                         "type": "string",
-                        "description": "Short descriptive name for the grandchild topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS."
+                        "description": "Short descriptive name for the grandchild topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS AND IS REQUIRED FOR EVERY GRANDCHILD."
                     }
                 },
                 "required": ["grandchild_id", "grandchild_name"]
@@ -233,15 +233,22 @@ def get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth):
         }
         required_child_fields.append("grandchild_topics")
 
+    # Build description for parent_topics based on depth
+    parent_topics_description = "Array of parent topics at depth 1."
+    if actual_max_depth == 2:
+        parent_topics_description += " YOU MUST PROVIDE NAMES FOR ALL PARENTS AND ALL CHILDREN."
+    else:  # actual_max_depth == 3
+        parent_topics_description += " YOU MUST PROVIDE NAMES FOR ALL PARENTS, ALL CHILDREN, AND ALL GRANDCHILDREN."
+
     topic_hierarchy_schema = {
         "name": "topic_hierarchy",
-        "description": "Create a structured topic hierarchy with short description labels",
+        "description": "Create a structured topic hierarchy with short description labels for EVERY node in the hierarchy",
         "input_schema": {
             "type": "object",
             "properties": {
                 "parent_topics": {
                     "type": "array",
-                    "description": "Array of parent topics at depth 1 (typically 8)",
+                    "description": parent_topics_description,
                     "items": {
                         "type": "object",
                         "properties": {
@@ -251,11 +258,11 @@ def get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth):
                             },
                             "parent_name": {
                                 "type": "string",
-                                "description": "Short descriptive name for the parent topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS."
+                                "description": "Short descriptive name for the parent topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS AND IS REQUIRED FOR EVERY PARENT."
                             },
                             "child_topics": {
                                 "type": "array",
-                                "description": "Array of child topics for this parent (variable number)",
+                                "description": "Array of child topics for this parent. EVERY PARENT MUST HAVE ALL ITS CHILDREN NAMED.",
                                 "items": {
                                     "type": "object",
                                     "properties": base_child_properties, # Use dynamically built child properties
@@ -271,40 +278,56 @@ def get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth):
         }
     }
 
-    with anthropic_client.messages.stream(
-        model=CLAUDE_MODEL_NAME,
-        max_tokens=40000, 
-        temperature=0.2,
-        system='''You are a topological semiotician specializing in structured hierarchical ontology optimization.
-You are given a tree-shaped topic model (defined by keywords from a Nomic Atlas map) and your task is to generate short, descriptive names (5-20 characters each) for each topic node (parent, child, grandchild).
-Crucially, your output MUST preserve the exact hierarchical structure (parent-child-grandchild relationships) of the input Nomic topic model. You are labeling the existing Nomic structure, not creating a new one.
+    # Build a system prompt based on the depth
+    system_prompt = '''You are a topological semiotician specializing in structured hierarchical ontology optimization.
+You are given a tree-shaped topic model (defined by keywords from a Nomic Atlas map) and your task is to generate short, descriptive names (5-20 characters each) for EVERY topic node'''
+    
+    if actual_max_depth == 2:
+        system_prompt += ''' (parent and child topics) in the input.
+
+CRITICAL REQUIREMENT: You MUST provide a name for EVERY parent and EVERY child topic in the input hierarchy. No topic node can be left without a label.'''
+    else:
+        system_prompt += ''' (parent, child, and grandchild topics) in the input.
+
+CRITICAL REQUIREMENT: You MUST provide a name for EVERY parent, EVERY child, and EVERY grandchild topic in the input hierarchy. No topic node can be left without a label.'''
+
+    system_prompt += '''
 
 Your primary goals for the descriptive names are:
 1.  **Strict Hierarchical Validity**:
-- Each child topic\'s name MUST represent a clear, logical, and intuitive conceptual subset or a specific aspect of its parent topic\'s name.
-- Similarly, each grandchild topic\'s name MUST be a conceptual subset or specific aspect of its direct child topic parent\'s name.
-- The parent-child-grandchild relationships in your names must be directionally coherent (e.g., Parent: "Vehicles", Child: "Cars", Grandchild: "Sedans").
+- Each child topic\'s name MUST represent a clear, logical, and intuitive conceptual subset or a specific aspect of its parent topic\'s name.'''
+
+    if actual_max_depth == 3:
+        system_prompt += '''
+- Similarly, each grandchild topic\'s name MUST be a conceptual subset or specific aspect of its direct child topic parent\'s name.'''
+    
+    system_prompt += '''
+- The parent-child''' + ('' if actual_max_depth < 3 else '-grandchild') + ''' relationships in your names must be directionally coherent''' + (' (e.g., Parent: "Vehicles", Child: "Cars").' if actual_max_depth == 2 else ' (e.g., Parent: "Vehicles", Child: "Cars", Grandchild: "Sedans").' if actual_max_depth == 3 else '.')
+
+    system_prompt += '''
 
 2.  **Maximal Conceptual Distinctness & Non-Redundancy in Labeling**:
 - Each parent topic name must define a distinct conceptual area based on its keywords.
 - Within a family, each child topic name must be unique and clearly differentiate its concept from its siblings, based on their respective keywords.
-- Across the entire hierarchy: Strive for unique names for unique Nomic topic nodes. If different Nomic nodes (e.g., under different parents or at different levels) have keywords pointing to similar underlying real-world themes, your descriptive names for these *specific Nomic nodes* must be nuanced and distinct. Aim for names that reflect the particular keywords and the specific parental context of each Nomic node. Avoid using the exact same name for two different topic nodes unless their underlying Nomic keywords and hierarchical position are identical.
+- Across the entire hierarchy: Strive for unique names for unique Nomic topic nodes.
 
 3.  **Accuracy to Nomic Keywords**:
-- Each descriptive name must be a concise and accurate summary of the keywords associated with its corresponding Nomic topic node. The name should be directly derivable from the provided keywords for that node.
+- Each descriptive name must be a concise and accurate summary of the keywords associated with its corresponding Nomic topic node.
 
 4.  **Clarity and Conciseness**:
 - Names must be 5-20 characters long.
-- Use full words when possible. Only use widely recognized and unambiguous abbreviations (e.g., "USA", "AI", "UK"). Avoid creating non-standard or obscure abbreviations to meet character limits.
-- Focus on meaningful, easily understandable terms.
+- Use full words when possible. Only use widely recognized abbreviations.
 
-Recap of Critical Instructions:
-- Adhere strictly to the provided Nomic topic structure. Your role is to label, not restructure.
-- Ensure all names create a strong, intuitive, and valid conceptual hierarchy (e.g., child is a specific type of parent).
-- Maximize label distinctiveness across all topic nodes, using context and specific keywords to differentiate.
-- Names must accurately reflect the given Nomic keywords for each node and respect character limits.
-- Prioritize clarity and standard language over forced abbreviations.
-''',
+CRITICAL REMINDER: You MUST provide a name for EVERY node in the hierarchy. No nodes can be left unnamed.
+Even if some topics have placeholder keywords like "🤷‍♂️" followed by a number, you must still name those topics based 
+on their context and relationship to their parent topics.
+'''
+
+    with anthropic_client.messages.stream(
+        model=CLAUDE_MODEL_NAME,
+        max_tokens=40000, 
+        temperature=0.2,
+        system=system_prompt,
         messages=[
             {
                 "role": "user",
@@ -329,7 +352,52 @@ Recap of Critical Instructions:
         
         final_message = stream.get_final_message()
     
-    return final_message.content[0].input
+    result = final_message.content[0].input
+    
+    # Simple validation to check if any topics are missing names
+    print("\nValidating topic hierarchy...")
+    is_valid = validate_topic_hierarchy_completeness(result, actual_max_depth)
+    if not is_valid:
+        print("WARNING: Some topics are missing names in Claude's response!")
+    else:
+        print("All topics have names. Hierarchy is complete.")
+    
+    return result
+
+def validate_topic_hierarchy_completeness(hierarchy, actual_max_depth):
+    """Quick validation to check if all topics have names"""
+    if 'parent_topics' not in hierarchy:
+        return False
+    
+    missing_names = False
+    
+    for parent in hierarchy['parent_topics']:
+        if 'parent_name' not in parent or not parent['parent_name']:
+            print(f"Missing parent name for parent ID {parent.get('parent_id', 'unknown')}")
+            missing_names = True
+        
+        if 'child_topics' not in parent or not parent['child_topics']:
+            print(f"Missing child topics for parent {parent.get('parent_name', 'unknown')}")
+            missing_names = True
+            continue
+            
+        for child in parent['child_topics']:
+            if 'child_name' not in child or not child['child_name']:
+                print(f"Missing child name for child ID {child.get('child_id', 'unknown')} under parent {parent.get('parent_name', 'unknown')}")
+                missing_names = True
+            
+            if actual_max_depth == 3:
+                if 'grandchild_topics' not in child or not child['grandchild_topics']:
+                    print(f"Missing grandchild topics for child {child.get('child_name', 'unknown')} under parent {parent.get('parent_name', 'unknown')}")
+                    missing_names = True
+                    continue
+                    
+                for grandchild in child['grandchild_topics']:
+                    if 'grandchild_name' not in grandchild or not grandchild['grandchild_name']:
+                        print(f"Missing grandchild name for grandchild ID {grandchild.get('grandchild_id', 'unknown')} under child {child.get('child_name', 'unknown')}")
+                        missing_names = True
+    
+    return not missing_names
 
 
 if __name__ == "__main__":
