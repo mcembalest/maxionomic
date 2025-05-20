@@ -3,8 +3,8 @@ import anthropic
 from nomic import AtlasDataset
 import pandas as pd 
 import requests
-import argparse
-
+import typer
+from typing import Optional
 NOMIC_API_KEY = os.getenv("NOMIC_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 CLAUDE_MODEL_NAME = "claude-3-7-sonnet-20250219" 
@@ -37,7 +37,7 @@ def fetch_topic_models_geojson(project_id: str, projection_id: str, nomic_api_ke
     print("Successfully fetched topic models GeoJSON.")
     return response.json()
 
-def print_topic_model_summary_statistics(features):
+def print_topic_model_summary_statistics(topic_features):
     """
     Calculates and prints summary statistics for the topic model features.
     """
@@ -46,7 +46,7 @@ def print_topic_model_summary_statistics(features):
     desc_lengths = []
     overall_unique_names_by_topic_field_level = {}
     unique_names_by_feature_depth = {}
-    for feature in features:
+    for feature in topic_features:
         properties = feature.get('properties', {})
         actual_feature_depth = properties.get('depth')
         if actual_feature_depth is not None:
@@ -75,7 +75,7 @@ def print_topic_model_summary_statistics(features):
     print(f"    Average 'topic_short_description' length: {avg_short_desc_len:.2f} characters (for {len(short_desc_lengths)} descriptions)")
     print('---------------------------------')
 
-def topic_hierarchy_report(atlas_map, features, topic_datum_counts, max_depth=3):
+def topic_hierarchy_report(atlas_map, max_depth=3):
     """
     Generates a report of the parent-child relationships between topics up to max_depth,
     including their keywords and Nomic topic_ids.
@@ -161,233 +161,6 @@ def topic_hierarchy_report(atlas_map, features, topic_datum_counts, max_depth=3)
                             report += f"        - (ID: {grandchild_nomic_id}) {grandchild_keywords}\n"
     return report
 
-def validate_topic_hierarchy_completeness(hierarchy, actual_max_depth):
-    """Quick validation to check if all topics have names and IDs"""
-    if 'parent_topics' not in hierarchy:
-        print("Validation Error: 'parent_topics' key missing from Claude response.")
-        return False
-    
-    missing_data = False
-    
-    for parent in hierarchy['parent_topics']:
-        if not isinstance(parent.get('parent_id'), int) or not parent.get('parent_name'):
-            print(f"Validation Error: Parent missing ID or name: {parent}")
-            missing_data = True
-        
-        if 'child_topics' not in parent:
-            print(f"Validation Error: Parent {parent.get('parent_name', '(ID: '+str(parent.get('parent_id'))+')')} missing 'child_topics' array.")
-            missing_data = True # If child_topics is missing, we can't check children
-            continue 
-            
-        for child in parent['child_topics']:
-            if not isinstance(child.get('child_id'), int) or not child.get('child_name'):
-                print(f"Validation Error: Child missing ID or name under parent {parent.get('parent_name', '(ID: '+str(parent.get('parent_id'))+')')}: {child}")
-                missing_data = True
-            
-            if actual_max_depth == 3:
-                if 'grandchild_topics' not in child:
-                    print(f"Validation Error: Child {child.get('child_name', '(ID: '+str(child.get('child_id'))+')')} missing 'grandchild_topics' array when depth 3 expected.")
-                    missing_data = True # If grandchild_topics is missing, can't check grandchildren
-                    continue
-                    
-                for grandchild in child['grandchild_topics']:
-                    if not isinstance(grandchild.get('grandchild_id'), int) or not grandchild.get('grandchild_name'):
-                        print(f"Validation Error: Grandchild missing ID or name under child {child.get('child_name', '(ID: '+str(child.get('child_id'))+')')}: {grandchild}")
-                        missing_data = True
-    
-    return not missing_data
-
-def create_topic_mapping(atlas_map, claude_topic_hierarchy):
-    """
-    Creates a mapping from Nomic Atlas topic_ids to Claude-generated topic names.
-    """
-    depth1_mapping = {} # Nomic D1 topic_id -> Claude Name
-    depth2_mapping = {} # (Nomic D1 topic_id, Nomic D2 topic_id) -> Claude Name
-    depth3_mapping = {} # (Nomic D1 topic_id, Nomic D2 topic_id, Nomic D3 topic_id) -> Claude Name
-
-    # For validation and error reporting if Claude returns an ID not in metadata
-    valid_nomic_topic_ids = set(atlas_map.topics.metadata['topic_id'].astype(int).unique())
-
-    # For reporting coverage against original Nomic topic counts per depth
-    meta_df = atlas_map.topics.metadata
-    nomic_topic_ids_by_depth = {
-        1: set(meta_df[meta_df['depth'] == 1]['topic_id'].astype(int).unique()),
-        2: set(meta_df[meta_df['depth'] == 2]['topic_id'].astype(int).unique()),
-        3: set(meta_df[meta_df['depth'] == 3]['topic_id'].astype(int).unique())
-    }
-    total_nomic_depth1 = len(nomic_topic_ids_by_depth[1])
-    total_nomic_depth2 = len(nomic_topic_ids_by_depth[2])
-    total_nomic_depth3 = len(nomic_topic_ids_by_depth[3])
-    
-    mapped_nomic_ids_depth1 = set()
-    mapped_nomic_ids_depth2 = set()
-    mapped_nomic_ids_depth3 = set()
-
-    if not claude_topic_hierarchy or 'parent_topics' not in claude_topic_hierarchy:
-        print("ERROR: Claude topic hierarchy is empty or invalid in create_topic_mapping.")
-        return depth1_mapping, depth2_mapping, depth3_mapping
-
-    for claude_parent in claude_topic_hierarchy.get('parent_topics', []):
-        parent_nomic_id = claude_parent.get('parent_id')
-        claude_parent_name = claude_parent.get('parent_name')
-        
-        if parent_nomic_id is None or claude_parent_name is None:
-            print(f"WARNING: Claude parent missing ID or name: {claude_parent}")
-            continue
-        if parent_nomic_id not in valid_nomic_topic_ids:
-            print(f"WARNING: Claude parent_id {parent_nomic_id} not found in Nomic metadata.")
-            continue
-            
-        depth1_mapping[parent_nomic_id] = claude_parent_name
-        if parent_nomic_id in nomic_topic_ids_by_depth[1]:
-            mapped_nomic_ids_depth1.add(parent_nomic_id)
-
-        for claude_child in claude_parent.get('child_topics', []):
-            child_nomic_id = claude_child.get('child_id')
-            claude_child_name = claude_child.get('child_name')
-
-            if child_nomic_id is None or claude_child_name is None:
-                print(f"WARNING: Claude child missing ID or name under parent ID {parent_nomic_id}: {claude_child}")
-                continue
-            if child_nomic_id not in valid_nomic_topic_ids:
-                print(f"WARNING: Claude child_id {child_nomic_id} not found in Nomic metadata.")
-                continue
-            
-            depth2_mapping[(parent_nomic_id, child_nomic_id)] = claude_child_name
-            if child_nomic_id in nomic_topic_ids_by_depth[2]:
-                 mapped_nomic_ids_depth2.add(child_nomic_id) # Count unique D2 IDs mapped
-
-            for claude_grandchild in claude_child.get('grandchild_topics', []):
-                grandchild_nomic_id = claude_grandchild.get('grandchild_id')
-                claude_grandchild_name = claude_grandchild.get('grandchild_name')
-                
-                if grandchild_nomic_id is None or claude_grandchild_name is None:
-                    print(f"WARNING: Claude grandchild missing ID or name under child ID {child_nomic_id}: {claude_grandchild}")
-                    continue
-                if grandchild_nomic_id not in valid_nomic_topic_ids:
-                    print(f"WARNING: Claude grandchild_id {grandchild_nomic_id} not found in Nomic metadata.")
-                    continue
-                
-                depth3_mapping[(parent_nomic_id, child_nomic_id, grandchild_nomic_id)] = claude_grandchild_name
-                if grandchild_nomic_id in nomic_topic_ids_by_depth[3]:
-                    mapped_nomic_ids_depth3.add(grandchild_nomic_id) # Count unique D3 IDs mapped
-    
-    print("\nTopic Mapping Coverage (Based on unique Nomic topic_ids mapped by Claude):")
-    print(f"Depth 1: {len(mapped_nomic_ids_depth1)}/{total_nomic_depth1} Nomic D1 topics mapped ({ (len(mapped_nomic_ids_depth1)/total_nomic_depth1*100) if total_nomic_depth1 else 0 :.1f}%)")
-    print(f"Depth 2: {len(mapped_nomic_ids_depth2)}/{total_nomic_depth2} Nomic D2 topics mapped ({ (len(mapped_nomic_ids_depth2)/total_nomic_depth2*100) if total_nomic_depth2 else 0 :.1f}%)")
-    if total_nomic_depth3 > 0:
-        print(f"Depth 3: {len(mapped_nomic_ids_depth3)}/{total_nomic_depth3} Nomic D3 topics mapped ({ (len(mapped_nomic_ids_depth3)/total_nomic_depth3*100) if total_nomic_depth3 else 0 :.1f}%)")
-
-    # (Claude node count comparison warning can remain as is, it's a useful structural check)
-    claude_node_counts = {'depth1': 0, 'depth2': 0, 'depth3': 0}
-    if claude_topic_hierarchy and 'parent_topics' in claude_topic_hierarchy:
-        claude_node_counts['depth1'] = len(claude_topic_hierarchy['parent_topics'])
-        for p in claude_topic_hierarchy['parent_topics']:
-            claude_node_counts['depth2'] += len(p.get('child_topics', []))
-            for c in p.get('child_topics', []):
-                claude_node_counts['depth3'] += len(c.get('grandchild_topics', []))
-    
-    if claude_node_counts['depth1'] != total_nomic_depth1:
-        print(f"STRUCTURAL WARNING: Claude returned {claude_node_counts['depth1']} parent topics, Nomic had {total_nomic_depth1}")
-    if claude_node_counts['depth2'] != total_nomic_depth2:
-        print(f"STRUCTURAL WARNING: Claude returned {claude_node_counts['depth2']} child topics, Nomic had {total_nomic_depth2}")
-    if total_nomic_depth3 > 0 and claude_node_counts['depth3'] != total_nomic_depth3:
-         print(f"STRUCTURAL WARNING: Claude returned {claude_node_counts['depth3']} grandchild topics, Nomic had {total_nomic_depth3}")
-
-    return depth1_mapping, depth2_mapping, depth3_mapping
-
-def topic_comparison(data_df, topics_df, indexed_field, atlas_map, claude_depth1_mapping=None, claude_depth2_mapping=None, claude_depth3_mapping=None):
-    """
-    Constructs and returns a DataFrame comparing Nomic Atlas topics vs Nomic Atlas + Claude Sonnet topics.
-    Uses Nomic topic_ids for robust lookup into Claude mappings.
-    Reports on unique Nomic topic_ids that are missing Claude mappings.
-    """
-    cols_to_join = ['topic_depth_1', 'topic_depth_2', 'topic_depth_3']
-    topics_df_cols_to_select = [col for col in cols_to_join if col in topics_df.columns]
-    topics_df_subset = topics_df[topics_df_cols_to_select]
-    merged_df = data_df.join(topics_df_subset, how='left')
-    comparison_data = []
-
-    # Create a lookup: (depth, stripped_topic_short_description) -> topic_id
-    # This is crucial for getting the correct topic_id from the names in topics.df
-    desc_to_id_lookup = {}
-    if hasattr(atlas_map, 'topics') and hasattr(atlas_map.topics, 'metadata'):
-        for _, row in atlas_map.topics.metadata.iterrows():
-            depth = int(row['depth'])
-            short_desc = str(row.get('topic_short_description', '')).strip()
-            topic_id = int(row['topic_id'])
-            if short_desc: # Ensure not empty
-                desc_to_id_lookup[(depth, short_desc)] = topic_id
-    else:
-        print("ERROR: atlas_map.topics.metadata not available in topic_comparison. Cannot map names to IDs.")
-        # Fallback or error handling if metadata is not available
-        # For now, we'll proceed, but lookups will likely fail if this happens.
-
-    missing_nomic_topic_ids_depth1 = set()
-    missing_nomic_topic_ids_depth2 = set() # Stores (parent_id, child_id) tuples
-    missing_nomic_topic_ids_depth3 = set() # Stores (parent_id, child_id, grandchild_id) tuples
-    
-    printed_d1_debug_info = False
-
-    for index, row in merged_df.iterrows():
-        nomic_d1_name_raw = row.get('topic_depth_1')
-        nomic_d2_name_raw = row.get('topic_depth_2')
-        nomic_d3_name_raw = row.get('topic_depth_3')
-
-        nomic_d1_name_stripped = str(nomic_d1_name_raw).strip() if pd.notna(nomic_d1_name_raw) else None
-        nomic_d2_name_stripped = str(nomic_d2_name_raw).strip() if pd.notna(nomic_d2_name_raw) else None
-        nomic_d3_name_stripped = str(nomic_d3_name_raw).strip() if pd.notna(nomic_d3_name_raw) else None
-
-        nomic_d1_id, nomic_d2_id, nomic_d3_id = None, None, None
-        claude_depth1, claude_depth2, claude_depth3 = None, None, None
-
-        if nomic_d1_name_stripped:
-            nomic_d1_id = desc_to_id_lookup.get((1, nomic_d1_name_stripped))
-            if nomic_d1_id is not None:
-                claude_depth1 = claude_depth1_mapping.get(nomic_d1_id)
-                if not claude_depth1:
-                    missing_nomic_topic_ids_depth1.add(nomic_d1_id)
-                    # (Diagnostic print for first failed D1 lookup can be re-added here if needed)
-            elif nomic_d1_name_stripped: # Name was there, but no ID found in metadata
-                 missing_nomic_topic_ids_depth1.add(f"NameNotInMeta:D1:{nomic_d1_name_stripped}")
-
-        if nomic_d1_id is not None and nomic_d2_name_stripped:
-            nomic_d2_id = desc_to_id_lookup.get((2, nomic_d2_name_stripped))
-            if nomic_d2_id is not None:
-                claude_depth2 = claude_depth2_mapping.get((nomic_d1_id, nomic_d2_id))
-                if not claude_depth2:
-                    missing_nomic_topic_ids_depth2.add((nomic_d1_id, nomic_d2_id))
-            elif nomic_d2_name_stripped:
-                missing_nomic_topic_ids_depth2.add(f"NameNotInMeta:D2:{nomic_d1_name_stripped}->{nomic_d2_name_stripped}")
-
-        if nomic_d1_id is not None and nomic_d2_id is not None and nomic_d3_name_stripped:
-            nomic_d3_id = desc_to_id_lookup.get((3, nomic_d3_name_stripped))
-            if nomic_d3_id is not None:
-                claude_depth3 = claude_depth3_mapping.get((nomic_d1_id, nomic_d2_id, nomic_d3_id))
-                if not claude_depth3:
-                    missing_nomic_topic_ids_depth3.add((nomic_d1_id, nomic_d2_id, nomic_d3_id))
-            elif nomic_d3_name_stripped:
-                 missing_nomic_topic_ids_depth3.add(f"NameNotInMeta:D3:{nomic_d1_name_stripped}->{nomic_d2_name_stripped}->{nomic_d3_name_stripped}")
-                
-        comparison_data.append({
-            'Datum ID': index,
-            'Indexed Field': row.get(indexed_field),
-            'NomicAtlasTopicDepth1': nomic_d1_name_raw, # Output raw names from topics.df
-            'NomicAtlasTopicDepth2': nomic_d2_name_raw,
-            'NomicAtlasTopicDepth3': nomic_d3_name_raw,
-            'NomicClaudeTopicDepth1': claude_depth1,
-            'NomicClaudeTopicDepth2': claude_depth2,
-            'NomicClaudeTopicDepth3': claude_depth3,
-        })
-    
-    if missing_nomic_topic_ids_depth1:
-        print(f"WARNING: {len(missing_nomic_topic_ids_depth1)} unique Nomic Depth 1 topic IDs/Names are missing Claude mappings (e.g., {list(missing_nomic_topic_ids_depth1)[:3]})")
-    if missing_nomic_topic_ids_depth2:
-        print(f"WARNING: {len(missing_nomic_topic_ids_depth2)} unique Nomic Depth 2 topic ID paths/Names are missing Claude mappings (e.g., {list(missing_nomic_topic_ids_depth2)[:3]})")
-    if missing_nomic_topic_ids_depth3:
-        print(f"WARNING: {len(missing_nomic_topic_ids_depth3)} unique Nomic Depth 3 topic ID paths/Names are missing Claude mappings (e.g., {list(missing_nomic_topic_ids_depth3)[:3]})")
-    
-    return pd.DataFrame(comparison_data)
 
 def get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth):
     
@@ -402,7 +175,6 @@ def get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth):
         }
     }
     required_child_fields = ["child_id", "child_name"]
-
     if actual_max_depth == 3:
         base_child_properties["grandchild_topics"] = {
             "type": "array",
@@ -517,61 +289,277 @@ CRITICAL REMINDER: Adhere strictly to the input hierarchy structure using the pr
         final_message = stream.get_final_message()
     
     result = final_message.content[0].input
-    
-    print("\nValidating topic hierarchy...")
     is_valid = validate_topic_hierarchy_completeness(result, actual_max_depth)
     if not is_valid:
         print("WARNING: Some topics are missing names or IDs in Claude's response!")
     else:
         print("All topics have names and IDs. Claude response structure seems valid.")
-    
     return result
 
-if __name__ == "__main__":
-    # Parse command-line arguments
-    parser = argparse.ArgumentParser(description="Process Nomic Atlas Topic Model with Claude")
-    parser.add_argument("--dataset", type=str)
-    parser.add_argument("--indexed-field", type=str)
-    args = parser.parse_args()
+def validate_topic_hierarchy_completeness(hierarchy, actual_max_depth):
+    """Quick validation to check if all topics have names and IDs"""
+    if 'parent_topics' not in hierarchy:
+        print("Validation Error: 'parent_topics' key missing from Claude response.")
+        return False
+    missing_data = False
+    for parent in hierarchy['parent_topics']:
+        if not isinstance(parent.get('parent_id'), int) or not parent.get('parent_name'):
+            print(f"Validation Error: Parent missing ID or name: {parent}")
+            missing_data = True
+        if 'child_topics' not in parent:
+            print(f"Validation Error: Parent {parent.get('parent_name', '(ID: '+str(parent.get('parent_id'))+')')} missing 'child_topics' array.")
+            missing_data = True # If child_topics is missing, we can't check children
+            continue 
+        for child in parent['child_topics']:
+            if not isinstance(child.get('child_id'), int) or not child.get('child_name'):
+                print(f"Validation Error: Child missing ID or name under parent {parent.get('parent_name', '(ID: '+str(parent.get('parent_id'))+')')}: {child}")
+                missing_data = True
+            if actual_max_depth == 3:
+                if 'grandchild_topics' not in child:
+                    print(f"Validation Error: Child {child.get('child_name', '(ID: '+str(child.get('child_id'))+')')} missing 'grandchild_topics' array when depth 3 expected.")
+                    missing_data = True # If grandchild_topics is missing, can't check grandchildren
+                    continue
+                for grandchild in child['grandchild_topics']:
+                    if not isinstance(grandchild.get('grandchild_id'), int) or not grandchild.get('grandchild_name'):
+                        print(f"Validation Error: Grandchild missing ID or name under child {child.get('child_name', '(ID: '+str(child.get('child_id'))+')')}: {grandchild}")
+                        missing_data = True
+    return not missing_data
 
-    # Get Nomic Atlas Topic Model labels
-    topic_datum_counts = {} 
-    atlas_dataset = AtlasDataset(args.dataset)
-    indexed_field = args.indexed_field
-    atlas_map = atlas_dataset.maps[0]
+def create_topic_mapping(atlas_map, claude_topic_hierarchy):
+    """
+    Creates a mapping from Nomic Atlas topic_ids to Claude-generated topic names.
+    """
+    depth1_mapping = {} # Nomic D1 topic_id -> Claude Name
+    depth2_mapping = {} # (Nomic D1 topic_id, Nomic D2 topic_id) -> Claude Name
+    depth3_mapping = {} # (Nomic D1 topic_id, Nomic D2 topic_id, Nomic D3 topic_id) -> Claude Name
 
-    # Determine the actual max depth from topic metadata
-    actual_max_depth = 0
+    # For validation and error reporting if Claude returns an ID not in metadata
+    valid_nomic_topic_ids = set(atlas_map.topics.metadata['topic_id'].astype(int).unique())
+
+    # For reporting coverage against original Nomic topic counts per depth
     meta_df = atlas_map.topics.metadata
+    nomic_topic_ids_by_depth = {
+        1: set(meta_df[meta_df['depth'] == 1]['topic_id'].astype(int).unique()),
+        2: set(meta_df[meta_df['depth'] == 2]['topic_id'].astype(int).unique()),
+        3: set(meta_df[meta_df['depth'] == 3]['topic_id'].astype(int).unique())
+    }
+    total_nomic_depth1 = len(nomic_topic_ids_by_depth[1])
+    total_nomic_depth2 = len(nomic_topic_ids_by_depth[2])
+    total_nomic_depth3 = len(nomic_topic_ids_by_depth[3])
+    mapped_nomic_ids_depth1 = set()
+    mapped_nomic_ids_depth2 = set()
+    mapped_nomic_ids_depth3 = set()
+    for claude_parent in claude_topic_hierarchy.get('parent_topics', []):
+        parent_nomic_id = claude_parent.get('parent_id')
+        claude_parent_name = claude_parent.get('parent_name')        
+        if parent_nomic_id is None or claude_parent_name is None:
+            print(f"WARNING: Claude parent missing ID or name: {claude_parent}")
+            continue
+        if parent_nomic_id not in valid_nomic_topic_ids:
+            print(f"WARNING: Claude parent_id {parent_nomic_id} not found in Nomic metadata.")
+            continue
+            
+        depth1_mapping[parent_nomic_id] = claude_parent_name
+        if parent_nomic_id in nomic_topic_ids_by_depth[1]:
+            mapped_nomic_ids_depth1.add(parent_nomic_id)
+        for claude_child in claude_parent.get('child_topics', []):
+            child_nomic_id = claude_child.get('child_id')
+            claude_child_name = claude_child.get('child_name')
+            if child_nomic_id is None or claude_child_name is None:
+                print(f"WARNING: Claude child missing ID or name under parent ID {parent_nomic_id}: {claude_child}")
+                continue
+            if child_nomic_id not in valid_nomic_topic_ids:
+                print(f"WARNING: Claude child_id {child_nomic_id} not found in Nomic metadata.")
+                continue
+            
+            depth2_mapping[(parent_nomic_id, child_nomic_id)] = claude_child_name
+            if child_nomic_id in nomic_topic_ids_by_depth[2]:
+                 mapped_nomic_ids_depth2.add(child_nomic_id) # Count unique D2 IDs mapped
+
+            for claude_grandchild in claude_child.get('grandchild_topics', []):
+                grandchild_nomic_id = claude_grandchild.get('grandchild_id')
+                claude_grandchild_name = claude_grandchild.get('grandchild_name')
+                
+                if grandchild_nomic_id is None or claude_grandchild_name is None:
+                    print(f"WARNING: Claude grandchild missing ID or name under child ID {child_nomic_id}: {claude_grandchild}")
+                    continue
+                if grandchild_nomic_id not in valid_nomic_topic_ids:
+                    print(f"WARNING: Claude grandchild_id {grandchild_nomic_id} not found in Nomic metadata.")
+                    continue
+                
+                depth3_mapping[(parent_nomic_id, child_nomic_id, grandchild_nomic_id)] = claude_grandchild_name
+                if grandchild_nomic_id in nomic_topic_ids_by_depth[3]:
+                    mapped_nomic_ids_depth3.add(grandchild_nomic_id) # Count unique D3 IDs mapped
+    
+    print("\nTopic Mapping Coverage (Based on unique Nomic topic_ids mapped by Claude):")
+    print(f"Depth 1: {len(mapped_nomic_ids_depth1)}/{total_nomic_depth1} Nomic D1 topics mapped ({ (len(mapped_nomic_ids_depth1)/total_nomic_depth1*100) if total_nomic_depth1 else 0 :.1f}%)")
+    print(f"Depth 2: {len(mapped_nomic_ids_depth2)}/{total_nomic_depth2} Nomic D2 topics mapped ({ (len(mapped_nomic_ids_depth2)/total_nomic_depth2*100) if total_nomic_depth2 else 0 :.1f}%)")
+    if total_nomic_depth3 > 0:
+        print(f"Depth 3: {len(mapped_nomic_ids_depth3)}/{total_nomic_depth3} Nomic D3 topics mapped ({ (len(mapped_nomic_ids_depth3)/total_nomic_depth3*100) if total_nomic_depth3 else 0 :.1f}%)")
+
+    claude_node_counts = {'depth1': 0, 'depth2': 0, 'depth3': 0}
+    if claude_topic_hierarchy and 'parent_topics' in claude_topic_hierarchy:
+        claude_node_counts['depth1'] = len(claude_topic_hierarchy['parent_topics'])
+        for p in claude_topic_hierarchy['parent_topics']:
+            claude_node_counts['depth2'] += len(p.get('child_topics', []))
+            for c in p.get('child_topics', []):
+                claude_node_counts['depth3'] += len(c.get('grandchild_topics', []))
+    
+    if claude_node_counts['depth1'] != total_nomic_depth1:
+        print(f"STRUCTURAL WARNING: Claude returned {claude_node_counts['depth1']} parent topics, Nomic had {total_nomic_depth1}")
+    if claude_node_counts['depth2'] != total_nomic_depth2:
+        print(f"STRUCTURAL WARNING: Claude returned {claude_node_counts['depth2']} child topics, Nomic had {total_nomic_depth2}")
+    if total_nomic_depth3 > 0 and claude_node_counts['depth3'] != total_nomic_depth3:
+         print(f"STRUCTURAL WARNING: Claude returned {claude_node_counts['depth3']} grandchild topics, Nomic had {total_nomic_depth3}")
+
+    return depth1_mapping, depth2_mapping, depth3_mapping
+
+def topic_comparison(atlas_map, topic_features, claude_depth1_mapping=None, claude_depth2_mapping=None, claude_depth3_mapping=None):
+    """
+    Returns a DataFrame comparing Nomic Atlas topics vs Nomic Atlas + Claude Sonnet topics
+    """
+    comparison_data = []
+
+    topic_id_to_feature_idx = {}
+    if topic_features:
+        for idx, feature in enumerate(topic_features):
+            props = feature.get('properties', {})
+            for d_check in range(1, 4):
+                key = f"topic_id_{d_check}"
+                if key in props and props[key] is not None:
+                    topic_id_to_feature_idx[int(props[key])] = idx
+            if 'topic_id' in props and props['topic_id'] is not None:
+                 topic_id_to_feature_idx[int(props['topic_id'])] = idx
+
+    # Precompute metadata and parent relationships using composite keys (depth, topic_id_from_row)
+    # topic_metadata_map stores: (depth, topic_id_from_row) -> {'short_desc': ..., 'keywords': ...}
+    topic_metadata_map = {}
+    for _, row in atlas_map.topics.metadata.iterrows():
+        depth = int(row['depth'])
+        original_topic_id = int(row['topic_id'])
+        unique_topic_key = (depth, original_topic_id)
+        topic_metadata_map[unique_topic_key] = {
+            'short_desc': str(row.get('topic_short_description', '')).strip(),
+            'keywords': str(row.get('topic_description', '')).strip(),
+        }
+
+    # short_desc_to_unique_key_map stores: (short_desc, depth) -> (depth, topic_id_from_row)
+    short_desc_to_unique_key_map = {}
+    for unique_key, meta_val in topic_metadata_map.items():
+        # meta_val already has short_desc, depth is in unique_key[0]
+        short_desc_to_unique_key_map[(meta_val['short_desc'], unique_key[0])] = unique_key
+
+    # parent_lookup_map stores: child_unique_key -> parent_unique_key
+    # Both keys are (depth, topic_id_from_row)
+    parent_lookup_map = {}
+    hierarchy = atlas_map.topics.hierarchy
+    for (parent_short_desc_from_hierarchy, parent_depth_from_hierarchy), child_short_desc_list in hierarchy.items():
+        parent_unique_key = short_desc_to_unique_key_map.get((parent_short_desc_from_hierarchy.strip(), parent_depth_from_hierarchy))
+        if parent_unique_key is None:
+            continue
+        child_actual_depth = parent_depth_from_hierarchy + 1
+        for child_short_desc in child_short_desc_list:
+            child_unique_key = short_desc_to_unique_key_map.get((child_short_desc.strip(), child_actual_depth))
+            if child_unique_key is None:
+                continue
+            parent_lookup_map[child_unique_key] = parent_unique_key
+            
+    processed_topics_count = 0
+    for unique_topic_key, meta in topic_metadata_map.items():
+        processed_topics_count += 1
+        current_depth, current_original_topic_id = unique_topic_key
+        current_short_desc = meta['short_desc']
+        current_keywords = meta['keywords']
+        parent_unique_key = parent_lookup_map.get(unique_topic_key)
+        old_nomic_atlas_parent_label = None
+        parent_original_topic_id_for_claude = None # This is the simple int ID for Claude map
+        grandparent_unique_key = None
+        grandparent_original_topic_id_for_claude = None # This is the simple int ID for Claude map
+        if parent_unique_key is not None:
+            parent_meta = topic_metadata_map.get(parent_unique_key)
+            if parent_meta:
+                old_nomic_atlas_parent_label = parent_meta['short_desc']
+                parent_original_topic_id_for_claude = parent_unique_key[1] # Get the original_topic_id part
+                grandparent_unique_key = parent_lookup_map.get(parent_unique_key)
+                if grandparent_unique_key is not None:
+                    grandparent_original_topic_id_for_claude = grandparent_unique_key[1]
+        claude_label = None
+        claude_parent_label = None
+        if current_depth == 1:
+            claude_label = claude_depth1_mapping.get(current_original_topic_id)
+        elif current_depth == 2:
+            if parent_original_topic_id_for_claude is not None:
+                claude_label = claude_depth2_mapping.get((parent_original_topic_id_for_claude, current_original_topic_id))
+                claude_parent_label = claude_depth1_mapping.get(parent_original_topic_id_for_claude)
+        elif current_depth == 3:
+            if parent_original_topic_id_for_claude is not None and grandparent_original_topic_id_for_claude is not None:
+                claude_label = claude_depth3_mapping.get((grandparent_original_topic_id_for_claude, parent_original_topic_id_for_claude, current_original_topic_id))
+                claude_parent_label = claude_depth2_mapping.get((grandparent_original_topic_id_for_claude, parent_original_topic_id_for_claude))
+        
+        comparison_data.append({
+            'topic_ID': current_original_topic_id, 
+            'topic_depth': current_depth,
+            'keywords': current_keywords,
+            'old_nomic_atlas_label': current_short_desc,
+            'old_nomic_atlas_parent_label': old_nomic_atlas_parent_label,
+            'nomic_claude_label': claude_label,
+            'nomic_claude_parent_label': claude_parent_label
+        })
+    return pd.DataFrame(comparison_data)
+
+def main(dataset: str, organization: Optional[str] = None):
+    """
+    Process Nomic Atlas Topic Model with Claude
+    """
+    # Get Nomic Atlas Topic Model labels
+    if organization:
+        atlas_dataset = AtlasDataset(f"{organization}/{dataset}")
+    else:
+        atlas_dataset = AtlasDataset(dataset)
+    atlas_map = atlas_dataset.maps[0]
+    meta_df = atlas_map.topics.metadata
+
+    print("Checking for duplicate topic_ids in atlas_map.topics.metadata...")
+    metadata_df_for_check = atlas_map.topics.metadata
+    # Check for rows where the topic_id is duplicated
+    duplicated_topic_id_rows = metadata_df_for_check[metadata_df_for_check.duplicated(subset=['topic_id'], keep=False)]
+    if not duplicated_topic_id_rows.empty:
+        print("WARNING: Duplicate topic_ids found in atlas_map.topics.metadata! This will cause overwriting in dictionaries keyed solely by topic_id.")
+        # Sort by topic_id and then by depth to see the duplicates clearly
+        print(duplicated_topic_id_rows.sort_values(by=['topic_id', 'depth'])) 
+    else:
+        print("No duplicate topic_ids found in atlas_map.topics.metadata. topic_id appears to be unique across rows.")
+    
+    num_rows_metadata = len(metadata_df_for_check)
+    num_unique_topic_ids_metadata = metadata_df_for_check['topic_id'].nunique()
+    print(f"Number of rows in metadata: {num_rows_metadata}")
+    print(f"Number of unique topic_ids in metadata column: {num_unique_topic_ids_metadata}")
+    if num_rows_metadata != num_unique_topic_ids_metadata:
+        print("CONFIRMED: The number of rows does not match the number of unique topic_ids. Overwriting WILL occur if topic_id is used as a simple key.")
+
     actual_max_depth = meta_df['depth'].max()    
-    depths_to_fetch = list(range(1, int(actual_max_depth) + 1))
-    data_df = atlas_map.data.df[[indexed_field]].copy()
-    topics_df = atlas_map.topics.df.copy()
-    topic_datum_counts = get_topic_datum_counts(atlas_map, depths_to_fetch=depths_to_fetch)
 
     # Get Atlas topic model clustering geojson 
     project_id = atlas_dataset.id
     projection_id = atlas_dataset.maps[0].projection_id
     topic_models_geojson = fetch_topic_models_geojson(project_id, projection_id, NOMIC_API_KEY)
     topic_model = topic_models_geojson.get('topic_models')[0]
-    features = topic_model.get('features')
-    print_topic_model_summary_statistics(features)
-    report = topic_hierarchy_report(atlas_map, features, topic_datum_counts, max_depth=actual_max_depth)
+    topic_features = topic_model.get('features')
+    print_topic_model_summary_statistics(topic_features)
+    report = topic_hierarchy_report(atlas_map, max_depth=actual_max_depth)
     print(report)
 
+    # Get topic hierarchy from Claude Sonnet
     anthropic_client = anthropic.Anthropic()
     token_count = anthropic_client.messages.count_tokens(
-        model="claude-3-7-sonnet-20250219",
-        system="You are a scientist",
+        model=CLAUDE_MODEL_NAME,
         messages=[{
             "role": "user",
             "content": report
         }],
     )
-    print("quick token count:")
+    print("quick token count for topic model hierarchy report (ignores tool tokens):")
     print(token_count.model_dump())
-    
-    # Get topic hierarchy from Claude Sonnet
     claude_topic_hierarchy = get_topic_hierarchy_from_claude(anthropic_client, report, actual_max_depth)
     print("--------------------------------")
     depth1_mapping, depth2_mapping, depth3_mapping = create_topic_mapping(atlas_map, claude_topic_hierarchy)
@@ -588,6 +576,9 @@ if __name__ == "__main__":
     print("\n".join(output_lines))
 
     # Compare original method for Nomic Atlas topics vs Nomic Atlas + Claude Sonnet topics
-    comparison_result_df = topic_comparison(data_df, topics_df, indexed_field, atlas_map, claude_depth1_mapping=depth1_mapping, claude_depth2_mapping=depth2_mapping, claude_depth3_mapping=depth3_mapping)            
-    comparison_result_df.to_csv(f'{args.dataset}_topic_comparison.csv', index=False)
+    comparison_result_df = topic_comparison(atlas_map, topic_features, claude_depth1_mapping=depth1_mapping, claude_depth2_mapping=depth2_mapping, claude_depth3_mapping=depth3_mapping)
+    comparison_result_df.to_csv(f'{dataset}_topic_comparison.csv', index=False)
+
+if __name__ == "__main__":
+    typer.run(main)
     

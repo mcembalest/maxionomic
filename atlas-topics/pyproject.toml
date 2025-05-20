@@ -1,0 +1,20 @@
+[project]
+name = "atlas-topics"
+version = "0.1.0"
+description = "Improving topic models with Claude"
+authors = [
+    {name = "Nomic Atlas Team"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic",
+    "nomic",
+    "pandas>=2.0.0",
+    "requests",
+    "typer",
+]
+
+
+[tool.setuptools]
+packages = ["atlas_topics"]
