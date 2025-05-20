@@ -3,6 +3,7 @@ import anthropic
 from nomic import AtlasDataset
 import pandas as pd 
 import requests
+import argparse
 
 NOMIC_API_KEY = os.getenv("NOMIC_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
@@ -93,13 +94,13 @@ def topic_hierarchy_report(atlas_map, features, topic_datum_counts):
         topic_name, topic_depth = topic_key
         if topic_depth == 1:
             parent_keywords = get_keywords(topic_name, 1, features)
-            parent_datum_count = topic_datum_counts.get((1, topic_name), "N/A")
+            parent_datum_count = topic_datum_counts.get((1, topic_name))
             report += f"\nParent Topic (Depth 1): (Datums: {parent_datum_count})\n"
             report += f"  Keywords: {parent_keywords}\n"
             report += "  Child Topics (Depth 2):\n"
             for sub_topic_entry in sub_topics:
                 child_keywords = get_keywords(sub_topic_entry, 2, features)
-                child_datum_count = topic_datum_counts.get((2, sub_topic_entry), "N/A")
+                child_datum_count = topic_datum_counts.get((2, sub_topic_entry))
                 report += f"    - (Datums: {child_datum_count})\n"
                 report += f"      Keywords: {child_keywords}\n"
     return report
@@ -141,8 +142,7 @@ def create_topic_mapping(atlas_map, claude_topic_hierarchy):
 
 def topic_comparison(data_df, topics_df, indexed_field, claude_depth1_mapping=None, claude_depth2_mapping=None):
     """
-    Constructs and returns a DataFrame comparing ground truth topics, Nomic Atlas topics,
-    and Claude Sonnet topics.
+    Constructs and returns a DataFrame comparing Nomic Atlas topics vs Nomic Atlas + Claude Sonnet topics.
     """
     cols_to_join = ['topic_depth_1', 'topic_depth_2']
     topics_df_subset = topics_df[[col for col in cols_to_join if col in topics_df.columns]]
@@ -151,24 +151,22 @@ def topic_comparison(data_df, topics_df, indexed_field, claude_depth1_mapping=No
     comparison_data = []
     
     for index, row in merged_df.iterrows():
-        nomic_depth1 = row.get('topic_depth_1', "N/A")
-        nomic_depth2 = row.get('topic_depth_2', "N/A")
-        claude_depth1 = claude_depth1_mapping.get(nomic_depth1, "N/A")
-        claude_depth2 = claude_depth2_mapping.get((nomic_depth1, nomic_depth2), "N/A")
+        nomic_depth1 = row.get('topic_depth_1')
+        nomic_depth2 = row.get('topic_depth_2')
+        claude_depth1 = claude_depth1_mapping.get(nomic_depth1)
+        claude_depth2 = claude_depth2_mapping.get((nomic_depth1, nomic_depth2))
         comparison_data.append({
             'Datum ID': index,
-            'Indexed Field': row.get(indexed_field, "N/A"),
+            'Indexed Field': row.get(indexed_field),
             'NomicAtlasTopicDepth1': nomic_depth1,
             'NomicAtlasTopicDepth2': nomic_depth2,
             'NomicClaudeTopicDepth1': claude_depth1,
             'NomicClaudeTopicDepth2': claude_depth2,
-            'GroundTruthTopic': row.get('Topic', "N/A"),
         })
     return pd.DataFrame(comparison_data)
 
-def get_topic_hierarchy_from_claude(report):
-    anthropic_client = anthropic.Anthropic()
-
+def get_topic_hierarchy_from_claude(anthropic_client, report):
+    
     # Define the structured output schema for topic hierarchy
     topic_hierarchy_schema = {
         "name": "topic_hierarchy",
@@ -190,10 +188,6 @@ def get_topic_hierarchy_from_claude(report):
                                 "type": "string",
                                 "description": "Short descriptive name for the parent topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS."
                             },
-                            "parent_datum_count": {
-                                "type": "integer",
-                                "description": "Number of data points in this parent topic cluster"
-                            },
                             "child_topics": {
                                 "type": "array",
                                 "description": "Array of child topics for this parent (variable number)",
@@ -208,16 +202,12 @@ def get_topic_hierarchy_from_claude(report):
                                             "type": "string",
                                             "description": "Short descriptive name for the child topic. SUPER IMPORTANT: MUST BE 5-20 CHARACTERS."
                                         },
-                                        "child_datum_count": {
-                                            "type": "integer",
-                                            "description": "Number of data points in this child topic cluster"
-                                        }
                                     },
-                                    "required": ["child_id", "child_name", "child_datum_count"]
+                                    "required": ["child_id", "child_name"]
                                 }
                             }
                         },
-                        "required": ["parent_id", "parent_name", "parent_datum_count", "child_topics"]
+                        "required": ["parent_id", "parent_name", "child_topics"]
                     }
                 }
             },
@@ -226,17 +216,20 @@ def get_topic_hierarchy_from_claude(report):
     }
     message = anthropic_client.messages.create(
         model="claude-3-7-sonnet-20250219",
-        max_tokens=4000,
-        temperature=0.7,
-        system="""You are a topological semiotician specializing in structured hierarhical ontology optimization.
+        max_tokens=20000,
+        temperature=0.2,
+        system="""You are a topological semiotician specializing in structured hierarchical ontology optimization.
 You are given a tree-shaped topic model in keyword form and must produce an equivalently shaped model in short description form (5-20 characters each).
 Your primary goal is to REDUCE REDUNDANCY while maintaining the hierarchical structure:
 
-1. Ensure each parent topic has a distinct conceptual focus that doesn't overlap significantly with other parent topics
-2. Each child topic should have a clear, unique relationship to its parent topic that differentiates it from children of other parents
-3. Use distinct terminology across topics to avoid semantic overlap (e.g., don't use 'Medical AI' under multiple parent categories)
-4. When topics appear conceptually similar, use more specific terms to highlight their unique aspects
-5. Strive for orthogonal topic dimensions where possible, minimizing cross-cutting concerns
+- Ensure each parent topic has a distinct conceptual focus that doesn't overlap significantly with other parent topics
+- Each child topic should have a clear, unique relationship to its parent topic that differentiates it from children of other parents
+- Use distinct terminology across topics to avoid semantic overlap (e.g., don't use 'Medical AI' under multiple parent categories)
+- When topics appear conceptually similar, use more specific terms to highlight their unique aspects
+- Strive for orthogonal topic dimensions where possible, minimizing cross-cutting concerns
+- DO NOT use non-standard abbreviations like "Biz" for "Business" or "Gov" for "Government" - keep full words when possible
+- Only use well-established acronyms/abbreviations like "USA", "NIST", "AI", "HPC" that are widely recognized
+- Focus on concise, meaningful terms rather than abbreviating words unnaturally to fit the character limit
 
 You maintain the SAME STRUCTURE of parent child topics as the input hierarchy, but make each topic description conceptually distinct while preserving accurate representation.""",
         messages=[
@@ -256,20 +249,24 @@ You maintain the SAME STRUCTURE of parent child topics as the input hierarchy, b
     return message.content[0].input
 
 if __name__ == "__main__":
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description="Process Nomic Atlas Topic Model with Claude")
+    parser.add_argument("--dataset", type=str)
+    parser.add_argument("--indexed-field", type=str)
+    args = parser.parse_args()
 
-    # Get ground truth topic labels and Nomic Atlas Topic Model labels
+    # Get Nomic Atlas Topic Model labels
     topic_datum_counts = {} 
-    atlas_dataset = AtlasDataset('ai-policy-recommendations')
-    indexed_field = 'Details'
+    atlas_dataset = AtlasDataset(args.dataset)
+    indexed_field = args.indexed_field
     atlas_map = atlas_dataset.maps[0]
-    data_df = atlas_map.data.df[[indexed_field, 'Topic']].copy()
+    data_df = atlas_map.data.df[[indexed_field]].copy()
     topics_df = atlas_map.topics.df.copy()
     topic_datum_counts = get_topic_datum_counts(atlas_map, depths_to_fetch=[1, 2])
 
     # Get Atlas topic model clustering geojson 
-    # (without labels, trying to use Claude Sonnet to relabel so we can benchmark these topics against ground truth)
-    project_id = "f2bba6e5-e3df-46ef-ad79-7362bd3c48f5"
-    projection_id = "1abba3fa-b89d-40b3-a0e2-0cf52b2a7f13"
+    project_id = atlas_dataset.id
+    projection_id = atlas_dataset.maps[0].projection_id
     topic_models_geojson = fetch_topic_models_geojson(project_id, projection_id, NOMIC_API_KEY)
     topic_model = topic_models_geojson.get('topic_models')[0]
     features = topic_model.get('features')
@@ -277,17 +274,32 @@ if __name__ == "__main__":
     report = topic_hierarchy_report(atlas_map, features, topic_datum_counts)
     print(report)
 
+    anthropic_client = anthropic.Anthropic()
+
+    token_count = anthropic_client.messages.count_tokens(
+        model="claude-3-7-sonnet-20250219",
+        system="You are a scientist",
+        messages=[{
+            "role": "user",
+            "content": report
+        }],
+    )
+    print("quick token count:")
+    print(token_count.model_dump())
+    
     # Get topic hierarchy from Claude Sonnet
-    claude_topic_hierarchy = get_topic_hierarchy_from_claude(report)
+    claude_topic_hierarchy = get_topic_hierarchy_from_claude(anthropic_client, report)
+    print("CLAUDE TOPIC HIERARCHY:")
+    print(claude_topic_hierarchy)
+    print("--------------------------------")
     depth1_mapping, depth2_mapping = create_topic_mapping(atlas_map, claude_topic_hierarchy)
     print("\n--- Formatted Topic Hierarchy ---")
     for parent in claude_topic_hierarchy['parent_topics']:
-        print(f"\n## {parent['parent_name']} (Datums: {parent['parent_datum_count']})")
+        print(f"\n## {parent['parent_name']}")
         for child in parent['child_topics']:
-            print(f"- {child['child_name']} ({child['child_datum_count']})")
+            print(f"- {child['child_name']}")
 
-    # Compare ground truth topics, Nomic Atlas topics, and Claude Sonnet topics
+    # Compare original method for Nomic Atlas topics vs Nomic Atlas + Claude Sonnet topics
     comparison_result_df = topic_comparison(data_df, topics_df, indexed_field, claude_depth1_mapping=depth1_mapping, claude_depth2_mapping=depth2_mapping)            
-    print("\n--- Topic Comparison DataFrame ---")
-    print(comparison_result_df.to_string())
-    comparison_result_df.to_csv('comparison_result_df.csv', index=False)
+    comparison_result_df.to_csv(f'{args.dataset}_topic_comparison.csv', index=False)
+    
